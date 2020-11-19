@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classphysapi_1_1_p_spectrum.html" title="physapi::PSpectrum\l\&lt; intervals \&gt;" alt="" coords="5,43,145,84"/>
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_spectrum_zenith.html" title="This class represents a photon distribution under a specfic zenith angle and an angular interval obta..." alt="" coords="199,5,375,47"/>
+<area shape="rect" id="node4" href="$classphysapi_1_1_p_spectrum_zenith.html" title="physapi::PSpectrumZenith\l\&lt; AGNFormula::N_intervals,\l AGN_DATA_COLS \&gt;" alt="" coords="193,71,381,127"/>
+<area shape="rect" id="node3" href="$classagn_1_1_a_g_n_spectrum_zenith.html" title="This class represents an agn spectrum under a specific zenith angle and angular interval. " alt="" coords="429,13,601,39"/>
+</map>

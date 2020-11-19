@@ -1,0 +1,5 @@
+<map id="Interactions" name="Interactions">
+<area shape="rect" id="node1" href="$group__compton.html" title="This submodule handles compton interaction. " alt="" coords="149,5,224,32"/>
+<area shape="rect" id="node3" href="$group__gravitation.html" title="This submodule handles gravitational interaction. " alt="" coords="144,56,229,83"/>
+<area shape="rect" id="node4" href="$group__collision.html" title="This submodule handles classical physics collisions. " alt="" coords="151,107,223,133"/>
+</map>

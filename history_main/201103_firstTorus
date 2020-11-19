@@ -1,0 +1,103 @@
+#include "AGNSmooth.hpp"
+#include <iostream>
+#include "PFluxPerEnergyIntervalMaker.hpp"
+#include <chrono>
+
+
+using namespace std;
+using namespace agn;
+using namespace physapi;
+
+template <phys_size rows>
+void loadResultingSpectrum(PSpectrum<rows> &spectrum, const std::vector<std::string> &files)
+{
+    ifstream fin;
+
+    for (auto &&file_i : files)
+    {
+        fin.open(file_i);
+        if (!fin.good())
+        {
+            cerr << "error while opening the file:  " << file_i << endl;
+            abort();
+        }
+
+        phys_float hv, theta, phi, type, line;
+        while (fin >> hv)
+        {
+            fin >> theta;
+            fin >> phi;
+            fin >> type;
+            fin >> line;
+
+            if (std::abs(phi) <= 20.0_deg && std::abs(phi) >= 10.0_deg)
+            {
+                spectrum.addPhoton(hv);
+            }
+        }
+        fin.clear();
+        fin.close();
+    }
+}
+
+int main()
+{
+    PSphere sphere{PPosition(), SPHERE_R};
+    PSimpleTorus torus{TORUS_R1, TORUS_R2, TORUS_THETA0, PPosition(0, 0, 0)};
+
+    AGNSmooth agn{torus, N_H, T_e, NUMBER_OF_PHOTONS};
+
+    auto start = chrono::high_resolution_clock::now();
+
+    agn.run(PATH_STORAGE_DATA);
+
+    auto stop = chrono::high_resolution_clock::now();
+
+    auto duration = chrono::duration_cast<chrono::seconds>(stop - start);
+
+    cout << endl;
+    cout << duration.count() / 60 << endl;
+
+    PSpectrum<AGNFormula::N_intervals> intrinsicSpectrum{
+        AGNFormula::E_low,
+        AGNFormula::E_cut,
+        eSpectrumScale::LOG};
+
+    AGNFormula myFormula;
+    PSpectrumMaker<AGNFormula::N_intervals, AGNFormula::SPECTRUM_PRECISION> spectrumMaker;
+
+    phys_float torus_solidAngle = 4 * Pi * std::sin(30.0_deg);
+
+    spectrumMaker(intrinsicSpectrum, NUMBER_OF_PHOTONS, myFormula);
+
+    PFluxPerEnergyIntervalMaker<AGNFormula::N_intervals> fluxMaker{1.0E3, torus_solidAngle, 1.0E3, intrinsicSpectrum};
+
+    PFluxPerEnergyInterval<AGNFormula::N_intervals> intrinsicFlux_dE(fluxMaker(intrinsicSpectrum, torus_solidAngle));
+
+    ofstream fout;
+    fout.open("intrinsicFlux_dE.txt");
+    fout << intrinsicFlux_dE << endl;
+    fout.close();
+
+    PSpectrum<AGNFormula::N_intervals> resultingSpectrum{
+        AGNFormula::E_low,
+        AGNFormula::E_cut,
+        eSpectrumScale::LOG};
+
+    vector<string> files;
+
+    for (phys_size i = 0; i < 2; i++)
+    {
+        files.push_back(PATH_STORAGE_DATA + "thread_" + to_string(i) + ".txt");
+    }
+
+    loadResultingSpectrum(resultingSpectrum, files);
+
+    phys_float solidAngle = 4 * Pi * (std::sin(20.0_deg) - std::sin(10.0_deg));
+
+    PFluxPerEnergyInterval<AGNFormula::N_intervals> resultingFlux_dE(fluxMaker(resultingSpectrum, solidAngle));
+
+    fout.open("resultingFlux_dE.txt");
+    fout << resultingFlux_dE << endl;
+    fout.close();
+}

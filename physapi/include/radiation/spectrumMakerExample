@@ -1,0 +1,45 @@
+#include <iostream>
+#include "PSpectrum.hpp"
+#include "PSpectrumMaker.hpp"
+#include <cmath>
+using namespace std;
+using namespace physapi;
+
+class AGNFormula : public PSpectralFormulaBase
+{
+public:
+    constexpr static phys_float E_cut = 300.0E3;
+    constexpr static phys_float E_low = 1.0;
+    constexpr static phys_float gamma = 1.8;
+    constexpr static phys_size N_intervals = 2000;
+
+    phys_float operator()(phys_float energy) const override
+    {
+        // return energy*energy;
+        return std::pow(energy, -gamma) * std::exp(-energy / E_cut);
+    }
+};
+
+int main()
+{
+    const phys_float numberOfPhotons = 1.5E9;
+
+    PSpectrum<AGNFormula::N_intervals> spectrum{
+        AGNFormula::E_low,
+        AGNFormula::E_cut,
+        eSpectrumScale::LOG};
+
+    AGNFormula myFormula;
+
+    PSpectrumMaker spectrumMaker;
+
+    spectrumMaker(spectrum, numberOfPhotons, myFormula);
+
+    cout << spectrum << endl;
+
+    cout << spectrum.count() << endl;
+
+    cout << 1 - (spectrum.count() / numberOfPhotons) << endl;
+
+    return 0;
+}

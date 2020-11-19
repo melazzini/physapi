@@ -1,0 +1,80 @@
+\form#0:$x,\; y$
+\form#1:$ \rho,\; \theta$
+\form#2:$ +, - $
+\form#3:$ \rho $
+\form#4:$ \theta $
+\form#5:$ e_{\rho} $
+\form#6:$ e_{\theta} $
+\form#7:$ || this - othervector || $
+\form#8:$ Result = \frac{\vec{v}}{divisor} = \left(\frac{1}{divisor}\right) * \vec{v} $
+\form#9:$ x_{left} = x_{right} $
+\form#10:$ y_{left} = y_{right} $
+\form#11:$ \cos( \phi ) = \frac{ \vec{a} * \vec{b} }{ | \vec{a} | * | \vec{b} | } $
+\form#12:$ \vec{a} $
+\form#13:$ \vec{b} $
+\form#14:$ \cos( \phi )$
+\form#15:$ \phi $
+\form#16:$ \vec{A} $
+\form#17:$ \vec{B} $
+\form#18:$x,\; y, \; z$
+\form#19:$ \rho,\; \theta, \; z$
+\form#20:$ r,\; \theta, \phi $
+\form#21:$ z $
+\form#22:$ e_{r} $
+\form#23:$ e_{\phi} $
+\form#24:$ dr $
+\form#25:$ d\vec{r} $
+\form#26:$ \vec{p} = m*\vec{v} $
+\form#27:$ \frac{p^{2}}{2*m} $
+\form#28:$ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) $
+\form#29:$ \beta * \int_{E_{low}}^{E_{upp}} \phi(E) = 1 $
+\form#30:$ E $
+\form#31:$ \beta $
+\form#32:$ N_{Tot} $
+\form#33:$ \phi(E) $
+\form#34:$ E_{low} $
+\form#35:$ E_{upp} $
+\form#36:$ \int_{E_{low}}^{E_{upp}} dN = N_{Tot} $
+\form#37:$ [a,b] $
+\form#38:$ \Phi_{\delta E} = $
+\form#39:$ \Phi_{\Delta E} = $
+\form#40:$ \bar{\Phi_{\Delta E}} = $
+\form#41:$ \Phi_{\Delta E} = \frac{E}{\Delta A * \Delta E * s} $
+\form#42:$ Joules $
+\form#43:$ m^{2}*sec*Joules $
+\form#44:$ \Phi_{\Delta E, normalized} = \alpha * \frac{E}{\Delta A * \Delta E * s} $
+\form#45:$ \Phi_{\Delta E, normalized}(E_{i}) = \alpha * \frac{E_{i} * \Delta N(E_{i})}{\Delta A * \Delta E(E_{i}) * s} $
+\form#46:$ E_{i} $
+\form#47:$ \alpha $
+\form#48:$ \Phi_{\Delta E} $
+\form#49:$ x $
+\form#50:$ \Phi_{\Delta E normalized} $
+\form#51:$ \eta $
+\form#52:$ \Phi_{\Delta E, normalized} $
+\form#53:$ E_{i}=E^{*} $
+\form#54:$ \alpha = \eta{E} $
+\form#55:$ \alpha = \eta(E^{*}) * \frac{\Delta A \Delta E(E^{*})}{E^{*} \Delta N(\Delta{E^{*}}) } $
+\form#56:$ \Delta A $
+\form#57:$ \Delta E(E^{*}) $
+\form#58:$ \Delta N(E^{*}) $
+\form#59:$ \Delta A_{0} $
+\form#60:$ \Delta N{0}(E^{*}) $
+\form#61:$ \Phi_{0, \Delta E, normalized} $
+\form#62:$ \Delta N_{0}(E^{*}) $
+\form#63:$ \Phi_{\Delta E, normalized} = \eta * \frac{\Delta A_{0}}{\Delta A} $
+\form#64:$ \Phi_{\Delta E, normalized} = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} $
+\form#65:$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} $
+\form#66:$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} * frac{\Delta N(E_{i})}{\Delta N_{0}(E^{*})} $
+\form#67:$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} * \frac{\Delta N(E_{i})}{\Delta N_{0}(E^{*})} $
+\form#68:$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} * \frac{\Delta N(E_{i})}{\Delta N_{0}(E^{*})} * \frac{\Delta E(E^{*})}{\Delta E(E^{*})} $
+\form#69:$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} * \frac{\Delta N(E_{i})}{\Delta N_{0}(E^{*})} * \frac{\Delta E(E^{*})}{\Delta E(E_{i})} $
+\form#70:$ E^{*} $
+\form#71:$ t_spectrum $
+\form#72:$ \Delta N(E_{i}) $
+\form#73:$ \Delta E(E_{i}) $
+\form#74:$ \theta_{0} $
+\form#75:$ \pi/2 $
+\form#76:$ \sum_{i} (z_{i}*a_{i}) $
+\form#77:$ \delta \theta $
+\form#78:$ \Delta \theta $
+\form#79:$ 4 \pi $

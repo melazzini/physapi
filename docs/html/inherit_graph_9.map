@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classphysapi_1_1_p_collision_base.html" title="This is the base class for all types of classical collisions. " alt="" coords="5,13,169,39"/>
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_perfectly_elastic_collision.html" title="Handles perfectly elastic collisions between two particles. " alt="" coords="217,5,393,47"/>
+</map>

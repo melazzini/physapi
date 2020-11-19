@@ -1,0 +1,63 @@
+#include "AGNSmooth.hpp"
+#include <iostream>
+#include "PFluxPerEnergyIntervalMaker.hpp"
+#include <chrono>
+#include <thread>
+
+using namespace std;
+using namespace agn;
+using namespace physapi;
+
+const string FILES_PREFIX = "./data/thread_";
+const string FILES_EXTENSION = ".txt";
+
+int main()
+{
+    //*****************INTRINSIC FLUX CREATION BEGIN*************************************************
+    PSpectrum<AGNFormula::N_intervals> intrinsicSpectrum{
+        AGNFormula::E_low,
+        AGNFormula::E_cut,
+        eSpectrumScale::LOG};
+
+    AGNFormula myFormula;
+    PSpectrumMaker<AGNFormula::N_intervals, AGNFormula::SPECTRUM_PRECISION> spectrumMaker;
+    spectrumMaker(intrinsicSpectrum, NUMBER_OF_PHOTONS, myFormula);
+
+    auto torusSolidAngle = agnSolidAngle(TORUS_THETA0, 30.0_deg);
+
+    PFluxPerEnergyIntervalMaker<AGNFormula::N_intervals> fluxMaker{1.0E3, torusSolidAngle, 1.0E3, intrinsicSpectrum};
+
+    PFluxPerEnergyInterval<AGNFormula::N_intervals> intrinsicFlux(fluxMaker(intrinsicSpectrum, torusSolidAngle));
+
+    ofstream fout;
+    fout.open("intrinsicFlux");
+    fout << intrinsicFlux << endl;
+    fout.close();
+    //*****************INTRINSIC FLUX CREATION END***************************************************
+
+    //*****************SET FILES NAMES BEGIN*************************************************
+    vector<string> files;
+
+    for (size_t i = 0; i < 3; i++)
+    {
+        files.push_back(FILES_PREFIX + to_string(i) + FILES_EXTENSION);
+    }
+    //*****************SET FILES NAMES END***************************************************
+
+    //*****************TOTAL FLUX UNDER 70 DEGREES CREATION BEGIN************************************
+    AGNSpectrumZenith spectrum70(70.0_deg, AGNFormula::E_low, AGNFormula::E_cut, eSpectrumScale::LOG);
+
+    for (auto &&file : files)
+    {
+        loadFromFile<AGN_DATA_COLS>(file, spectrum70);
+        cout << "tot: " << spectrum70.count() << endl;
+    }
+
+    PFluxPerEnergyInterval<AGNFormula::N_intervals> flux70_dE(fluxMaker(spectrum70, agnSolidAngle(70.0_deg, 10.0_deg)));
+
+    fout.open("flux70_dE");
+    fout << flux70_dE << endl;
+    fout.close();
+    //*****************TOTAL FLUX UNDER 70 DEGREES CREATION END**************************************
+    return 0;
+}

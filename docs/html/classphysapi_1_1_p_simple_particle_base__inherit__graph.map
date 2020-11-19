@@ -1,0 +1,6 @@
+<map id="physapi::PSimpleParticleBase" name="physapi::PSimpleParticleBase">
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_simple_mass_particle_base.html" title="This is the base class for all classical particles that have an inertial mass. " alt="" coords="73,80,304,107"/>
+<area shape="rect" id="node5" href="$classphysapi_1_1_p_simple_photon.html" title="This class represents a simple photon. " alt="" coords="329,80,494,107"/>
+<area shape="rect" id="node3" href="$classphysapi_1_1_p_simple_electron.html" title="This class represents a simple electron. " alt="" coords="5,155,177,181"/>
+<area shape="rect" id="node4" href="$classphysapi_1_1_p_simple_particle.html" title="This class represents a simple particle. " alt="" coords="202,155,370,181"/>
+</map>

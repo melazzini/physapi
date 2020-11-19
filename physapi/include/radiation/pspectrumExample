@@ -1,0 +1,20 @@
+#include <iostream>
+#include "PSpectrum.hpp"
+
+using namespace std;
+using namespace physapi;
+
+int main()
+{
+    PSpectrum<10> spectrum{3, 20, eSpectrumScale::LIN};
+
+    spectrum.addPhoton(4);
+    spectrum.addPhoton(5);
+    spectrum.addPhoton(9.9);
+    spectrum.addPhoton(10);
+    spectrum.addPhoton(7.8);
+
+    cout << spectrum << endl;
+
+    return 0;
+}

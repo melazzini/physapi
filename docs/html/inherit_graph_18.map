@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classphysapi_1_1_p_geometry_base.html" title="This is the base class for all 3D geometric forms(cubs, spheres, tori, etc.) " alt="" coords="5,31,176,57"/>
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_simple_torus.html" title="This class represents a simple torus. " alt="" coords="224,5,381,32"/>
+<area shape="rect" id="node3" href="$classphysapi_1_1_p_sphere.html" title="This class represents a 3d sphere. " alt="" coords="240,56,365,83"/>
+</map>

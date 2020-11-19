@@ -1,0 +1,20 @@
+#include "PSphere.hpp"
+#include "PSimplePhoton.hpp"
+
+#include <iostream>
+
+using namespace std;
+using namespace physapi;
+
+int main()
+{
+    PSphere sphere{PPosition(), 1};
+
+    PSimplePhoton photon{1, {1, 0.0998, 0}, {10, 2, 0}};
+
+    cout << sphere.intersect(photon.position(), photon.omega()) << endl;
+
+    cout << sphere.distanceBetweenBoundaries(photon.position(), photon.omega()) << endl;
+    cout << sphere.distanceToBoundaryFromOutside(photon.position(), photon.omega()) << endl;
+    cout << sphere.distanceToBoundaryFromInside(photon.position(), photon.omega()) << endl;
+}

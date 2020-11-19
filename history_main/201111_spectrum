@@ -1,0 +1,31 @@
+#include "AGNSmooth.hpp"
+#include <iostream>
+#include "PFluxPerEnergyIntervalMaker.hpp"
+#include <chrono>
+#include <thread>
+
+using namespace std;
+using namespace agn;
+using namespace physapi;
+
+const string FILES_PREFIX = "./results/NH23/data_23/thread_";
+const string FILES_EXTENSION = ".txt";
+
+int main()
+{
+    AGNSpectrumZenith spectrum(0.0_deg, AGNFormula::E_low, AGNFormula::E_cut, eSpectrumScale::LOG, Pi / 2);
+    cout << "tot: " << spectrum.count() << endl;
+
+    vector<string> files;
+
+    for (size_t i = 0; i < 3; i++)
+    {
+        files.push_back(FILES_PREFIX + to_string(i) + FILES_EXTENSION);
+    }
+
+    for (auto &&file : files)
+    {
+        loadFromFile<AGN_DATA_COLS>(file, spectrum);
+        cout << "tot: " << spectrum.count() << endl;
+    }
+}

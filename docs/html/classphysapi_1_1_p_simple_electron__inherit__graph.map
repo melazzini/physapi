@@ -1,0 +1,4 @@
+<map id="physapi::PSimpleElectron" name="physapi::PSimpleElectron">
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_simple_mass_particle_base.html" title="This is the base class for all classical particles that have an inertial mass. " alt="" coords="5,80,236,107"/>
+<area shape="rect" id="node3" href="$classphysapi_1_1_p_simple_particle_base.html" title="This is the base class for all classical particles. " alt="" coords="21,5,220,32"/>
+</map>

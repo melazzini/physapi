@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classphysapi_1_1_p_simple_particle_base.html" title="This is the base class for all classical particles. " alt="" coords="5,56,204,83"/>
+<area shape="rect" id="node2" href="$classphysapi_1_1_p_simple_mass_particle_base.html" title="This is the base class for all classical particles that have an inertial mass. " alt="" coords="252,31,483,57"/>
+<area shape="rect" id="node5" href="$classphysapi_1_1_p_simple_photon.html" title="This class represents a simple photon. " alt="" coords="285,81,450,108"/>
+<area shape="rect" id="node3" href="$classphysapi_1_1_p_simple_electron.html" title="This class represents a simple electron. " alt="" coords="531,5,703,32"/>
+<area shape="rect" id="node4" href="$classphysapi_1_1_p_simple_particle.html" title="This class represents a simple particle. " alt="" coords="533,56,701,83"/>
+</map>

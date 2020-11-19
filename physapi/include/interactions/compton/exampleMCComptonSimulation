@@ -1,0 +1,24 @@
+#include <iostream>
+#include "PCompontCollider.hpp"
+#include "PMCCompton.hpp"
+
+using namespace std;
+using namespace physapi;
+
+int main()
+{
+    PCompontCollider<PMCCompton> comptonCollider;
+
+    PSimplePhoton photon{100.0E3_eV, PVector3D(1, 0, 0)};
+
+    cout << photon.energy() << std::endl;
+    cout << photon.momentum() << std::endl;
+
+    comptonCollider.run(photon, 100.0E3_eVToKelvin);
+
+    cout << photon.energy() << std::endl;
+
+    cout << photon.momentum() << std::endl;
+
+    return 0;
+}

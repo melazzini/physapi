@@ -1,0 +1,59 @@
+#include <iostream>
+#include "utils.hpp"
+#include <vector>
+#include"PVector2D.hpp"
+
+using namespace std;
+using namespace physapi;
+
+class MyContainer
+{
+    static constexpr phys_size COLUMNS = 3;
+
+private:
+    std::vector<std::array<phys_float, COLUMNS>> m_rows;
+
+public:
+    const std::vector<std::array<phys_float, COLUMNS>> &getElements() const { return m_rows; }
+
+    void loadElement(const std::array<phys_float, COLUMNS> &row)
+    {
+        m_rows.push_back(row);
+    }
+};
+
+int main()
+{
+    MyContainer myContainer;
+
+    loadFromFile<3>("myfile", myContainer,10);
+
+    for (auto &&row : myContainer.getElements())
+    {
+        for (auto &&column : row)
+        {
+            cout << column << " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+#include "PAbundanceTable.hpp"
+#include <cmath>
+#include <fstream>
+
+using namespace std;
+using namespace physapi;
+
+int main()
+{
+    PAbundanceTable table;
+
+    loadFromFile<3>("./physapi/include/astrophysics/tables/abundancetable.txt", table);
+
+    cout << table << endl;
+
+    return 0;
+}
