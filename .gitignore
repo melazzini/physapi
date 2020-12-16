@@ -2,3 +2,4 @@ x64/
 kernel.cu
 main.cpp
 *.vcxproj*
+Doxyfile
