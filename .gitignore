@@ -3,3 +3,5 @@ kernel.cu
 main.cpp
 *.vcxproj*
 Doxyfile
+main.py
+testsNotForProduction

@@ -3,7 +3,7 @@
 
 namespace physapi
 {
-    const std::string PAbundanceTable::DEFAULT_FILE_PATH = "./physapi/include/astrophysics/tables/abundancetable.txt";
+    const std::string PAbundanceTable::DEFAULT_FILE_PATH = "./include/astrophysics/tables/abundancetable.txt";
 
     void PAbundanceTable::loadElement(const std::array<phys_float, 3> &row)
     {
