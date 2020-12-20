@@ -1,0 +1,55 @@
+/*****************************************************************//**
+ * \file   main.cpp
+ * \brief  This example shows how to use the fluorescence simulator object
+ *
+ * \author francisco melazzini
+ * \date   December 2020
+ *********************************************************************/
+
+#include "PFluorescenceHnd.hpp"
+#include <fstream>
+#include <memory>
+
+using namespace std;
+using namespace physapi;
+
+int main()
+{
+	// we need the abundances
+	PAbundanceTable abundances;
+
+	// for memory efficiency(special when working with multiple threads)
+	// we need a shared pointer to the fluorescence table
+	shared_ptr<PFluorescenceTable> table = make_shared<PFluorescenceTable>(abundances);
+
+	// now we can create the fluorescence simulator
+	PFluorescenceHnd fluorescenceHnd(table);
+
+	// the next for loop demostrate how easy it is to use the fluorescence simulator
+	// with 10 trials we run the simulation with the Fe possible lines
+
+	for (size_t i = 0; i < 10; i++)
+	{
+		cout << "trial #" << i + 1 << ":" << endl;
+
+		auto optionalLine = fluorescenceHnd.run(eZ::Fe, 1);
+
+		if (optionalLine.has_value())
+		{
+			auto& line = optionalLine.value();
+
+			cout << line.first.atomicNumber() << "  "
+				<< line.first.ionizationState() << "  "
+				<< line.first.shellNUmber() << "  "
+				<< line.first.augerElectrons() << "  "
+				<< line.first.lineNumber() << "  "
+				<< line.second.lineEnergy() << "  "
+				<< line.second.lineYield() << endl;
+		}
+		else
+		{
+			cout << "no fluorescence occurred" << endl;
+		}
+		cout << endl;
+	}
+}

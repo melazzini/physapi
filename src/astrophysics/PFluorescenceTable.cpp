@@ -2,7 +2,7 @@
 
 namespace physapi
 {
-    const std::string PFluorescenceTable::DEFAULT_FILE_PATH = "./physapi/include/astrophysics/tables/fluorescencetable.txt";
+    const std::string PFluorescenceTable::DEFAULT_FILE_PATH = "./include/astrophysics/tables/fluorescencetable.txt";
 
     void PFluorescenceTable::loadElement(const std::array<phys_float, FLUORESCENCE_TABLE_COLS> &row)
     {

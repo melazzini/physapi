@@ -2,6 +2,7 @@
 
 #include "astrophysics_utils.hpp"
 #include <map>
+#include<memory>
 #include "PAbundanceTable.hpp"
 
 namespace physapi
@@ -84,7 +85,7 @@ namespace physapi
         std::string m_file;
 
         // abundances
-        PAbundanceTable m_abundances;
+        const PAbundanceTable& m_abundances;
 
     public:
         /**
@@ -92,8 +93,8 @@ namespace physapi
          * 
          * @param file fluorescence table file path
          */
-        explicit PFluorescenceTable(const std::string file = DEFAULT_FILE_PATH)
-            : m_file{file}
+        PFluorescenceTable(const PAbundanceTable& abundances, const std::string file = DEFAULT_FILE_PATH)
+            : m_file{file}, m_abundances{abundances}
         {
             loadFromFile<FLUORESCENCE_TABLE_COLS>(m_file, *this);
         }

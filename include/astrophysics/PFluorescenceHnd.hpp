@@ -1,6 +1,8 @@
 #pragma once
 
 #include "PFluorescenceTable.hpp"
+#include <memory>
+#include <optional>
 
 namespace physapi
 {
@@ -12,39 +14,54 @@ namespace physapi
      * **Example:**
      * 
      * @code{.cpp}
-        #include "PFluorescenceHnd.hpp"
-        #include <fstream>
+     * 
+#include "PFluorescenceHnd.hpp"
+#include <fstream>
+#include <memory>
 
-        using namespace std;
-        using namespace physapi;
+    using namespace std;
+    using namespace physapi;
 
-        int main()
+    int main()
+    {
+        // we need the abundances
+        PAbundanceTable abundances;
+
+        // for memory efficiency(special when working with multiple threads)
+        // we need a shared pointer to the fluorescence table
+        shared_ptr<PFluorescenceTable> table = make_shared<PFluorescenceTable>(abundances);
+
+        // now we can create the fluorescence simulator
+        PFluorescenceHnd fluorescenceHnd(table);
+
+        // the next for loop demostrate how easy it is to use the fluorescence simulator
+        // with 10 trials we run the simulation with the Fe possible lines
+
+        for (size_t i = 0; i < 10; i++)
         {
-            PFluorescenceHnd fluorescenceHnd;
+            cout << "trial #" << i + 1 << ":" << endl;
 
-            for (size_t i = 0; i < 10; i++)
+            auto optionalLine = fluorescenceHnd.run(eZ::Fe, 1);
+
+            if (optionalLine.has_value())
             {
-                cout << "trial #" << i + 1 << ":" << endl;
+                auto& line = optionalLine.value();
 
-                auto line = fluorescenceHnd.run(eZ::Fe, 1);
-
-                if (line == t_fluorescentLine())
-                {
-                    cout << "no fluorescence occurred" << endl;
-                }
-                else
-                {
-                    cout << line.first.atomicNumber() << "  "
-                         << line.first.ionizationState() << "  "
-                         << line.first.shellNUmber() << "  "
-                         << line.first.augerElectrons() << "  "
-                         << line.first.lineNumber() << "  "
-                         << line.second.lineEnergy() << "  "
-                         << line.second.lineYield() << endl;
-                }
-                cout << endl;
+                cout << line.first.atomicNumber() << "  "
+                    << line.first.ionizationState() << "  "
+                    << line.first.shellNUmber() << "  "
+                    << line.first.augerElectrons() << "  "
+                    << line.first.lineNumber() << "  "
+                    << line.second.lineEnergy() << "  "
+                    << line.second.lineYield() << endl;
             }
+            else
+            {
+                cout << "no fluorescence occurred" << endl;
+            }
+            cout << endl;
         }
+    }
      * @endcode
      * 
      * output:
@@ -94,7 +111,7 @@ namespace physapi
     {
     private:
         // fluorescence table
-        PFluorescenceTable m_fluorescenceTable;
+        const std::shared_ptr<PFluorescenceTable> m_fluorescenceTable;
 
         // random numbers manager
         PRandom m_randMng;
@@ -104,7 +121,9 @@ namespace physapi
          * @brief Construct a new PFluorescenceHnd object
          * 
          */
-        explicit PFluorescenceHnd() {}
+        explicit PFluorescenceHnd(const std::shared_ptr<PFluorescenceTable> fluorescenceTable)
+        :m_fluorescenceTable{fluorescenceTable}
+        {}
 
         /**
          * @brief Destroy the PFluorescenceHnd object
@@ -119,10 +138,9 @@ namespace physapi
          * @param is shell number
          * @param st ionization state
          * @param aug auger electrons
-         * @return t_fluorescentLine fluorescence line
-         * @return t_fluorescentLine() if no fluorescence happened 
+         * @return std::optional<t_fluorescentLine> optional fluorescence line
          */
-        t_fluorescentLine run(eZ z, phys_size is, phys_size st = 1, phys_size aug = 0);
+        std::optional<t_fluorescentLine> run(eZ z, phys_size is, phys_size st = 1, phys_size aug = 0);
 
     private:
         std::vector<phys_float> yieldList(const std::vector<t_fluorescentLine> &lines) const;

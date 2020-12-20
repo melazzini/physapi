@@ -4,16 +4,16 @@
 
 namespace physapi
 {
-    t_fluorescentLine PFluorescenceHnd::run(eZ z,
+    std::optional<t_fluorescentLine> PFluorescenceHnd::run(eZ z,
                                             phys_size is,
                                             phys_size st,
                                             phys_size aug)
     {
-        auto lines = m_fluorescenceTable.lines(z, st, is, aug);
+        auto lines = m_fluorescenceTable->lines(z, st, is, aug);
 
         if (lines.empty())
         {
-            return {};
+            return std::nullopt;
         }
 
         auto yields = yieldList(lines);
@@ -22,7 +22,7 @@ namespace physapi
 
         if (total_yield < m_randMng.random_0_1())
         {
-            return {};
+            return std::nullopt;
         }
 
         std::vector<phys_float> probabilities;
