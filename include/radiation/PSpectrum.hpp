@@ -175,6 +175,8 @@ namespace physapi
         *              GETTERS & SETTERS
         ***********************************************************************/
 
+        static constexpr phys_size N_intervals = energyIntervals;
+
         /**
          * @brief Clear the spectrum.
          * 

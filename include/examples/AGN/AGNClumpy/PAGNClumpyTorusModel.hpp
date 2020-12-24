@@ -19,6 +19,8 @@ namespace agn
 
 		std::vector<PPosition> m_clouds;
 
+		phys_float m_cloudRadius;
+
 	public:
 		/**
 		 * Constructs a smooth sphere agn structure model.
@@ -74,5 +76,9 @@ namespace agn
 		// Inherited via PAGNClumpyStructureModelB
 		virtual const std::vector<PPosition>& clouds() const override;
 
+		virtual phys_float cloudRadius()const override
+		{
+			return m_cloudRadius;
+		}
 	};
 }// namespace agn

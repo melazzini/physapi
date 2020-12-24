@@ -3,6 +3,7 @@
 #include"PAGNSmoothStructureModelB.hpp"
 #include"PAGNSimulationMng.hpp"
 #include"PAGNFormula.hpp"
+#include"PAGNInitSpectrumDirectionFilter.hpp"
 namespace agn
 {
 	class PAGNSmoothSimulationTeam : public PAGNSimulationTeamB
@@ -14,13 +15,20 @@ namespace agn
 			const std::shared_ptr<PVernerTable2> vernerTable2,
 			const std::shared_ptr<PFluorescenceTable> fluorescenceTable,
 			const std::shared_ptr<PAbundanceTable> abundances,
-			phys_size id, phys_float numOfPhotons,
-			const std::shared_ptr<PAGNFormula> agnformula);
+			phys_size id, phys_float numOfPhotons, phys_float n_e,
+			const std::shared_ptr<PAGNFormula> agnformula,
+			const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter);
 
 		// Inherited via PAGNSimulationTeam
 		virtual void run(std::string_view pathToStorageFolder) override;
 
 	private:
 		const PAGNSmoothStructureModelB& m_structureModel;
+
+	protected:
+
+		// move the photon inside the agn internal structure and get the distance to
+		// closest external boundary
+		virtual std::optional<phys_float> distanceToBoundary(PSimplePhoton& photon)override;
 	};
 }// namespace agn

@@ -22,12 +22,14 @@ namespace agn
 	class PAGNClumpyStructureModelB :public PAGNStructureModelB
 	{
 	public:
-		
+
 		/**
 		 * Get a reference to the clouds positions.
 		 *
 		 * \return clouds positions
 		 */
 		virtual const std::vector<PPosition>& clouds()const = 0;
+
+		virtual phys_float cloudRadius()const = 0;
 	};
 }// namespace agn

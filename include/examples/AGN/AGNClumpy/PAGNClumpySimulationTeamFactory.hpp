@@ -15,8 +15,9 @@ namespace agn
 			const std::shared_ptr<PVernerTable2> vernerTable2,
 			const std::shared_ptr<PFluorescenceTable> fluorescenceTable,
 			const std::shared_ptr<PAbundanceTable> abundances,
-			phys_size id, phys_float numOfPhotons,
-			const std::shared_ptr<PAGNFormula> agnformula) override;
+			phys_size id, phys_float numOfPhotons, phys_float n_e,
+			const std::shared_ptr<PAGNFormula> agnformula,
+			const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter) override;
 
 	};
 

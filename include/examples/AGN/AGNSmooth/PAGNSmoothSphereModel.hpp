@@ -44,7 +44,7 @@ namespace agn
 		 * \param direction direction of the trajectory
 		 * \return optional distance to the  next entering point
 		 */
-		virtual std::optional<phys_float> distanceToEnterinPoint(const PPosition& position, const PVector3D& direction) const override;
+		virtual std::optional<phys_float> distanceToEnteringPoint(const PPosition& position, const PVector3D& direction) const override;
 
 		/**
 		 * Get the equatorial half effective size.

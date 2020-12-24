@@ -42,7 +42,7 @@ namespace physapi
 	}
 
 	phys_float PVerner::operator()(phys_float energy,
-		std::vector<std::array<phys_float, 4>>& listFromVerner)
+		std::vector<std::array<phys_float, ABSORBINGELEMENT_PROPERTIES>>& listFromVerner)
 	{
 
 		//first we reset the value of m_sigma

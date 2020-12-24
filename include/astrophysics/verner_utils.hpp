@@ -213,4 +213,19 @@ namespace physapi
     {
         return value * 1.E-18;
     }
+
+    // DESCRIPTION OF AN ABSORBING ELEMENT
+    // THE FISRT THREE ARE THE SAME AS 
+    // VERNERTABLE1 KEY PROPERTIES(Z,NE,IS)
+    enum class eAbsorbingElement
+    {
+        Z = static_cast<phys_size>(eVernerTable1Key::Z),  // ATOMIC NUMBER
+        Ne = static_cast<phys_size>(eVernerTable1Key::Ne), // NUMBER OF ELECTRONS
+        Is = static_cast<phys_size>(eVernerTable1Key::Is),  // SHELL NUMBER "n"
+        SIGMA = 3 // PHOTOIONIZATION CROSS SECTION OF THE GIVEN ELEMENT
+    };
+
+    // NUMBER OF PROPERTIES THAT DETERMINE AN ABSORBING ELEMENT (SEE @eAbsorbingElement)
+    constexpr phys_size ABSORBINGELEMENT_PROPERTIES = 4;
+
 } // namespace physapi

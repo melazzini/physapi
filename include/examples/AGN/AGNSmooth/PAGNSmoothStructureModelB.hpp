@@ -39,6 +39,6 @@ namespace agn
 		 * \param direction direction of the trajectory
 		 * \return optional distance to the entering point
 		 */
-		virtual std::optional<phys_float> distanceToEnterinPoint(const PPosition& position, const PVector3D& direction)const = 0;
+		virtual std::optional<phys_float> distanceToEnteringPoint(const PPosition& position, const PVector3D& direction)const = 0;
 	};
 }// namespace agn

@@ -6,6 +6,7 @@
 #include"verner_utils.hpp"
 #include"PAGNStructureModelB.hpp"
 #include"PAGNSimulationTeamFactory.hpp"
+#include"PAGNInitSpectrumDirectionFilter.hpp"
 
 namespace agn
 {
@@ -32,7 +33,8 @@ namespace agn
 			phys_float T_e,
 			phys_float numOfPhotos,
 			const std::shared_ptr<PAGNSimulationTeamFactory> simulationTeamFactory,
-			const std::shared_ptr<PAGNFormula> agnformula);
+			const std::shared_ptr<PAGNFormula> agnformula,
+			const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter = std::make_shared<PAGNInitSpectrumDirectionFilter>());
 
 		/**
 		 * Run the simulation of the agn x-ray spectral model.
@@ -53,12 +55,18 @@ namespace agn
 		std::shared_ptr<PVernerTable2> m_vernerTable2;
 		std::shared_ptr<PFluorescenceTable> m_fluorescences;
 		const std::shared_ptr<PAGNFormula> m_formula;
-
+		const std::shared_ptr<PAGNInitSpectrumDirectionFilter> m_initSpectrumDirFilter;
+		phys_float m_n_e; // concentration of electrons
 	private:
 		void initTables();
 		void initVernerTable1();
 		void initVernerTable2();
 		void createSimulationThread(phys_size id, phys_float numOfPhotons,
 			std::string_view pathToStorageFolder);
+		// calculate concentration of electrons
+		phys_float calculate_n_e(phys_float n_H) const 
+		{
+			return m_abundances->total() * n_H;
+		}
 	};
 }

@@ -16,7 +16,7 @@ namespace agn
 		else
 			return std::nullopt;
 	}
-	std::optional<phys_float> PAGNSmoothSphereModel::distanceToEnterinPoint(const PPosition& position, const PVector3D& direction) const
+	std::optional<phys_float> PAGNSmoothSphereModel::distanceToEnteringPoint(const PPosition& position, const PVector3D& direction) const
 	{
 		auto d = m_sphere.distanceToBoundaryFromOutside(position, direction);
 		if (d >= 0.0)

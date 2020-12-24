@@ -5,9 +5,12 @@ namespace agn
 {
 	PAGN::PAGN(const std::shared_ptr<PAGNStructureModelB> structureModel,
 		phys_float T_e, phys_float numOfPhotos,
-		const std::shared_ptr<PAGNSimulationTeamFactory> simulationTeamFactory, const std::shared_ptr<PAGNFormula> agnformula)
+		const std::shared_ptr<PAGNSimulationTeamFactory> simulationTeamFactory, 
+		const std::shared_ptr<PAGNFormula> agnformula,
+		const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter)
 		:m_structureModel{ structureModel }, m_T_e{ T_e }, m_numOfPhotons{ numOfPhotos },
-		m_simulationTeamFactory{ simulationTeamFactory }, m_formula{agnformula}
+		m_simulationTeamFactory{ simulationTeamFactory }, m_formula{agnformula},
+		m_initSpectrumDirFilter{initSpectrumDirFilter}, m_n_e{calculate_n_e(m_structureModel->n_H())}
 	{
 		initTables();
 	}
@@ -85,7 +88,7 @@ namespace agn
 		auto simulationTeam{ m_simulationTeamFactory->buildSimulationTeam(m_structureModel,
 																		m_vernerTable1,m_vernerTable2,
 																		m_fluorescences, m_abundances,
-																		id, numOfPhotons, m_formula) };
+																		id, numOfPhotons, m_n_e, m_formula, m_initSpectrumDirFilter) };
 		simulationTeam->run(pathToStorageFolder);
 	}
 }// namespace agn

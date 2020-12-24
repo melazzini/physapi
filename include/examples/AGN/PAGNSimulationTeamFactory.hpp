@@ -7,6 +7,7 @@
 #include <memory>
 #include <string_view>
 #include"PAGNFormula.hpp"
+#include"PAGNInitSpectrumDirectionFilter.hpp"
 
 namespace agn
 {
@@ -21,6 +22,8 @@ namespace agn
 				const std::shared_ptr<PAbundanceTable> abundances,
 				phys_size id,
 				phys_float numOfPhotons,
-				const std::shared_ptr<PAGNFormula> agnformula) = 0;
+				phys_float n_e,
+				const std::shared_ptr<PAGNFormula> agnformula,
+				const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter) = 0;
 	};
 }

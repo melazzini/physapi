@@ -119,7 +119,7 @@ namespace physapi
 		 * @return phys_float photonionization cross section
 		 */
 		phys_float operator()(phys_float energy,
-			std::vector<std::array<phys_float, 4>>& absorbingElements);
+			std::vector<std::array<phys_float, ABSORBINGELEMENT_PROPERTIES>>& absorbingElements);
 
 		phys_float operator()(phys_float energy);
 
