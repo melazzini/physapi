@@ -65,14 +65,14 @@ namespace physapi
 			//here we pass a pointer(iterator) to the current element
 			//of m_Table1, also we need to pass the photon energy
 			sigma_i = getSigma(it_Table1, energy) *
-				m_abundances.abundance(eZ(it_Table1->first[static_cast<phys_size>(eTable1Key::Z)]));
+				m_abundances.abundance(eZ(it_Table1->first[static_cast<phys_size>(eVernerTable1Key::Z)]));
 
 			m_sigma += sigma_i;
 
 			listFromVerner.push_back({
-				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eTable1Key::Z)]),
-				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eTable1Key::Ne)]),
-				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eTable1Key::Is)]),
+				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eVernerTable1Key::Z)]),
+				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eVernerTable1Key::Ne)]),
+				static_cast<phys_float>(it_Table1->first[static_cast<phys_size>(eVernerTable1Key::Is)]),
 				static_cast<phys_float>(sigma_i * 1.0_Mb) * 1.0_cm2 // THIS IS THE SIGMA FOR THE CURRENT ELEMENT
 				});
 		}
@@ -87,7 +87,7 @@ namespace physapi
 
 	int i = 0;
 
-	phys_float PVerner::getSigma(const VernerTable1::const_iterator& it_Table1, phys_float e)
+	phys_float PVerner::getSigma(const PVernerTable1::const_iterator& it_Table1, phys_float e)
 	{
 		//in this implementation we will follow
 		//the Prof Verner' Algorithm, that was
@@ -105,16 +105,16 @@ namespace physapi
 		//auto ne = it_Table1->first[(uint32_t)eTable1Key::Ne];
 		//auto is = it_Table1->first[(uint32_t)eTable1Key::Is];
 
-		auto nz = it_Table1->first.at((uint32_t)eTable1Key::Z);
-		auto ne = it_Table1->first.at((uint32_t)eTable1Key::Ne);
-		auto is = it_Table1->first.at((uint32_t)eTable1Key::Is);
+		auto nz = it_Table1->first.at((uint32_t)eVernerTable1Key::Z);
+		auto ne = it_Table1->first.at((uint32_t)eVernerTable1Key::Ne);
+		auto is = it_Table1->first.at((uint32_t)eVernerTable1Key::Is);
 
 		//we need to update the array to
 		//select the correct address of
 		//the current element in m_Table2
 
-		CurrentElementTable2[(uint32_t)eTable2Key::Z] = nz;
-		CurrentElementTable2[(uint32_t)eTable2Key::Ne] = ne;
+		CurrentElementTable2[(uint32_t)eVernerTable2Key::Z] = nz;
+		CurrentElementTable2[(uint32_t)eVernerTable2Key::Ne] = ne;
 
 		//here begin the actual algorithm
 

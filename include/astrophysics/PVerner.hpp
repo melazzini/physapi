@@ -62,10 +62,10 @@ namespace physapi
 		//std::string m_table2File;
 
 		// table 1 see @keystable1 @valuestable1
-		const VernerTable1& m_table1;
+		const PVernerTable1& m_table1;
 
 		// table 1 see @keystable2 @valuestable2
-		const VernerTable2& m_table2;
+		const PVernerTable2& m_table2;
 
 		//this variable holds the value
 		//of the photoionization cross
@@ -87,8 +87,8 @@ namespace physapi
 		//	m_table1{ m_abundances },
 		//	m_table2{ m_abundances }
 		PVerner(const PAbundanceTable& abundances,
-			const VernerTable1& table1,
-			const VernerTable2& table2)
+			const PVernerTable1& table1,
+			const PVernerTable2& table2)
 			:m_abundances{abundances}, m_table1{table1},m_table2{table2}
 		{
 			//VernerTable1Hnd config;
@@ -124,7 +124,7 @@ namespace physapi
 		phys_float operator()(phys_float energy);
 
 	private:
-		phys_float getSigma(const VernerTable1::const_iterator& it_Table1, phys_float e);
+		phys_float getSigma(const PVernerTable1::const_iterator& it_Table1, phys_float e);
 
 	private:
 		//other internally required parameters:

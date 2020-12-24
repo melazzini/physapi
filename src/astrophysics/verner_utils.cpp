@@ -5,7 +5,7 @@ namespace physapi {
     *                   Verner Table 1 (BEGIN)
     *********************************************************************/
 
-    void VernerTable1::loadElement(const std::array<phys_float, TABLE1_COLS>& row)
+    void PVernerTable1::loadElement(const std::array<phys_float, VERNERTABLE1_COLS>& row)
     {
         auto z = static_cast<phys_size>(row[eColTab1::Z]);
 
@@ -55,7 +55,7 @@ namespace physapi {
     *********************************************************************/
 
 
-    void VernerTable2::loadElement(const std::array<phys_float, TABLE2_COLS>& row)
+    void PVernerTable2::loadElement(const std::array<phys_float, VERNERTABLE2_COLS>& row)
     {
         auto z = static_cast<phys_size>(row[eColTab2::Z]);
 
@@ -84,7 +84,7 @@ namespace physapi {
         (*this)[{z, ne}] = { E_th, E_max, E_0, sigma_0, y_a, P, y_w, y_0, y_1 };
     }
 
-    void VernerTable1Hnd::formatShellNumber(t_vect& v) const
+    void PVernerTable1Hnd::formatShellNumber(t_vect& v) const
     {
         for (phys_size i = v.size(); i > 0; --i)
         {
@@ -92,7 +92,7 @@ namespace physapi {
         }
     }
 
-    phys_size VernerTable1Hnd::getShellNumber(phys_size is_) const
+    phys_size PVernerTable1Hnd::getShellNumber(phys_size is_) const
     {
         static phys_size counter = 0;
         static phys_size previousValue = 0;

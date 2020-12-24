@@ -9,10 +9,10 @@ namespace physapi
     *********************************************************************/
 
     // NUMBER OF COLUMNS OF TABLE 1
-    constexpr phys_size TABLE1_COLS = 10;
+    constexpr phys_size VERNERTABLE1_COLS = 10;
 
     // DESCRIPTION OF THE KEYS OF TABLE 1 @keystable1
-    enum class eTable1Key
+    enum class eVernerTable1Key
     {
         Z = 0,  // ATOMIC NUMBER
         Ne = 1, // NUMBER OF ELECTRONS
@@ -20,7 +20,7 @@ namespace physapi
     };
 
     // DESCRIPTION OF THE VALUES OF TABLE 1 @valuestable1
-    enum class eTable1Val
+    enum class eVernerTable1Val
     {
         ETh = 0, // SUBSHELL IONIZATION THRESHOLD ENERGY
         E0,      // FIT PARAMETER
@@ -34,21 +34,21 @@ namespace physapi
     //  atomic number: nz
     //  number of electrons: ne
     //  shell number: is
-    using t_nz_ne_is = std::array<phys_size, 3>;
+    using _t_nz_ne_is = std::array<phys_size, 3>;
 
     // table1 key type
-    using t_table1Key = t_nz_ne_is;
+    using t_vernertable1Key = _t_nz_ne_is;
 
     // table1 value type
     //this type is an array to store the values of
     //the parameters of VernerTable1, used in the
     //fitting algorithm, ie not to store nz,ne,is,
     //but for example E_max, etc.
-    using t_table1Value = std::array<phys_float, 6>;
+    using t_vernertable1Value = std::array<phys_float, 6>;
 
-    const std::string DEFAULT_FILE_PATH_TABLE1 = "./include/astrophysics/tables/vernertable1.txt";
+    const std::string DEFAULT_FILE_PATH_VERNERTABLE1 = "./include/astrophysics/tables/vernertable1.txt";
 
-    class VernerTable1 : public std::map<t_table1Key, t_table1Value>
+    class PVernerTable1 : public std::map<t_vernertable1Key, t_vernertable1Value>
     {
         // DESCRIPTION OF THE COLUMNS OF VERNER TABLE1
         enum eColTab1
@@ -69,17 +69,17 @@ namespace physapi
         const PAbundanceTable& m_abundances;
 
     public:
-        VernerTable1(const PAbundanceTable& abundances) : m_abundances{ abundances }
+        PVernerTable1(const PAbundanceTable& abundances) : m_abundances{ abundances }
         {
         }
 
-        void loadElement(const std::array<phys_float, TABLE1_COLS>& row);
+        void loadElement(const std::array<phys_float, VERNERTABLE1_COLS>& row);
     };
 
     // correct the problem with the shell numbers
-    class VernerTable1Hnd
+    class PVernerTable1Hnd
     {
-        using t_vect = std::vector<std::pair<t_nz_ne_is, t_table1Value>>;
+        using t_vect = std::vector<std::pair<_t_nz_ne_is, t_vernertable1Value>>;
 
     public:
         void operator()(t_vect& v) const
@@ -92,11 +92,11 @@ namespace physapi
         phys_size getShellNumber(phys_size is_) const;
     };
 
-    class VernerLoadTable1
+    class PLoadVernerTable1
     {
     public:
-        std::pair<t_nz_ne_is, t_table1Value> operator()(
-            const std::array<phys_float, TABLE1_COLS>& a)
+        std::pair<_t_nz_ne_is, t_vernertable1Value> operator()(
+            const std::array<phys_float, VERNERTABLE1_COLS>& a)
         {
             return { {static_cast<phys_size>(a[0]),
                      static_cast<phys_size>(a[1]),
@@ -105,7 +105,7 @@ namespace physapi
         }
     };
 
-    class VernerSelectorTable1
+    class PSelectorVernerTable1
     {
     public:
         template <typename T, typename T2>
@@ -135,29 +135,29 @@ namespace physapi
     using t_nz_ne = std::array<phys_size, 2>;
 
     // table1 key type
-    using t_table2Key = t_nz_ne;
+    using t_vernertable2Key = t_nz_ne;
 
     // table2 value type
     //this type is an array to store the values of
     //the parameters of VernerTable2, used in the
     //fitting algorithm
-    using t_table2Value = std::array<phys_float, 9>;
+    using t_vernertable2Value = std::array<phys_float, 9>;
 
     // NUMBER OF COLUMNS OF TABLE 2
-    constexpr phys_size TABLE2_COLS = 11;
+    constexpr phys_size VERNERTABLE2_COLS = 11;
 
     // DEFAULT PATH OF TABLE 2
-    const std::string DEFAULT_FILE_PATH_TABLE2 = "./include/astrophysics/tables/vernertable2.txt";
+    const std::string DEFAULT_FILE_PATH_VERNERTABLE2 = "./include/astrophysics/tables/vernertable2.txt";
 
     // DESCRIPTION OF THE KEYS OF TABLE 2 @keystable2
-    enum class eTable2Key
+    enum class eVernerTable2Key
     {
         Z = 0,  // ATOMIC NUMBER
         Ne = 1, // NUMBER OF ELECTRONS
     };
 
     // DESCRIPTION OF THE VALUES OF TABLE 2 @valuestable2
-    enum class eTable2Val
+    enum class eVernerTable2Val
     {
         Eth = 0,    // SUBSHELL IONIZATION THRESHOLD ENERGY
         Emax = 1,   // IONIZATION ENERGY OF THE SUBSEQUENT INNER SHELL
@@ -170,7 +170,7 @@ namespace physapi
         Y1 = 8      // FIT PARAMETER
     };
 
-    class VernerTable2 : public std::map<t_table2Key, t_table2Value>
+    class PVernerTable2 : public std::map<t_vernertable2Key, t_vernertable2Value>
     {
         // DESCRIPTION OF THE COLUMNS OF VERNER TABLE2
         enum eColTab2
@@ -192,12 +192,12 @@ namespace physapi
         const PAbundanceTable& m_abundances;
 
     public:
-        VernerTable2(const PAbundanceTable& abundances)
+        PVernerTable2(const PAbundanceTable& abundances)
             : m_abundances{ abundances }
         {
         }
 
-        void loadElement(const std::array<phys_float, TABLE2_COLS>& row);
+        void loadElement(const std::array<phys_float, VERNERTABLE2_COLS>& row);
     };
 
     /*********************************************************************
