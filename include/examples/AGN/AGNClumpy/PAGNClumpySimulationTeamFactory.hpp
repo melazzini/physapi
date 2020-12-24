@@ -1,9 +1,10 @@
 #pragma once
 
 #include"PAGNSimulationTeamFactory.hpp"
+
 namespace agn
 {
-	class PAGNSmoothSimulationTeamFactory :public PAGNSimulationTeamFactory
+	class PAGNClumpySimulationTeamFactory :public PAGNSimulationTeamFactory
 	{
 	public:
 
@@ -18,4 +19,5 @@ namespace agn
 			const std::shared_ptr<PAGNFormula> agnformula) override;
 
 	};
+
 }// namespace agn

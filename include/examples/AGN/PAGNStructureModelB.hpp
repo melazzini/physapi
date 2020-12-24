@@ -6,6 +6,23 @@ namespace agn
 	class PAGNStructureModelB
 	{
 	public:
+
+		/**
+		 * \brief Calculate(with probability) the distance to the interaction point.
+		 *
+		 * \param lamdaMean mean free path
+		 * \param escapeProbability escape probability
+		 * \param rand_0_1 random value in 0..1
+		 * \return distance to the interaction point
+		 */
+		virtual phys_float distanceToInteractionPoint(
+			phys_float lamdaMean,
+			phys_float escapeProbability,
+			phys_float rand_0_1)const
+		{
+			return -lamdaMean * std::log(1 - rand_0_1 * (1 - escapeProbability));
+		}
+
 		/**
 		 * Get the equatorial effective half size of the simple agn structure model.
 		 *

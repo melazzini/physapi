@@ -10,25 +10,12 @@ namespace agn
 		const std::shared_ptr<PAbundanceTable> abundances,
 		phys_size id, phys_float numOfPhotons,
 		const std::shared_ptr<PAGNFormula> agnformula)
-		:m_structureModel{ static_cast<const PAGNSmoothStructureModelB&>(*structureModel) },
-		m_vernerTable1{ vernerTable1 }, m_vernerTable2{ vernerTable2 },
-		m_fluorescenceTable{ fluorescenceTable }, m_abundances{ abundances },
-		m_id{ id }, m_numOfPhotons{ numOfPhotons },
-		m_verner{ *m_abundances,*m_vernerTable1, *m_vernerTable2 },
-		m_fluorescenceHnd{ fluorescenceTable }, m_simMng{},
-		m_formula{ agnformula }, m_spectrumMaker{},
-		m_initSpectrum{ agnformula->E_low(),agnformula->E_cut(), eSpectrumScale::LOG }
+		: PAGNSimulationTeamB(vernerTable1, vernerTable2, fluorescenceTable, abundances, id, numOfPhotons, agnformula),
+		m_structureModel{ static_cast<const PAGNSmoothStructureModelB&>(*structureModel) }
 	{
-		// initialize the intrinsic spectrum spectrum
-		m_spectrumMaker(m_initSpectrum, numOfPhotons, *m_formula);
-
-		if (m_id == 0)
-		{
-			std::cout << "number of photons main thread:  " << m_initSpectrum.count() << std::endl;
-		}
 	}
+
 	void PAGNSmoothSimulationTeam::run(std::string_view pathToStorageFolder)
 	{
-
 	}
 }// namespace agn

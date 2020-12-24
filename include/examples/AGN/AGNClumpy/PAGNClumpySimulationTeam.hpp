@@ -1,14 +1,16 @@
 #pragma once
+
 #include"PAGNSimulationTeamB.hpp"
-#include"PAGNSmoothStructureModelB.hpp"
+#include"PAGNClumpyStructureModelB.hpp"
 #include"PAGNSimulationMng.hpp"
 #include"PAGNFormula.hpp"
+
 namespace agn
 {
-	class PAGNSmoothSimulationTeam : public PAGNSimulationTeamB
+	class PAGNClumpySimulationTeam: public PAGNSimulationTeamB
 	{
 	public:
-		PAGNSmoothSimulationTeam(
+		PAGNClumpySimulationTeam(
 			const std::shared_ptr<PAGNStructureModelB> structureModel,
 			const std::shared_ptr<PVernerTable1> vernerTable1,
 			const std::shared_ptr<PVernerTable2> vernerTable2,
@@ -21,6 +23,6 @@ namespace agn
 		virtual void run(std::string_view pathToStorageFolder) override;
 
 	private:
-		const PAGNSmoothStructureModelB& m_structureModel;
+		const PAGNClumpyStructureModelB& m_structureModel;
 	};
 }// namespace agn

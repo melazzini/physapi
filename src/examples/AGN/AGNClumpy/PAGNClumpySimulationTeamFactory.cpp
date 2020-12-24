@@ -1,8 +1,8 @@
-#include "PAGNSmoothSimulationTeamFactory.hpp"
-#include "PAGNSmoothSimulationTeam.hpp"
+#include "PAGNClumpySimulationTeamFactory.hpp"
+#include "PAGNClumpySimulationTeam.hpp"
 namespace agn
 {
-	std::shared_ptr<PAGNSimulationTeamB> agn::PAGNSmoothSimulationTeamFactory::
+	std::shared_ptr<PAGNSimulationTeamB> agn::PAGNClumpySimulationTeamFactory::
 		buildSimulationTeam(
 			const std::shared_ptr<PAGNStructureModelB> structureModel,
 			const std::shared_ptr<PVernerTable1> vernerTable1,
@@ -12,9 +12,9 @@ namespace agn
 			phys_size id, phys_float numOfPhotons,
 			const std::shared_ptr<PAGNFormula> agnformula)
 	{
-		auto team = new PAGNSmoothSimulationTeam(structureModel, vernerTable1, vernerTable2, fluorescenceTable, abundances, id, numOfPhotons, agnformula);
+		auto team = new PAGNClumpySimulationTeam(structureModel, vernerTable1, vernerTable2, fluorescenceTable, abundances, id, numOfPhotons, agnformula);
 
-		std::shared_ptr<PAGNSmoothSimulationTeam> mySharedPtrToTeam(team);
+		std::shared_ptr<PAGNClumpySimulationTeam> mySharedPtrToTeam(team);
 
 		return mySharedPtrToTeam;
 	}

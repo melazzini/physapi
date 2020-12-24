@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PAGNSimulationTeam.hpp"
+#include "PAGNSimulationTeamB.hpp"
 #include"PAGNStructureModelB.hpp"
 #include"verner_utils.hpp"
 #include"PFluorescenceTable.hpp"
@@ -13,7 +13,7 @@ namespace agn
 	class PAGNSimulationTeamFactory
 	{
 	public:
-		virtual std::shared_ptr<PAGNSimulationTeam> 
+		virtual std::shared_ptr<PAGNSimulationTeamB> 
 			buildSimulationTeam(const std::shared_ptr<PAGNStructureModelB>structureModel,
 				const std::shared_ptr<PVernerTable1>vernerTable1,
 				const std::shared_ptr<PVernerTable2>vernerTable2,

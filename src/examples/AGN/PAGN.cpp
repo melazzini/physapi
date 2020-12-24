@@ -29,11 +29,9 @@ namespace agn
 
 		for (phys_size i = MAINTHREAD_ID + 1; i < trueNumOfThreads; i++)
 		{
-			std::cout << "New thread created, with id:	" << i << std::endl;
 			threads.push_back(std::thread(&PAGN::createSimulationThread, this, i, photonsPerThread, pathToStorageFolder));
 		}
 
-		std::cout << "main thread created, with id:	" << MAINTHREAD_ID << std::endl;
 		createSimulationThread(MAINTHREAD_ID, photonsPerThread, pathToStorageFolder);
 
 		for (auto& thread_i : threads)
