@@ -3,7 +3,7 @@
 namespace agn
 {
 	PAGNSmoothSphereModel::PAGNSmoothSphereModel(const PSphere& sphere, phys_float N_H)
-		:m_sphere{ m_sphere }, m_N_H{ N_H }
+		:m_sphere{ sphere }, m_N_H{ N_H }
 	{
 	}
 	std::optional<phys_float> PAGNSmoothSphereModel::distanceToBoundary(const PPosition& position, const PVector3D& direction) const

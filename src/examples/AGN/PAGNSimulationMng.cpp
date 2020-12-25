@@ -3,11 +3,12 @@
 namespace agn
 {
 	PAGNSimulationMng::PAGNSimulationMng()
-		:m_isGone{false},m_isInside{false},
-		m_currentLine{t_fluorescentLine()},
-		m_currentPhotonType{eTypeOfAGNPhoton::INTRINSIC},
+		:m_isGone{ false }, m_isInside{ false },
+		m_currentLine{ t_fluorescentLine() },
+		m_currentPhotonType{ eTypeOfAGNPhoton::INTRINSIC },
 		m_currentPhotonIndex{}
 	{
+		m_dataToBeStored.resize(MAX_NUM_OF_PHOTONS);
 	}
 	PAGNSimulationMng::~PAGNSimulationMng()
 	{
@@ -17,93 +18,101 @@ namespace agn
 	void PAGNSimulationMng::setFileName(std::string_view fileName)
 	{
 		m_file = fileName;
+
+		if (m_file == "")
+		{
+			std::cerr << "Simulation Manager: Invalid file name!" << std::endl;
+			std::abort();
+		}
+
+		m_fout.open(std::string(m_file));
 	}
 	void PAGNSimulationMng::registerPhoton(const PSimplePhoton& photon)
 	{
-        t_dataToBeStored newData;
-        newData[static_cast<phys_size>(eAGNData::ENERGY)] = photon.energy();
-        newData[static_cast<phys_size>(eAGNData::THETA)] = photon.omega().theta();
-        newData[static_cast<phys_size>(eAGNData::PHY)] = photon.omega().phi();
-        newData[static_cast<phys_size>(eAGNData::TYPE)] = static_cast<phys_float>(m_currentPhotonType);
+		t_dataToBeStored newData;
+		newData[static_cast<phys_size>(eAGNData::ENERGY)] = photon.energy() / 1.0_eV;
+		newData[static_cast<phys_size>(eAGNData::THETA)] = photon.omega().theta();
+		newData[static_cast<phys_size>(eAGNData::PHY)] = photon.omega().phi();
+		newData[static_cast<phys_size>(eAGNData::TYPE)] = static_cast<phys_float>(m_currentPhotonType);
 
-        auto lineKey = m_currentLine.first;
+		auto lineKey = m_currentLine.first;
 
-        // we put fekalpha first because it is the most frequently encountered line
-        // thus, we wont expend looking for other lines(for time efficiency)
-        if (lineKey == FeKalpha1 || lineKey == FeKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::FeKalpha);
-        }
-        else if (lineKey == CKalpha1 || lineKey == CKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CKalpha);
-        }
-        else if (lineKey == NKalpha1 || lineKey == NKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NKalpha);
-        }
-        else if (lineKey == OKalpha1 || lineKey == OKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::OKalpha);
-        }
-        else if (lineKey == NeKalpha1 || lineKey == NeKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NeKalpha);
-        }
-        else if (lineKey == NaKalpha1 || lineKey == NaKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NaKalpha);
-        }
-        else if (lineKey == MgKalpha1 || lineKey == MgKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::MgKalpha);
-        }
-        else if (lineKey == AlKalpha1 || lineKey == AlKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::AlKalpha);
-        }
-        else if (lineKey == SiKalpha1 || lineKey == SiKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::SiKalpha);
-        }
-        else if (lineKey == SKalpha1 || lineKey == SKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::SKalpha);
-        }
-        else if (lineKey == ArKalpha1 || lineKey == ArKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::ArKalpha);
-        }
-        else if (lineKey == CaKalpha1 || lineKey == CaKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CaKalpha);
-        }
-        else if (lineKey == CrKalpha1 || lineKey == CrKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CrKalpha);
-        }
-        else if (lineKey == NiKalpha1 || lineKey == NiKalpha2)
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NiKalpha);
-        }
-        else
-        {
-            newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NONE);
-        }
+		// we put fekalpha first because it is the most frequently encountered line
+		// thus, we wont expend looking for other lines(for time efficiency)
+		if (lineKey == FeKalpha1 || lineKey == FeKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::FeKalpha);
+		}
+		else if (lineKey == CKalpha1 || lineKey == CKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CKalpha);
+		}
+		else if (lineKey == NKalpha1 || lineKey == NKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NKalpha);
+		}
+		else if (lineKey == OKalpha1 || lineKey == OKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::OKalpha);
+		}
+		else if (lineKey == NeKalpha1 || lineKey == NeKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NeKalpha);
+		}
+		else if (lineKey == NaKalpha1 || lineKey == NaKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NaKalpha);
+		}
+		else if (lineKey == MgKalpha1 || lineKey == MgKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::MgKalpha);
+		}
+		else if (lineKey == AlKalpha1 || lineKey == AlKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::AlKalpha);
+		}
+		else if (lineKey == SiKalpha1 || lineKey == SiKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::SiKalpha);
+		}
+		else if (lineKey == SKalpha1 || lineKey == SKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::SKalpha);
+		}
+		else if (lineKey == ArKalpha1 || lineKey == ArKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::ArKalpha);
+		}
+		else if (lineKey == CaKalpha1 || lineKey == CaKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CaKalpha);
+		}
+		else if (lineKey == CrKalpha1 || lineKey == CrKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::CrKalpha);
+		}
+		else if (lineKey == NiKalpha1 || lineKey == NiKalpha2)
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NiKalpha);
+		}
+		else
+		{
+			newData[static_cast<phys_size>(eAGNData::LINE)] = static_cast<phys_float>(eImportantFluorescentLines::NONE);
+		}
 
-        m_dataToBeStored[m_currentPhotonIndex] = newData;
+		m_dataToBeStored[m_currentPhotonIndex] = newData;
 
-        if (m_currentPhotonIndex + 1 >= m_dataToBeStored.size())
-        {
-            m_currentPhotonIndex = 0;
-            printData();
-        }
-        else
-        {
-            m_currentPhotonIndex++;
-        }
+		if (m_currentPhotonIndex + 1 >= m_dataToBeStored.size())
+		{
+			m_currentPhotonIndex = 0;
+			printData();
+		}
+		else
+		{
+			m_currentPhotonIndex++;
+		}
 
-        reset();
+		reset();
 	}
 	void PAGNSimulationMng::reset()
 	{
@@ -111,13 +120,14 @@ namespace agn
 		m_currentLine = t_fluorescentLine();
 		m_currentPhotonType = eTypeOfAGNPhoton::INTRINSIC;
 		m_isInside = false;
+		m_enteredGeometryAtleastOnce = false;
 	}
 	void PAGNSimulationMng::printData()
 	{
 		std::string data, energy, theta, phi, typeOfPhoton, typeOfLine;
 		for (auto&& photon_data_row_i : m_dataToBeStored)
 		{
-			energy = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::ENERGY)] / 1.0_eV);
+			energy = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::ENERGY)]);
 			if (photon_data_row_i[static_cast<phys_size>(eAGNData::ENERGY)] / 1.0_eV < 90.0)
 			{
 				std::cout << std::endl;
@@ -143,7 +153,7 @@ namespace agn
 		{
 			auto photon_data_row_i = m_dataToBeStored[i];
 
-			energy = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::ENERGY)] / 1.0_eV);
+			energy = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::ENERGY)]);
 			theta = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::THETA)]);
 			phi = std::to_string(photon_data_row_i[static_cast<phys_size>(eAGNData::PHY)]);
 			typeOfPhoton = std::to_string((phys_size)photon_data_row_i[static_cast<phys_size>(eAGNData::TYPE)]);
@@ -153,5 +163,15 @@ namespace agn
 		}
 
 		m_fout << data;
+	}
+	void PAGNSimulationMng::enteredGeometry(phys_bool yesNo)
+	{
+		if (!m_enteredGeometryAtleastOnce && yesNo)
+		{
+			m_enteredGeometryAtleastOnce = true;
+			m_currentPhotonType = eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY;
+		}
+
+		m_isInside = yesNo;
 	}
 }// namespace agn

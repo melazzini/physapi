@@ -25,18 +25,27 @@ namespace agn
 		static constexpr phys_size SPECTRUM_PRECISION = 10'000'000;
 #endif // AGN_SPECTRUM_PRECISION
 
+		// describes the list(vector) of absorbing elements
+		enum eAbsorbingElementsDescription
+		{
+			Z = 0,    // element's atomic number
+			Ne = 1,   // element's number of electrons
+			IS = 2,   // element's shell number
+			SIGMA = 3 // element's cross section
+		};
+
 	public:
 		PAGNSimulationTeamB(
 			const std::shared_ptr<PVernerTable1> vernerTable1,
 			const std::shared_ptr<PVernerTable2> vernerTable2,
 			const std::shared_ptr<PFluorescenceTable> fluorescenceTable,
 			const std::shared_ptr<PAbundanceTable> abundances,
-			phys_size id, phys_float numOfPhotons, phys_float n_e,
+			phys_size id, phys_float numOfPhotons, phys_float n_e, phys_float T_e,
 			const std::shared_ptr<PAGNFormula> agnformula,
 			const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter
 		);
 
-		virtual void run(std::string_view pathToStorageFolder) = 0;
+		virtual void run(std::string_view pathToStorageFolder);
 
 		/**
 		 * Get the team's id.
@@ -61,6 +70,7 @@ namespace agn
 		phys_size m_id; // id of the current team
 		phys_float m_numOfPhotons; // number of photons in the current team
 		phys_float m_n_e; // concentration of electrons
+		phys_float m_T_e; // temperature of the electrons
 		const std::shared_ptr<PAGNFormula> m_formula; // agn spectrum formula
 	protected:
 		PVerner m_verner; // calculates the photoionization cross section
@@ -69,8 +79,8 @@ namespace agn
 		PSpectrum<N_intervals> m_initSpectrum; // initial spectrum from the agn source(SMBH at the center)
 		PRandom m_randomValuesMng; // random values generator
 		PRandomDirection m_randDirMng; // // random directions generator
-		const PAGNInitSpectrumDirectionFilter& m_dirFilter;
-
+		const PAGNInitSpectrumDirectionFilter& m_dirFilter; // selects the allowed directions into the agn for the initial photons
+		PComptonCollider<physapi::PMCCompton> m_comptonHnd; // this handles compton simulation
 	protected:
 		phys_float m_sigmaVerner; // photonionization cross section
 		std::vector<std::array<phys_float, ABSORBINGELEMENT_PROPERTIES>> m_listOfAbsorbingElements;
@@ -95,5 +105,10 @@ namespace agn
 		// move the photon inside the agn internal structure and get the distance to
 		// closest external boundary
 		virtual std::optional<phys_float> distanceToBoundary(PSimplePhoton& photon) = 0;
+
+		// get the fluorescent line, if any occurs, for the given arguments
+		std::optional<t_fluorescentLine>
+			fluorescentLine(const std::vector<std::array<phys_float, ABSORBINGELEMENT_PROPERTIES>>& absorbingElements,
+				phys_float sigmaVerner);
 	};
 }// namespace agn

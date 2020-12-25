@@ -52,13 +52,15 @@ namespace agn
 		// return true if the photon is inside the geometry
 		phys_bool isInside() const { return m_isInside; }
 
-		void enteredGeometry(phys_bool yesNo) { m_isInside = yesNo; }
+		void enteredGeometry(phys_bool yesNo);
 
 	private:
 		// the photon escaped the torus or was absorbed
 		phys_bool m_isGone;
 
 		phys_bool m_isInside;
+
+		phys_bool m_enteredGeometryAtleastOnce;
 
 		// this line has produced the photon current photon
 		t_fluorescentLine m_currentLine;

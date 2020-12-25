@@ -22,7 +22,7 @@ namespace agn
 				const std::shared_ptr<PAbundanceTable> abundances,
 				phys_size id,
 				phys_float numOfPhotons,
-				phys_float n_e,
+				phys_float n_e, phys_float T_e,
 				const std::shared_ptr<PAGNFormula> agnformula,
 				const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter) = 0;
 	};

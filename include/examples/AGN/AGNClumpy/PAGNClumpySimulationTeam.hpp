@@ -5,6 +5,7 @@
 #include"PAGNSimulationMng.hpp"
 #include"PAGNFormula.hpp"
 #include<optional>
+#include"PAGNClumpyCloudFinder.hpp"
 
 namespace agn
 {
@@ -17,17 +18,15 @@ namespace agn
 			const std::shared_ptr<PVernerTable2> vernerTable2,
 			const std::shared_ptr<PFluorescenceTable> fluorescenceTable,
 			const std::shared_ptr<PAbundanceTable> abundances,
-			phys_size id, phys_float numOfPhotons, phys_float n_e,
+			phys_size id, phys_float numOfPhotons, phys_float n_e, phys_float T_e,
 			const std::shared_ptr<PAGNFormula> agnformula,
 			const std::shared_ptr<PAGNInitSpectrumDirectionFilter> initSpectrumDirFilter);
 
-		// Inherited via PAGNSimulationTeam
-		virtual void run(std::string_view pathToStorageFolder) override;
-
 	private:
 		const PAGNClumpyStructureModelB& m_structureModel;
-		std::optional<phys_size> m_cloudIndex;
+		std::optional<phys_size> m_cloudIndex; // last cloud index, for efficiency
 		PSphere m_cloud;
+		PAGNClumpyCloudFinder m_cloudFinder;
 
 	protected:
 		// move the photon inside the agn internal structure and get the distance to

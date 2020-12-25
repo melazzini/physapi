@@ -316,4 +316,75 @@ namespace agn
 	 */
 	const PFluorescenceKey NiKalpha2{ eZ::Ni, 1, 1, 0, 2 };
 
+	/**
+	 * @brief Get the total solid angle of an agn angular portion.
+	 *
+	 * The total solid angle consists of both parts over the equatorial
+	 * horizontal plane and under the same plane.
+	 * The total solid angle is defined by the zenith angle \f$ \theta \f$
+	 * and the angular interval \f$ \delta \theta \f$. Therefore, if
+	 * for example the zenith is 0 and the angular interval Pi/2 then
+	 * you will get \f$ 4 \pi \f$.
+	 *
+	 * @param zenith
+	 * @param dz
+	 * @return constexpr phys_float
+	 *
+	 * @ingroup agn
+	 */
+	inline phys_float agnSolidAngle(phys_float zenith, phys_float dz)
+	{
+		return 2 * (solidAngle(zenith + dz) - solidAngle(zenith));
+	}
+
+	/**
+	 * @brief This class represents an agn spectrum under a specific zenith angle
+	 * and angular interval.
+	 *
+	 * To load the spectrum you can use physapi::loadFromFile()
+	 *
+	 * @ingroup agn
+	 *
+	 */
+	template<phys_size N_intervals>
+	class PAGNSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
+	{
+	public:
+		PAGNSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+
+		/**
+		 * @brief Construct a new agn spectrum under a specfied zenith angle
+		 *
+		 * @param zenithAngle zenith angle (\f$ \theta \f$)
+		 * @param E_low energy lower bound
+		 * @param E_upp energy upper bound
+		 * @param scale scale(logarithmic or linear)
+		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
+		 */
+		PAGNSpectrumZenith(phys_float zenithAngle,
+			phys_float E_low,
+			phys_float E_upp,
+			eSpectrumScale scale = eSpectrumScale::LIN,
+			phys_float angularInterval = 10.0_deg)
+			: PSpectrumZenith(zenithAngle, E_low, E_upp, scale, angularInterval)
+		{
+		}
+
+		/**
+		 * @brief count a photon into the spectrum
+		 *
+		 * This method is meant to be used in conjunction with physapi::loadFromFile()
+		 *
+		 * @param row
+		 */
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		{
+			phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
+			if (checkRangeInclusive(minPhi(), std::abs(phi), maxPhi()))
+			{
+				addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+			}
+		}
+	};
+
 } // namespace agn

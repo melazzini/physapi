@@ -15,10 +15,10 @@ namespace agn
 		 * \param rand_0_1 random value in 0..1
 		 * \return distance to the interaction point
 		 */
-		virtual phys_float distanceToInteractionPoint(
+		static inline phys_float distanceToInteractionPoint(
 			phys_float lamdaMean,
 			phys_float escapeProbability,
-			phys_float rand_0_1)const
+			phys_float rand_0_1)
 		{
 			return -lamdaMean * std::log(1 - rand_0_1 * (1 - escapeProbability));
 		}

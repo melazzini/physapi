@@ -24,7 +24,6 @@ namespace agn
 		 */
 		virtual phys_bool operator()(const PVector3D& direction) const override
 		{
-			std::cout << "Calling torus filter!" << std::endl;
 			// this is for the simple torus
 			return std::abs(direction.phi()) <= (Pi / 2 - m_halfOpeningAngle);
 		}

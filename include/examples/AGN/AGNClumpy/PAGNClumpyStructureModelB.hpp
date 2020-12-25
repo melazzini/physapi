@@ -31,5 +31,12 @@ namespace agn
 		virtual const std::vector<PPosition>& clouds()const = 0;
 
 		virtual phys_float cloudRadius()const = 0;
+
+		/**
+		 * Place a cloud inside the agn.
+		 * 
+		 * \param cloudPosition
+		 */
+		virtual void placeCloud(PPosition& cloudPosition) = 0;
 	};
 }// namespace agn
