@@ -26,6 +26,11 @@ namespace agn
 		const PAGNClumpyStructureModelB& m_structureModel;
 		std::optional<phys_size> m_cloudIndex; // last cloud index, for efficiency
 		PSphere m_cloud;
+
+#ifdef PHYSAPI_USE_GPU
+		PAGNClumpyCloudFinderGPU m_cloudFinder;
+#endif // PHYSAPI_USE_GPU
+
 		PAGNClumpyCloudFinder m_cloudFinder;
 
 	protected:

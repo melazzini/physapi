@@ -9,18 +9,22 @@ namespace agn
 	//there exists such a cloud.
 	//Dont use this class if the current
 	//photon is inside a cloud already!
-	class PAGNClumpyCloudFinder :public PAGNClumpyCloudFinderB
+	class PAGNClumpyCloudFinderGPU :public PAGNClumpyCloudFinderB
 	{
 	public:
-
-		PAGNClumpyCloudFinder(const std::vector<PPosition>& cloudsPositions,
+		PAGNClumpyCloudFinderGPU(const std::vector<PPosition>& cloudsPositions,
 			phys_float cloudsRadius);
 
-		virtual  std::optional<phys_size> operator()(const PSimplePhoton& photon) override;
+		virtual	std::optional<phys_size> operator()(const PSimplePhoton& photon) override;
 
 	private:
 		const std::vector<PPosition>& m_cloudsPositions;
 
 		phys_float m_cloudsRadius;
+
+	private:
+		void initializeGPU(const sPosition* clouds_h);
+
+		void searchForCloudsGPU(const PSimplePhoton& photon);
 	};
 }// namespace agn

@@ -17,7 +17,8 @@ namespace agn
 			id, numOfPhotons, n_e, T_e,
 			agnformula, initSpectrumDirFilter),
 		m_structureModel{ static_cast<const PAGNClumpyStructureModelB&>(*structureModel) },
-		m_cloudIndex{ std::nullopt }, m_cloud(PPosition(), m_structureModel.cloudRadius())
+		m_cloudIndex{ std::nullopt }, m_cloud(PPosition(), m_structureModel.cloudRadius()),
+		m_cloudFinder{ m_structureModel.clouds(), m_structureModel.cloudRadius() }
 	{
 	}
 
@@ -40,7 +41,7 @@ namespace agn
 			}
 		}
 
-		m_cloudIndex = m_cloudFinder(photon, m_structureModel.clouds(), m_structureModel.cloudRadius());// find cloud for the photon => return index
+		m_cloudIndex = m_cloudFinder(photon);// find cloud for the photon => return index
 
 		if (m_cloudIndex.has_value())
 		{

@@ -394,4 +394,9 @@ namespace agn
 
 	void loadHistogram(t_histogram& histogram, const std::string& histogramFile);
 
+	struct sPosition
+	{
+		phys_float x, y, z;
+	};
+
 } // namespace agn
