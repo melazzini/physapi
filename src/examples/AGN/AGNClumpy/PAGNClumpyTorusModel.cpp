@@ -22,7 +22,7 @@ namespace agn
 		std::cout << "Creating clouds!" << std::endl;
 		std::cout << std::endl;
 		
-		PAGNClumpyCloudsCreator cloudsCreator{ m_cloudsRadius,m_N_clouds_tot };
+		PAGNClumpyCloudsCreator cloudsCreator{ m_cloudsRadius, m_N_clouds_tot };
 		m_clouds.reserve(m_N_clouds_tot);
 		m_clouds = cloudsCreator.createClouds(*this);
 
@@ -60,8 +60,6 @@ namespace agn
 			phys_float max_phi_h{ Pi / 2 - (2 * std::asin(m_cloudsRadius / (2 * cloudPosition.norm())) + m_torus.theta0()) };
 
 		} while (!(std::abs(cloudPosition.phi()) < Pi / 2 - (2 * std::asin(m_cloudsRadius / (2 * cloudPosition.norm())) + m_torus.theta0())) ||
-			!checkRangeInclusive(m_torus.internalRadius() + m_cloudsRadius,
-				m_torus.externalRadius() - m_cloudsRadius,
-				cloudPosition.norm()));
+			!checkRangeInclusive(m_torus.internalRadius() + m_cloudsRadius, cloudPosition.norm(), m_torus.externalRadius() - m_cloudsRadius));
 	}
 }// namespace agn

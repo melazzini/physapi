@@ -387,4 +387,11 @@ namespace agn
 		}
 	};
 
+	using t_clouds = std::vector<PPosition>;
+	using t_histogram = std::map<phys_size, phys_float>;
+
+	void loadClouds(t_clouds& clouds, const std::string& cloudsFile);
+
+	void loadHistogram(t_histogram& histogram, const std::string& histogramFile);
+
 } // namespace agn
