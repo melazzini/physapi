@@ -3,7 +3,7 @@
 namespace agn
 {
 
-	std::optional<phys_size> PAGNClumpyCloudFinderB::mainAlgorithm(
+	phys_int PAGNClumpyCloudFinderB::mainAlgorithm(
 		const PSimplePhoton& photon,
 		const std::vector<PPosition>& cloudsPositions,
 		phys_float cloudsRadius,
@@ -70,7 +70,15 @@ namespace agn
 				index = i;
 			}
 		}
-		return index;
+
+		if (index.has_value())
+		{
+			return index.value();
+		}
+		else
+		{
+			return -1;
+		}
 	}
 
 }// namespace agn

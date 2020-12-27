@@ -380,9 +380,9 @@ namespace agn
 		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
 		{
 			phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
-			if (checkRangeInclusive(minPhi(), std::abs(phi), maxPhi()))
+			if (checkRangeInclusive(PSpectrumZenith::minPhi(), std::abs(phi), PSpectrumZenith::maxPhi()))
 			{
-				addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+				PSpectrumZenith::addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
 			}
 		}
 	};

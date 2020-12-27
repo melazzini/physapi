@@ -4,7 +4,7 @@
 
 namespace physapi
 {
-    std::optional<t_fluorescentLine> PFluorescenceHnd::run(eZ z,
+    t_fluorescentLine PFluorescenceHnd::run(eZ z,
                                             phys_size is,
                                             phys_size st,
                                             phys_size aug)
@@ -13,7 +13,7 @@ namespace physapi
 
         if (lines.empty())
         {
-            return std::nullopt;
+            return t_fluorescentLine();
         }
 
         auto yields = yieldList(lines);
@@ -22,7 +22,7 @@ namespace physapi
 
         if (total_yield < m_randMng.random_0_1())
         {
-            return std::nullopt;
+            return t_fluorescentLine();
         }
 
         std::vector<phys_float> probabilities;

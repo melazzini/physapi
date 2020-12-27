@@ -41,7 +41,16 @@ namespace agn
 			}
 		}
 
-		m_cloudIndex = m_cloudFinder(photon);// find cloud for the photon => return index
+		// find cloud for the photon => return index
+		auto index_v_raw = m_cloudFinder(photon);
+		if (index_v_raw>=0)
+		{
+			m_cloudIndex = index_v_raw;
+		}
+		else
+		{
+			m_cloudIndex = std::nullopt;
+		}
 
 		if (m_cloudIndex.has_value())
 		{

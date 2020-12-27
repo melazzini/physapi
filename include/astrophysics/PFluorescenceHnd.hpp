@@ -140,7 +140,7 @@ namespace physapi
          * @param aug auger electrons
          * @return std::optional<t_fluorescentLine> optional fluorescence line
          */
-        std::optional<t_fluorescentLine> run(eZ z, phys_size is, phys_size st = 1, phys_size aug = 0);
+        t_fluorescentLine run(eZ z, phys_size is, phys_size st = 1, phys_size aug = 0);
 
     private:
         std::vector<phys_float> yieldList(const std::vector<t_fluorescentLine> &lines) const;

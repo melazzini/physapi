@@ -5,6 +5,7 @@
 #include"PAGNSimulationMng.hpp"
 #include"PAGNFormula.hpp"
 #include<optional>
+#include"PAGNClumpyCloudFinderGPU.hpp"
 #include"PAGNClumpyCloudFinder.hpp"
 
 namespace agn
@@ -29,9 +30,9 @@ namespace agn
 
 #ifdef PHYSAPI_USE_GPU
 		PAGNClumpyCloudFinderGPU m_cloudFinder;
-#endif // PHYSAPI_USE_GPU
-
+#else
 		PAGNClumpyCloudFinder m_cloudFinder;
+#endif // PHYSAPI_USE_GPU
 
 	protected:
 		// move the photon inside the agn internal structure and get the distance to

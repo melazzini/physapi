@@ -16,7 +16,7 @@ namespace agn
 		PAGNClumpyCloudFinder(const std::vector<PPosition>& cloudsPositions,
 			phys_float cloudsRadius);
 
-		virtual  std::optional<phys_size> operator()(const PSimplePhoton& photon) override;
+		phys_int operator()(const PSimplePhoton& photon) override;
 
 	private:
 		const std::vector<PPosition>& m_cloudsPositions;

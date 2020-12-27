@@ -191,7 +191,15 @@ namespace agn
 		// at this point we know precisely what element has absorbed the photon
 
 		// we now can obtain the fluorescent(if any) line corresponding to the absorbing element
-		return m_fluorescenceHnd.run(eZ(Z), Is);
+		auto line = m_fluorescenceHnd.run(eZ(Z), Is);
+		if (line == t_fluorescentLine())
+		{
+			return std::nullopt;
+		}
+		else
+		{
+			return m_fluorescenceHnd.run(eZ(Z), Is);
+		}
 	}
 
 }// namespace agn

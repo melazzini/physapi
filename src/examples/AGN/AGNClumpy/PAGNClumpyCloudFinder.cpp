@@ -9,7 +9,7 @@ namespace agn
 	{
 	}
 
-	std::optional<phys_size> agn::PAGNClumpyCloudFinder::operator()(const PSimplePhoton& photon)
+	phys_int agn::PAGNClumpyCloudFinder::operator()(const PSimplePhoton& photon)
 	{
 		return mainAlgorithm(photon, m_cloudsPositions, m_cloudsRadius);
 	}
