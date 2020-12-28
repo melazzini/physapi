@@ -198,7 +198,7 @@ namespace agn
 		}
 		else
 		{
-			return m_fluorescenceHnd.run(eZ(Z), Is);
+			return line;
 		}
 	}
 
