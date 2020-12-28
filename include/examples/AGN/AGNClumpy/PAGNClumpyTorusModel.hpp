@@ -39,17 +39,25 @@ namespace agn
 		phys_size m_N_clouds_tot;
 
 	public:
+
 		/**
 		 * Constructs a smooth sphere agn structure model.
-		 *
-		 * \param sphere geomtry
-		 * \param N_H average column density
+		 * 
+		 * \param torus
+		 * \param N_H average column density along the equator
+		 * \param averNumOfCloudsEquator average number of clouds along the equator
+		 * \param volFillFactor volume filling factor
 		 */
 		PAGNClumpyTorusModel(const PSimpleTorus& torus,
 			phys_float N_H,
 			phys_float averNumOfCloudsEquator,
 			phys_float volFillFactor);
 
+		PAGNClumpyTorusModel(const PSimpleTorus& torus,
+			phys_float N_H,
+			phys_float averNumOfCloudsEquator,
+			phys_float volFillFactor,
+			const t_clouds& clouds);
 
 		/**
 		 * Get the equatorial half effective size.

@@ -29,6 +29,33 @@ namespace agn
 		std::cout << "Creation of clouds done!" << std::endl;
 		std::cout << std::endl;		
 	}
+	PAGNClumpyTorusModel::PAGNClumpyTorusModel(const PSimpleTorus& torus, 
+		phys_float N_H, 
+		phys_float averNumOfCloudsEquator, 
+		phys_float volFillFactor, 
+		const t_clouds& clouds)
+		:m_torus{ torus }, m_N_H{ N_H },
+		m_averNumCloudsEquator{ averNumOfCloudsEquator },
+		m_volFillFactor{ volFillFactor },
+		m_clouds{clouds}, m_cloudsRadius{}, m_rndMng{}
+	{
+		// ! the order here is very important
+
+		m_N_H_clouds = calculateN_H_clouds();
+		m_n_H = calculate_n_H();
+		m_cloudsRadius = calculateCloudsRadius();
+		m_N_clouds_tot = calculateNumOfClouds();
+		std::cout << "Total number of clouds:  " << m_N_clouds_tot << std::endl;
+
+		if (m_N_clouds_tot != m_clouds.size())
+		{
+			std::cerr << "PAGNClumpyTorusModel error while loading the clouds: "
+				<< "Wrong number of clouds!" << std::endl;
+			abort();
+		}
+
+		std::cout << std::endl;
+	}
 	phys_float PAGNClumpyTorusModel::equatorialEffectiveHalfSize() const
 	{
 		return m_torus.externalRadius() - m_torus.internalRadius();
