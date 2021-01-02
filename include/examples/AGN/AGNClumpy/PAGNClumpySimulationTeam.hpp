@@ -31,7 +31,7 @@ namespace agn
 #ifdef PHYSAPI_USE_GPU
 		PAGNClumpyCloudFinderGPU m_cloudFinder;
 #else
-		PAGNClumpyCloudFinderGPU m_cloudFinder;
+		PAGNClumpyCloudFinder m_cloudFinder;
 #endif // PHYSAPI_USE_GPU
 
 	protected:

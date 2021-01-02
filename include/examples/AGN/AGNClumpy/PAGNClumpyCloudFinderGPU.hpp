@@ -1,15 +1,20 @@
 #pragma once
-#include "PAGNClumpyCloudFinderB.hpp"
 #include "agn_utils.hpp"
+#include "PAGNClumpyCloudFinderB.hpp"
 #include <algorithm>
 #include <thread>
 #include<optional>
+#ifdef PHYSAPI_USE_GPU
+
 #define CUDA_API_PER_THREAD_DEFAULT_STREAM
 
 #include<cuda.h>
 #include "device_launch_parameters.h"
 #include <device_functions.h>
 #include<cuda_runtime.h>
+
+#endif // PHYSAPI_USE_GPU
+
 
 namespace agn
 {
@@ -30,7 +35,11 @@ namespace agn
 		phys_size* indexes_d,
 
 		//num of gpu blocks and num of gpu threads per each block
-		phys_size NUM_OF_BLOCKS, phys_size NUM_OF_THREADS_PER_BLOCK, cudaStream_t s);
+		phys_size NUM_OF_BLOCKS, phys_size NUM_OF_THREADS_PER_BLOCK
+#ifdef PHYSAPI_USE_GPU
+		, cudaStream_t s
+#endif // PHYSAPI_USE_GPU
+	);
 
 
 	//This class finds the next cloud,
@@ -39,7 +48,7 @@ namespace agn
 	//there exists such a cloud.
 	//Dont use this class if the current
 	//photon is inside a cloud already!
-	class PAGNClumpyCloudFinderGPU
+	class PAGNClumpyCloudFinderGPU :public PAGNClumpyCloudFinderB
 	{
 		class _ThreadsOrganizer
 		{
@@ -75,7 +84,10 @@ namespace agn
 
 		phys_float m_cloudsRadius;
 
+#ifdef PHYSAPI_USE_GPU
 		cudaStream_t m_cudaStream;
+#endif // PHYSAPI_USE_GPU
+
 
 		_ThreadsOrganizer m_gpuThreadsOrganizer;
 
@@ -86,11 +98,11 @@ namespace agn
 
 	private:
 
-		phys_int mainAlgorithm(const PSimplePhoton& photon,
-			const std::vector<PPosition>& cloudsPositions,
-			phys_float cloudsRadius,
-			phys_size firstIndex = 0// this parameter helps us to work with the gpu-cpu
-		);
+		//phys_int mainAlgorithm(const PSimplePhoton& photon,
+		//	const std::vector<PPosition>& cloudsPositions,
+		//	phys_float cloudsRadius,
+		//	phys_size firstIndex = 0// this parameter helps us to work with the gpu-cpu
+		//);
 
 		void initializeGPU(const sPosition* clouds_h);
 

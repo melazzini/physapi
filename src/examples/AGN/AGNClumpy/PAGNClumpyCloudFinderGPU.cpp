@@ -12,6 +12,7 @@ namespace agn
 		m_indexes_device{ nullptr },
 		m_cloudPos_device{ nullptr }
 	{
+#ifdef PHYSAPI_USE_GPU
 		cudaStreamCreate(&m_cudaStream);
 
 		// first we have to prepare the data(positions of clouds) to pass it
@@ -40,6 +41,8 @@ namespace agn
 		{
 			m_indexes_host[i] = ULLONG_MAX;
 		}
+#endif // PHYSAPI_USE_GPU
+
 
 		// at this point, we have the position of the clouds and the array of
 		// possible indexes(ie clouds that are intersected by the photon trajectory)
@@ -47,6 +50,7 @@ namespace agn
 	}
 	phys_int PAGNClumpyCloudFinderGPU::operator()(const PSimplePhoton& photon)
 	{
+#ifdef PHYSAPI_USE_GPU
 		// first we will get the best candidate among the clouds processed by the cpu
 		auto firstIndexOfCloudsInTheCPU = m_cloudsPositions.size() - m_gpuThreadsOrganizer.getNumOfCPUClouds();
 
@@ -122,21 +126,28 @@ namespace agn
 		}
 
 		return bestIndex;
+
+#else
+		return -1;
+#endif // PHYSAPI_USE_GPU
+
 	}
-	phys_int PAGNClumpyCloudFinderGPU::mainAlgorithm(const PSimplePhoton& photon, const std::vector<PPosition>& cloudsPositions, phys_float cloudsRadius, phys_size firstIndex)
-	{
-		return phys_int();
-	}
+
+
 	void PAGNClumpyCloudFinderGPU::initializeGPU(const sPosition* clouds_h)
 	{
+#ifdef PHYSAPI_USE_GPU
 		cudaMalloc(&m_cloudPos_device, m_cloudsPositions.size() * sizeof(sPosition));
 		cudaMemcpy(m_cloudPos_device, clouds_h, m_cloudsPositions.size() * sizeof(sPosition), cudaMemcpyHostToDevice);
 
 		cudaMalloc(&m_indexes_device, m_gpuThreadsOrganizer.getNumOfGPUBlocks() * sizeof(phys_size));
 		cudaMemcpy(m_indexes_device, m_indexes_host, m_gpuThreadsOrganizer.getNumOfGPUBlocks() * sizeof(phys_size), cudaMemcpyHostToDevice);
+#endif // PHYSAPI_USE_GPU
+
 	}
 	void PAGNClumpyCloudFinderGPU::searchForCloudsGPU(const PSimplePhoton& photon)
 	{
+#ifdef PHYSAPI_USE_GPU
 		// first get the position and direction(unit-vector-omega) of the photon
 		auto x = photon.position().x();
 		auto y = photon.position().y();
@@ -166,5 +177,7 @@ namespace agn
 		// which will be the first cloud intersected by the photon 
 		cudaMemcpy(m_indexes_host, m_indexes_device, m_gpuThreadsOrganizer.getNumOfGPUBlocks() * sizeof(phys_size), cudaMemcpyDeviceToHost);
 		//cudaMemcpyAsync(m_indexes_host, m_indexes_device, m_gpuThreadsOrganizer.getNumOfGPUBlocks() * sizeof(phys_size), cudaMemcpyDeviceToHost,m_cudaStream);
+#endif // PHYSAPI_USE_GPU
+
 	}
 }// namespace agn

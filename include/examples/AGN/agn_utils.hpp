@@ -9,6 +9,8 @@
 
 #pragma once
 
+#define PHYSAPI_USE_GPU
+
 #include "PSpectrumMaker.hpp"
 #include "PGeometryBase.hpp"
 #include "PSphere.hpp"
