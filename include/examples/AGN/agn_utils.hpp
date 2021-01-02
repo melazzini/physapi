@@ -399,4 +399,16 @@ namespace agn
 		phys_float x, y, z;
 	};
 
+	void printAGNClumpyTorusInfo(phys_float R1,
+		phys_float R2,
+		phys_float theta0,
+		phys_float N_H,
+		phys_float N_aver,
+		phys_float phi,
+		phys_size numOfPhotons,
+		phys_size numOfClouds,
+		phys_float T_e,
+		phys_float R_clouds,
+		std::ostream& os);
+
 } // namespace agn

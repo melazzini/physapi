@@ -1,5 +1,5 @@
 #include"agn_utils.hpp"
-
+#include<iomanip>
 namespace agn
 {
 	void loadClouds(t_clouds& clouds, const std::string& cloudsFile)
@@ -49,5 +49,59 @@ namespace agn
 
 		fin.clear();
 		fin.close();
+	}
+
+	void printAGNClumpyTorusInfo(phys_float R1,
+		phys_float R2,
+		phys_float theta0,
+		phys_float N_H,
+		phys_float N_aver,
+		phys_float phi,
+		phys_size numOfPhotons,
+		phys_size numOfClouds,
+		phys_float T_e,
+		phys_float R_clouds,
+		std::ostream& os)
+	{
+		os << "   Internal Radius:                        "
+			<< std::right << std::setw(5) << R1 << " m"
+			<< std::endl;
+
+		os << "   External Radius:                        "
+			<< std::right << std::setw(5) << R2 << " m"
+			<< std::endl;
+
+		os << "   Half Opening-angle:                     "
+			<< std::right << theta0 / 1.0_deg << "    deg"
+			<< std::endl;
+
+		os << "   Column Density:                         "
+			<< std::right << std::setw(5) << N_H << " m^{-2}"
+			<< std::endl;
+
+		os << "   Average Number(sightline) of Clouds:    "
+			<< std::right << N_aver
+			<< std::endl;
+
+		os << "   Volume Filling Factor:                  "
+			<< std::right << std::setw(3) << phi
+			<< std::endl;
+
+		os << "   Number of Photons:                      "
+			<< std::right << numOfPhotons
+			<< std::endl;
+
+		os << "   Number of Clouds:                       "
+			<< std::right << numOfClouds
+			<< std::endl;
+
+		os << "   Radius of the clouds:                   "
+			<< std::right << std::setw(5) << R_clouds << " m"
+			<< std::endl;
+
+		os << "   Temperature of Electrons:               "
+			<< std::right << std::setw(5)
+			<< T_e << " K"
+			<< std::endl;
 	}
 }// namespace agn
