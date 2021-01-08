@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['k_5fb_442',['k_B',['../group__core.html#gaa1f9fffc2ee32daa5ca44dd39dcfd12e',1,'physapi']]]
+  ['h_5fplank_582',['h_Plank',['../group__core.html#gaf0e049646834eab26eeef3f10bb757a8',1,'physapi']]]
 ];

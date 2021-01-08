@@ -1,0 +1,25 @@
+var classagn_1_1_p_a_g_n_simulation_team_b =
+[
+    [ "PAGNSimulationTeamB", "classagn_1_1_p_a_g_n_simulation_team_b.html#a4b7fe16bc2b539ebcef935512b7563a5", null ],
+    [ "distanceToBoundary", "classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2", null ],
+    [ "escapeProbability", "classagn_1_1_p_a_g_n_simulation_team_b.html#add58db86b5c7abaf7292aa53c9077801", null ],
+    [ "fluorescentLine", "classagn_1_1_p_a_g_n_simulation_team_b.html#aa0e6e373f0c9da6e3b223a0a2757f43d", null ],
+    [ "id", "classagn_1_1_p_a_g_n_simulation_team_b.html#a714c050a466c27983aa8ced38acb2416", null ],
+    [ "lambdaMean", "classagn_1_1_p_a_g_n_simulation_team_b.html#a851865f10f78fb14e275d9c2b9446a57", null ],
+    [ "numOfPhotons", "classagn_1_1_p_a_g_n_simulation_team_b.html#a1abcba89591d9825da2c43403d1a5bca", null ],
+    [ "run", "classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce", null ],
+    [ "m_comptonHnd", "classagn_1_1_p_a_g_n_simulation_team_b.html#a6197e53bb6ba1f59f1bb1dc00863c0ee", null ],
+    [ "m_dirFilter", "classagn_1_1_p_a_g_n_simulation_team_b.html#a212b9ad9d32fb307af2b4ba7720c9c80", null ],
+    [ "m_escapeProbability", "classagn_1_1_p_a_g_n_simulation_team_b.html#a4695ca860deb20412922b2987af68913", null ],
+    [ "m_fluorescenceHnd", "classagn_1_1_p_a_g_n_simulation_team_b.html#a55b8f41a48cb12a11557ecf153457275", null ],
+    [ "m_initSpectrum", "classagn_1_1_p_a_g_n_simulation_team_b.html#a70d2df74132cf479d443767ec4803b1b", null ],
+    [ "m_lambdaMean", "classagn_1_1_p_a_g_n_simulation_team_b.html#a2429bb9fdf7dd0800e8d4b708c4b154e", null ],
+    [ "m_listOfAbsorbingElements", "classagn_1_1_p_a_g_n_simulation_team_b.html#a72dcf50dfe9b84fbb786c2c2957eda2a", null ],
+    [ "m_randDirMng", "classagn_1_1_p_a_g_n_simulation_team_b.html#abe22fc7c70a6e074a9a06d5479d12cd2", null ],
+    [ "m_randomValuesMng", "classagn_1_1_p_a_g_n_simulation_team_b.html#aa257371d4228106f1c61ed8ca3886b83", null ],
+    [ "m_sigmaKleinNishina", "classagn_1_1_p_a_g_n_simulation_team_b.html#a2fcc3e1d9fc213601420d48ee5a3b72f", null ],
+    [ "m_sigmaTotal", "classagn_1_1_p_a_g_n_simulation_team_b.html#a13c4846990dcb13dc2784861cc45f128", null ],
+    [ "m_sigmaVerner", "classagn_1_1_p_a_g_n_simulation_team_b.html#a6d5713d6d6c428032392aaedd56a8259", null ],
+    [ "m_simMng", "classagn_1_1_p_a_g_n_simulation_team_b.html#ac54d6b15418425f025784839f18b52b2", null ],
+    [ "m_verner", "classagn_1_1_p_a_g_n_simulation_team_b.html#a8a07a9c941e9926b3acc84b6a234f06d", null ]
+];

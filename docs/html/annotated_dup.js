@@ -1,5 +1,32 @@
 var annotated_dup =
 [
+    [ "agn", null, [
+      [ "PAGN", "classagn_1_1_p_a_g_n.html", "classagn_1_1_p_a_g_n" ],
+      [ "PAGNClumpyCloudFinder", "classagn_1_1_p_a_g_n_clumpy_cloud_finder.html", "classagn_1_1_p_a_g_n_clumpy_cloud_finder" ],
+      [ "PAGNClumpyCloudFinderB", "classagn_1_1_p_a_g_n_clumpy_cloud_finder_b.html", "classagn_1_1_p_a_g_n_clumpy_cloud_finder_b" ],
+      [ "PAGNClumpyCloudFinderGPU", "classagn_1_1_p_a_g_n_clumpy_cloud_finder_g_p_u.html", "classagn_1_1_p_a_g_n_clumpy_cloud_finder_g_p_u" ],
+      [ "PAGNClumpyCloudsCreator", "classagn_1_1_p_a_g_n_clumpy_clouds_creator.html", "classagn_1_1_p_a_g_n_clumpy_clouds_creator" ],
+      [ "PAGNClumpyHistogramMaker", "classagn_1_1_p_a_g_n_clumpy_histogram_maker.html", "classagn_1_1_p_a_g_n_clumpy_histogram_maker" ],
+      [ "PAGNClumpySimulationTeam", "classagn_1_1_p_a_g_n_clumpy_simulation_team.html", "classagn_1_1_p_a_g_n_clumpy_simulation_team" ],
+      [ "PAGNClumpySimulationTeamFactory", "classagn_1_1_p_a_g_n_clumpy_simulation_team_factory.html", "classagn_1_1_p_a_g_n_clumpy_simulation_team_factory" ],
+      [ "PAGNClumpyStructureModelB", "classagn_1_1_p_a_g_n_clumpy_structure_model_b.html", "classagn_1_1_p_a_g_n_clumpy_structure_model_b" ],
+      [ "PAGNClumpyTorusModel", "classagn_1_1_p_a_g_n_clumpy_torus_model.html", "classagn_1_1_p_a_g_n_clumpy_torus_model" ],
+      [ "PAGNFormula", "classagn_1_1_p_a_g_n_formula.html", "classagn_1_1_p_a_g_n_formula" ],
+      [ "PAGNInitSpectrumDirectionFilter", "classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html", "classagn_1_1_p_a_g_n_init_spectrum_direction_filter" ],
+      [ "PAGNSimpleTorusDirectionFilter", "classagn_1_1_p_a_g_n_simple_torus_direction_filter.html", "classagn_1_1_p_a_g_n_simple_torus_direction_filter" ],
+      [ "PAGNSimulationMng", "classagn_1_1_p_a_g_n_simulation_mng.html", "classagn_1_1_p_a_g_n_simulation_mng" ],
+      [ "PAGNSimulationTeamB", "classagn_1_1_p_a_g_n_simulation_team_b.html", "classagn_1_1_p_a_g_n_simulation_team_b" ],
+      [ "PAGNSimulationTeamFactory", "classagn_1_1_p_a_g_n_simulation_team_factory.html", "classagn_1_1_p_a_g_n_simulation_team_factory" ],
+      [ "PAGNSimulationTeamFactoryBuilder", "classagn_1_1_p_a_g_n_simulation_team_factory_builder.html", null ],
+      [ "PAGNSmoothSimulationTeam", "classagn_1_1_p_a_g_n_smooth_simulation_team.html", "classagn_1_1_p_a_g_n_smooth_simulation_team" ],
+      [ "PAGNSmoothSimulationTeamFactory", "classagn_1_1_p_a_g_n_smooth_simulation_team_factory.html", "classagn_1_1_p_a_g_n_smooth_simulation_team_factory" ],
+      [ "PAGNSmoothSphereModel", "classagn_1_1_p_a_g_n_smooth_sphere_model.html", "classagn_1_1_p_a_g_n_smooth_sphere_model" ],
+      [ "PAGNSmoothStructureModelB", "classagn_1_1_p_a_g_n_smooth_structure_model_b.html", "classagn_1_1_p_a_g_n_smooth_structure_model_b" ],
+      [ "PAGNSmoothTorusModel", "classagn_1_1_p_a_g_n_smooth_torus_model.html", "classagn_1_1_p_a_g_n_smooth_torus_model" ],
+      [ "PAGNSpectrumZenith", "classagn_1_1_p_a_g_n_spectrum_zenith.html", "classagn_1_1_p_a_g_n_spectrum_zenith" ],
+      [ "PAGNStructureModelB", "classagn_1_1_p_a_g_n_structure_model_b.html", "classagn_1_1_p_a_g_n_structure_model_b" ],
+      [ "sPosition", "structagn_1_1s_position.html", "structagn_1_1s_position" ]
+    ] ],
     [ "physapi", null, [
       [ "_PMCComptonElectronModeler", "classphysapi_1_1___p_m_c_compton_electron_modeler.html", "classphysapi_1_1___p_m_c_compton_electron_modeler" ],
       [ "PAbundanceTable", "classphysapi_1_1_p_abundance_table.html", "classphysapi_1_1_p_abundance_table" ],
@@ -14,6 +41,7 @@ var annotated_dup =
       [ "PFluxPerEnergyInterval", "classphysapi_1_1_p_flux_per_energy_interval.html", "classphysapi_1_1_p_flux_per_energy_interval" ],
       [ "PFluxPerEnergyIntervalMaker", "classphysapi_1_1_p_flux_per_energy_interval_maker.html", "classphysapi_1_1_p_flux_per_energy_interval_maker" ],
       [ "PGeometryBase", "classphysapi_1_1_p_geometry_base.html", "classphysapi_1_1_p_geometry_base" ],
+      [ "PLoadVernerTable1", "classphysapi_1_1_p_load_verner_table1.html", "classphysapi_1_1_p_load_verner_table1" ],
       [ "PMCCompton", "classphysapi_1_1_p_m_c_compton.html", "classphysapi_1_1_p_m_c_compton" ],
       [ "PMomentum", "classphysapi_1_1_p_momentum.html", "classphysapi_1_1_p_momentum" ],
       [ "PPerfectlyElasticCollision", "classphysapi_1_1_p_perfectly_elastic_collision.html", "classphysapi_1_1_p_perfectly_elastic_collision" ],
@@ -21,6 +49,7 @@ var annotated_dup =
       [ "PProcessTable", "classphysapi_1_1_p_process_table.html", "classphysapi_1_1_p_process_table" ],
       [ "PRandom", "classphysapi_1_1_p_random.html", "classphysapi_1_1_p_random" ],
       [ "PRandomDirection", "classphysapi_1_1_p_random_direction.html", "classphysapi_1_1_p_random_direction" ],
+      [ "PSelectorVernerTable1", "classphysapi_1_1_p_selector_verner_table1.html", "classphysapi_1_1_p_selector_verner_table1" ],
       [ "PSimpleElectron", "classphysapi_1_1_p_simple_electron.html", "classphysapi_1_1_p_simple_electron" ],
       [ "PSimpleMassParticleBase", "classphysapi_1_1_p_simple_mass_particle_base.html", "classphysapi_1_1_p_simple_mass_particle_base" ],
       [ "PSimpleParticle", "classphysapi_1_1_p_simple_particle.html", "classphysapi_1_1_p_simple_particle" ],
@@ -34,6 +63,9 @@ var annotated_dup =
       [ "PSphere", "classphysapi_1_1_p_sphere.html", "classphysapi_1_1_p_sphere" ],
       [ "PVector2D", "classphysapi_1_1_p_vector2_d.html", "classphysapi_1_1_p_vector2_d" ],
       [ "PVector3D", "classphysapi_1_1_p_vector3_d.html", "classphysapi_1_1_p_vector3_d" ],
-      [ "PVerner", "classphysapi_1_1_p_verner.html", "classphysapi_1_1_p_verner" ]
+      [ "PVerner", "classphysapi_1_1_p_verner.html", "classphysapi_1_1_p_verner" ],
+      [ "PVernerTable1", "classphysapi_1_1_p_verner_table1.html", "classphysapi_1_1_p_verner_table1" ],
+      [ "PVernerTable1Hnd", "classphysapi_1_1_p_verner_table1_hnd.html", "classphysapi_1_1_p_verner_table1_hnd" ],
+      [ "PVernerTable2", "classphysapi_1_1_p_verner_table2.html", "classphysapi_1_1_p_verner_table2" ]
     ] ]
 ];

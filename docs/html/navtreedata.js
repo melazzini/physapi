@@ -46,7 +46,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classphysapi_1_1_p_sphere.html#a944cd9ef6b4777813e65a6f87ae0d726"
+"classphysapi_1_1_p_collider.html",
+"classphysapi_1_1_p_vector2_d.html#af13393ec2be2f87b21e095426c4b6809"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

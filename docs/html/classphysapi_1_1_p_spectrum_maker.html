@@ -145,6 +145,8 @@ class physapi::PSpectrumMaker&lt; energyIntervals, precision &gt;</h3>
   </dd>
 </dl>
 <p>A radiation spectrum is defined in our api by the next formula: </p><pre class="fragment"> \f$ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) \f$
+
+ $$\frac{dN}{dE} = \beta * N_{Tot} * \phi(E)$$
 </pre><p>The formula gives the number of photons per energy interval corresponding to the energy \( E \).</p>
 <p>Where \( \beta \) is the normalization parameter, \( N_{Tot} \) the total amount of photons in the spectrum and \( \phi(E) \) is the spectral formula.</p>
 <p>We normalize this such that: </p><pre class="fragment"> \f$ \beta * \int_{E_{low}}^{E_{upp}} \phi(E) = 1 \f$

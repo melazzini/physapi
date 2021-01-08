@@ -116,9 +116,9 @@ $(document).ready(function(){initNavTree('classphysapi_1_1_p_fluorescence_table.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5936901e938c9bc2e10cdfd36031a47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_fluorescence_table.html#ae5936901e938c9bc2e10cdfd36031a47">PFluorescenceTable</a> (const std::string file=DEFAULT_FILE_PATH)</td></tr>
-<tr class="memdesc:ae5936901e938c9bc2e10cdfd36031a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classphysapi_1_1_p_fluorescence_table.html" title="This class represents a fluorescence table.">PFluorescenceTable</a> object.  <a href="classphysapi_1_1_p_fluorescence_table.html#ae5936901e938c9bc2e10cdfd36031a47">More...</a><br /></td></tr>
-<tr class="separator:ae5936901e938c9bc2e10cdfd36031a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0475a98c5e292c91f6551c3a41a845"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_fluorescence_table.html#aed0475a98c5e292c91f6551c3a41a845">PFluorescenceTable</a> (const <a class="el" href="classphysapi_1_1_p_abundance_table.html">PAbundanceTable</a> &amp;abundances, const std::string file=DEFAULT_FILE_PATH)</td></tr>
+<tr class="memdesc:aed0475a98c5e292c91f6551c3a41a845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classphysapi_1_1_p_fluorescence_table.html" title="This class represents a fluorescence table.">PFluorescenceTable</a> object.  <a href="classphysapi_1_1_p_fluorescence_table.html#aed0475a98c5e292c91f6551c3a41a845">More...</a><br /></td></tr>
+<tr class="separator:aed0475a98c5e292c91f6551c3a41a845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac157b171555305ad259b6069f155956d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_fluorescence_table.html#ac157b171555305ad259b6069f155956d">~PFluorescenceTable</a> ()</td></tr>
 <tr class="memdesc:ac157b171555305ad259b6069f155956d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classphysapi_1_1_p_fluorescence_table.html" title="This class represents a fluorescence table.">PFluorescenceTable</a> object.  <a href="classphysapi_1_1_p_fluorescence_table.html#ac157b171555305ad259b6069f155956d">More...</a><br /></td></tr>
 <tr class="separator:ac157b171555305ad259b6069f155956d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,8 +176,8 @@ Friends</h2></td></tr>
 <p>26 1 1 0 3 7056.7 0.0127</p>
 <p>26 1 1 0 4 7058.3 0.0254 </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae5936901e938c9bc2e10cdfd36031a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5936901e938c9bc2e10cdfd36031a47">&#9670;&nbsp;</a></span>PFluorescenceTable()</h2>
+<a id="aed0475a98c5e292c91f6551c3a41a845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0475a98c5e292c91f6551c3a41a845">&#9670;&nbsp;</a></span>PFluorescenceTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,14 +188,24 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">physapi::PFluorescenceTable::PFluorescenceTable </td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>file</em> = <code>DEFAULT_FILE_PATH</code></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classphysapi_1_1_p_abundance_table.html">PAbundanceTable</a> &amp;&#160;</td>
+          <td class="paramname"><em>abundances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>file</em> = <code>DEFAULT_FILE_PATH</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -395,7 +405,7 @@ template&lt;phys_size columns, typename Target , typename T &gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassphysapi_1_1_p_fluorescence_table_html_ac3ca324c7deb62092c2fc48916c09d84"><div class="ttname"><a href="classphysapi_1_1_p_fluorescence_table.html#ac3ca324c7deb62092c2fc48916c09d84">physapi::PFluorescenceTable::lines</a></div><div class="ttdeci">std::vector&lt; t_fluorescentLine &gt; lines(eZ z, phys_size ionizationState, phys_size shell, phys_size augerElectrons) const</div><div class="ttdoc">Get a list(vector) of all lines corresponding to z, st, is and aug.</div><div class="ttdef"><b>Definition:</b> PFluorescenceTable.cpp:49</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_fluorescence_table_html"><div class="ttname"><a href="classphysapi_1_1_p_fluorescence_table.html">physapi::PFluorescenceTable</a></div><div class="ttdoc">This class represents a fluorescence table.</div><div class="ttdef"><b>Definition:</b> PFluorescenceTable.hpp:63</div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_fluorescence_table_html"><div class="ttname"><a href="classphysapi_1_1_p_fluorescence_table.html">physapi::PFluorescenceTable</a></div><div class="ttdoc">This class represents a fluorescence table.</div><div class="ttdef"><b>Definition:</b> PFluorescenceTable.hpp:64</div></div>
 <div class="ttc" id="aclassphysapi_1_1_p_fluorescence_table_html_ac6008a94cac9d2d0f47962f80dfd8d37"><div class="ttname"><a href="classphysapi_1_1_p_fluorescence_table.html#ac6008a94cac9d2d0f47962f80dfd8d37">physapi::PFluorescenceTable::line</a></div><div class="ttdeci">t_fluorescentLine line(const PFluorescenceKey &amp;lineKey) const</div><div class="ttdoc">Get the fluorescence line corresponding to the given key.</div><div class="ttdef"><b>Definition:</b> PFluorescenceTable.cpp:37</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

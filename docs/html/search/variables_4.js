@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['intervals_441',['INTERVALS',['../classphysapi_1_1_p_spectrum_maker.html#a84bbc177e2b6adf95a038eff274d0a72',1,'physapi::PSpectrumMaker']]]
+  ['g_581',['G',['../group__core.html#ga4dd3ed9de6dcf4926215c186d9692cb5',1,'physapi']]]
 ];
