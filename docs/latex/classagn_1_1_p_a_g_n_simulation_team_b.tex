@@ -1,0 +1,333 @@
+\hypertarget{classagn_1_1_p_a_g_n_simulation_team_b}{}\doxysection{agn\+::P\+A\+G\+N\+Simulation\+TeamB Class Reference}
+\label{classagn_1_1_p_a_g_n_simulation_team_b}\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Simulation\+Team\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Simulation\+TeamB\+:
+% FIG 0
+
+
+Collaboration diagram for agn\+::P\+A\+G\+N\+Simulation\+TeamB\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a4b7fe16bc2b539ebcef935512b7563a5}{P\+A\+G\+N\+Simulation\+TeamB}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_verner_table1}{P\+Verner\+Table1}} $>$ verner\+Table1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_verner_table2}{P\+Verner\+Table2}} $>$ verner\+Table2, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} $>$ fluorescence\+Table, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} $>$ abundances, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a714c050a466c27983aa8ced38acb2416}{id}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a1abcba89591d9825da2c43403d1a5bca}{num\+Of\+Photons}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} n\+\_\+e, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a492625c01cb41af46e9284b9fd87700c}{T\+\_\+e}}, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_formula}{P\+A\+G\+N\+Formula}} $>$ agnformula, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} $>$ init\+Spectrum\+Dir\+Filter)
+\item 
+virtual void \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_ac731744118677ec55c1f0bd457b3e2ce}{run}} (std\+::string\+\_\+view path\+To\+Storage\+Folder)
+\item 
+\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a714c050a466c27983aa8ced38acb2416}{id}} () const
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a1abcba89591d9825da2c43403d1a5bca}{num\+Of\+Photons}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a851865f10f78fb14e275d9c2b9446a57}{lambda\+Mean}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} sigma\+Total)
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_add58db86b5c7abaf7292aa53c9077801}{escape\+Probability}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a8aeb5f55fd505a2892205774271124c2}{distance\+To\+Boundary}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a851865f10f78fb14e275d9c2b9446a57}{lambda\+Mean}})
+\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a8aeb5f55fd505a2892205774271124c2}{distance\+To\+Boundary}} (\mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&photon)=0
+\item 
+std\+::optional$<$ \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_aa0e6e373f0c9da6e3b223a0a2757f43d}{fluorescent\+Line}} (const std\+::vector$<$ std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES $>$$>$ \&absorbing\+Elements, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} sigma\+Verner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a8a07a9c941e9926b3acc84b6a234f06d}{m\+\_\+verner}}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a55b8f41a48cb12a11557ecf153457275}{m\+\_\+fluorescence\+Hnd}}
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_mng}{P\+A\+G\+N\+Simulation\+Mng}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_ac54d6b15418425f025784839f18b52b2}{m\+\_\+sim\+Mng}}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ N\+\_\+intervals $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a70d2df74132cf479d443767ec4803b1b}{m\+\_\+init\+Spectrum}}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_random}{P\+Random}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_aa257371d4228106f1c61ed8ca3886b83}{m\+\_\+random\+Values\+Mng}}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_abe22fc7c70a6e074a9a06d5479d12cd2}{m\+\_\+rand\+Dir\+Mng}}
+\item 
+const \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} \& \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a212b9ad9d32fb307af2b4ba7720c9c80}{m\+\_\+dir\+Filter}}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}}$<$ \mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{physapi\+::\+P\+M\+C\+Compton}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a6197e53bb6ba1f59f1bb1dc00863c0ee}{m\+\_\+compton\+Hnd}}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a6d5713d6d6c428032392aaedd56a8259}{m\+\_\+sigma\+Verner}}
+\item 
+std\+::vector$<$ std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES $>$ $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a72dcf50dfe9b84fbb786c2c2957eda2a}{m\+\_\+list\+Of\+Absorbing\+Elements}}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a2fcc3e1d9fc213601420d48ee5a3b72f}{m\+\_\+sigma\+Klein\+Nishina}}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a13c4846990dcb13dc2784861cc45f128}{m\+\_\+sigma\+Total}}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a2429bb9fdf7dd0800e8d4b708c4b154e}{m\+\_\+lambda\+Mean}}
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_b_a4695ca860deb20412922b2987af68913}{m\+\_\+escape\+Probability}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a4b7fe16bc2b539ebcef935512b7563a5}\label{classagn_1_1_p_a_g_n_simulation_team_b_a4b7fe16bc2b539ebcef935512b7563a5}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!PAGNSimulationTeamB@{PAGNSimulationTeamB}}
+\index{PAGNSimulationTeamB@{PAGNSimulationTeamB}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{PAGNSimulationTeamB()}{PAGNSimulationTeamB()}}
+{\footnotesize\ttfamily agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::\+P\+A\+G\+N\+Simulation\+TeamB (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_verner_table1}{P\+Verner\+Table1}} $>$}]{verner\+Table1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_verner_table2}{P\+Verner\+Table2}} $>$}]{verner\+Table2,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} $>$}]{fluorescence\+Table,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} $>$}]{abundances,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{id,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{num\+Of\+Photons,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{n\+\_\+e,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{T\+\_\+e,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_formula}{P\+A\+G\+N\+Formula}} $>$}]{agnformula,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} $>$}]{init\+Spectrum\+Dir\+Filter }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file P\+A\+G\+N\+Simulation\+Team\+B.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a8aeb5f55fd505a2892205774271124c2}\label{classagn_1_1_p_a_g_n_simulation_team_b_a8aeb5f55fd505a2892205774271124c2}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!distanceToBoundary@{distanceToBoundary}}
+\index{distanceToBoundary@{distanceToBoundary}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundary()}{distanceToBoundary()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}$>$ agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::distance\+To\+Boundary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&}]{photon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_simulation_team_ac34a1368c306ff75648d347a2d3208fe}{agn\+::\+P\+A\+G\+N\+Clumpy\+Simulation\+Team}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_simulation_team_ab4f57f961d0476504071f734c0633ba4}{agn\+::\+P\+A\+G\+N\+Smooth\+Simulation\+Team}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_add58db86b5c7abaf7292aa53c9077801}\label{classagn_1_1_p_a_g_n_simulation_team_b_add58db86b5c7abaf7292aa53c9077801}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!escapeProbability@{escapeProbability}}
+\index{escapeProbability@{escapeProbability}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{escapeProbability()}{escapeProbability()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::escape\+Probability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{distance\+To\+Boundary,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{lambda\+Mean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 100 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_aa0e6e373f0c9da6e3b223a0a2757f43d}\label{classagn_1_1_p_a_g_n_simulation_team_b_aa0e6e373f0c9da6e3b223a0a2757f43d}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!fluorescentLine@{fluorescentLine}}
+\index{fluorescentLine@{fluorescentLine}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{fluorescentLine()}{fluorescentLine()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} $>$ agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::fluorescent\+Line (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES $>$$>$ \&}]{absorbing\+Elements,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{sigma\+Verner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 167 of file P\+A\+G\+N\+Simulation\+Team\+B.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a714c050a466c27983aa8ced38acb2416}\label{classagn_1_1_p_a_g_n_simulation_team_b_a714c050a466c27983aa8ced38acb2416}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!id@{id}}
+\index{id@{id}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the team\textquotesingle{}s id.
+
+\begin{DoxyReturn}{Returns}
+team\textquotesingle{}s id 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a851865f10f78fb14e275d9c2b9446a57}\label{classagn_1_1_p_a_g_n_simulation_team_b_a851865f10f78fb14e275d9c2b9446a57}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!lambdaMean@{lambdaMean}}
+\index{lambdaMean@{lambdaMean}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{lambdaMean()}{lambdaMean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::lambda\+Mean (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{sigma\+Total }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 94 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a1abcba89591d9825da2c43403d1a5bca}\label{classagn_1_1_p_a_g_n_simulation_team_b_a1abcba89591d9825da2c43403d1a5bca}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!numOfPhotons@{numOfPhotons}}
+\index{numOfPhotons@{numOfPhotons}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{numOfPhotons()}{numOfPhotons()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::num\+Of\+Photons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of photons in the current team.
+
+\begin{DoxyReturn}{Returns}
+the number of photons in the current team 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_ac731744118677ec55c1f0bd457b3e2ce}\label{classagn_1_1_p_a_g_n_simulation_team_b_ac731744118677ec55c1f0bd457b3e2ce}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!run@{run}}
+\index{run@{run}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::run (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path\+To\+Storage\+Folder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 40 of file P\+A\+G\+N\+Simulation\+Team\+B.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a6197e53bb6ba1f59f1bb1dc00863c0ee}\label{classagn_1_1_p_a_g_n_simulation_team_b_a6197e53bb6ba1f59f1bb1dc00863c0ee}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_comptonHnd@{m\_comptonHnd}}
+\index{m\_comptonHnd@{m\_comptonHnd}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_comptonHnd}{m\_comptonHnd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}}$<$\mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{physapi\+::\+P\+M\+C\+Compton}}$>$ agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+compton\+Hnd\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 83 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a212b9ad9d32fb307af2b4ba7720c9c80}\label{classagn_1_1_p_a_g_n_simulation_team_b_a212b9ad9d32fb307af2b4ba7720c9c80}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_dirFilter@{m\_dirFilter}}
+\index{m\_dirFilter@{m\_dirFilter}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_dirFilter}{m\_dirFilter}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}}\& agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+dir\+Filter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 82 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a4695ca860deb20412922b2987af68913}\label{classagn_1_1_p_a_g_n_simulation_team_b_a4695ca860deb20412922b2987af68913}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_escapeProbability@{m\_escapeProbability}}
+\index{m\_escapeProbability@{m\_escapeProbability}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_escapeProbability}{m\_escapeProbability}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+escape\+Probability\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a55b8f41a48cb12a11557ecf153457275}\label{classagn_1_1_p_a_g_n_simulation_team_b_a55b8f41a48cb12a11557ecf153457275}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_fluorescenceHnd@{m\_fluorescenceHnd}}
+\index{m\_fluorescenceHnd@{m\_fluorescenceHnd}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_fluorescenceHnd}{m\_fluorescenceHnd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+fluorescence\+Hnd\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a70d2df74132cf479d443767ec4803b1b}\label{classagn_1_1_p_a_g_n_simulation_team_b_a70d2df74132cf479d443767ec4803b1b}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_initSpectrum@{m\_initSpectrum}}
+\index{m\_initSpectrum@{m\_initSpectrum}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_initSpectrum}{m\_initSpectrum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$N\+\_\+intervals$>$ agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+init\+Spectrum\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 79 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a2429bb9fdf7dd0800e8d4b708c4b154e}\label{classagn_1_1_p_a_g_n_simulation_team_b_a2429bb9fdf7dd0800e8d4b708c4b154e}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_lambdaMean@{m\_lambdaMean}}
+\index{m\_lambdaMean@{m\_lambdaMean}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_lambdaMean}{m\_lambdaMean}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+lambda\+Mean\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 89 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a72dcf50dfe9b84fbb786c2c2957eda2a}\label{classagn_1_1_p_a_g_n_simulation_team_b_a72dcf50dfe9b84fbb786c2c2957eda2a}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_listOfAbsorbingElements@{m\_listOfAbsorbingElements}}
+\index{m\_listOfAbsorbingElements@{m\_listOfAbsorbingElements}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_listOfAbsorbingElements}{m\_listOfAbsorbingElements}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::array$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES$>$ $>$ agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+list\+Of\+Absorbing\+Elements\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 86 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_abe22fc7c70a6e074a9a06d5479d12cd2}\label{classagn_1_1_p_a_g_n_simulation_team_b_abe22fc7c70a6e074a9a06d5479d12cd2}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_randDirMng@{m\_randDirMng}}
+\index{m\_randDirMng@{m\_randDirMng}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_randDirMng}{m\_randDirMng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+rand\+Dir\+Mng\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 81 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_aa257371d4228106f1c61ed8ca3886b83}\label{classagn_1_1_p_a_g_n_simulation_team_b_aa257371d4228106f1c61ed8ca3886b83}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_randomValuesMng@{m\_randomValuesMng}}
+\index{m\_randomValuesMng@{m\_randomValuesMng}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_randomValuesMng}{m\_randomValuesMng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_random}{P\+Random}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+random\+Values\+Mng\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 80 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a2fcc3e1d9fc213601420d48ee5a3b72f}\label{classagn_1_1_p_a_g_n_simulation_team_b_a2fcc3e1d9fc213601420d48ee5a3b72f}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_sigmaKleinNishina@{m\_sigmaKleinNishina}}
+\index{m\_sigmaKleinNishina@{m\_sigmaKleinNishina}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_sigmaKleinNishina}{m\_sigmaKleinNishina}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+sigma\+Klein\+Nishina\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 87 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a13c4846990dcb13dc2784861cc45f128}\label{classagn_1_1_p_a_g_n_simulation_team_b_a13c4846990dcb13dc2784861cc45f128}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_sigmaTotal@{m\_sigmaTotal}}
+\index{m\_sigmaTotal@{m\_sigmaTotal}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_sigmaTotal}{m\_sigmaTotal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+sigma\+Total\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 88 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a6d5713d6d6c428032392aaedd56a8259}\label{classagn_1_1_p_a_g_n_simulation_team_b_a6d5713d6d6c428032392aaedd56a8259}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_sigmaVerner@{m\_sigmaVerner}}
+\index{m\_sigmaVerner@{m\_sigmaVerner}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_sigmaVerner}{m\_sigmaVerner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+sigma\+Verner\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 85 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_ac54d6b15418425f025784839f18b52b2}\label{classagn_1_1_p_a_g_n_simulation_team_b_ac54d6b15418425f025784839f18b52b2}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_simMng@{m\_simMng}}
+\index{m\_simMng@{m\_simMng}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_simMng}{m\_simMng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_mng}{P\+A\+G\+N\+Simulation\+Mng}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+sim\+Mng\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 78 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_simulation_team_b_a8a07a9c941e9926b3acc84b6a234f06d}\label{classagn_1_1_p_a_g_n_simulation_team_b_a8a07a9c941e9926b3acc84b6a234f06d}} 
+\index{agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}!m\_verner@{m\_verner}}
+\index{m\_verner@{m\_verner}!agn::PAGNSimulationTeamB@{agn::PAGNSimulationTeamB}}
+\doxysubsubsection{\texorpdfstring{m\_verner}{m\_verner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} agn\+::\+P\+A\+G\+N\+Simulation\+Team\+B\+::m\+\_\+verner\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 76 of file P\+A\+G\+N\+Simulation\+Team\+B.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_simulation_team_b_8hpp}{P\+A\+G\+N\+Simulation\+Team\+B.\+hpp}}\item 
+src/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_simulation_team_b_8cpp}{P\+A\+G\+N\+Simulation\+Team\+B.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{classphysapi_1_1_p_fluorescence_hnd}{}\doxysection{physapi\+::P\+Fluorescence\+Hnd Class Reference}
+\label{classphysapi_1_1_p_fluorescence_hnd}\index{physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}}
+
+
+{\ttfamily \#include $<$P\+Fluorescence\+Hnd.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd_a4e4539fb0ba7a3ab58ce5b11711bdc73}{P\+Fluorescence\+Hnd}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} $>$ fluorescence\+Table)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd_acb567d26165ef3e64105d89ccc972aca}{$\sim$\+P\+Fluorescence\+Hnd}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd_abcf13691f2fffbdc987c9a4a178b33aa}{run}} (\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}} z, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} is, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} st=1, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} aug=0)
+\begin{DoxyCompactList}\small\item\em Simulate fluorescence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}   @brief Handles the simulation of fluorescence.
+
+   @ingroup astrophysics
+
+   **Example:**
+
+   @code{.cpp}
+\end{DoxyVerb}
+
+
+\#include \char`\"{}\+P\+Fluorescence\+Hnd.\+hpp\char`\"{} \#include $<$fstream$>$ \#include $<$memory$>$ \begin{DoxyVerb}using namespace std;
+using namespace physapi;
+
+int main()
+{
+    // we need the abundances
+    PAbundanceTable abundances;
+
+    // for memory efficiency(special when working with multiple threads)
+    // we need a shared pointer to the fluorescence table
+    shared_ptr<PFluorescenceTable> table = make_shared<PFluorescenceTable>(abundances);
+
+    // now we can create the fluorescence simulator
+    PFluorescenceHnd fluorescenceHnd(table);
+
+    // the next for loop demostrate how easy it is to use the fluorescence simulator
+    // with 10 trials we run the simulation with the Fe possible lines
+
+    for (size_t i = 0; i < 10; i++)
+    {
+        cout << "trial #" << i + 1 << ":" << endl;
+
+        auto optionalLine = fluorescenceHnd.run(eZ::Fe, 1);
+
+        if (optionalLine.has_value())
+        {
+            auto& line = optionalLine.value();
+
+            cout << line.first.atomicNumber() << "  "
+                << line.first.ionizationState() << "  "
+                << line.first.shellNUmber() << "  "
+                << line.first.augerElectrons() << "  "
+                << line.first.lineNumber() << "  "
+                << line.second.lineEnergy() << "  "
+                << line.second.lineYield() << endl;
+        }
+        else
+        {
+            cout << "no fluorescence occurred" << endl;
+        }
+        cout << endl;
+    }
+}
+   @endcode
+
+   output:
+
+    trial #1:
+
+    no fluorescence occurred
+
+    trial #2:
+
+    no fluorescence occurred
+
+    trial #3:
+
+    no fluorescence occurred
+
+    trial #4:
+
+    26  1  1  0  1  6391.5  0.1013
+
+    trial #5:
+
+    no fluorescence occurred
+
+    trial #6:
+
+    no fluorescence occurred
+
+    trial #7:
+
+    26  1  1  0  2  6404.7  0.2026
+
+    trial #8:
+
+    no fluorescence occurred
+
+    trial #9:
+
+    no fluorescence occurred
+
+    trial #10:
+
+    26  1  1  0  3  7056.7  0.0127
+\end{DoxyVerb}
+ 
+
+Definition at line 110 of file P\+Fluorescence\+Hnd.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_hnd_a4e4539fb0ba7a3ab58ce5b11711bdc73}\label{classphysapi_1_1_p_fluorescence_hnd_a4e4539fb0ba7a3ab58ce5b11711bdc73}} 
+\index{physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}!PFluorescenceHnd@{PFluorescenceHnd}}
+\index{PFluorescenceHnd@{PFluorescenceHnd}!physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}}
+\doxysubsubsection{\texorpdfstring{PFluorescenceHnd()}{PFluorescenceHnd()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Fluorescence\+Hnd\+::\+P\+Fluorescence\+Hnd (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} $>$}]{fluorescence\+Table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} object. 
+
+
+
+Definition at line 124 of file P\+Fluorescence\+Hnd.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_hnd_acb567d26165ef3e64105d89ccc972aca}\label{classphysapi_1_1_p_fluorescence_hnd_acb567d26165ef3e64105d89ccc972aca}} 
+\index{physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}!````~PFluorescenceHnd@{$\sim$PFluorescenceHnd}}
+\index{````~PFluorescenceHnd@{$\sim$PFluorescenceHnd}!physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}}
+\doxysubsubsection{\texorpdfstring{$\sim$PFluorescenceHnd()}{~PFluorescenceHnd()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Fluorescence\+Hnd\+::$\sim$\+P\+Fluorescence\+Hnd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_hnd}{P\+Fluorescence\+Hnd}} object. 
+
+
+
+Definition at line 132 of file P\+Fluorescence\+Hnd.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_hnd_abcf13691f2fffbdc987c9a4a178b33aa}\label{classphysapi_1_1_p_fluorescence_hnd_abcf13691f2fffbdc987c9a4a178b33aa}} 
+\index{physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}!run@{run}}
+\index{run@{run}!physapi::PFluorescenceHnd@{physapi::PFluorescenceHnd}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} physapi\+::\+P\+Fluorescence\+Hnd\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}}}]{z,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{is,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{st = {\ttfamily 1},  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{aug = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Simulate fluorescence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & atomic number \\
+\hline
+{\em is} & shell number \\
+\hline
+{\em st} & ionization state \\
+\hline
+{\em aug} & auger electrons \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$t\+\_\+fluorescent\+Line$>$ optional fluorescence line 
+\end{DoxyReturn}
+
+
+Definition at line 7 of file P\+Fluorescence\+Hnd.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/astrophysics/\mbox{\hyperlink{_p_fluorescence_hnd_8hpp}{P\+Fluorescence\+Hnd.\+hpp}}\item 
+src/astrophysics/\mbox{\hyperlink{_p_fluorescence_hnd_8cpp}{P\+Fluorescence\+Hnd.\+cpp}}\end{DoxyCompactItemize}

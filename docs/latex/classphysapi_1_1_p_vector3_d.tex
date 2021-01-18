@@ -1,0 +1,761 @@
+\hypertarget{classphysapi_1_1_p_vector3_d}{}\doxysection{physapi\+::P\+Vector3D Class Reference}
+\label{classphysapi_1_1_p_vector3_d}\index{physapi::PVector3D@{physapi::PVector3D}}
+
+
+This class represents a vector in the X\+YZ space.  
+
+
+
+
+{\ttfamily \#include $<$P\+Vector3\+D.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Vector3D\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Vector3D\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d_aa9250290aaaf24f20255decbda961163}{P\+Vector3D}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new 3D-\/vector with x=y=z=0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a4d219a6a7ea9fd6d76ed27e01f5d12d7}{P\+Vector3D}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x1, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x2, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x3, \mbox{\hyperlink{group__core_ga59050da5736fc6cf7dde9779102c02b6}{e\+Coord\+Sys}} \mbox{\hyperlink{classphysapi_1_1_p_vector2_d_a921d7965babf2352574778ca97cea71d}{coord\+Sys}}=\mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c}{e\+Coord\+Sys\+::\+R\+EC}})
+\begin{DoxyCompactList}\small\item\em Construct a new 3D-\/vector with the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d_aef496c46c06dd28fe31f89fa71dc263c}{P\+Vector3D}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} \&vect2D, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a3140f0ae110d7b6342950d8a392ae243}{z}})
+\begin{DoxyCompactList}\small\item\em Construct a new 3D vector from a 2D vector and the z coordinate. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a569cc339300922dbf4eab08e8747f219}{$\sim$\+P\+Vector3D}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a846389480e87307d2ed4ec18aa725b98}{setZ}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a3140f0ae110d7b6342950d8a392ae243}{z}})
+\begin{DoxyCompactList}\small\item\em Set a new z coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_add9315ba6ef669c884340d340bf197a8}{set\+Phi}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_afcc069b3f3e741c3a77cfd1b41cc9939}{phi}})
+\begin{DoxyCompactList}\small\item\em Set a new $ \phi $ coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a07b5836d7759f1d82914ac02988c173b}{setR}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ad33f1b41d8d8120e5147fd7315230b09}{r}})
+\begin{DoxyCompactList}\small\item\em Set the r coordinate, i.\+e. the norm of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a3140f0ae110d7b6342950d8a392ae243}{z}} () const
+\begin{DoxyCompactList}\small\item\em Get the z coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ad33f1b41d8d8120e5147fd7315230b09}{r}} () const
+\begin{DoxyCompactList}\small\item\em Get the r coordinate, i.\+e. the norm of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_afcc069b3f3e741c3a77cfd1b41cc9939}{phi}} () const
+\begin{DoxyCompactList}\small\item\em Get the $ \phi $ spherical coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a17511cdd903682998726d8cc552ff697}{norm}} () const override
+\begin{DoxyCompactList}\small\item\em Get the norm of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a0424c2400c2ca9c8dc478317ce0378ca}{norm\+Squared}} () const override
+\begin{DoxyCompactList}\small\item\em Get the squared of the vector\textquotesingle{}s norm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a0741f13feb0438f3a7af0c16a60d28fc}{e\+\_\+rho}} () const
+\begin{DoxyCompactList}\small\item\em Get the $ e_{\rho} $ basis vector in cartesian coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ac925dc8dd82704807a08f4a15162c543}{e\+\_\+theta}} () const
+\begin{DoxyCompactList}\small\item\em Get the $ e_{\theta} $ basis vector in cartesian coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a7fe821abd771d6f47dd3b48277b1f4d2}{e\+\_\+r}} () const
+\begin{DoxyCompactList}\small\item\em Get the $ e_{r} $ basis vector in cartesian coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a37b00ddee4484f5eae447a0e8d4c2a39}{e\+\_\+phi}} () const
+\begin{DoxyCompactList}\small\item\em Get the $ e_{\phi} $ basis vector in cartesian coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ab8feefe0f1130441d69586fbdd707e20}{xy\+Components}} () const
+\begin{DoxyCompactList}\small\item\em Get the XY components as a \mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ae33054e739d01d247ac487471fd9d5a4}{operator+}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect\+Right) const
+\begin{DoxyCompactList}\small\item\em Addition of 3D-\/vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a3efbef810da05bca9cb0da9917600c0c}{operator-\/}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect\+Right) const
+\begin{DoxyCompactList}\small\item\em Subtraction of 3D-\/vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_acf5dd4969c9cb448f983f69a197dbcb3}{operator$\ast$}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect\+Right) const
+\begin{DoxyCompactList}\small\item\em Vector multiplication of 3D-\/vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a99a79c68187441dbabe8db12bc8c0da1}{operator$\ast$}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} number) const
+\begin{DoxyCompactList}\small\item\em Multiplication of a 3D-\/vector by a number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ab44b6cd32c827e03b162f57532365b3c}{cross\+Product}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculates the cross product of two 3d vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a7e5c08c126ffe8dee5cc1082741f6ef2}{operator/}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} divisor) const
+\begin{DoxyCompactList}\small\item\em Get the a new vector divided by the given number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_a690f0f431d46d79e147bbf95491f8e5d}{operator+=}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect\+Right)
+\begin{DoxyCompactList}\small\item\em Shortcut to add a vector to the original vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_aaf7e12ccb2b02833d578427b65411a83}{operator-\/=}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect\+Right)
+\begin{DoxyCompactList}\small\item\em Shortcut to subtract a vector from the original vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ac7ccb784fd2a3cd89eb2d293f65b8c93}{operator$\ast$=}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} number)
+\begin{DoxyCompactList}\small\item\em Shortcut to multiply a vector by a number and get the result into the original vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_aafe39d9a469c81a6c66ab97434aeaba6}{operator/=}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} number)
+\begin{DoxyCompactList}\small\item\em Shortcut to divide a vector by a number and get the result into the original vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_ab4c6b4b0ace014491247b83894d70dfa}{operator-\/}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect)
+\begin{DoxyCompactList}\small\item\em Get the vector with changed sign. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_vector3_d_accec56fe5cd467674ac9f24802da9ac2}{operator$\ast$}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} number, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect)
+\begin{DoxyCompactList}\small\item\em Multiplication of a number by a 3D-\/vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a vector in the X\+YZ space. 
+
+You can use three different coordinate systems\+:
+\begin{DoxyItemize}
+\item Rectangular(\+Cartesian)\+: $x,\; y, \; z$.
+\item Polar \+: $ \rho,\; \theta, \; z$.
+\item Spherical\+: $ r,\; \theta, \phi $.
+\end{DoxyItemize}
+
+In addition, you can perform all common vector operations( $ +, - $ , etc), manipulate them and perform with them other operations like printing their components with std\+::cout, etc. 
+
+Definition at line 32 of file P\+Vector3\+D.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_aa9250290aaaf24f20255decbda961163}\label{classphysapi_1_1_p_vector3_d_aa9250290aaaf24f20255decbda961163}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!PVector3D@{PVector3D}}
+\index{PVector3D@{PVector3D}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{PVector3D()}{PVector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Vector3\+D\+::\+P\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new 3D-\/vector with x=y=z=0. 
+
+
+
+Definition at line 47 of file P\+Vector3\+D.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a4d219a6a7ea9fd6d76ed27e01f5d12d7}\label{classphysapi_1_1_p_vector3_d_a4d219a6a7ea9fd6d76ed27e01f5d12d7}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!PVector3D@{PVector3D}}
+\index{PVector3D@{PVector3D}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{PVector3D()}{PVector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Vector3\+D\+::\+P\+Vector3D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x1,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x2,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x3,  }\item[{\mbox{\hyperlink{group__core_ga59050da5736fc6cf7dde9779102c02b6}{e\+Coord\+Sys}}}]{coord\+Sys = {\ttfamily \mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c}{e\+Coord\+Sys\+::\+R\+EC}}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new 3D-\/vector with the specified coordinates. 
+
+As you can see, if you need to create a 3D-\/vector in rectangular coordinates, then x1 represents x and x2 represents y, x3 represents z. On the other hand, if you need a polar vector, then x1 represents $ \rho $ x2 represents $ \theta $, and x3 represents $ \phi $.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & x(cartesian) or $ \rho $(polar) or r(spherical) \\
+\hline
+{\em x2} & y(cartesian) or $ \theta $(polar) or $ \theta $(spherical) \\
+\hline
+{\em x3} & z(cartesian) or $ z $(polar) or $ \phi $(spherical)\\
+\hline
+{\em coord\+Sys} & coordinate system\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+neither $ \rho $ nor r cannot be negative! 
+\end{DoxyNote}
+
+
+Definition at line 5 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_aef496c46c06dd28fe31f89fa71dc263c}\label{classphysapi_1_1_p_vector3_d_aef496c46c06dd28fe31f89fa71dc263c}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!PVector3D@{PVector3D}}
+\index{PVector3D@{PVector3D}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{PVector3D()}{PVector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Vector3\+D\+::\+P\+Vector3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} \&}]{vect2D,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new 3D vector from a 2D vector and the z coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect2D} & 2D vector. \\
+\hline
+{\em z} & z-\/cartesian coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a569cc339300922dbf4eab08e8747f219}\label{classphysapi_1_1_p_vector3_d_a569cc339300922dbf4eab08e8747f219}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!````~PVector3D@{$\sim$PVector3D}}
+\index{````~PVector3D@{$\sim$PVector3D}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{$\sim$PVector3D()}{~PVector3D()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Vector3\+D\+::$\sim$\+P\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} object. 
+
+
+
+Definition at line 88 of file P\+Vector3\+D.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ab44b6cd32c827e03b162f57532365b3c}\label{classphysapi_1_1_p_vector3_d_ab44b6cd32c827e03b162f57532365b3c}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!crossProduct@{crossProduct}}
+\index{crossProduct@{crossProduct}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{crossProduct()}{crossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::cross\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the cross product of two 3d vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & right 3d vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} cross product 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a37b00ddee4484f5eae447a0e8d4c2a39}\label{classphysapi_1_1_p_vector3_d_a37b00ddee4484f5eae447a0e8d4c2a39}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!e\_phi@{e\_phi}}
+\index{e\_phi@{e\_phi}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{e\_phi()}{e\_phi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::e\+\_\+phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the $ e_{\phi} $ basis vector in cartesian coordinates. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a7fe821abd771d6f47dd3b48277b1f4d2}\label{classphysapi_1_1_p_vector3_d_a7fe821abd771d6f47dd3b48277b1f4d2}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!e\_r@{e\_r}}
+\index{e\_r@{e\_r}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{e\_r()}{e\_r()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::e\+\_\+r (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the $ e_{r} $ basis vector in cartesian coordinates. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a0741f13feb0438f3a7af0c16a60d28fc}\label{classphysapi_1_1_p_vector3_d_a0741f13feb0438f3a7af0c16a60d28fc}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!e\_rho@{e\_rho}}
+\index{e\_rho@{e\_rho}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{e\_rho()}{e\_rho()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::e\+\_\+rho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the $ e_{\rho} $ basis vector in cartesian coordinates. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ac925dc8dd82704807a08f4a15162c543}\label{classphysapi_1_1_p_vector3_d_ac925dc8dd82704807a08f4a15162c543}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!e\_theta@{e\_theta}}
+\index{e\_theta@{e\_theta}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{e\_theta()}{e\_theta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::e\+\_\+theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the $ e_{\theta} $ basis vector in cartesian coordinates. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a17511cdd903682998726d8cc552ff697}\label{classphysapi_1_1_p_vector3_d_a17511cdd903682998726d8cc552ff697}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!norm@{norm}}
+\index{norm@{norm}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the norm of the vector. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float norm 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classphysapi_1_1_p_vector2_d_a93ca53c4e2c71d2b312f59cbc069de14}{physapi\+::\+P\+Vector2D}}.
+
+
+
+Definition at line 143 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a0424c2400c2ca9c8dc478317ce0378ca}\label{classphysapi_1_1_p_vector3_d_a0424c2400c2ca9c8dc478317ce0378ca}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!normSquared@{normSquared}}
+\index{normSquared@{normSquared}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{normSquared()}{normSquared()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::norm\+Squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the squared of the vector\textquotesingle{}s norm. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classphysapi_1_1_p_vector2_d_a492aecd7fdfd137de2efaf5a8eaa2fe4}{physapi\+::\+P\+Vector2D}}.
+
+
+
+Definition at line 150 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_acf5dd4969c9cb448f983f69a197dbcb3}\label{classphysapi_1_1_p_vector3_d_acf5dd4969c9cb448f983f69a197dbcb3}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect\+Right }\end{DoxyParamCaption}) const}
+
+
+
+Vector multiplication of 3D-\/vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float result 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a99a79c68187441dbabe8db12bc8c0da1}\label{classphysapi_1_1_p_vector3_d_a99a79c68187441dbabe8db12bc8c0da1}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{number }\end{DoxyParamCaption}) const}
+
+
+
+Multiplication of a 3D-\/vector by a number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+\_\+float} & number on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} result. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ac7ccb784fd2a3cd89eb2d293f65b8c93}\label{classphysapi_1_1_p_vector3_d_ac7ccb784fd2a3cd89eb2d293f65b8c93}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& physapi\+::\+P\+Vector3\+D\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{number }\end{DoxyParamCaption})}
+
+
+
+Shortcut to multiply a vector by a number and get the result into the original vector. 
+
+It multiplies the vector on the left by the number of the right , set the result into the vector and returns a reference to that vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number on the right \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& updated vector(vector on the left) after multiplication. 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ae33054e739d01d247ac487471fd9d5a4}\label{classphysapi_1_1_p_vector3_d_ae33054e739d01d247ac487471fd9d5a4}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator+@{operator+}}
+\index{operator+@{operator+}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect\+Right }\end{DoxyParamCaption}) const}
+
+
+
+Addition of 3D-\/vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} result in rectangular coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a690f0f431d46d79e147bbf95491f8e5d}\label{classphysapi_1_1_p_vector3_d_a690f0f431d46d79e147bbf95491f8e5d}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& physapi\+::\+P\+Vector3\+D\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect\+Right }\end{DoxyParamCaption})}
+
+
+
+Shortcut to add a vector to the original vector. 
+
+It adds the two vectors, set the result into the vector on the left and returns a reference to that vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& updated vector(vector on the left) after the addition. 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a3efbef810da05bca9cb0da9917600c0c}\label{classphysapi_1_1_p_vector3_d_a3efbef810da05bca9cb0da9917600c0c}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect\+Right }\end{DoxyParamCaption}) const}
+
+
+
+Subtraction of 3D-\/vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} result in rectangular coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_aaf7e12ccb2b02833d578427b65411a83}\label{classphysapi_1_1_p_vector3_d_aaf7e12ccb2b02833d578427b65411a83}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& physapi\+::\+P\+Vector3\+D\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect\+Right }\end{DoxyParamCaption})}
+
+
+
+Shortcut to subtract a vector from the original vector. 
+
+It subtracts the two vectors, set the result into the vector on the left and returns a reference to that vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& updated vector(vector on the left) after the subtraction. 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a7e5c08c126ffe8dee5cc1082741f6ef2}\label{classphysapi_1_1_p_vector3_d_a7e5c08c126ffe8dee5cc1082741f6ef2}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator/@{operator/}}
+\index{operator/@{operator/}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Vector3\+D\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{divisor }\end{DoxyParamCaption}) const}
+
+
+
+Get the a new vector divided by the given number. 
+
+$ Result = \frac{\vec{v}}{divisor} = \left(\frac{1}{divisor}\right) * \vec{v} $
+
+
+\begin{DoxyParams}{Parameters}
+{\em divisor} & number which divides the vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} Result(see the formula above). 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_aafe39d9a469c81a6c66ab97434aeaba6}\label{classphysapi_1_1_p_vector3_d_aafe39d9a469c81a6c66ab97434aeaba6}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& physapi\+::\+P\+Vector3\+D\+::operator/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{number }\end{DoxyParamCaption})}
+
+
+
+Shortcut to divide a vector by a number and get the result into the original vector. 
+
+It divides the vector on the left by the number of the right , set the result into the vector and returns a reference to that vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number on the right \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& updated vector(vector on the left) after division. 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_afcc069b3f3e741c3a77cfd1b41cc9939}\label{classphysapi_1_1_p_vector3_d_afcc069b3f3e741c3a77cfd1b41cc9939}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!phi@{phi}}
+\index{phi@{phi}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{phi()}{phi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the $ \phi $ spherical coordinate. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float $ \phi $ coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ad33f1b41d8d8120e5147fd7315230b09}\label{classphysapi_1_1_p_vector3_d_ad33f1b41d8d8120e5147fd7315230b09}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!r@{r}}
+\index{r@{r}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{r()}{r()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::r (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the r coordinate, i.\+e. the norm of the vector. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float r coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_add9315ba6ef669c884340d340bf197a8}\label{classphysapi_1_1_p_vector3_d_add9315ba6ef669c884340d340bf197a8}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!setPhi@{setPhi}}
+\index{setPhi@{setPhi}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{setPhi()}{setPhi()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Vector3\+D\+::set\+Phi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{phi }\end{DoxyParamCaption})}
+
+
+
+Set a new $ \phi $ coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phi} & new $ \phi $ coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a07b5836d7759f1d82914ac02988c173b}\label{classphysapi_1_1_p_vector3_d_a07b5836d7759f1d82914ac02988c173b}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!setR@{setR}}
+\index{setR@{setR}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{setR()}{setR()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Vector3\+D\+::setR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Set the r coordinate, i.\+e. the norm of the vector. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float new r coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file P\+Vector3\+D.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 25
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a846389480e87307d2ed4ec18aa725b98}\label{classphysapi_1_1_p_vector3_d_a846389480e87307d2ed4ec18aa725b98}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!setZ@{setZ}}
+\index{setZ@{setZ}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{setZ()}{setZ()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Vector3\+D\+::setZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a new z coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & new z coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ab8feefe0f1130441d69586fbdd707e20}\label{classphysapi_1_1_p_vector3_d_ab8feefe0f1130441d69586fbdd707e20}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!xyComponents@{xyComponents}}
+\index{xyComponents@{xyComponents}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{xyComponents()}{xyComponents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} physapi\+::\+P\+Vector3\+D\+::xy\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the XY components as a \mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector2_d}{P\+Vector2D}} X\+Y-\/plane vector component 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file P\+Vector3\+D.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 29
+Here is the caller graph for this function\+:
+% FIG 30
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_a3140f0ae110d7b6342950d8a392ae243}\label{classphysapi_1_1_p_vector3_d_a3140f0ae110d7b6342950d8a392ae243}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!z@{z}}
+\index{z@{z}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{z()}{z()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Vector3\+D\+::z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the z coordinate. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float z coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file P\+Vector3\+D.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 31
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_accec56fe5cd467674ac9f24802da9ac2}\label{classphysapi_1_1_p_vector3_d_accec56fe5cd467674ac9f24802da9ac2}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{number,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Multiplication of a number by a 3D-\/vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect\+Right} & vector on the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} result 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file P\+Vector3\+D.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_vector3_d_ab4c6b4b0ace014491247b83894d70dfa}\label{classphysapi_1_1_p_vector3_d_ab4c6b4b0ace014491247b83894d70dfa}} 
+\index{physapi::PVector3D@{physapi::PVector3D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!physapi::PVector3D@{physapi::PVector3D}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Get the vector with changed sign. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect} & vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} new vector with the opposite sign. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file P\+Vector3\+D.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_p_vector3_d_8hpp}{P\+Vector3\+D.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_p_vector3_d_8cpp}{P\+Vector3\+D.\+cpp}}\end{DoxyCompactItemize}

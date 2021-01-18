@@ -1,0 +1,149 @@
+\hypertarget{classphysapi_1_1_p_spectrum_zenith}{}\doxysection{physapi\+::P\+Spectrum\+Zenith$<$ intervals, cols $>$ Class Template Reference}
+\label{classphysapi_1_1_p_spectrum_zenith}\index{physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}}
+
+
+This class represents a photon distribution under a specfic zenith angle and an angular interval obtained from a simulation file.  
+
+
+
+
+{\ttfamily \#include $<$P\+Spectrum\+Zenith.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Spectrum\+Zenith$<$ intervals, cols $>$\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Spectrum\+Zenith$<$ intervals, cols $>$\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith_a86023049f08181d93220f54319b68d28}{P\+Spectrum\+Zenith}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} zenith\+Angle, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a916108029210bca24cd432b99633c6ea}{E\+\_\+low}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a71d94e894daa894dc5c4b3f6445d9c77}{E\+\_\+upp}}, \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a70e7a9c7f85ed5eb2468a21e6ab44acd}{scale}}=\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a90c3fd5ee0c6c471cac39b5f9a4ffae2}{e\+Spectrum\+Scale\+::\+L\+IN}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} angular\+Interval=10.\+0\+\_\+deg)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{P\+Spectrum\+Zenith}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith_aa7e76d44fb7126a53c1bdb37b81e552e}{min\+Phi}} () const
+\begin{DoxyCompactList}\small\item\em Get the absolute value of the minimum phi angle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith_a551e9ae5f42f86d55a01806750c51c6d}{max\+Phi}} () const
+\begin{DoxyCompactList}\small\item\em Get the absolute value of the the maximum phi angle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith_a8ae8e348fe5837724752ab27f5457601}{load\+Element}} (const std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, cols $>$ \&row)=0
+\begin{DoxyCompactList}\small\item\em This method loads an element(counts a photon) to the spectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$phys\+\_\+size intervals, phys\+\_\+size cols$>$\newline
+class physapi\+::\+P\+Spectrum\+Zenith$<$ intervals, cols $>$}
+
+This class represents a photon distribution under a specfic zenith angle and an angular interval obtained from a simulation file. 
+
+You can load the spectrum from a data file, resulting from the corresponding simulation using \mbox{\hyperlink{group__core_gaed104f515ebdb0f2fd8b1d8cf29923b1}{physapi\+::load\+From\+File()}}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em intervals} & energy intervals \\
+\hline
+{\em cols} & number of columns \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 20 of file P\+Spectrum\+Zenith.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_zenith_a86023049f08181d93220f54319b68d28}\label{classphysapi_1_1_p_spectrum_zenith_a86023049f08181d93220f54319b68d28}} 
+\index{physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}!PSpectrumZenith@{PSpectrumZenith}}
+\index{PSpectrumZenith@{PSpectrumZenith}!physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}}
+\doxysubsubsection{\texorpdfstring{PSpectrumZenith()}{PSpectrumZenith()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size intervals, phys\+\_\+size cols$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{physapi\+::\+P\+Spectrum\+Zenith}}$<$ intervals, cols $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{P\+Spectrum\+Zenith}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{zenith\+Angle,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{E\+\_\+low,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{E\+\_\+upp,  }\item[{\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}}}]{scale = {\ttfamily \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a90c3fd5ee0c6c471cac39b5f9a4ffae2}{e\+Spectrum\+Scale\+::\+L\+IN}}},  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{angular\+Interval = {\ttfamily 10.0\+\_\+deg} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{P\+Spectrum\+Zenith}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zenith\+Angle} & zenith angle \\
+\hline
+{\em E\+\_\+low} & Energy lower bound \\
+\hline
+{\em E\+\_\+upp} & Energy upper bound \\
+\hline
+{\em scale} & scale \\
+\hline
+{\em angular\+Interval} & angular interval \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file P\+Spectrum\+Zenith.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_zenith_a8ae8e348fe5837724752ab27f5457601}\label{classphysapi_1_1_p_spectrum_zenith_a8ae8e348fe5837724752ab27f5457601}} 
+\index{physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}!loadElement@{loadElement}}
+\index{loadElement@{loadElement}!physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}}
+\doxysubsubsection{\texorpdfstring{loadElement()}{loadElement()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size intervals, phys\+\_\+size cols$>$ \\
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{physapi\+::\+P\+Spectrum\+Zenith}}$<$ intervals, cols $>$\+::load\+Element (\begin{DoxyParamCaption}\item[{const std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, cols $>$ \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method loads an element(counts a photon) to the spectrum. 
+
+This method can be used with \mbox{\hyperlink{group__core_gaed104f515ebdb0f2fd8b1d8cf29923b1}{physapi\+::load\+From\+File()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & a row from the corresponding file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_zenith_a551e9ae5f42f86d55a01806750c51c6d}\label{classphysapi_1_1_p_spectrum_zenith_a551e9ae5f42f86d55a01806750c51c6d}} 
+\index{physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}!maxPhi@{maxPhi}}
+\index{maxPhi@{maxPhi}!physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}}
+\doxysubsubsection{\texorpdfstring{maxPhi()}{maxPhi()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size intervals, phys\+\_\+size cols$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{physapi\+::\+P\+Spectrum\+Zenith}}$<$ intervals, cols $>$\+::max\+Phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the absolute value of the the maximum phi angle. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file P\+Spectrum\+Zenith.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_zenith_aa7e76d44fb7126a53c1bdb37b81e552e}\label{classphysapi_1_1_p_spectrum_zenith_aa7e76d44fb7126a53c1bdb37b81e552e}} 
+\index{physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}!minPhi@{minPhi}}
+\index{minPhi@{minPhi}!physapi::PSpectrumZenith$<$ intervals, cols $>$@{physapi::PSpectrumZenith$<$ intervals, cols $>$}}
+\doxysubsubsection{\texorpdfstring{minPhi()}{minPhi()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size intervals, phys\+\_\+size cols$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{physapi\+::\+P\+Spectrum\+Zenith}}$<$ intervals, cols $>$\+::min\+Phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the absolute value of the minimum phi angle. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file P\+Spectrum\+Zenith.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/radiation/\mbox{\hyperlink{_p_spectrum_zenith_8hpp}{P\+Spectrum\+Zenith.\+hpp}}\end{DoxyCompactItemize}

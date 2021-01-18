@@ -1,0 +1,102 @@
+\hypertarget{classphysapi_1_1_p_spectral_formula_base}{}\doxysection{physapi\+::P\+Spectral\+Formula\+Base Class Reference}
+\label{classphysapi_1_1_p_spectral_formula_base}\index{physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}}
+
+
+This is the base class for spectral formulas or functions.  
+
+
+
+
+{\ttfamily \#include $<$P\+Spectral\+Formula\+Base.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Spectral\+Formula\+Base\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base_ae3e6bbb52d40f79501471e8a7545a52d}{$\sim$\+P\+Spectral\+Formula\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base_ae4066772f86ac0cf5363812af807a0f2}{operator()}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} energy) const =0
+\begin{DoxyCompactList}\small\item\em Get the value of the spectral formula for the corresponding energy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base_a3e6cc24b69a211daffd14902851c342d}{P\+Spectral\+Formula\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the base class for spectral formulas or functions. 
+
+Derive your own formulas from this class in order to create different kind of spectra with \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 17 of file P\+Spectral\+Formula\+Base.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectral_formula_base_a3e6cc24b69a211daffd14902851c342d}\label{classphysapi_1_1_p_spectral_formula_base_a3e6cc24b69a211daffd14902851c342d}} 
+\index{physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}!PSpectralFormulaBase@{PSpectralFormulaBase}}
+\index{PSpectralFormulaBase@{PSpectralFormulaBase}!physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}}
+\doxysubsubsection{\texorpdfstring{PSpectralFormulaBase()}{PSpectralFormulaBase()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Spectral\+Formula\+Base\+::\+P\+Spectral\+Formula\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} object. 
+
+
+
+Definition at line 24 of file P\+Spectral\+Formula\+Base.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectral_formula_base_ae3e6bbb52d40f79501471e8a7545a52d}\label{classphysapi_1_1_p_spectral_formula_base_ae3e6bbb52d40f79501471e8a7545a52d}} 
+\index{physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}!````~PSpectralFormulaBase@{$\sim$PSpectralFormulaBase}}
+\index{````~PSpectralFormulaBase@{$\sim$PSpectralFormulaBase}!physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSpectralFormulaBase()}{~PSpectralFormulaBase()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Spectral\+Formula\+Base\+::$\sim$\+P\+Spectral\+Formula\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} object. 
+
+
+
+Definition at line 31 of file P\+Spectral\+Formula\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectral_formula_base_ae4066772f86ac0cf5363812af807a0f2}\label{classphysapi_1_1_p_spectral_formula_base_ae4066772f86ac0cf5363812af807a0f2}} 
+\index{physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PSpectralFormulaBase@{physapi::PSpectralFormulaBase}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Spectral\+Formula\+Base\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the value of the spectral formula for the corresponding energy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float value of the formula 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_formula_a6b91f9980b80432ab5140efc3e0319e7}{agn\+::\+P\+A\+G\+N\+Formula}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/radiation/\mbox{\hyperlink{_p_spectral_formula_base_8hpp}{P\+Spectral\+Formula\+Base.\+hpp}}\end{DoxyCompactItemize}

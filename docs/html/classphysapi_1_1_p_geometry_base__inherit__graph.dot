@@ -1,0 +1,11 @@
+digraph "physapi::PGeometryBase"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="physapi::PGeometryBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This is the base class for all 3D geometric forms(cubs, spheres, tori, etc.)"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PSimpleTorus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_torus.html",tooltip="This class represents a simple torus."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PSphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_sphere.html",tooltip="This class represents a 3d sphere."];
+}

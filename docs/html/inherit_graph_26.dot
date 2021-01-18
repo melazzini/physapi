@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="physapi::PProcessTable\l\< T_key, T_value, SIZE\l_phys, T_LoadArray \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_process_table.html",tooltip="This class process a generic table. It can load elements to it with defined constrains."];
+}

@@ -1,0 +1,297 @@
+\hypertarget{classphysapi_1_1_p_simple_electron}{}\doxysection{physapi\+::P\+Simple\+Electron Class Reference}
+\label{classphysapi_1_1_p_simple_electron}\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+
+
+This class represents a simple electron.  
+
+
+
+
+{\ttfamily \#include $<$P\+Simple\+Electron.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Simple\+Electron\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Simple\+Electron\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a4931e02628485554907078e5bb9d5023}{P\+Simple\+Electron}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new simple electron with zero momentum at the origin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a7a680294222b7fb4a82ca6b49a1584fd}{P\+Simple\+Electron}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a4d9c4a2ddda2c0b8e242470efc297410}{momentum}}=\mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}())
+\begin{DoxyCompactList}\small\item\em Construct a new electron. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a82056bcda995445a65b540b2716800e1}{P\+Simple\+Electron}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a5b9a05c1f956883d1b607cc4e24c93c5}{velocity}})
+\begin{DoxyCompactList}\small\item\em Construct a new electron. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_ac4110242e853a5ce6f535db4917a4eb6}{$\sim$\+P\+Simple\+Electron}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the simple electron. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_aae96ca18699d5b60d9f59da22291a051}{mass}} () const override
+\begin{DoxyCompactList}\small\item\em Get the mass of the particle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a6cf4d5324d94e802fce30cc39bbc4e88}{energy}} () const
+\begin{DoxyCompactList}\small\item\em Get the electron\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a5b9a05c1f956883d1b607cc4e24c93c5}{velocity}} () const
+\begin{DoxyCompactList}\small\item\em Get the electron\textquotesingle{}s velocity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a7f563d2deab9ca8b36402bcee89a9825}{set\+Energy}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a6cf4d5324d94e802fce30cc39bbc4e88}{energy}})
+\begin{DoxyCompactList}\small\item\em Set the electron\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_aad741fa7f86a1b886a403bfa6d88979b}{set\+Velocity}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&velocity\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the electron\textquotesingle{}s velocity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a029d98763910999ad412927bf8021fbf}{give\+Impulse}} (const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&impulse)
+\begin{DoxyCompactList}\small\item\em Give an impulse to the electron. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_a317b7480e14c84d13b4cffb4e3917c26}{omega}} () const
+\begin{DoxyCompactList}\small\item\em Get the direction of movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a simple electron. 
+
+A simple electron in our api is defined by its position and momentum. Its mass is constant and equal to \mbox{\hyperlink{group__core_gab06480bd1a2ee40ace9c6d35d1a13507}{physapi\+::m\+\_\+e}} 
+
+Definition at line 21 of file P\+Simple\+Electron.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a4931e02628485554907078e5bb9d5023}\label{classphysapi_1_1_p_simple_electron_a4931e02628485554907078e5bb9d5023}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!PSimpleElectron@{PSimpleElectron}}
+\index{PSimpleElectron@{PSimpleElectron}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{PSimpleElectron()}{PSimpleElectron()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Electron\+::\+P\+Simple\+Electron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new simple electron with zero momentum at the origin. 
+
+
+
+Definition at line 33 of file P\+Simple\+Electron.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a7a680294222b7fb4a82ca6b49a1584fd}\label{classphysapi_1_1_p_simple_electron_a7a680294222b7fb4a82ca6b49a1584fd}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!PSimpleElectron@{PSimpleElectron}}
+\index{PSimpleElectron@{PSimpleElectron}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{PSimpleElectron()}{PSimpleElectron()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Electron\+::\+P\+Simple\+Electron (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{momentum = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new electron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & initial position \\
+\hline
+{\em momentum} & initial momentum \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file P\+Simple\+Electron.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a82056bcda995445a65b540b2716800e1}\label{classphysapi_1_1_p_simple_electron_a82056bcda995445a65b540b2716800e1}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!PSimpleElectron@{PSimpleElectron}}
+\index{PSimpleElectron@{PSimpleElectron}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{PSimpleElectron()}{PSimpleElectron()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Electron\+::\+P\+Simple\+Electron (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new electron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & initial position \\
+\hline
+{\em velocity} & initial velocity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file P\+Simple\+Electron.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_ac4110242e853a5ce6f535db4917a4eb6}\label{classphysapi_1_1_p_simple_electron_ac4110242e853a5ce6f535db4917a4eb6}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!````~PSimpleElectron@{$\sim$PSimpleElectron}}
+\index{````~PSimpleElectron@{$\sim$PSimpleElectron}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSimpleElectron()}{~PSimpleElectron()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Simple\+Electron\+::$\sim$\+P\+Simple\+Electron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the simple electron. 
+
+
+
+Definition at line 64 of file P\+Simple\+Electron.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a6cf4d5324d94e802fce30cc39bbc4e88}\label{classphysapi_1_1_p_simple_electron_a6cf4d5324d94e802fce30cc39bbc4e88}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!energy@{energy}}
+\index{energy@{energy}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{energy()}{energy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Electron\+::energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the electron\textquotesingle{}s energy. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_af84864ba82b8abc0e6b3c38c1f046a08}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 77 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a029d98763910999ad412927bf8021fbf}\label{classphysapi_1_1_p_simple_electron_a029d98763910999ad412927bf8021fbf}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!giveImpulse@{giveImpulse}}
+\index{giveImpulse@{giveImpulse}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{giveImpulse()}{giveImpulse()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Electron\+::give\+Impulse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{impulse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Give an impulse to the electron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em impulse} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a5f1d284094101d853275d8ab8c89bcb2}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 124 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_aae96ca18699d5b60d9f59da22291a051}\label{classphysapi_1_1_p_simple_electron_aae96ca18699d5b60d9f59da22291a051}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!mass@{mass}}
+\index{mass@{mass}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{mass()}{mass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Electron\+::mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the mass of the particle. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}{physapi\+::\+P\+Simple\+Mass\+Particle\+Base}}.
+
+
+
+Definition at line 70 of file P\+Simple\+Electron.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a317b7480e14c84d13b4cffb4e3917c26}\label{classphysapi_1_1_p_simple_electron_a317b7480e14c84d13b4cffb4e3917c26}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!omega@{omega}}
+\index{omega@{omega}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{omega()}{omega()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Simple\+Electron\+::omega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the direction of movement. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+it returns zero if the momentum is zero 
+\end{DoxyNote}
+
+
+Definition at line 136 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a7f563d2deab9ca8b36402bcee89a9825}\label{classphysapi_1_1_p_simple_electron_a7f563d2deab9ca8b36402bcee89a9825}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!setEnergy@{setEnergy}}
+\index{setEnergy@{setEnergy}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{setEnergy()}{setEnergy()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Electron\+::set\+Energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the electron\textquotesingle{}s energy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a68abd45ccd3ea1646c61cafaea54b61b}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 97 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_aad741fa7f86a1b886a403bfa6d88979b}\label{classphysapi_1_1_p_simple_electron_aad741fa7f86a1b886a403bfa6d88979b}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Electron\+::set\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{velocity\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the electron\textquotesingle{}s velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocity\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_electron_a5b9a05c1f956883d1b607cc4e24c93c5}\label{classphysapi_1_1_p_simple_electron_a5b9a05c1f956883d1b607cc4e24c93c5}} 
+\index{physapi::PSimpleElectron@{physapi::PSimpleElectron}!velocity@{velocity}}
+\index{velocity@{velocity}!physapi::PSimpleElectron@{physapi::PSimpleElectron}}
+\doxysubsubsection{\texorpdfstring{velocity()}{velocity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Simple\+Electron\+::velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the electron\textquotesingle{}s velocity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a27368dd84986bfc379fad65a7488e6e3}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 87 of file P\+Simple\+Electron.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/particles/\mbox{\hyperlink{_p_simple_electron_8hpp}{P\+Simple\+Electron.\+hpp}}\end{DoxyCompactItemize}

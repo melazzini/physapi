@@ -1,0 +1,26 @@
+digraph "agn::PAGNClumpySimulationTeam"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="agn::PAGNClumpySimulationTeam",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="agn::PAGNSimulationTeamB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_team_b.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_dirFilter" ];
+  Node3 [label="agn::PAGNInitSpectrumDirection\lFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html",tooltip="This functor filters the initial directions of the photons generated in the simulation."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_initSpectrum" ];
+  Node4 [label="physapi::PSpectrum\l\< N_intervals \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_comptonHnd" ];
+  Node5 [label="physapi::PComptonCollider\l\< physapi::PMCCompton \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_compton_collider.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_verner" ];
+  Node6 [label="physapi::PVerner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_verner.html",tooltip="This class is a functor for calculating the photonionization cross section."];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_fluorescenceHnd" ];
+  Node7 [label="physapi::PFluorescenceHnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_fluorescence_hnd.html",tooltip=" "];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_simMng" ];
+  Node8 [label="agn::PAGNSimulationMng",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_mng.html",tooltip=" "];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_randDirMng" ];
+  Node9 [label="physapi::PRandomDirection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_random_direction.html",tooltip="This class generates random directions for vectors."];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_randomValuesMng" ];
+  Node10 [label="physapi::PRandom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_random.html",tooltip="Generate random numbers offering a simple interface."];
+}

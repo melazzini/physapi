@@ -1,0 +1,20 @@
+digraph "physapi::PSpectrum::index"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSpectrum\l::index",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the index that corresponds to the given energy."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSpectrum\l\< intervals \>::addPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a95b91efd286d14246d3eb23484519ae8",tooltip="Add a photon with energy hv to the spectrum."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PSpectrum\l\< intervals \>::addPhotons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#abf71fae6eb9f01645786b442053e2840",tooltip="Add a number of photons to the given interval."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSpectrum\l\< intervals \>::energy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a205afc21bebfcfb19d55cec26e28e36a",tooltip="Get the energy of the corresponding interval."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::PSpectrum\l\< intervals \>::subinterval\lEnergyLowerBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a30b985140db42af89121754364922fe9",tooltip="Get the energy lower bound of the interval determined by the index."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="physapi::PSpectrum\l\< intervals \>::subinterval\lEnergyUpperBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#ad4763641075f0e8f548cc87e6cab0a9e",tooltip="Get the energy upper bound of the interval determined by the index."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PSpectrum\l\< intervals \>::value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a96de05661be6b52584b6eb6ef6294310",tooltip="Get the spectrum value of the corresponding interval."];
+}

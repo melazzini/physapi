@@ -1,0 +1,59 @@
+\hypertarget{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{}\doxysection{agn\+::P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter Class Reference}
+\label{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}\index{agn::PAGNInitSpectrumDirectionFilter@{agn::PAGNInitSpectrumDirectionFilter}}
+
+
+This functor filters the initial directions of the photons generated in the simulation.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter_a40afa431660dc60e19a0b5643285b5b2}{operator()}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This functor filters the initial directions of the photons generated in the simulation. 
+
+Definition at line 14 of file P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_init_spectrum_direction_filter_a40afa431660dc60e19a0b5643285b5b2}\label{classagn_1_1_p_a_g_n_init_spectrum_direction_filter_a40afa431660dc60e19a0b5643285b5b2}} 
+\index{agn::PAGNInitSpectrumDirectionFilter@{agn::PAGNInitSpectrumDirectionFilter}!operator()@{operator()}}
+\index{operator()@{operator()}!agn::PAGNInitSpectrumDirectionFilter@{agn::PAGNInitSpectrumDirectionFilter}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} agn\+::\+P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check whether or not the given direction is valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & photon\textquotesingle{}s direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the direction is valid, else false 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_simple_torus_direction_filter_a10dbc30f04236ea5457808241d1c6de4}{agn\+::\+P\+A\+G\+N\+Simple\+Torus\+Direction\+Filter}}.
+
+
+
+Definition at line 25 of file P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_init_spectrum_direction_filter_8hpp}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter.\+hpp}}\end{DoxyCompactItemize}

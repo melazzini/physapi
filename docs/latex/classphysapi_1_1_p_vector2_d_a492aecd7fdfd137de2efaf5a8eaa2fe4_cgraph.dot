@@ -1,0 +1,21 @@
+digraph "physapi::PVector2D::normSquared"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="physapi::PVector2D\l::normSquared",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the squared of the vector's norm."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PVector2D\l::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a93ca53c4e2c71d2b312f59cbc069de14",tooltip="Get the norm of the vector."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PVector2D::rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#af6fa628381013afe9cf5b9e97c7a3a8d",tooltip="Get the  coordinate."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::sqr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#ga01ea6c103ae225b6d9c3dec92bd7141c",tooltip="Calculate the square of an obj(number, scalar, vector, etc)"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#gae92fbf95826f105bd60a485bf7b596e8",tooltip="Calculate the square root of a scalar."];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="physapi::PVector2D::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#adef3e21a4bb82ad7b9351590075a8086",tooltip="Get the x coordinate."];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PVector2D::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a15bb9964eb7b9ea7936d3e075737558e",tooltip="Get the y coordinate."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

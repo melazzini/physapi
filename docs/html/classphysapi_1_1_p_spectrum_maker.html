@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c8189b205b819a72bed772435044ab2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_spectrum_maker.html#a5c8189b205b819a72bed772435044ab2">~PSpectrumMaker</a> ()</td></tr>
 <tr class="memdesc:a5c8189b205b819a72bed772435044ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classphysapi_1_1_p_spectrum_maker.html" title="This is a functor class for making radiation spectra.">PSpectrumMaker</a> object.  <a href="classphysapi_1_1_p_spectrum_maker.html#a5c8189b205b819a72bed772435044ab2">More...</a><br /></td></tr>
 <tr class="separator:a5c8189b205b819a72bed772435044ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a678cd05ad7b84469974cc19ed4c59cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_spectrum_maker.html#a678cd05ad7b84469974cc19ed4c59cd6">operator()</a> (<a class="el" href="classphysapi_1_1_p_spectrum.html">PSpectrum</a>&lt; energyIntervals &gt; &amp;spectrum, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numberOfPhotons, const <a class="el" href="classphysapi_1_1_p_spectral_formula_base.html">PSpectralFormulaBase</a> &amp;phi) const</td></tr>
+<tr class="memitem:a678cd05ad7b84469974cc19ed4c59cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_spectrum_maker.html#a678cd05ad7b84469974cc19ed4c59cd6">operator()</a> (<a class="el" href="classphysapi_1_1_p_spectrum.html">PSpectrum</a>&lt; energyIntervals &gt; &amp;spectrum, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numberOfPhotons, const <a class="el" href="classphysapi_1_1_p_spectral_formula_base.html">PSpectralFormulaBase</a> &amp;<a class="el" href="main_8cpp.html#a43a01a98cfb0456d4147a9bbff67f029">phi</a>) const</td></tr>
 <tr class="memdesc:a678cd05ad7b84469974cc19ed4c59cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the spectrum.  <a href="classphysapi_1_1_p_spectrum_maker.html#a678cd05ad7b84469974cc19ed4c59cd6">More...</a><br /></td></tr>
 <tr class="separator:a678cd05ad7b84469974cc19ed4c59cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -144,15 +144,24 @@ class physapi::PSpectrumMaker&lt; energyIntervals, precision &gt;</h3>
   </table>
   </dd>
 </dl>
-<p>A radiation spectrum is defined in our api by the next formula: </p><pre class="fragment"> \f$ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) \f$
-
- $$\frac{dN}{dE} = \beta * N_{Tot} * \phi(E)$$
-</pre><p>The formula gives the number of photons per energy interval corresponding to the energy \( E \).</p>
+<p>A radiation spectrum is defined in our api by the next formula:</p>
+<p class="formulaDsp">
+\[ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) \]
+</p>
+<p>The formula gives the number of photons per energy interval corresponding to the energy \( E \).</p>
 <p>Where \( \beta \) is the normalization parameter, \( N_{Tot} \) the total amount of photons in the spectrum and \( \phi(E) \) is the spectral formula.</p>
-<p>We normalize this such that: </p><pre class="fragment"> \f$ \beta * \int_{E_{low}}^{E_{upp}} \phi(E) = 1 \f$
-</pre><p>and therefore: </p><pre class="fragment"> \f$ \int_{E_{low}}^{E_{upp}} dN = N_{Tot} \f$
-</pre><p>Where \( E_{low} \) and \( E_{upp} \) are the energy bounds of the spectrum.</p>
+<p>We normalize this such that:</p>
+<p class="formulaDsp">
+\[ \beta * \int_{E_{low}}^{E_{upp}} \phi(E) = 1 \]
+</p>
+<p>and therefore:</p>
+<p class="formulaDsp">
+\[ \int_{E_{low}}^{E_{upp}} dN = N_{Tot} \]
+</p>
+<p>Where \( E_{low} \) and \( E_{upp} \) are the energy bounds of the spectrum.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classphysapi_1_1_p_spectral_formula_base.html" title="This is the base class for spectral formulas or functions.">PSpectralFormulaBase</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_p_spectrum_maker_8hpp_source.html#l00046">46</a> of file <a class="el" href="_p_spectrum_maker_8hpp_source.html">PSpectrumMaker.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa052f1a1929febe6d37e02464661e262"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa052f1a1929febe6d37e02464661e262">&#9670;&nbsp;</a></span>PSpectrumMaker()</h2>
@@ -199,6 +208,8 @@ template&lt;phys_size energyIntervals, phys_size precision = 1'000'000&gt; </div
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_p_spectrum_maker_8hpp_source.html#l00070">70</a> of file <a class="el" href="_p_spectrum_maker_8hpp_source.html">PSpectrumMaker.hpp</a>.</p>
+
 </div>
 </div>
 <a id="a5c8189b205b819a72bed772435044ab2"></a>
@@ -227,6 +238,8 @@ template&lt;phys_size energyIntervals, phys_size precision = 1'000'000&gt; </div
 </div><div class="memdoc">
 
 <p>Destroy the <a class="el" href="classphysapi_1_1_p_spectrum_maker.html" title="This is a functor class for making radiation spectra.">PSpectrumMaker</a> object. </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_spectrum_maker_8hpp_source.html#l00079">79</a> of file <a class="el" href="_p_spectrum_maker_8hpp_source.html">PSpectrumMaker.hpp</a>.</p>
 
 </div>
 </div>
@@ -290,6 +303,8 @@ template&lt;phys_size energyIntervals, phys_size precision = 1'000'000&gt; </div
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The spectrum will be cleared befored it gets filled with the data. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_p_spectrum_maker_8hpp_source.html#l00097">97</a> of file <a class="el" href="_p_spectrum_maker_8hpp_source.html">PSpectrumMaker.hpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -317,6 +332,8 @@ template&lt;phys_size energyIntervals, phys_size precision = 1'000'000&gt; </div
 
 <p>Number of energy intervals. </p>
 
+<p class="definition">Definition at line <a class="el" href="_p_spectrum_maker_8hpp_source.html#l00058">58</a> of file <a class="el" href="_p_spectrum_maker_8hpp_source.html">PSpectrumMaker.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -327,7 +344,7 @@ template&lt;phys_size energyIntervals, phys_size precision = 1'000'000&gt; </div
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>physapi</b></li><li class="navelem"><a class="el" href="classphysapi_1_1_p_spectrum_maker.html">PSpectrumMaker</a></li>
+    <li class="navelem"><a class="el" href="namespacephysapi.html">physapi</a></li><li class="navelem"><a class="el" href="classphysapi_1_1_p_spectrum_maker.html">PSpectrumMaker</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

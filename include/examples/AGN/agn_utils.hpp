@@ -7,6 +7,22 @@
  * \date   December 2020
  *********************************************************************/
 
+ /**
+  * @defgroup examples
+  *
+  * @brief This module offers different ready-to-use examples.
+  *
+  */
+
+  /**
+   * @defgroup agn
+   *
+   * @brief This module implements a model of an Active Galactic Nuclei X-Ray Spectral Model.
+   *
+   * @ingroup examples
+   * 
+   */
+
 #pragma once
 
 #define PHYSAPI_USE_GPU

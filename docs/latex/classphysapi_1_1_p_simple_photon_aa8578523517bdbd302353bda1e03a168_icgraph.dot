@@ -1,0 +1,20 @@
+digraph "physapi::PSimplePhoton::energy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSimplePhoton\l::energy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the photon's energy."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSpectrum\l\< intervals \>::addPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a281e0b3e5480a9ee18edd92eb4fe71c8",tooltip="Add a photon with its energy to the spectrum."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::_PMCComptonElectron\lModeler::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1___p_m_c_compton_electron_modeler.html#a7f7d4c98244d5af2dc32c2a296b271ba",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSimplePhoton\l::PSimplePhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#a593ea87e678eb518c70bcc8a10ac8da2",tooltip="Construct a new photon."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="agn::PAGNSimulationMng\l::registerPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_mng.html#a3eb153c6b9676621da4729bb5f6140f7",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="agn::PAGNSimulationTeamB::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PSimplePhoton\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#a0a53aa76e0deda26396552154ae33f38",tooltip="Set the photon's energy."];
+}

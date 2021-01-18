@@ -1,0 +1,14 @@
+digraph "include/montecarlo/mccompton" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f9d60213ad3e9a3f75b58cadac8553a7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="montecarlo" fontname="Helvetica", fontsize="10", URL="dir_f9d60213ad3e9a3f75b58cadac8553a7.html"]
+  dir_0d10e04eb9c71527b81872286633c8eb [shape=box, label="mccompton", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0d10e04eb9c71527b81872286633c8eb.html"];
+  }
+  dir_4500ae5066efdd32ca33cf133a51d304 [shape=box label="particles" URL="dir_4500ae5066efdd32ca33cf133a51d304.html"];
+  dir_3d69f64eaf81436fe2b22361382717e5 [shape=box label="core" URL="dir_3d69f64eaf81436fe2b22361382717e5.html"];
+  dir_0d10e04eb9c71527b81872286633c8eb->dir_4500ae5066efdd32ca33cf133a51d304 [headlabel="4", labeldistance=1.5 headhref="dir_000013_000014.html"];
+  dir_0d10e04eb9c71527b81872286633c8eb->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="1", labeldistance=1.5 headhref="dir_000013_000003.html"];
+  dir_4500ae5066efdd32ca33cf133a51d304->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="2", labeldistance=1.5 headhref="dir_000014_000003.html"];
+}

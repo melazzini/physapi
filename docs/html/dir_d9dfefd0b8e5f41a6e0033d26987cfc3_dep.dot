@@ -1,0 +1,14 @@
+digraph "include/interactions/collision" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a0e072522556b65a93a9487bd14d855c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="interactions" fontname="Helvetica", fontsize="10", URL="dir_a0e072522556b65a93a9487bd14d855c.html"]
+  dir_d9dfefd0b8e5f41a6e0033d26987cfc3 [shape=box, label="collision", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d9dfefd0b8e5f41a6e0033d26987cfc3.html"];
+  }
+  dir_4500ae5066efdd32ca33cf133a51d304 [shape=box label="particles" URL="dir_4500ae5066efdd32ca33cf133a51d304.html"];
+  dir_3d69f64eaf81436fe2b22361382717e5 [shape=box label="core" URL="dir_3d69f64eaf81436fe2b22361382717e5.html"];
+  dir_4500ae5066efdd32ca33cf133a51d304->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="2", labeldistance=1.5 headhref="dir_000014_000003.html"];
+  dir_d9dfefd0b8e5f41a6e0033d26987cfc3->dir_4500ae5066efdd32ca33cf133a51d304 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000014.html"];
+  dir_d9dfefd0b8e5f41a6e0033d26987cfc3->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="3", labeldistance=1.5 headhref="dir_000009_000003.html"];
+}

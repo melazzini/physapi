@@ -1,0 +1,199 @@
+\hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model}{}\doxysection{agn\+::P\+A\+G\+N\+Smooth\+Torus\+Model Class Reference}
+\label{classagn_1_1_p_a_g_n_smooth_torus_model}\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+
+
+This class represents a smooth torus agn structure model.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Smooth\+Torus.\+model.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Smooth\+Torus\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for agn\+::P\+A\+G\+N\+Smooth\+Torus\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a337408f844484353d04c2dd0d51715f6}{P\+A\+G\+N\+Smooth\+Torus\+Model}} (const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&torus, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}{N\+\_\+H}})
+\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a51d41fbe24184640a2653af5b95c3b75}{distance\+To\+Boundary}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const override
+\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a9ce6ebecbbd725067308412d1762aee8}{distance\+To\+Entering\+Point}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const override
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a2eac8ac8cd6cab04bace64f9959cef53}{equatorial\+Effective\+Half\+Size}} () const override
+\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a5df3c55e4af94f2393547b4729d3ab1c}{is\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position) const override
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_addffc581cf6804d605afbd8a39a0230c}{n\+\_\+H}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a smooth torus agn structure model. 
+
+Definition at line 12 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_a337408f844484353d04c2dd0d51715f6}\label{classagn_1_1_p_a_g_n_smooth_torus_model_a337408f844484353d04c2dd0d51715f6}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!PAGNSmoothTorusModel@{PAGNSmoothTorusModel}}
+\index{PAGNSmoothTorusModel@{PAGNSmoothTorusModel}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{PAGNSmoothTorusModel()}{PAGNSmoothTorusModel()}}
+{\footnotesize\ttfamily agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&}]{torus,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{N\+\_\+H }\end{DoxyParamCaption})}
+
+Constructs a smooth torus agn structure model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em torus} & geomtry \\
+\hline
+{\em N\+\_\+H} & average column density \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_a51d41fbe24184640a2653af5b95c3b75}\label{classagn_1_1_p_a_g_n_smooth_torus_model_a51d41fbe24184640a2653af5b95c3b75}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!distanceToBoundary@{distanceToBoundary}}
+\index{distanceToBoundary@{distanceToBoundary}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundary()}{distanceToBoundary()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::distance\+To\+Boundary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the distance to the next boundary inside the agn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & reference point \\
+\hline
+{\em direction} & direction of the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optional distance 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_structure_model_b_af2f2478d5ee48f1b3fedc1ce2e8b973e}{agn\+::\+P\+A\+G\+N\+Smooth\+Structure\+ModelB}}.
+
+
+
+Definition at line 10 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_a9ce6ebecbbd725067308412d1762aee8}\label{classagn_1_1_p_a_g_n_smooth_torus_model_a9ce6ebecbbd725067308412d1762aee8}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!distanceToEnteringPoint@{distanceToEnteringPoint}}
+\index{distanceToEnteringPoint@{distanceToEnteringPoint}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{distanceToEnteringPoint()}{distanceToEnteringPoint()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::distance\+To\+Entering\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the distance to the next entering point to the agn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & reference point \\
+\hline
+{\em direction} & direction of the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optional distance to the next entering point 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_structure_model_b_aa1d6da0bd85c311f9f5358754c3de20a}{agn\+::\+P\+A\+G\+N\+Smooth\+Structure\+ModelB}}.
+
+
+
+Definition at line 21 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_a2eac8ac8cd6cab04bace64f9959cef53}\label{classagn_1_1_p_a_g_n_smooth_torus_model_a2eac8ac8cd6cab04bace64f9959cef53}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}}
+\index{equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{equatorialEffectiveHalfSize()}{equatorialEffectiveHalfSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::equatorial\+Effective\+Half\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the equatorial half effective size.
+
+\begin{DoxyReturn}{Returns}
+the equatorial half effective size 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a9ab6a2caa9356487a903e795d9782176}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 32 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_a5df3c55e4af94f2393547b4729d3ab1c}\label{classagn_1_1_p_a_g_n_smooth_torus_model_a5df3c55e4af94f2393547b4729d3ab1c}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!isInside@{isInside}}
+\index{isInside@{isInside}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Check if the given point is inside the agn structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & point\textquotesingle{}s position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point is inside, else false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a997323fdf7e7065bfae66fba074392bb}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 37 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_torus_model_addffc581cf6804d605afbd8a39a0230c}\label{classagn_1_1_p_a_g_n_smooth_torus_model_addffc581cf6804d605afbd8a39a0230c}} 
+\index{agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}!n\_H@{n\_H}}
+\index{n\_H@{n\_H}!agn::PAGNSmoothTorusModel@{agn::PAGNSmoothTorusModel}}
+\doxysubsubsection{\texorpdfstring{n\_H()}{n\_H()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model\+::n\+\_\+H (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the concentration of Hydrogen.
+
+\begin{DoxyReturn}{Returns}
+the concentration of Hidrogen 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_ada82aa1c097cef6af22a8b0826581e8c}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 42 of file P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\+A\+G\+N\+Smooth/\mbox{\hyperlink{_p_a_g_n_smooth_torus_8model_8hpp}{P\+A\+G\+N\+Smooth\+Torus.\+model.\+hpp}}\item 
+src/examples/\+A\+G\+N/\+A\+G\+N\+Smooth/\mbox{\hyperlink{_p_a_g_n_smooth_torus_8model_8cpp}{P\+A\+G\+N\+Smooth\+Torus.\+model.\+cpp}}\end{DoxyCompactItemize}

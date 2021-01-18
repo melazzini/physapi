@@ -1,0 +1,119 @@
+\hypertarget{classagn_1_1_p_a_g_n_structure_model_b}{}\doxysection{agn\+::P\+A\+G\+N\+Structure\+ModelB Class Reference}
+\label{classagn_1_1_p_a_g_n_structure_model_b}\index{agn::PAGNStructureModelB@{agn::PAGNStructureModelB}}
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Structure\+Model\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Structure\+ModelB\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a9ab6a2caa9356487a903e795d9782176}{equatorial\+Effective\+Half\+Size}} () const =0
+\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a997323fdf7e7065bfae66fba074392bb}{is\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position) const =0
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_ada82aa1c097cef6af22a8b0826581e8c}{n\+\_\+H}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a6ccf3a1b7591f80d33cf0d0310a9e068}{distance\+To\+Interaction\+Point}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} lamda\+Mean, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} escape\+Probability, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} rand\+\_\+0\+\_\+1)
+\begin{DoxyCompactList}\small\item\em Calculate(with probability) the distance to the interaction point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file P\+A\+G\+N\+Structure\+Model\+B.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_structure_model_b_a6ccf3a1b7591f80d33cf0d0310a9e068}\label{classagn_1_1_p_a_g_n_structure_model_b_a6ccf3a1b7591f80d33cf0d0310a9e068}} 
+\index{agn::PAGNStructureModelB@{agn::PAGNStructureModelB}!distanceToInteractionPoint@{distanceToInteractionPoint}}
+\index{distanceToInteractionPoint@{distanceToInteractionPoint}!agn::PAGNStructureModelB@{agn::PAGNStructureModelB}}
+\doxysubsubsection{\texorpdfstring{distanceToInteractionPoint()}{distanceToInteractionPoint()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Structure\+Model\+B\+::distance\+To\+Interaction\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{lamda\+Mean,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{escape\+Probability,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{rand\+\_\+0\+\_\+1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculate(with probability) the distance to the interaction point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lamda\+Mean} & mean free path \\
+\hline
+{\em escape\+Probability} & escape probability \\
+\hline
+{\em rand\+\_\+0\+\_\+1} & random value in 0..1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance to the interaction point 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file P\+A\+G\+N\+Structure\+Model\+B.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_structure_model_b_a9ab6a2caa9356487a903e795d9782176}\label{classagn_1_1_p_a_g_n_structure_model_b_a9ab6a2caa9356487a903e795d9782176}} 
+\index{agn::PAGNStructureModelB@{agn::PAGNStructureModelB}!equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}}
+\index{equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}!agn::PAGNStructureModelB@{agn::PAGNStructureModelB}}
+\doxysubsubsection{\texorpdfstring{equatorialEffectiveHalfSize()}{equatorialEffectiveHalfSize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Structure\+Model\+B\+::equatorial\+Effective\+Half\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the equatorial effective half size of the simple agn structure model.
+
+\begin{DoxyReturn}{Returns}
+the equatorial effective half size 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_adca6e713593196e988c4d1642cf2cad2}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}, \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_sphere_model_ad6aa7176c63c64b879ff2ee90e28f10b}{agn\+::\+P\+A\+G\+N\+Smooth\+Sphere\+Model}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a2eac8ac8cd6cab04bace64f9959cef53}{agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model}}.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_structure_model_b_a997323fdf7e7065bfae66fba074392bb}\label{classagn_1_1_p_a_g_n_structure_model_b_a997323fdf7e7065bfae66fba074392bb}} 
+\index{agn::PAGNStructureModelB@{agn::PAGNStructureModelB}!isInside@{isInside}}
+\index{isInside@{isInside}!agn::PAGNStructureModelB@{agn::PAGNStructureModelB}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} agn\+::\+P\+A\+G\+N\+Structure\+Model\+B\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Check whether the given point is inside the agn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point is inside the agn, else false 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_ae1a696b6f119f018928ff367a9a4aff3}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}, \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_sphere_model_a8be8d2c48e104be46fa7b832a558d4ac}{agn\+::\+P\+A\+G\+N\+Smooth\+Sphere\+Model}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a5df3c55e4af94f2393547b4729d3ab1c}{agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_structure_model_b_ada82aa1c097cef6af22a8b0826581e8c}\label{classagn_1_1_p_a_g_n_structure_model_b_ada82aa1c097cef6af22a8b0826581e8c}} 
+\index{agn::PAGNStructureModelB@{agn::PAGNStructureModelB}!n\_H@{n\_H}}
+\index{n\_H@{n\_H}!agn::PAGNStructureModelB@{agn::PAGNStructureModelB}}
+\doxysubsubsection{\texorpdfstring{n\_H()}{n\_H()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Structure\+Model\+B\+::n\+\_\+H (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the concentration of hydrogen in the agn.
+
+\begin{DoxyReturn}{Returns}
+the concentration of hydrogen 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a814a7c5f538eee318ad862a28b61ed7c}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}, \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_sphere_model_a881dbeb0f3e9899bbe7149bb90ff47ba}{agn\+::\+P\+A\+G\+N\+Smooth\+Sphere\+Model}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_addffc581cf6804d605afbd8a39a0230c}{agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_structure_model_b_8hpp}{P\+A\+G\+N\+Structure\+Model\+B.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+digraph "include/interactions/gravitation" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a0e072522556b65a93a9487bd14d855c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="interactions" fontname="Helvetica", fontsize="10", URL="dir_a0e072522556b65a93a9487bd14d855c.html"]
+  dir_5c1d8d3495fe6ca88a6254cfddce7e7d [shape=box, label="gravitation", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5c1d8d3495fe6ca88a6254cfddce7e7d.html"];
+  }
+  dir_3d69f64eaf81436fe2b22361382717e5 [shape=box label="core" URL="dir_3d69f64eaf81436fe2b22361382717e5.html"];
+  dir_5c1d8d3495fe6ca88a6254cfddce7e7d->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="1", labeldistance=1.5 headhref="dir_000011_000003.html"];
+}

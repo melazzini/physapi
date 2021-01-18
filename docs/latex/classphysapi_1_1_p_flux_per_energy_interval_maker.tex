@@ -1,0 +1,218 @@
+\hypertarget{classphysapi_1_1_p_flux_per_energy_interval_maker}{}\doxysection{physapi\+::P\+Flux\+Per\+Energy\+Interval\+Maker$<$ energy\+Intervals $>$ Class Template Reference}
+\label{classphysapi_1_1_p_flux_per_energy_interval_maker}\index{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}}
+
+
+This class represents the flux per energy interval.  
+
+
+
+
+{\ttfamily \#include $<$P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker_a97532e43aaaa5bc59634aac5f059e7ca}{P\+Flux\+Per\+Energy\+Interval\+Maker}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} eta, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} d\+A0, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} E, const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&normalization\+Spectrum, const std\+::string \&unitsX=\char`\"{}j\char`\"{}, const std\+::string \&unitsY=\char`\"{}j,j$^\wedge$\{-\/1\},m$^\wedge$\{-\/2\},s$^\wedge$\{-\/1\}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker_a4b252cf7256b2656a031e31b7f844036}{$\sim$\+P\+Flux\+Per\+Energy\+Interval\+Maker}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval}{P\+Flux\+Per\+Energy\+Interval}}$<$ energy\+Intervals $>$ \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker_ab5e0ed3a4166fc9f28b7231bb92ecbe2}{operator()}} (const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&spectrum, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} dA)
+\begin{DoxyCompactList}\small\item\em Get a flux per energy\+Intervals interval built from the given spectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$phys\+\_\+size energy\+Intervals$>$\newline
+class physapi\+::\+P\+Flux\+Per\+Energy\+Interval\+Maker$<$ energy\+Intervals $>$}
+
+This class represents the flux per energy interval. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em energy\+Intervals} & number of energy energy intervals\\
+\hline
+\end{DoxyTemplParams}
+Flux in physics is energy per area(and per seconds).
+
+Therefore, an instance of \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval}{P\+Flux\+Per\+Energy\+Interval}} represents\+: \begin{DoxyVerb} \f$ \Phi_{\Delta E} = \frac{E}{\Delta A * \Delta E * s} \f$     
+\end{DoxyVerb}
+
+
+As we can see the units are $ Joules $ per $ m^{2}*sec*Joules $
+
+In our api we can rewrite that formula in the following form\+: \begin{DoxyVerb} \f$ \Phi_{\Delta E, normalized}(E_{i}) = \alpha * \frac{E_{i} * \Delta N(E_{i})}{\Delta A * \Delta E(E_{i}) * s} \f$
+\end{DoxyVerb}
+
+
+Where $ E_{i} $ is the energy of the correspoding interval, $ \Delta N(E_{i}) $ is the number of photons in the correspoding energy interval $ \Delta E(E_{i}) $ and $ \alpha $ is a normalization parameter.
+
+Let\textquotesingle{}s suppose that you need to normalize the given flux per energy interval, so that when the energy is $ E_{i}=E^{*} $ the $ \Phi_{\Delta E, normalized} $ is $ \eta $. Therefore, we will have that\+: \begin{DoxyVerb} \f$  \alpha = \eta(E^{*}) * \frac{\Delta A \Delta E(E^{*})}{E^{*} \Delta N(\Delta{E^{*}}) } \f$
+\end{DoxyVerb}
+
+
+We can choose a normalization flux per energy interval, such that we know $ \Delta A_{0} $, $ \Delta E(E^{*}) $ and $ \Delta N_{0}(E^{*}) $ for that $ \Phi_{0, \Delta E, normalized} $. If we do so, any other given flux per energy interval will be given by\+: \begin{DoxyVerb} \f$ \Phi_{\Delta E, normalized}(E_{i}) = \eta * \frac{\Delta A_{0}}{\Delta A} * \frac{E_{i}}{E^{*}} * \frac{\Delta N(E_{i})}{\Delta N_{0}(E^{*})} * \frac{\Delta E(E^{*})}{\Delta E(E_{i})} \f$                                                                          
+\end{DoxyVerb}
+
+
+Therefore the \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} receives in the constructor\+:
+
+
+\begin{DoxyItemize}
+\item $ \eta $
+\item $ \Delta A_{0} $
+\item $ E^{*} $
+\item the normalization spectrum(instance of P\+Spectrum)
+\end{DoxyItemize}
+
+The normalization spectrum helps us to determine $ \Delta N_{0}(E^{*}) $. It can be, for example the intrinsic spectrum of the source.
+
+{\bfseries{Example\+:}}
+
+In the next example we create an intrinsic active galactic nuclei(\+A\+G\+N) spectrum, from which we build the correspoding flux per energy interval.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_spectrum_8hpp}{PSpectrum.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_spectrum_maker_8hpp}{PSpectrumMaker.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_flux_per_energy_interval_maker_8hpp}{PFluxPerEnergyIntervalMaker.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_flux_per_energy_interval_8hpp}{PFluxPerEnergyInterval.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacephysapi}{physapi}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }AGNFormula : \textcolor{keyword}{public} \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{PSpectralFormulaBase}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    constexpr \textcolor{keyword}{static} \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} E\_cut = 300.0E3;}
+\DoxyCodeLine{    constexpr \textcolor{keyword}{static} \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} \mbox{\hyperlink{main_8cpp_a916108029210bca24cd432b99633c6ea}{E\_low}} = 1.0;}
+\DoxyCodeLine{    constexpr \textcolor{keyword}{static} \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} gamma = 1.8;}
+\DoxyCodeLine{    constexpr \textcolor{keyword}{static} \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\_size}} N\_intervals = 5000;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker_ab5e0ed3a4166fc9f28b7231bb92ecbe2}{operator()}}(\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} energy)\textcolor{keyword}{ const override}}
+\DoxyCodeLine{\textcolor{keyword}{    }\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} std::pow(energy, -\/gamma) * std::exp(-\/energy / E\_cut);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{const} \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} numberOfPhotons = 1.5E9;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{PSpectrum<AGNFormula::N\_intervals>}} intrinsicSpectrum\{}
+\DoxyCodeLine{        \mbox{\hyperlink{main_8cpp_a916108029210bca24cd432b99633c6ea}{AGNFormula::E\_low}},}
+\DoxyCodeLine{        AGNFormula::E\_cut,}
+\DoxyCodeLine{        \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a4b5ffcdaf38ce4d463171f5c977c5ab3}{eSpectrumScale::LOG}}\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    AGNFormula myFormula;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{PSpectrumMaker<AGNFormula::N\_intervals, 100'000'000>}} spectrumMaker;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    spectrumMaker(intrinsicSpectrum, numberOfPhotons, myFormula);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{PFluxPerEnergyIntervalMaker<AGNFormula::N\_intervals>}} fluxMaker\{1.0E3, 4 * \mbox{\hyperlink{group__core_ga576ece9f648463c901eeeca97ce89737}{Pi}}, 1.0E3, intrinsicSpectrum\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval}{PFluxPerEnergyInterval<AGNFormula::N\_intervals>}} flux\_dE(fluxMaker(intrinsicSpectrum, 4 * \mbox{\hyperlink{group__core_ga576ece9f648463c901eeeca97ce89737}{Pi}}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    ofstream fout;}
+\DoxyCodeLine{    fout.open(\textcolor{stringliteral}{"myFile"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    fout << flux\_dE << endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+\href{myFile}{\texttt{ my\+File}}
+
+
+
+\begin{DoxyWarning}{Warning}
+All spectra processed by this class, if they are empty they need to be equal to each other and to the normalization spectrum, when it is empty. 
+\end{DoxyWarning}
+
+
+Definition at line 127 of file P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_flux_per_energy_interval_maker_a97532e43aaaa5bc59634aac5f059e7ca}\label{classphysapi_1_1_p_flux_per_energy_interval_maker_a97532e43aaaa5bc59634aac5f059e7ca}} 
+\index{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}!PFluxPerEnergyIntervalMaker@{PFluxPerEnergyIntervalMaker}}
+\index{PFluxPerEnergyIntervalMaker@{PFluxPerEnergyIntervalMaker}!physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{PFluxPerEnergyIntervalMaker()}{PFluxPerEnergyIntervalMaker()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{physapi\+::\+P\+Flux\+Per\+Energy\+Interval\+Maker}}$<$ energy\+Intervals $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{eta,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{d\+A0,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{E,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&}]{normalization\+Spectrum,  }\item[{const std\+::string \&}]{unitsX = {\ttfamily \char`\"{}j\char`\"{}},  }\item[{const std\+::string \&}]{unitsY = {\ttfamily \char`\"{}j,j$^\wedge$\{-\/1\},m$^\wedge$\{-\/2\},s$^\wedge$\{-\/1\}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & \\
+\hline
+{\em d\+A0} & \\
+\hline
+{\em E} & \\
+\hline
+{\em normalization\+Spectrum} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_flux_per_energy_interval_maker_a4b252cf7256b2656a031e31b7f844036}\label{classphysapi_1_1_p_flux_per_energy_interval_maker_a4b252cf7256b2656a031e31b7f844036}} 
+\index{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}!````~PFluxPerEnergyIntervalMaker@{$\sim$PFluxPerEnergyIntervalMaker}}
+\index{````~PFluxPerEnergyIntervalMaker@{$\sim$PFluxPerEnergyIntervalMaker}!physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PFluxPerEnergyIntervalMaker()}{~PFluxPerEnergyIntervalMaker()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+virtual \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{physapi\+::\+P\+Flux\+Per\+Energy\+Interval\+Maker}}$<$ energy\+Intervals $>$\+::$\sim$\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{P\+Flux\+Per\+Energy\+Interval\+Maker}} object. 
+
+
+
+Definition at line 196 of file P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_flux_per_energy_interval_maker_ab5e0ed3a4166fc9f28b7231bb92ecbe2}\label{classphysapi_1_1_p_flux_per_energy_interval_maker_ab5e0ed3a4166fc9f28b7231bb92ecbe2}} 
+\index{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$@{physapi::PFluxPerEnergyIntervalMaker$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval}{P\+Flux\+Per\+Energy\+Interval}}$<$energy\+Intervals$>$ \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{physapi\+::\+P\+Flux\+Per\+Energy\+Interval\+Maker}}$<$ energy\+Intervals $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&}]{spectrum,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{dA }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a flux per energy\+Intervals interval built from the given spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum} & this spectrum will be use to build the flux per dE \\
+\hline
+{\em dA} & cross area of the flux per dE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+Flux\+Per\+Energy\+Interval$<$energy\+Intervals$>$ resulting flux per dE 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/radiation/\mbox{\hyperlink{_p_flux_per_energy_interval_maker_8hpp}{P\+Flux\+Per\+Energy\+Interval\+Maker.\+hpp}}\end{DoxyCompactItemize}

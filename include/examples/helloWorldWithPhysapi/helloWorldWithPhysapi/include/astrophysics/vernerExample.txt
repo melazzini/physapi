@@ -1,0 +1,61 @@
+/*
+
+This example shows how to use the PVerner class-functor to calculate the photoionization cross seccion.
+
+*/
+#include<iostream>
+#include"PVerner.hpp"
+
+using namespace std;
+using namespace physapi;
+int main()
+{
+	// We need to create the table of abundaces
+	PAbundanceTable abundances{ "./include/astrophysics/tables/abundancetable.txt" };
+
+	// this configurator object handles the verner table1 proper configuration.
+	// the order of elements in that table is not well suited for our algorithms
+	// that is why we need to tacle that issue and set an order with the quantum numbers.
+	// this object handle that issue
+	VernerTable1Hnd config;
+
+	// ProcessTable can load data with special configuration requirements, in this case
+	// the requirement is that the elements in verner table 1 will be properly ordered
+	// when they get loaded into the table object. Thus, handler1 will handle that issue
+	PProcessTable<t_nz_ne_is, t_table1Value, TABLE1_COLS, VernerLoadTable1> handler1{ "./include/astrophysics/tables/vernertable1.txt", config };
+	
+	// This selector will filter out the elements that aren't neutral
+	VernerSelectorTable1 f;
+
+	// this reprents the verner table 1
+	VernerTable1 table1{ abundances };
+
+	// this reprents the verner table 2
+	VernerTable2 table2{ abundances };
+
+	// now we can load up(in a special way) the verner table 1 object 
+	handler1(table1, f, abundances);
+
+	// verner table 2 does not has any special requirements, other than the existence
+	// of the elements, that is determined by the abundace table, this is why we use
+	// the loadFromFile() function directly to load the elements of verner table 2.
+	loadFromFile<TABLE2_COLS>("./include/astrophysics/tables/vernertable2.txt", table2);
+
+	// now we create the verner object width all the needed tables properly initialized
+	PVerner verner{ abundances,table1, table2 };
+
+	/*
+	now we plot the photoionization cross sections on the energy interval [1eV,300keV]
+	*/
+
+	ofstream fout;
+
+	fout.open("photoionization.txt");
+
+	for (phys_float energy_i = 1.0_eV; energy_i < 300.0E3_eV; energy_i += 1.0_eV)
+	{
+		fout << energy_i / 1.0_eV << "    " << verner(energy_i) << endl;
+	}
+
+	return 0;
+}

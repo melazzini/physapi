@@ -1,0 +1,90 @@
+\hypertarget{classagn_1_1_p_a_g_n_clumpy_structure_model_b}{}\doxysection{agn\+::P\+A\+G\+N\+Clumpy\+Structure\+ModelB Class Reference}
+\label{classagn_1_1_p_a_g_n_clumpy_structure_model_b}\index{agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}}
+
+
+This base class represents an abstract simple(not tend to be clumpy) agn structure model, it can be spherical, toridal, etc.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Clumpy\+Structure\+Model\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Clumpy\+Structure\+ModelB\+:
+% FIG 0
+
+
+Collaboration diagram for agn\+::P\+A\+G\+N\+Clumpy\+Structure\+ModelB\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} $>$ \& \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a789331c2184660144c5d1394aabe25f5}{clouds}} () const =0
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a5283fde0d7de5da73e0bc7b606ee7173}{cloud\+Radius}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_aeeffc2bcbd9f742482988b5fec49736c}{place\+Cloud}} (\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&cloud\+Position)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This base class represents an abstract simple(not tend to be clumpy) agn structure model, it can be spherical, toridal, etc. 
+
+Definition at line 22 of file P\+A\+G\+N\+Clumpy\+Structure\+Model\+B.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a5283fde0d7de5da73e0bc7b606ee7173}\label{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a5283fde0d7de5da73e0bc7b606ee7173}} 
+\index{agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}!cloudRadius@{cloudRadius}}
+\index{cloudRadius@{cloudRadius}!agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}}
+\doxysubsubsection{\texorpdfstring{cloudRadius()}{cloudRadius()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+Model\+B\+::cloud\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a2ed32c671a334d1daaff4fa55230f1e7}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a789331c2184660144c5d1394aabe25f5}\label{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a789331c2184660144c5d1394aabe25f5}} 
+\index{agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}!clouds@{clouds}}
+\index{clouds@{clouds}!agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}}
+\doxysubsubsection{\texorpdfstring{clouds()}{clouds()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}$>$\& agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+Model\+B\+::clouds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get a reference to the clouds positions.
+
+\begin{DoxyReturn}{Returns}
+clouds positions 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a3daf07f84b475408ac9fa4161ff01f70}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_structure_model_b_aeeffc2bcbd9f742482988b5fec49736c}\label{classagn_1_1_p_a_g_n_clumpy_structure_model_b_aeeffc2bcbd9f742482988b5fec49736c}} 
+\index{agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}!placeCloud@{placeCloud}}
+\index{placeCloud@{placeCloud}!agn::PAGNClumpyStructureModelB@{agn::PAGNClumpyStructureModelB}}
+\doxysubsubsection{\texorpdfstring{placeCloud()}{placeCloud()}}
+{\footnotesize\ttfamily virtual void agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+Model\+B\+::place\+Cloud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{cloud\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Place a cloud inside the agn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud\+Position} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a2d05a0ec848baf944d0eba2939593911}{agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\+A\+G\+N\+Clumpy/\mbox{\hyperlink{_p_a_g_n_clumpy_structure_model_b_8hpp}{P\+A\+G\+N\+Clumpy\+Structure\+Model\+B.\+hpp}}\end{DoxyCompactItemize}

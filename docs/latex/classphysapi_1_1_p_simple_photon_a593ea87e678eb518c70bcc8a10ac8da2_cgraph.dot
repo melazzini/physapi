@@ -1,0 +1,10 @@
+digraph "physapi::PSimplePhoton::PSimplePhoton"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="physapi::PSimplePhoton\l::PSimplePhoton",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Construct a new photon."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSimplePhoton\l::energy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#aa8578523517bdbd302353bda1e03a168",tooltip="Get the photon's energy."];
+}

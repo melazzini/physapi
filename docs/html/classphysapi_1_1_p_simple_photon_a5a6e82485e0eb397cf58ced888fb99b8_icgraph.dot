@@ -1,0 +1,18 @@
+digraph "physapi::PSimplePhoton::setMomentum"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSimplePhoton\l::setMomentum",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Set the momentum of the particle."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PSimplePhoton\l::giveImpulse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#ab391400ce8f861b727ce2735a6c30831",tooltip="Give an impulse to the photon."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PComptonCollider\l\< physapi::PMCCompton \>::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_compton_collider.html#a921141f11c5612a0f9386d573c749770",tooltip="Perform the collision and set the corresponding momentum to the photon and to the electron given as a..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="physapi::PComptonCollider\l\< PMCCompton \>::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0",tooltip="Perform the collision and set the corresponding momentum to the photon and to the electron given as a..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="physapi::PSimplePhoton\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#a0a53aa76e0deda26396552154ae33f38",tooltip="Set the photon's energy."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="physapi::PSimplePhoton\l::setOmega",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#a4fcab8fea7ca0076a803a854f880db2d",tooltip="Set the photon's direction of movement."];
+}

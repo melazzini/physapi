@@ -1,0 +1,47 @@
+digraph "physapi::PVector2D::theta"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PVector2D\l::theta",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the  coordinate."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PVector2D\l::e_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#acc93d0621814fd75f0129828d87dacf0",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PVector3D\l::e_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a0741f13feb0438f3a7af0c16a60d28fc",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="physapi::PVector2D\l::e_theta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a65061ad2048259cf430d25ec23f3f8ba",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="physapi::PVector3D\l::e_theta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#ac925dc8dd82704807a08f4a15162c543",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="physapi::PVector3D\l::e_phi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a37b00ddee4484f5eae447a0e8d4c2a39",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="physapi::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacephysapi.html#a189550ce8aba91af42b052d4d1869c41",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="agn::PAGNSimulationMng\l::registerPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_mng.html#a3eb153c6b9676621da4729bb5f6140f7",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="agn::PAGNSimulationTeamB::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="physapi::PVector3D\l::setPhi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#add9315ba6ef669c884340d340bf197a8",tooltip="Set a new  coordinate."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="physapi::PVector2D\l::setPolCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a17d53237cfa5a20e26f70cced0015962",tooltip="Set the coordinates , ."];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="physapi::PVector2D\l::setCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae1b7752437c2c30b48ff4f40f0e84e78",tooltip="Set new coordinates (x, y) or ( , )."];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="physapi::PVector3D\l::PVector3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a4d219a6a7ea9fd6d76ed27e01f5d12d7",tooltip="Construct a new 3D-vector with the specified coordinates."];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="physapi::PVector2D\l::setRho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a82a68974596e56dad0ac18c283e56f0f",tooltip="Set a new  coordinate."];
+  Node11 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="physapi::PVector2D\l::setTheta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a1e3cd130f4a6d2fe0c2439351ee7c9b5",tooltip="Set a new  coordinate."];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="physapi::PVector2D\l::setVectorAParallelToVectorB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a5f4cdf71873b7c29f5bc12bf344c7cd9",tooltip="Set the Vector A Parallel To Vector B."];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="physapi::PVector3D\l::setR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a07b5836d7759f1d82914ac02988c173b",tooltip="Set the r coordinate, i.e. the norm of the vector."];
+  Node17 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="physapi::PSimpleElectron\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_electron.html#a7f563d2deab9ca8b36402bcee89a9825",tooltip="Set the electron's energy."];
+  Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="physapi::PSimpleParticle\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_particle.html#aa6d8185137ad45f73b653f2f356b88c5",tooltip="Set the particle's energy."];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

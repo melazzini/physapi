@@ -1,0 +1,11 @@
+digraph "agn::PAGNClumpyTorusModel"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="agn::PAGNClumpyTorusModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This class represents a smooth sphere agn structure model."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="agn::PAGNClumpyStructure\lModelB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_structure_model_b.html",tooltip="This base class represents an abstract simple(not tend to be clumpy) agn structure model,..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="agn::PAGNStructureModelB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_structure_model_b.html",tooltip=" "];
+}

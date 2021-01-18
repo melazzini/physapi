@@ -1,0 +1,27 @@
+digraph "physapi::PVector2D::setY"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PVector2D\l::setY",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Set a new y coordinate."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PRandomDirection\l::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_random_direction.html#adedc6ed68e15bd13cab8bf482267f6ee",tooltip="Set a random direction to a 3d vector."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="agn::PAGNClumpyTorusModel\l::placeCloud",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_torus_model.html#a2d05a0ec848baf944d0eba2939593911",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PVector2D\l::setPolCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a17d53237cfa5a20e26f70cced0015962",tooltip="Set the coordinates , ."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::PVector2D\l::setCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae1b7752437c2c30b48ff4f40f0e84e78",tooltip="Set new coordinates (x, y) or ( , )."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="physapi::PVector3D\l::PVector3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a4d219a6a7ea9fd6d76ed27e01f5d12d7",tooltip="Construct a new 3D-vector with the specified coordinates."];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PVector2D\l::setRho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a82a68974596e56dad0ac18c283e56f0f",tooltip="Set a new  coordinate."];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="physapi::PVector2D\l::setTheta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a1e3cd130f4a6d2fe0c2439351ee7c9b5",tooltip="Set a new  coordinate."];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="physapi::PVector2D\l::setVectorAParallelToVectorB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a5f4cdf71873b7c29f5bc12bf344c7cd9",tooltip="Set the Vector A Parallel To Vector B."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="physapi::PVector2D\l::setRecCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae218483bca5e4aeb4f00a15260d5bc55",tooltip="Set the coordinates x,y."];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,360 @@
+\hypertarget{classphysapi_1_1_p_geometry_base}{}\doxysection{physapi\+::P\+Geometry\+Base Class Reference}
+\label{classphysapi_1_1_p_geometry_base}\index{physapi::PGeometryBase@{physapi::PGeometryBase}}
+
+
+This is the base class for all 3D geometric forms(cubs, spheres, tori, etc.)  
+
+
+
+
+{\ttfamily \#include $<$P\+Geometry\+Base.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Geometry\+Base\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_ae44b298b2eaf59321d957af3b59d87c0}{P\+Geometry\+Base}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}=\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}())
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_geometry_base}{P\+Geometry\+Base}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a4d8796ae6666b711d45fca8a55417c02}{$\sim$\+P\+Geometry\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_geometry_base}{P\+Geometry\+Base}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a0d798f51fab83f794ac85f9957758516}{is\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&point) const =0
+\begin{DoxyCompactList}\small\item\em Check if the given point is inside the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a9f3292d1a6933a649db0ab83522df299}{intersect}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction, \mbox{\hyperlink{group__core_gaba57b90048e7f13a88a50f8c2c4e4704}{e\+Sense}} sense=\mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31}{e\+Sense\+::\+F\+O\+R\+W\+A\+RD}}) const =0
+\begin{DoxyCompactList}\small\item\em Check if the line determined by a point and a direction intersects or not the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a80d390dba8dd66d37118cd3aa70dca0f}{distance\+To\+Boundary\+From\+Outside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the distance to the geometry\textquotesingle{}s boundaries from an outside point. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a61418836b6054e30febdb41291442427}{distance\+To\+Boundary\+From\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the distance to the geometry\textquotesingle{}s boundaries from an inside point. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6d9ca62f69dd8e03cf96e202fb156544}{distance\+Between\+Boundaries}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the distance from one boundary to another on the given line. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_aa7c0b416bb05d95586fd5bdd6e701210}{estimation\+Average\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em This class gives an estimation of the average size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a2e876fb5bfeba8497cc32e13cc85455d}{effective\+Length}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the length inside the geometry starting from a position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_aa74ae1f35806b440d9f56fe3b0760210}{free\+Length}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the length between boundaries, not inside the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a714de87fc9bfeedf8df1e4f95480d72b}{volume}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the volume of the geometry. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \& \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_ae79dc21354fa116707e7fc628d07d013}{set\+Position}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set a new position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a36d51266c9fa91f3a0c26f4620481136}{translate}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&dr)
+\begin{DoxyCompactList}\small\item\em Translate the geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the base class for all 3D geometric forms(cubs, spheres, tori, etc.) 
+
+Definition at line 14 of file P\+Geometry\+Base.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_ae44b298b2eaf59321d957af3b59d87c0}\label{classphysapi_1_1_p_geometry_base_ae44b298b2eaf59321d957af3b59d87c0}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!PGeometryBase@{PGeometryBase}}
+\index{PGeometryBase@{PGeometryBase}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{PGeometryBase()}{PGeometryBase()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Geometry\+Base\+::\+P\+Geometry\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_geometry_base}{P\+Geometry\+Base}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file P\+Geometry\+Base.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a4d8796ae6666b711d45fca8a55417c02}\label{classphysapi_1_1_p_geometry_base_a4d8796ae6666b711d45fca8a55417c02}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!````~PGeometryBase@{$\sim$PGeometryBase}}
+\index{````~PGeometryBase@{$\sim$PGeometryBase}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$PGeometryBase()}{~PGeometryBase()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Geometry\+Base\+::$\sim$\+P\+Geometry\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_geometry_base}{P\+Geometry\+Base}} object. 
+
+
+
+Definition at line 35 of file P\+Geometry\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a6d9ca62f69dd8e03cf96e202fb156544}\label{classphysapi_1_1_p_geometry_base_a6d9ca62f69dd8e03cf96e202fb156544}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!distanceBetweenBoundaries@{distanceBetweenBoundaries}}
+\index{distanceBetweenBoundaries@{distanceBetweenBoundaries}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{distanceBetweenBoundaries()}{distanceBetweenBoundaries()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::distance\+Between\+Boundaries (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the distance from one boundary to another on the given line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a0b5d527f2c968c51f78bf6ed92dfca2e}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_a9620a9bf73a2fbac24c701487921a5ae}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a61418836b6054e30febdb41291442427}\label{classphysapi_1_1_p_geometry_base_a61418836b6054e30febdb41291442427}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!distanceToBoundaryFromInside@{distanceToBoundaryFromInside}}
+\index{distanceToBoundaryFromInside@{distanceToBoundaryFromInside}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundaryFromInside()}{distanceToBoundaryFromInside()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::distance\+To\+Boundary\+From\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the distance to the geometry\textquotesingle{}s boundaries from an inside point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the point \\
+\hline
+{\em direction} & direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ad39bb1aa9c6b348b8f0aa130d125dfb9}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_aa6666b385c620c468e6fae456c22f38c}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a80d390dba8dd66d37118cd3aa70dca0f}\label{classphysapi_1_1_p_geometry_base_a80d390dba8dd66d37118cd3aa70dca0f}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!distanceToBoundaryFromOutside@{distanceToBoundaryFromOutside}}
+\index{distanceToBoundaryFromOutside@{distanceToBoundaryFromOutside}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundaryFromOutside()}{distanceToBoundaryFromOutside()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::distance\+To\+Boundary\+From\+Outside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the distance to the geometry\textquotesingle{}s boundaries from an outside point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the point \\
+\hline
+{\em direction} & direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float if the geometry is not in the path, given by the position and direction then this method returns -\/1 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ac99f96b476bd37e6ceebbc7ede24265e}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_a33ee0588a73fe7f1e55be847b94ec3b5}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a2e876fb5bfeba8497cc32e13cc85455d}\label{classphysapi_1_1_p_geometry_base_a2e876fb5bfeba8497cc32e13cc85455d}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!effectiveLength@{effectiveLength}}
+\index{effectiveLength@{effectiveLength}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{effectiveLength()}{effectiveLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::effective\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the length inside the geometry starting from a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+
+0 if the line does not enters the geometry 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_sphere_a3004e94d16b896bd17159ee9a0b639ed}{physapi\+::\+P\+Sphere}}, and \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a7ccc1b2360beafbc0498584e289a4438}{physapi\+::\+P\+Simple\+Torus}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_aa7c0b416bb05d95586fd5bdd6e701210}\label{classphysapi_1_1_p_geometry_base_aa7c0b416bb05d95586fd5bdd6e701210}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!estimationAverageSize@{estimationAverageSize}}
+\index{estimationAverageSize@{estimationAverageSize}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{estimationAverageSize()}{estimationAverageSize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::estimation\+Average\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This class gives an estimation of the average size. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float estimation size 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a04f22a422014c673f7585dc364483c55}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_ae384fe1f4e438bef2a3a3eb7cdf5bfcf}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_aa74ae1f35806b440d9f56fe3b0760210}\label{classphysapi_1_1_p_geometry_base_aa74ae1f35806b440d9f56fe3b0760210}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!freeLength@{freeLength}}
+\index{freeLength@{freeLength}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{freeLength()}{freeLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::free\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the length between boundaries, not inside the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_sphere_a9c58bd4eeff3a1b0abb0b663cbeea598}{physapi\+::\+P\+Sphere}}, and \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a9e13e2a65c827707d75e9990a8398b43}{physapi\+::\+P\+Simple\+Torus}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a9f3292d1a6933a649db0ab83522df299}\label{classphysapi_1_1_p_geometry_base_a9f3292d1a6933a649db0ab83522df299}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!intersect@{intersect}}
+\index{intersect@{intersect}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} physapi\+::\+P\+Geometry\+Base\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction,  }\item[{\mbox{\hyperlink{group__core_gaba57b90048e7f13a88a50f8c2c4e4704}{e\+Sense}}}]{sense = {\ttfamily \mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31}{e\+Sense\+::\+F\+O\+R\+W\+A\+RD}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the line determined by a point and a direction intersects or not the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & point\textquotesingle{}s position \\
+\hline
+{\em direction} & direction of the line \\
+\hline
+{\em sense} & sense of the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_abd070c3aeab7290b09c85e4f9d4662e7}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_a655a30b87b572636c33bb8f4847f54f1}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a0d798f51fab83f794ac85f9957758516}\label{classphysapi_1_1_p_geometry_base_a0d798f51fab83f794ac85f9957758516}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!isInside@{isInside}}
+\index{isInside@{isInside}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} physapi\+::\+P\+Geometry\+Base\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the given point is inside the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+bool true if the point is inside, else false 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a377f278cd3cd37352d503a4a93e5f8d6}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_aca847ee885f7f7d9476cfc2ab5dc2cad}{physapi\+::\+P\+Sphere}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}\label{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!position@{position}}
+\index{position@{position}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}\& physapi\+::\+P\+Geometry\+Base\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the object. 
+
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file P\+Geometry\+Base.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_ae79dc21354fa116707e7fc628d07d013}\label{classphysapi_1_1_p_geometry_base_ae79dc21354fa116707e7fc628d07d013}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Geometry\+Base\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a new position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file P\+Geometry\+Base.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a36d51266c9fa91f3a0c26f4620481136}\label{classphysapi_1_1_p_geometry_base_a36d51266c9fa91f3a0c26f4620481136}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!translate@{translate}}
+\index{translate@{translate}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Geometry\+Base\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{dr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translate the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dr} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 144 of file P\+Geometry\+Base.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_geometry_base_a714de87fc9bfeedf8df1e4f95480d72b}\label{classphysapi_1_1_p_geometry_base_a714de87fc9bfeedf8df1e4f95480d72b}} 
+\index{physapi::PGeometryBase@{physapi::PGeometryBase}!volume@{volume}}
+\index{volume@{volume}!physapi::PGeometryBase@{physapi::PGeometryBase}}
+\doxysubsubsection{\texorpdfstring{volume()}{volume()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Geometry\+Base\+::volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the volume of the geometry. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ac1ff8ebd355b8a9320b501f7f1c4eeb0}{physapi\+::\+P\+Simple\+Torus}}, and \mbox{\hyperlink{classphysapi_1_1_p_sphere_a944cd9ef6b4777813e65a6f87ae0d726}{physapi\+::\+P\+Sphere}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_p_geometry_base_8hpp}{P\+Geometry\+Base.\+hpp}}\end{DoxyCompactItemize}

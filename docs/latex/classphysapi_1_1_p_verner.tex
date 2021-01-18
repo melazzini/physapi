@@ -1,0 +1,148 @@
+\hypertarget{classphysapi_1_1_p_verner}{}\doxysection{physapi\+::P\+Verner Class Reference}
+\label{classphysapi_1_1_p_verner}\index{physapi::PVerner@{physapi::PVerner}}
+
+
+This class is a functor for calculating the photonionization cross section.  
+
+
+
+
+{\ttfamily \#include $<$P\+Verner.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_verner_a4dd31e96d8350d351b42c30fd629c910}{P\+Verner}} (const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&abundances, const \mbox{\hyperlink{classphysapi_1_1_p_verner_table1}{P\+Verner\+Table1}} \&table1, const \mbox{\hyperlink{classphysapi_1_1_p_verner_table2}{P\+Verner\+Table2}} \&table2)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_verner_aa8c89d50efecb83910721d466c36098f}{$\sim$\+P\+Verner}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_verner_a24a7b61e7ac0a8812a9875ce994a8ea4}{operator()}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} energy, std\+::vector$<$ std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, \mbox{\hyperlink{namespacephysapi_a346f2cb2904d4177ee6ab85c79ddadf1}{A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES}} $>$$>$ \&absorbing\+Elements)
+\begin{DoxyCompactList}\small\item\em Get the photonionization cross section. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_verner_a4898749e928ffb9212d88df246b91dca}{operator()}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} energy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a functor for calculating the photonionization cross section. 
+
+This class is based on \href{https://ui.adsabs.harvard.edu/abs/1996ApJ...465..487V/abstract}{\texttt{ Verner }}.
+
+{\bfseries{Example\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_verner_8hpp}{PVerner.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacephysapi}{physapi}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{   \mbox{\hyperlink{classphysapi_1_1_p_verner}{PVerner}} verner;}
+\DoxyCodeLine{}
+\DoxyCodeLine{   ofstream fout;}
+\DoxyCodeLine{}
+\DoxyCodeLine{   fout.open(\textcolor{stringliteral}{"photoionization.txt"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{   \textcolor{keywordflow}{for} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\_float}} energy\_i = 1.0\_eV; energy\_i < 300.0E3\_eV; energy\_i += 1.0\_eV)}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{       fout << energy\_i / 1.0\_eV << \textcolor{stringliteral}{"    "} << verner(energy\_i) << endl;}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+\href{photoionization.txt}{\texttt{ photonionization.\+txt }}
+
+ 
+
+Definition at line 51 of file P\+Verner.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_verner_a4dd31e96d8350d351b42c30fd629c910}\label{classphysapi_1_1_p_verner_a4dd31e96d8350d351b42c30fd629c910}} 
+\index{physapi::PVerner@{physapi::PVerner}!PVerner@{PVerner}}
+\index{PVerner@{PVerner}!physapi::PVerner@{physapi::PVerner}}
+\doxysubsubsection{\texorpdfstring{PVerner()}{PVerner()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Verner\+::\+P\+Verner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&}]{abundances,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_verner_table1}{P\+Verner\+Table1}} \&}]{table1,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_verner_table2}{P\+Verner\+Table2}} \&}]{table2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table1} & path to table 1 \\
+\hline
+{\em table2} & path to table 2 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file P\+Verner.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_verner_aa8c89d50efecb83910721d466c36098f}\label{classphysapi_1_1_p_verner_aa8c89d50efecb83910721d466c36098f}} 
+\index{physapi::PVerner@{physapi::PVerner}!````~PVerner@{$\sim$PVerner}}
+\index{````~PVerner@{$\sim$PVerner}!physapi::PVerner@{physapi::PVerner}}
+\doxysubsubsection{\texorpdfstring{$\sim$PVerner()}{~PVerner()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Verner\+::$\sim$\+P\+Verner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_verner}{P\+Verner}} object. 
+
+
+
+Definition at line 112 of file P\+Verner.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_verner_a4898749e928ffb9212d88df246b91dca}\label{classphysapi_1_1_p_verner_a4898749e928ffb9212d88df246b91dca}} 
+\index{physapi::PVerner@{physapi::PVerner}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PVerner@{physapi::PVerner}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Verner\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file P\+Verner.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classphysapi_1_1_p_verner_a24a7b61e7ac0a8812a9875ce994a8ea4}\label{classphysapi_1_1_p_verner_a24a7b61e7ac0a8812a9875ce994a8ea4}} 
+\index{physapi::PVerner@{physapi::PVerner}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PVerner@{physapi::PVerner}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Verner\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy,  }\item[{std\+::vector$<$ std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, \mbox{\hyperlink{namespacephysapi_a346f2cb2904d4177ee6ab85c79ddadf1}{A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES}} $>$$>$ \&}]{absorbing\+Elements }\end{DoxyParamCaption})}
+
+
+
+Get the photonionization cross section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & photon energy \\
+\hline
+{\em absorbing\+Elements} & list of all absorbing elements for that energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float photonionization cross section 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file P\+Verner.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/astrophysics/\mbox{\hyperlink{_p_verner_8hpp}{P\+Verner.\+hpp}}\item 
+src/astrophysics/\mbox{\hyperlink{_p_verner_8cpp}{P\+Verner.\+cpp}}\end{DoxyCompactItemize}

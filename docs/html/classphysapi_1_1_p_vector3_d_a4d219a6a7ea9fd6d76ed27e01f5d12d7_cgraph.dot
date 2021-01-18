@@ -1,0 +1,43 @@
+digraph "physapi::PVector3D::PVector3D"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="physapi::PVector3D\l::PVector3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Construct a new 3D-vector with the specified coordinates."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PVector2D\l::coordSys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a921d7965babf2352574778ca97cea71d",tooltip="Get the current coordinate system."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PVector2D\l::setCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae1b7752437c2c30b48ff4f40f0e84e78",tooltip="Set new coordinates (x, y) or ( , )."];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="physapi::PVector2D\l::setCoordSys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#af13393ec2be2f87b21e095426c4b6809",tooltip="Set a new coordinate system."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="physapi::PVector2D\l::setPolCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a17d53237cfa5a20e26f70cced0015962",tooltip="Set the coordinates , ."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="physapi::PVector2D::rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#af6fa628381013afe9cf5b9e97c7a3a8d",tooltip="Get the  coordinate."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="physapi::sqr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#ga01ea6c103ae225b6d9c3dec92bd7141c",tooltip="Calculate the square of an obj(number, scalar, vector, etc)"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="physapi::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#gae92fbf95826f105bd60a485bf7b596e8",tooltip="Calculate the square root of a scalar."];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="physapi::PVector2D::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#adef3e21a4bb82ad7b9351590075a8086",tooltip="Get the x coordinate."];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="physapi::PVector2D::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a15bb9964eb7b9ea7936d3e075737558e",tooltip="Get the y coordinate."];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="physapi::PVector2D\l::setX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ab95542584d466f618fcceb441a8d193e",tooltip="Set a new x coordinate."];
+  Node11 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="physapi::PVector2D\l::setY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a97efe616e6da1b05303a95bb183f46a2",tooltip="Set a new y coordinate."];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="physapi::PVector2D\l::theta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae3f8992ec4806815ed072fb4dc16aa38",tooltip="Get the  coordinate."];
+  Node13 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="physapi::PVector2D\l::setRecCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ae218483bca5e4aeb4f00a15260d5bc55",tooltip="Set the coordinates x,y."];
+  Node14 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

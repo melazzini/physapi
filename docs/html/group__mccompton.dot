@@ -1,0 +1,9 @@
+digraph "MC Compton"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Monte Carlo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__montecarlo.html",tooltip="This module offers Monte Carlo simulation tools."];
+  Node1 [label="MC Compton",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This submodule contains all the tools needed for simulation of compton scattering with Monte Carlo me..."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

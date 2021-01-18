@@ -121,7 +121,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab26a2737adc77e0e91e83178cfa5aca6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#ab26a2737adc77e0e91e83178cfa5aca6">~PComptonCollider</a> ()</td></tr>
 <tr class="memdesc:ab26a2737adc77e0e91e83178cfa5aca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classphysapi_1_1_p_compton_collider.html" title="Perform Compton collision.">PComptonCollider</a> object.  <a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#ab26a2737adc77e0e91e83178cfa5aca6">More...</a><br /></td></tr>
 <tr class="separator:ab26a2737adc77e0e91e83178cfa5aca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8a872b0c153980431a1f3b4d257ed0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0">run</a> (<a class="el" href="classphysapi_1_1_p_simple_photon.html">PSimplePhoton</a> &amp;photon, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> T_e) const</td></tr>
+<tr class="memitem:a6f8a872b0c153980431a1f3b4d257ed0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0">run</a> (<a class="el" href="classphysapi_1_1_p_simple_photon.html">PSimplePhoton</a> &amp;photon, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>) const</td></tr>
 <tr class="memdesc:a6f8a872b0c153980431a1f3b4d257ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the collision and set the corresponding momentum to the photon and to the electron given as arguments.  <a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0">More...</a><br /></td></tr>
 <tr class="separator:a6f8a872b0c153980431a1f3b4d257ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -130,12 +130,12 @@ Public Member Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classphysapi_1_1_p_m_c_compton.html" title="Handles compton interactions with Monte Carlo methods.">PMCCompton</a></dd></dl>
 <p><b>Example:</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;PComptonCollider.hpp&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;PMCCompton.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_p_compton_collider_8hpp.html">PComptonCollider.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_p_m_c_compton_8hpp.html">PMCCompton.hpp</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
-<div class="line"><span class="keyword">using namespace </span>physapi;</div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacephysapi.html">physapi</a>;</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="fluorescence_example_8txt.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line">{</div>
 <div class="line"><a class="code" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html">PComptonCollider&lt;PMCCompton&gt;</a> comptonCollider;</div>
 <div class="line"> </div>
@@ -155,6 +155,8 @@ Public Member Functions</h2></td></tr>
 <p>(5.34433e-23,0,0)</p>
 <p>2.07994e-14</p>
 <p>(6.20026e-23,2.91483e-23,-1.09325e-23) </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_compton_collider_8hpp_source.html#l00097">97</a> of file <a class="el" href="_p_compton_collider_8hpp_source.html">PComptonCollider.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa99339f8e4d344226635bbe1a5fc1420"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa99339f8e4d344226635bbe1a5fc1420">&#9670;&nbsp;</a></span>PComptonCollider()</h2>
@@ -180,6 +182,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="classphysapi_1_1_p_compton_collider.html" title="Perform Compton collision.">PComptonCollider</a> object. </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_compton_collider_8hpp_source.html#l00104">104</a> of file <a class="el" href="_p_compton_collider_8hpp_source.html">PComptonCollider.hpp</a>.</p>
 
 </div>
 </div>
@@ -207,6 +211,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy the <a class="el" href="classphysapi_1_1_p_compton_collider.html" title="Perform Compton collision.">PComptonCollider</a> object. </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_compton_collider_8hpp_source.html#l00110">110</a> of file <a class="el" href="_p_compton_collider_8hpp_source.html">PComptonCollider.hpp</a>.</p>
 
 </div>
 </div>
@@ -254,6 +260,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_p_compton_collider_8hpp_source.html#l00119">119</a> of file <a class="el" href="_p_compton_collider_8hpp_source.html">PComptonCollider.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -261,14 +269,18 @@ Public Member Functions</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassphysapi_1_1_p_simple_photon_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_photon.html">physapi::PSimplePhoton</a></div><div class="ttdoc">This class represents a simple photon.</div><div class="ttdef"><b>Definition:</b> PSimplePhoton.hpp:22</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_vector3_d_html"><div class="ttname"><a href="classphysapi_1_1_p_vector3_d.html">physapi::PVector3D</a></div><div class="ttdoc">This class represents a vector in the XYZ space.</div><div class="ttdef"><b>Definition:</b> PVector3D.hpp:33</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_html"><div class="ttname"><a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html">physapi::PComptonCollider&lt; PMCCompton &gt;</a></div><div class="ttdoc">Template specialization of PComptonCollider for compton Monte Carlo simulation(PMCCompton).</div><div class="ttdef"><b>Definition:</b> PComptonCollider.hpp:98</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_html_a6f8a872b0c153980431a1f3b4d257ed0"><div class="ttname"><a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0">physapi::PComptonCollider&lt; PMCCompton &gt;::run</a></div><div class="ttdeci">virtual void run(PSimplePhoton &amp;photon, phys_float T_e) const</div><div class="ttdoc">Perform the collision and set the corresponding momentum to the photon and to the electron given as a...</div><div class="ttdef"><b>Definition:</b> PComptonCollider.hpp:119</div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_simple_photon_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_photon.html">physapi::PSimplePhoton</a></div><div class="ttdoc">This class represents a simple photon.</div><div class="ttdef"><b>Definition:</b> <a href="_p_simple_photon_8hpp_source.html#l00021">PSimplePhoton.hpp:22</a></div></div>
+<div class="ttc" id="a_p_m_c_compton_8hpp_html"><div class="ttname"><a href="_p_m_c_compton_8hpp.html">PMCCompton.hpp</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_vector3_d_html"><div class="ttname"><a href="classphysapi_1_1_p_vector3_d.html">physapi::PVector3D</a></div><div class="ttdoc">This class represents a vector in the XYZ space.</div><div class="ttdef"><b>Definition:</b> <a href="_p_vector3_d_8hpp_source.html#l00032">PVector3D.hpp:33</a></div></div>
+<div class="ttc" id="a_p_compton_collider_8hpp_html"><div class="ttname"><a href="_p_compton_collider_8hpp.html">PComptonCollider.hpp</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_html"><div class="ttname"><a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html">physapi::PComptonCollider&lt; PMCCompton &gt;</a></div><div class="ttdoc">Template specialization of PComptonCollider for compton Monte Carlo simulation(PMCCompton).</div><div class="ttdef"><b>Definition:</b> <a href="_p_compton_collider_8hpp_source.html#l00097">PComptonCollider.hpp:98</a></div></div>
+<div class="ttc" id="afluorescence_example_8txt_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="fluorescence_example_8txt.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="fluorescence_example_8txt_source.html#l00016">fluorescenceExample.txt:16</a></div></div>
+<div class="ttc" id="anamespacephysapi_html"><div class="ttname"><a href="namespacephysapi.html">physapi</a></div><div class="ttdef"><b>Definition:</b> <a href="astrophysics__utils_8hpp_source.html#l00013">astrophysics_utils.hpp:14</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_html_a6f8a872b0c153980431a1f3b4d257ed0"><div class="ttname"><a href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0">physapi::PComptonCollider&lt; PMCCompton &gt;::run</a></div><div class="ttdeci">virtual void run(PSimplePhoton &amp;photon, phys_float T_e) const</div><div class="ttdoc">Perform the collision and set the corresponding momentum to the photon and to the electron given as a...</div><div class="ttdef"><b>Definition:</b> <a href="_p_compton_collider_8hpp_source.html#l00119">PComptonCollider.hpp:119</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>physapi</b></li><li class="navelem"><a class="el" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html">PComptonCollider&lt; PMCCompton &gt;</a></li>
+    <li class="navelem"><a class="el" href="namespacephysapi.html">physapi</a></li><li class="navelem"><a class="el" href="classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html">PComptonCollider&lt; PMCCompton &gt;</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

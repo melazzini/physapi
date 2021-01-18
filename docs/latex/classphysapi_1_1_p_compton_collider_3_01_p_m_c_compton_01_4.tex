@@ -1,0 +1,130 @@
+\hypertarget{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4}{}\doxysection{physapi\+::P\+Compton\+Collider$<$ P\+M\+C\+Compton $>$ Class Reference}
+\label{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4}\index{physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}}
+
+
+Template specialization of \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} for compton Monte Carlo simulation(\+P\+M\+C\+Compton).  
+
+
+
+
+{\ttfamily \#include $<$P\+Compton\+Collider.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_aa99339f8e4d344226635bbe1a5fc1420}{P\+Compton\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_ab26a2737adc77e0e91e83178cfa5aca6}{$\sim$\+P\+Compton\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_a6f8a872b0c153980431a1f3b4d257ed0}{run}} (\mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&photon, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a492625c01cb41af46e9284b9fd87700c}{T\+\_\+e}}) const
+\begin{DoxyCompactList}\small\item\em Perform the collision and set the corresponding momentum to the photon and to the electron given as arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Template specialization of \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} for compton Monte Carlo simulation(\+P\+M\+C\+Compton). 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{P\+M\+C\+Compton}}
+\end{DoxySeeAlso}
+{\bfseries{Example\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_compton_collider_8hpp}{PComptonCollider.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_m_c_compton_8hpp}{PMCCompton.hpp}}"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacephysapi}{physapi}};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\mbox{\hyperlink{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4}{PComptonCollider<PMCCompton>}} comptonCollider;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{PSimplePhoton}} photon\{100.0E3\_eV, \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{PVector3D}}(1, 0, 0)\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{cout << photon.energy() << endl;}
+\DoxyCodeLine{cout << photon.momentum() << endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{comptonCollider.\mbox{\hyperlink{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_a6f8a872b0c153980431a1f3b4d257ed0}{run}}(photon, 100.0E3\_eVToKelvin);}
+\DoxyCodeLine{}
+\DoxyCodeLine{cout << photon.energy() << endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{cout << photon.momentum() << endl;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+1.\+60219e-\/14
+
+(5.\+34433e-\/23,0,0)
+
+2.\+07994e-\/14
+
+(6.\+20026e-\/23,2.\+91483e-\/23,-\/1.\+09325e-\/23) 
+
+Definition at line 97 of file P\+Compton\+Collider.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_aa99339f8e4d344226635bbe1a5fc1420}\label{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_aa99339f8e4d344226635bbe1a5fc1420}} 
+\index{physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}!PComptonCollider@{PComptonCollider}}
+\index{PComptonCollider@{PComptonCollider}!physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}}
+\doxysubsubsection{\texorpdfstring{PComptonCollider()}{PComptonCollider()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{physapi\+::\+P\+Compton\+Collider}}$<$ \mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{P\+M\+C\+Compton}} $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} object. 
+
+
+
+Definition at line 104 of file P\+Compton\+Collider.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_ab26a2737adc77e0e91e83178cfa5aca6}\label{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_ab26a2737adc77e0e91e83178cfa5aca6}} 
+\index{physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}!````~PComptonCollider@{$\sim$PComptonCollider}}
+\index{````~PComptonCollider@{$\sim$PComptonCollider}!physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PComptonCollider()}{~PComptonCollider()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{physapi\+::\+P\+Compton\+Collider}}$<$ \mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{P\+M\+C\+Compton}} $>$\+::$\sim$\mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{P\+Compton\+Collider}} object. 
+
+
+
+Definition at line 110 of file P\+Compton\+Collider.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_a6f8a872b0c153980431a1f3b4d257ed0}\label{classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4_a6f8a872b0c153980431a1f3b4d257ed0}} 
+\index{physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}!run@{run}}
+\index{run@{run}!physapi::PComptonCollider$<$ PMCCompton $>$@{physapi::PComptonCollider$<$ PMCCompton $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{classphysapi_1_1_p_compton_collider}{physapi\+::\+P\+Compton\+Collider}}$<$ \mbox{\hyperlink{classphysapi_1_1_p_m_c_compton}{P\+M\+C\+Compton}} $>$\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&}]{photon,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{T\+\_\+e }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Perform the collision and set the corresponding momentum to the photon and to the electron given as arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em photon} & photon \\
+\hline
+{\em T\+\_\+e} & temperature of the electron \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file P\+Compton\+Collider.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/interactions/compton/\mbox{\hyperlink{_p_compton_collider_8hpp}{P\+Compton\+Collider.\+hpp}}\end{DoxyCompactItemize}

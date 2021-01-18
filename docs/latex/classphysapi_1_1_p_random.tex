@@ -1,0 +1,122 @@
+\hypertarget{classphysapi_1_1_p_random}{}\doxysection{physapi\+::P\+Random Class Reference}
+\label{classphysapi_1_1_p_random}\index{physapi::PRandom@{physapi::PRandom}}
+
+
+Generate random numbers offering a simple interface.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_random_a87756acb5f4cfe275e1b7fd6629fa312}{P\+Random}} ()
+\item 
+{\footnotesize template$<$phys\+\_\+size bits = 14$>$ }\\\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_random_aaf1a9a3a03a363adb33ee9cb3e5dafec}{random\+\_\+0\+\_\+1}} ()
+\begin{DoxyCompactList}\small\item\em Get a random number between 0 and 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_random_ad0ec4a5caa6515a39a60f7f23bfc4840}{random\+\_\+minus\+Plus\+\_\+1}} ()
+\begin{DoxyCompactList}\small\item\em Get a random number between -\/1 and +1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_random_a0947f18dbf629d58d4b64015c15169f4}{uniform\+\_\+real}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} left, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} right)
+\begin{DoxyCompactList}\small\item\em Get a random number between left and right bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate random numbers offering a simple interface. 
+
+This class handles the reneration of random numbers and it offers a simple interface. You can create a global instance of this class and pass references of it where you need random number generation. 
+
+Definition at line 655 of file utils.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_random_a87756acb5f4cfe275e1b7fd6629fa312}\label{classphysapi_1_1_p_random_a87756acb5f4cfe275e1b7fd6629fa312}} 
+\index{physapi::PRandom@{physapi::PRandom}!PRandom@{PRandom}}
+\index{PRandom@{PRandom}!physapi::PRandom@{physapi::PRandom}}
+\doxysubsubsection{\texorpdfstring{PRandom()}{PRandom()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Random\+::\+P\+Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 658 of file utils.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_random_aaf1a9a3a03a363adb33ee9cb3e5dafec}\label{classphysapi_1_1_p_random_aaf1a9a3a03a363adb33ee9cb3e5dafec}} 
+\index{physapi::PRandom@{physapi::PRandom}!random\_0\_1@{random\_0\_1}}
+\index{random\_0\_1@{random\_0\_1}!physapi::PRandom@{physapi::PRandom}}
+\doxysubsubsection{\texorpdfstring{random\_0\_1()}{random\_0\_1()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size bits = 14$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Random\+::random\+\_\+0\+\_\+1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a random number between 0 and 1. 
+
+This method is a wrapper of std\+::generate\+\_\+canonical$<$type,bits$>$
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em bits} & precision \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float random number on (0,1) 
+\end{DoxyReturn}
+
+
+Definition at line 673 of file utils.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classphysapi_1_1_p_random_ad0ec4a5caa6515a39a60f7f23bfc4840}\label{classphysapi_1_1_p_random_ad0ec4a5caa6515a39a60f7f23bfc4840}} 
+\index{physapi::PRandom@{physapi::PRandom}!random\_minusPlus\_1@{random\_minusPlus\_1}}
+\index{random\_minusPlus\_1@{random\_minusPlus\_1}!physapi::PRandom@{physapi::PRandom}}
+\doxysubsubsection{\texorpdfstring{random\_minusPlus\_1()}{random\_minusPlus\_1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Random\+::random\+\_\+minus\+Plus\+\_\+1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a random number between -\/1 and +1. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float random number on (-\/1,1) 
+\end{DoxyReturn}
+
+
+Definition at line 683 of file utils.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_random_a0947f18dbf629d58d4b64015c15169f4}\label{classphysapi_1_1_p_random_a0947f18dbf629d58d4b64015c15169f4}} 
+\index{physapi::PRandom@{physapi::PRandom}!uniform\_real@{uniform\_real}}
+\index{uniform\_real@{uniform\_real}!physapi::PRandom@{physapi::PRandom}}
+\doxysubsubsection{\texorpdfstring{uniform\_real()}{uniform\_real()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Random\+::uniform\+\_\+real (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{left,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a random number between left and right bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & lower bound \\
+\hline
+{\em right} & upper bound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float random number on (left, right) 
+\end{DoxyReturn}
+
+
+Definition at line 692 of file utils.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{utils_8hpp}{utils.\+hpp}}\end{DoxyCompactItemize}

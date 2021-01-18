@@ -1,0 +1,165 @@
+\hypertarget{classphysapi_1_1_p_spectrum_maker}{}\doxysection{physapi\+::P\+Spectrum\+Maker$<$ energy\+Intervals, precision $>$ Class Template Reference}
+\label{classphysapi_1_1_p_spectrum_maker}\index{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}}
+
+
+This is a functor class for making radiation spectra.  
+
+
+
+
+{\ttfamily \#include $<$P\+Spectrum\+Maker.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker_aa052f1a1929febe6d37e02464661e262}{P\+Spectrum\+Maker}} (const std\+::string \&unitsX=\char`\"{}j\char`\"{}, const std\+::string \&unitsY=\char`\"{}adim\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker_a5c8189b205b819a72bed772435044ab2}{$\sim$\+P\+Spectrum\+Maker}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker_a678cd05ad7b84469974cc19ed4c59cd6}{operator()}} (\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&spectrum, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} number\+Of\+Photons, const \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} \&\mbox{\hyperlink{main_8cpp_a43a01a98cfb0456d4147a9bbff67f029}{phi}}) const
+\begin{DoxyCompactList}\small\item\em Make the spectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker_a84bbc177e2b6adf95a038eff274d0a72}{I\+N\+T\+E\+R\+V\+A\+LS}} = energy\+Intervals
+\begin{DoxyCompactList}\small\item\em Number of energy intervals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$phys\+\_\+size energy\+Intervals, phys\+\_\+size precision = 1\textquotesingle{}000\textquotesingle{}000$>$\newline
+class physapi\+::\+P\+Spectrum\+Maker$<$ energy\+Intervals, precision $>$}
+
+This is a functor class for making radiation spectra. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em energy\+Intervals} & number of energy intervals\\
+\hline
+{\em precision} & precision in the generation of photons. The more precision the more exact number of photons you will obtain.\\
+\hline
+\end{DoxyTemplParams}
+A radiation spectrum is defined in our api by the next formula\+:
+
+\[ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) \]
+
+The formula gives the number of photons per energy interval corresponding to the energy $ E $.
+
+Where $ \beta $ and $ \frac{dN}{dE} = \beta * N_{Tot} * \phi(E) $ is the normalization parameter, $ N_{Tot} $ the total amount of photons in the spectrum and $ \phi(E) $ is the spectral formula.
+
+We normalize this such that\+: \begin{DoxyVerb} \f$ \beta * \int_{E_{low}}^{E_{upp}} \phi(E) = 1 \f$
+\end{DoxyVerb}
+
+
+and therefore\+: \begin{DoxyVerb} \f$ \int_{E_{low}}^{E_{upp}} dN = N_{Tot} \f$
+\end{DoxyVerb}
+
+
+Where $ E_{low} $ and $ E_{upp} $ are the energy bounds of the spectrum.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 46 of file P\+Spectrum\+Maker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_maker_aa052f1a1929febe6d37e02464661e262}\label{classphysapi_1_1_p_spectrum_maker_aa052f1a1929febe6d37e02464661e262}} 
+\index{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}!PSpectrumMaker@{PSpectrumMaker}}
+\index{PSpectrumMaker@{PSpectrumMaker}!physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}}
+\doxysubsubsection{\texorpdfstring{PSpectrumMaker()}{PSpectrumMaker()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals, phys\+\_\+size precision = 1\textquotesingle{}000\textquotesingle{}000$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{physapi\+::\+P\+Spectrum\+Maker}}$<$ energy\+Intervals, precision $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{unitsX = {\ttfamily \char`\"{}j\char`\"{}},  }\item[{const std\+::string \&}]{unitsY = {\ttfamily \char`\"{}adim\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unitsX} & units of the x axis \\
+\hline
+{\em unitsY} & units of the y axis \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file P\+Spectrum\+Maker.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_maker_a5c8189b205b819a72bed772435044ab2}\label{classphysapi_1_1_p_spectrum_maker_a5c8189b205b819a72bed772435044ab2}} 
+\index{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}!````~PSpectrumMaker@{$\sim$PSpectrumMaker}}
+\index{````~PSpectrumMaker@{$\sim$PSpectrumMaker}!physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSpectrumMaker()}{~PSpectrumMaker()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals, phys\+\_\+size precision = 1\textquotesingle{}000\textquotesingle{}000$>$ \\
+virtual \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{physapi\+::\+P\+Spectrum\+Maker}}$<$ energy\+Intervals, precision $>$\+::$\sim$\mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{P\+Spectrum\+Maker}} object. 
+
+
+
+Definition at line 79 of file P\+Spectrum\+Maker.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_maker_a678cd05ad7b84469974cc19ed4c59cd6}\label{classphysapi_1_1_p_spectrum_maker_a678cd05ad7b84469974cc19ed4c59cd6}} 
+\index{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals, phys\+\_\+size precision = 1\textquotesingle{}000\textquotesingle{}000$>$ \\
+void \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{physapi\+::\+P\+Spectrum\+Maker}}$<$ energy\+Intervals, precision $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&}]{spectrum,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{number\+Of\+Photons,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{P\+Spectral\+Formula\+Base}} \&}]{phi }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Make the spectrum. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em energy\+Intervals} & number of energy intervals \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum} & empty spectrum \\
+\hline
+{\em number\+Of\+Photons} & total number of photons \\
+\hline
+{\em phi} & spectral formula\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The spectrum will be cleared befored it gets filled with the data. 
+\end{DoxyNote}
+
+
+Definition at line 97 of file P\+Spectrum\+Maker.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_maker_a84bbc177e2b6adf95a038eff274d0a72}\label{classphysapi_1_1_p_spectrum_maker_a84bbc177e2b6adf95a038eff274d0a72}} 
+\index{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}!INTERVALS@{INTERVALS}}
+\index{INTERVALS@{INTERVALS}!physapi::PSpectrumMaker$<$ energyIntervals, precision $>$@{physapi::PSpectrumMaker$<$ energyIntervals, precision $>$}}
+\doxysubsubsection{\texorpdfstring{INTERVALS}{INTERVALS}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals, phys\+\_\+size precision = 1\textquotesingle{}000\textquotesingle{}000$>$ \\
+constexpr \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{physapi\+::\+P\+Spectrum\+Maker}}$<$ energy\+Intervals, precision $>$\+::I\+N\+T\+E\+R\+V\+A\+LS = energy\+Intervals\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Number of energy intervals. 
+
+
+
+Definition at line 58 of file P\+Spectrum\+Maker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/radiation/\mbox{\hyperlink{_p_spectrum_maker_8hpp}{P\+Spectrum\+Maker.\+hpp}}\end{DoxyCompactItemize}

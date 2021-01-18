@@ -1,0 +1,15 @@
+digraph "include/astrophysics" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_d44c64559bbebec7f509842c48db8b23.html"]
+  subgraph clusterdir_2e89f58e79689a8ad01250709ad34702 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2e89f58e79689a8ad01250709ad34702.html"];
+    dir_2e89f58e79689a8ad01250709ad34702 [shape=plaintext label="astrophysics"];
+    dir_dd471a0757442a54d346ddb83a295798 [shape=box label="tables" color="black" fillcolor="white" style="filled" URL="dir_dd471a0757442a54d346ddb83a295798.html"];
+  }
+  }
+  dir_3d69f64eaf81436fe2b22361382717e5 [shape=box label="core" URL="dir_3d69f64eaf81436fe2b22361382717e5.html"];
+  dir_2e89f58e79689a8ad01250709ad34702->dir_3d69f64eaf81436fe2b22361382717e5 [headlabel="2", labeldistance=1.5 headhref="dir_000001_000003.html"];
+}

@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['checkrangeexclusive_383',['checkRangeExclusive',['../group__core.html#ga3cd9a3283f784a6a22df2532fc99d1dc',1,'physapi']]],
-  ['checkrangeinclusive_384',['checkRangeInclusive',['../group__core.html#gafec5606c7bf79d88e5f429217f376d1d',1,'physapi']]],
-  ['checkrangeinclusiveleft_385',['checkRangeInclusiveLeft',['../group__core.html#gacadd1d23c3c1b35cfa4863a2080973be',1,'physapi']]],
-  ['checkrangeinclusiveright_386',['checkRangeInclusiveRight',['../group__core.html#ga7d22b29a503bc80fe477846ffdb300b1',1,'physapi']]],
-  ['clear_387',['clear',['../classphysapi_1_1_p_spectrum.html#ad873684b9b3c746b574a14158dd9ea4e',1,'physapi::PSpectrum']]],
-  ['clouds_388',['clouds',['../classagn_1_1_p_a_g_n_clumpy_structure_model_b.html#a789331c2184660144c5d1394aabe25f5',1,'agn::PAGNClumpyStructureModelB::clouds()'],['../classagn_1_1_p_a_g_n_clumpy_torus_model.html#a3daf07f84b475408ac9fa4161ff01f70',1,'agn::PAGNClumpyTorusModel::clouds()']]],
-  ['coordsys_389',['coordSys',['../classphysapi_1_1_p_vector2_d.html#a921d7965babf2352574778ca97cea71d',1,'physapi::PVector2D']]],
-  ['cos_390',['cos',['../classphysapi_1_1_p_vector2_d.html#aa0167d443f83fb9822a04401654f22c1',1,'physapi::PVector2D']]],
-  ['count_391',['count',['../classphysapi_1_1_p_spectrum.html#ad2354653e1077dc6e6f2ec37379e3084',1,'physapi::PSpectrum']]],
-  ['crossproduct_392',['crossProduct',['../classphysapi_1_1_p_vector2_d.html#a11df58f0191454f79c974a55131b6632',1,'physapi::PVector2D::crossProduct()'],['../classphysapi_1_1_p_vector3_d.html#ab44b6cd32c827e03b162f57532365b3c',1,'physapi::PVector3D::crossProduct()']]],
-  ['cub_393',['cub',['../group__core.html#gad811674e1b0bbc9874f87965cfa33561',1,'physapi']]]
+  ['abundance_765',['abundance',['../classphysapi_1_1_p_abundance_table.html#a206f8fae8c70f6ee0877c940d28fd3f4',1,'physapi::PAbundanceTable']]],
+  ['addphoton_766',['addPhoton',['../classphysapi_1_1_p_spectrum.html#a95b91efd286d14246d3eb23484519ae8',1,'physapi::PSpectrum::addPhoton(phys_float hv)'],['../classphysapi_1_1_p_spectrum.html#a281e0b3e5480a9ee18edd92eb4fe71c8',1,'physapi::PSpectrum::addPhoton(const PSimplePhoton &amp;photon)']]],
+  ['addphotons_767',['addPhotons',['../classphysapi_1_1_p_spectrum.html#abf71fae6eb9f01645786b442053e2840',1,'physapi::PSpectrum']]],
+  ['agnsolidangle_768',['agnSolidAngle',['../group__agn.html#gadfac13cfa98e7b89da2f9df1a3166e3a',1,'agn']]],
+  ['anglebetweenvectors_769',['angleBetweenVectors',['../classphysapi_1_1_p_vector2_d.html#aafb821d3f298542106323af5ff076be1',1,'physapi::PVector2D']]],
+  ['atomicnumber_770',['atomicNumber',['../classphysapi_1_1_p_fluorescence_key.html#afb713c710c84378ff820649c8c3eb648',1,'physapi::PFluorescenceKey']]],
+  ['augerelectrons_771',['augerElectrons',['../classphysapi_1_1_p_fluorescence_key.html#ae4534a00f7b336c3a5a642723c8bc93b',1,'physapi::PFluorescenceKey']]]
 ];

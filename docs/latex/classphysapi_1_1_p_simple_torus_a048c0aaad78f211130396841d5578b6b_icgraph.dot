@@ -1,0 +1,16 @@
+digraph "physapi::PSimpleTorus::maximumLength"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSimpleTorus\l::maximumLength",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the maximum possible length inside the geometry."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSimpleTorus\l::distanceToBoundaryFromInside",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_torus.html#ad39bb1aa9c6b348b8f0aa130d125dfb9",tooltip="Get the distance to the geometry's boundaries from an inside point."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="agn::PAGNSmoothTorusModel\l::distanceToBoundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_torus_model.html#a51d41fbe24184640a2653af5b95c3b75",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSimpleTorus\l::distanceToBoundaryFromOutside",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_torus.html#ac99f96b476bd37e6ceebbc7ede24265e",tooltip="Get the distance to the geometry's boundaries from an outside point."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="agn::PAGNSmoothTorusModel\l::distanceToEnteringPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_torus_model.html#a9ce6ebecbbd725067308412d1762aee8",tooltip=" "];
+}

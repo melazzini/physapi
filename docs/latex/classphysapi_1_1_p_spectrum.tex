@@ -1,0 +1,631 @@
+\hypertarget{classphysapi_1_1_p_spectrum}{}\doxysection{physapi\+::P\+Spectrum$<$ energy\+Intervals $>$ Class Template Reference}
+\label{classphysapi_1_1_p_spectrum}\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+
+
+This class represents a raw spectrum(or photon distribution).  
+
+
+
+
+{\ttfamily \#include $<$P\+Spectrum.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum_a51c67c82bdfeef36160dcbc2e1937fc0}{P\+Spectrum}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a916108029210bca24cd432b99633c6ea}{E\+\_\+low}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a71d94e894daa894dc5c4b3f6445d9c77}{E\+\_\+upp}}, \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a70e7a9c7f85ed5eb2468a21e6ab44acd}{scale}}=\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a90c3fd5ee0c6c471cac39b5f9a4ffae2}{e\+Spectrum\+Scale\+::\+L\+IN}})
+\begin{DoxyCompactList}\small\item\em Construct a new empty spectrum. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a8ca606bd0f890fc285af61f6486ce8e6}{$\sim$\+P\+Spectrum}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the spectrum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ad873684b9b3c746b574a14158dd9ea4e}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the spectrum. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}{t\+\_\+spectrum}}$<$ energy\+Intervals $>$ \& \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}} () const
+\begin{DoxyCompactList}\small\item\em Get the spectrum data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_aef47df9c42f702d4466f56a6706ceb23}{left\+Bound}} () const
+\begin{DoxyCompactList}\small\item\em Get the left energy bound of the spectrum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a3bc2e811e723ac9a4b13394cd3eea5c3}{right\+Bound}} () const
+\begin{DoxyCompactList}\small\item\em Get the right energy bound of the spectrum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a70e7a9c7f85ed5eb2468a21e6ab44acd}{scale}} () const
+\begin{DoxyCompactList}\small\item\em Get the spectrum scale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ab1df1f6bb3917701fa4bacc7c6f71821}{left\+Remainder}} () const
+\begin{DoxyCompactList}\small\item\em Get the remaining photons to the left of the interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_aaa0e2308366decf9875689225536ec2f}{right\+Remainder}} () const
+\begin{DoxyCompactList}\small\item\em Get the remaining photons to the right of the interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a57476aa68e068948d982698ed84de5dd}{remainder}} () const
+\begin{DoxyCompactList}\small\item\em Get the remaining photons to the left and right of the interval. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a95b91efd286d14246d3eb23484519ae8}{add\+Photon}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} hv)
+\begin{DoxyCompactList}\small\item\em Add a photon with energy hv to the spectrum. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum_abf71fae6eb9f01645786b442053e2840}{add\+Photons}} (\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} n=1)
+\begin{DoxyCompactList}\small\item\em Add a number of photons to the given interval. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a281e0b3e5480a9ee18edd92eb4fe71c8}{add\+Photon}} (const \mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&photon)
+\begin{DoxyCompactList}\small\item\em Add a photon with its energy to the spectrum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a205afc21bebfcfb19d55cec26e28e36a}{energy}} (\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the energy of the corresponding interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a30b985140db42af89121754364922fe9}{subinterval\+Energy\+Lower\+Bound}} (\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the energy lower bound of the interval determined by the index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ad4763641075f0e8f548cc87e6cab0a9e}{subinterval\+Energy\+Upper\+Bound}} (\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the energy upper bound of the interval determined by the index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a96de05661be6b52584b6eb6ef6294310}{value}} (\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the spectrum value of the corresponding interval. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga961a6ad83c74d135766d36b1e47b94bc}{phys\+\_\+lint}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}{index}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a205afc21bebfcfb19d55cec26e28e36a}{energy}}) const
+\begin{DoxyCompactList}\small\item\em Get the index that corresponds to the given energy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_ad2354653e1077dc6e6f2ec37379e3084}{count}} () const
+\begin{DoxyCompactList}\small\item\em Get the total number of photons in the spectrum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a368cab481318c414f14ba82615147e6e}{operator+}} (const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a42e6375b41e950a57b47aadabe5e528b}{N\+\_\+intervals}} = energy\+Intervals
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t number\+Of\+Energy\+Intervals$>$ }\\std\+::ostream \& \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a05c8d498d98ad61530c52e0a99473d9b}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ number\+Of\+Energy\+Intervals $>$ \&\mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$phys\+\_\+size energy\+Intervals$>$\newline
+class physapi\+::\+P\+Spectrum$<$ energy\+Intervals $>$}
+
+This class represents a raw spectrum(or photon distribution). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em energy\+Intervals} & number of energy intervals.\\
+\hline
+\end{DoxyTemplParams}
+A raw spectrum is simply a vector of energy-\/value pairs where the energy corresponds to the energy interval and the value is the number of photons in that interval.
+
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    PSpectrum<10> \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}\{3, 20, \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a90c3fd5ee0c6c471cac39b5f9a4ffae2}{eSpectrumScale::LIN}}\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(4);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(5);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(9.9);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(10);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(7.8);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    cout << \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}} << endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+0 3.\+85 1
+
+1 5.\+55 1
+
+2 7.\+25 1
+
+3 8.\+95 0
+
+4 10.\+65 2
+
+5 12.\+35 0
+
+6 14.\+05 0
+
+7 15.\+75 0
+
+8 17.\+45 0
+
+9 19.\+15 0
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_spectrum_8hpp}{PSpectrum.hpp}}"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacephysapi}{physapi}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{PSpectrum<10>}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}\{3, 20, \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a4b5ffcdaf38ce4d463171f5c977c5ab3}{eSpectrumScale::LOG}}\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(4);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(5);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(9.9);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(10);}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}}.addPhoton(7.8);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    cout << \mbox{\hyperlink{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}{spectrum}} << endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+0 3.\+31335 0
+
+1 4.\+00552 1
+
+2 4.\+84227 1
+
+3 5.\+85383 0
+
+4 7.\+0767 0
+
+5 8.\+55504 1
+
+6 10.\+3422 2
+
+7 12.\+5027 0
+
+8 15.\+1145 0
+
+9 18.\+272 0 
+
+Definition at line 111 of file P\+Spectrum.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a51c67c82bdfeef36160dcbc2e1937fc0}\label{classphysapi_1_1_p_spectrum_a51c67c82bdfeef36160dcbc2e1937fc0}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!PSpectrum@{PSpectrum}}
+\index{PSpectrum@{PSpectrum}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{PSpectrum()}{PSpectrum()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{E\+\_\+low,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{E\+\_\+upp,  }\item[{\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}}}]{scale = {\ttfamily \mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4a90c3fd5ee0c6c471cac39b5f9a4ffae2}{e\+Spectrum\+Scale\+::\+L\+IN}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new empty spectrum. 
+
+
+
+Definition at line 150 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a8ca606bd0f890fc285af61f6486ce8e6}\label{classphysapi_1_1_p_spectrum_a8ca606bd0f890fc285af61f6486ce8e6}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!````~PSpectrum@{$\sim$PSpectrum}}
+\index{````~PSpectrum@{$\sim$PSpectrum}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSpectrum()}{~PSpectrum()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+virtual \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::$\sim$\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the spectrum. 
+
+
+
+Definition at line 172 of file P\+Spectrum.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a281e0b3e5480a9ee18edd92eb4fe71c8}\label{classphysapi_1_1_p_spectrum_a281e0b3e5480a9ee18edd92eb4fe71c8}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!addPhoton@{addPhoton}}
+\index{addPhoton@{addPhoton}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{addPhoton()}{addPhoton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::add\+Photon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_simple_photon}{P\+Simple\+Photon}} \&}]{photon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a photon with its energy to the spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em photon} & photon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the photon has been added successfully, false if not 
+\end{DoxyReturn}
+
+
+Definition at line 322 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a95b91efd286d14246d3eb23484519ae8}\label{classphysapi_1_1_p_spectrum_a95b91efd286d14246d3eb23484519ae8}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!addPhoton@{addPhoton}}
+\index{addPhoton@{addPhoton}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{addPhoton()}{addPhoton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::add\+Photon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{hv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a photon with energy hv to the spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hv} & photon\textquotesingle{}s energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the photon has been added successfully, false if not 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_abf71fae6eb9f01645786b442053e2840}\label{classphysapi_1_1_p_spectrum_abf71fae6eb9f01645786b442053e2840}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!addPhotons@{addPhotons}}
+\index{addPhotons@{addPhotons}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{addPhotons()}{addPhotons()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+bool \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::add\+Photons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{index,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{n = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a number of photons to the given interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & interval index \\
+\hline
+{\em n} & number of photons \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true the photons were added to the spectrum successfully 
+
+false the photons were not added to the spectrum 
+\end{DoxyReturn}
+
+
+Definition at line 303 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_ad873684b9b3c746b574a14158dd9ea4e}\label{classphysapi_1_1_p_spectrum_ad873684b9b3c746b574a14158dd9ea4e}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!clear@{clear}}
+\index{clear@{clear}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+void \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the spectrum. 
+
+After this the spectrum will be intialized to zero in each interval. 
+
+Definition at line 186 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_ad2354653e1077dc6e6f2ec37379e3084}\label{classphysapi_1_1_p_spectrum_ad2354653e1077dc6e6f2ec37379e3084}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!count@{count}}
+\index{count@{count}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the total number of photons in the spectrum. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+size 
+\end{DoxyReturn}
+
+
+Definition at line 459 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a205afc21bebfcfb19d55cec26e28e36a}\label{classphysapi_1_1_p_spectrum_a205afc21bebfcfb19d55cec26e28e36a}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!energy@{energy}}
+\index{energy@{energy}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{energy()}{energy()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the energy of the corresponding interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float energy of the interval, -\/1 if any error 
+\end{DoxyReturn}
+
+
+Definition at line 336 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}\label{classphysapi_1_1_p_spectrum_ace5940b23971be68974fca5d1cfd16af}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!index@{index}}
+\index{index@{index}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga961a6ad83c74d135766d36b1e47b94bc}{phys\+\_\+lint}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index that corresponds to the given energy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & photon energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+lint index 
+
+-\/1 if any error 
+\end{DoxyReturn}
+
+
+Definition at line 423 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_aef47df9c42f702d4466f56a6706ceb23}\label{classphysapi_1_1_p_spectrum_aef47df9c42f702d4466f56a6706ceb23}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!leftBound@{leftBound}}
+\index{leftBound@{leftBound}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{leftBound()}{leftBound()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::left\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the left energy bound of the spectrum. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_ab1df1f6bb3917701fa4bacc7c6f71821}\label{classphysapi_1_1_p_spectrum_ab1df1f6bb3917701fa4bacc7c6f71821}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!leftRemainder@{leftRemainder}}
+\index{leftRemainder@{leftRemainder}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{leftRemainder()}{leftRemainder()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::left\+Remainder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the remaining photons to the left of the interval. 
+
+This photons are not taken registered in the spectrum
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a368cab481318c414f14ba82615147e6e}\label{classphysapi_1_1_p_spectrum_a368cab481318c414f14ba82615147e6e}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ energy\+Intervals $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 469 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a57476aa68e068948d982698ed84de5dd}\label{classphysapi_1_1_p_spectrum_a57476aa68e068948d982698ed84de5dd}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!remainder@{remainder}}
+\index{remainder@{remainder}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{remainder()}{remainder()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::remainder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the remaining photons to the left and right of the interval. 
+
+This photons are not taken registered in the spectrum
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a3bc2e811e723ac9a4b13394cd3eea5c3}\label{classphysapi_1_1_p_spectrum_a3bc2e811e723ac9a4b13394cd3eea5c3}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!rightBound@{rightBound}}
+\index{rightBound@{rightBound}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{rightBound()}{rightBound()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::right\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the right energy bound of the spectrum. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_aaa0e2308366decf9875689225536ec2f}\label{classphysapi_1_1_p_spectrum_aaa0e2308366decf9875689225536ec2f}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!rightRemainder@{rightRemainder}}
+\index{rightRemainder@{rightRemainder}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{rightRemainder()}{rightRemainder()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::right\+Remainder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the remaining photons to the right of the interval. 
+
+This photons are not taken registered in the spectrum
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 238 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a70e7a9c7f85ed5eb2468a21e6ab44acd}\label{classphysapi_1_1_p_spectrum_a70e7a9c7f85ed5eb2468a21e6ab44acd}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!scale@{scale}}
+\index{scale@{scale}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{namespacephysapi_ad66f461777684a49201c104ba29de9c4}{e\+Spectrum\+Scale}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the spectrum scale. 
+
+\begin{DoxyReturn}{Returns}
+e\+Spectrum\+Scale 
+\end{DoxyReturn}
+
+
+Definition at line 220 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}\label{classphysapi_1_1_p_spectrum_a730c33a12b405ef26b38fb6b67851ee2}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!spectrum@{spectrum}}
+\index{spectrum@{spectrum}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{spectrum()}{spectrum()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+const \mbox{\hyperlink{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}{t\+\_\+spectrum}}$<$energy\+Intervals$>$\& \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::spectrum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the spectrum data. 
+
+\begin{DoxyReturn}{Returns}
+const t\+\_\+spectrum\& 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file P\+Spectrum.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a30b985140db42af89121754364922fe9}\label{classphysapi_1_1_p_spectrum_a30b985140db42af89121754364922fe9}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!subintervalEnergyLowerBound@{subintervalEnergyLowerBound}}
+\index{subintervalEnergyLowerBound@{subintervalEnergyLowerBound}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{subintervalEnergyLowerBound()}{subintervalEnergyLowerBound()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::subinterval\+Energy\+Lower\+Bound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the energy lower bound of the interval determined by the index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the energy interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float energy lower bound of the subinterval 
+
+-\/1 if any error 
+\end{DoxyReturn}
+
+
+Definition at line 354 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_ad4763641075f0e8f548cc87e6cab0a9e}\label{classphysapi_1_1_p_spectrum_ad4763641075f0e8f548cc87e6cab0a9e}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!subintervalEnergyUpperBound@{subintervalEnergyUpperBound}}
+\index{subintervalEnergyUpperBound@{subintervalEnergyUpperBound}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{subintervalEnergyUpperBound()}{subintervalEnergyUpperBound()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::subinterval\+Energy\+Upper\+Bound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the energy upper bound of the interval determined by the index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the energy interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float energy upper bound of the subinterval 
+
+-\/1 if any error 
+\end{DoxyReturn}
+
+
+Definition at line 381 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a96de05661be6b52584b6eb6ef6294310}\label{classphysapi_1_1_p_spectrum_a96de05661be6b52584b6eb6ef6294310}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!value@{value}}
+\index{value@{value}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the spectrum value of the corresponding interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float number of photons in the interval, -\/1 if any error 
+\end{DoxyReturn}
+
+
+Definition at line 406 of file P\+Spectrum.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a05c8d498d98ad61530c52e0a99473d9b}\label{classphysapi_1_1_p_spectrum_a05c8d498d98ad61530c52e0a99473d9b}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+template$<$size\+\_\+t number\+Of\+Energy\+Intervals$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{P\+Spectrum}}$<$ number\+Of\+Energy\+Intervals $>$ \&}]{spectrum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 580 of file P\+Spectrum.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_spectrum_a42e6375b41e950a57b47aadabe5e528b}\label{classphysapi_1_1_p_spectrum_a42e6375b41e950a57b47aadabe5e528b}} 
+\index{physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}!N\_intervals@{N\_intervals}}
+\index{N\_intervals@{N\_intervals}!physapi::PSpectrum$<$ energyIntervals $>$@{physapi::PSpectrum$<$ energyIntervals $>$}}
+\doxysubsubsection{\texorpdfstring{N\_intervals}{N\_intervals}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size energy\+Intervals$>$ \\
+constexpr \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum}}$<$ energy\+Intervals $>$\+::N\+\_\+intervals = energy\+Intervals\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 178 of file P\+Spectrum.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/radiation/\mbox{\hyperlink{_p_spectrum_8hpp}{P\+Spectrum.\+hpp}}\end{DoxyCompactItemize}

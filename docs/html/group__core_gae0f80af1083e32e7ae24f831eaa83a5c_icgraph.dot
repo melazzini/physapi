@@ -1,0 +1,10 @@
+digraph "physapi::solidAngle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::solidAngle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the solid angle of a cone with a given half opening angle theta."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="agn::agnSolidAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceagn.html#adfac13cfa98e7b89da2f9df1a3166e3a",tooltip="Get the total solid angle of an agn angular portion."];
+}

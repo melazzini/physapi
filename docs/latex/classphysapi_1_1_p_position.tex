@@ -1,0 +1,154 @@
+\hypertarget{classphysapi_1_1_p_position}{}\doxysection{physapi\+::P\+Position Class Reference}
+\label{classphysapi_1_1_p_position}\index{physapi::PPosition@{physapi::PPosition}}
+
+
+This class represents a radius vector.  
+
+
+
+
+{\ttfamily \#include $<$P\+Position.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Position\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Position\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_position_a50c3e36d8f2ce512333f753ac6809b6f}{P\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new radius vector with x=y=z=0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_position_afe1f99b2b9c0656c8872dcfc6cf1cb27}{P\+Position}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x1, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x2, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} x3, \mbox{\hyperlink{group__core_ga59050da5736fc6cf7dde9779102c02b6}{e\+Coord\+Sys}} \mbox{\hyperlink{classphysapi_1_1_p_vector2_d_a921d7965babf2352574778ca97cea71d}{coord\+Sys}}=\mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c}{e\+Coord\+Sys\+::\+R\+EC}})
+\begin{DoxyCompactList}\small\item\em Construct a new radius vector with the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_position_a6be4da260fdeebffe4b3f053963d7418}{P\+Position}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&vect3D)
+\begin{DoxyCompactList}\small\item\em Construct a new radius vector from a 3D vector. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_position_a10e47c94bbf8480dd5eaac84b821a8c5}{$\sim$\+P\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_position_a78011e23e5499c288ae5216779f3d850}{distance\+To\+Point}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculate the distance from this position to the other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a radius vector. 
+
+
+
+Definition at line 18 of file P\+Position.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_position_a50c3e36d8f2ce512333f753ac6809b6f}\label{classphysapi_1_1_p_position_a50c3e36d8f2ce512333f753ac6809b6f}} 
+\index{physapi::PPosition@{physapi::PPosition}!PPosition@{PPosition}}
+\index{PPosition@{PPosition}!physapi::PPosition@{physapi::PPosition}}
+\doxysubsubsection{\texorpdfstring{PPosition()}{PPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Position\+::\+P\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new radius vector with x=y=z=0. 
+
+
+
+Definition at line 29 of file P\+Position.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_position_afe1f99b2b9c0656c8872dcfc6cf1cb27}\label{classphysapi_1_1_p_position_afe1f99b2b9c0656c8872dcfc6cf1cb27}} 
+\index{physapi::PPosition@{physapi::PPosition}!PPosition@{PPosition}}
+\index{PPosition@{PPosition}!physapi::PPosition@{physapi::PPosition}}
+\doxysubsubsection{\texorpdfstring{PPosition()}{PPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Position\+::\+P\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x1,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x2,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{x3,  }\item[{\mbox{\hyperlink{group__core_ga59050da5736fc6cf7dde9779102c02b6}{e\+Coord\+Sys}}}]{coord\+Sys = {\ttfamily \mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c}{e\+Coord\+Sys\+::\+R\+EC}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new radius vector with the specified coordinates. 
+
+As you can see, if you need to create a 3D-\/vector in rectangular coordinates, then x1 represents x and x2 represents y, x3 represents z. On the other hand, if you need a polar vector, then x1 represents $ \rho $ x2 represents $ \theta $, and x3 represents $ \phi $.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & x(cartesian) or $ \rho $(polar) or r(spherical) \\
+\hline
+{\em x2} & y(cartesian) or $ \theta $(polar) or $ \theta $(spherical) \\
+\hline
+{\em x3} & z(cartesian) or $ z $(polar) or $ \phi $(spherical)\\
+\hline
+{\em coord\+Sys} & coordinate system\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+neither $ \rho $ nor r cannot be negative! 
+\end{DoxyNote}
+
+
+Definition at line 50 of file P\+Position.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_position_a6be4da260fdeebffe4b3f053963d7418}\label{classphysapi_1_1_p_position_a6be4da260fdeebffe4b3f053963d7418}} 
+\index{physapi::PPosition@{physapi::PPosition}!PPosition@{PPosition}}
+\index{PPosition@{PPosition}!physapi::PPosition@{physapi::PPosition}}
+\doxysubsubsection{\texorpdfstring{PPosition()}{PPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Position\+::\+P\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{vect3D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new radius vector from a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect3D} & 3D vector. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file P\+Position.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_position_a10e47c94bbf8480dd5eaac84b821a8c5}\label{classphysapi_1_1_p_position_a10e47c94bbf8480dd5eaac84b821a8c5}} 
+\index{physapi::PPosition@{physapi::PPosition}!````~PPosition@{$\sim$PPosition}}
+\index{````~PPosition@{$\sim$PPosition}!physapi::PPosition@{physapi::PPosition}}
+\doxysubsubsection{\texorpdfstring{$\sim$PPosition()}{~PPosition()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Position\+::$\sim$\+P\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} object. 
+
+
+
+Definition at line 71 of file P\+Position.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_position_a78011e23e5499c288ae5216779f3d850}\label{classphysapi_1_1_p_position_a78011e23e5499c288ae5216779f3d850}} 
+\index{physapi::PPosition@{physapi::PPosition}!distanceToPoint@{distanceToPoint}}
+\index{distanceToPoint@{distanceToPoint}!physapi::PPosition@{physapi::PPosition}}
+\doxysubsubsection{\texorpdfstring{distanceToPoint()}{distanceToPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Position\+::distance\+To\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the distance from this position to the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float distance 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file P\+Position.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_p_position_8hpp}{P\+Position.\+hpp}}\end{DoxyCompactItemize}

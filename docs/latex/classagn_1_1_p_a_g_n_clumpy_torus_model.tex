@@ -1,0 +1,213 @@
+\hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model}{}\doxysection{agn\+::P\+A\+G\+N\+Clumpy\+Torus\+Model Class Reference}
+\label{classagn_1_1_p_a_g_n_clumpy_torus_model}\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+
+
+This class represents a smooth sphere agn structure model.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Clumpy\+Torus\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for agn\+::P\+A\+G\+N\+Clumpy\+Torus\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_ac75de87a27aee2f5da52b105a69006df}{P\+A\+G\+N\+Clumpy\+Torus\+Model}} (const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&torus, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}{N\+\_\+H}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} aver\+Num\+Of\+Clouds\+Equator, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} vol\+Fill\+Factor)
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a02fc0ff69f5738cbe42e7e22e4cc0b62}{P\+A\+G\+N\+Clumpy\+Torus\+Model}} (const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&torus, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}{N\+\_\+H}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} aver\+Num\+Of\+Clouds\+Equator, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} vol\+Fill\+Factor, const \mbox{\hyperlink{namespaceagn_ad03a1934a3c99b676e8dea3c094b4b18}{t\+\_\+clouds}} \&\mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a3daf07f84b475408ac9fa4161ff01f70}{clouds}})
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_adca6e713593196e988c4d1642cf2cad2}{equatorial\+Effective\+Half\+Size}} () const override
+\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_ae1a696b6f119f018928ff367a9a4aff3}{is\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position) const override
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a814a7c5f538eee318ad862a28b61ed7c}{n\+\_\+H}} () const override
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} $>$ \& \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a3daf07f84b475408ac9fa4161ff01f70}{clouds}} () const override
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a2ed32c671a334d1daaff4fa55230f1e7}{cloud\+Radius}} () const override
+\item 
+virtual void \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_torus_model_a2d05a0ec848baf944d0eba2939593911}{place\+Cloud}} (\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&cloud\+Position) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a smooth sphere agn structure model. 
+
+Definition at line 12 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_ac75de87a27aee2f5da52b105a69006df}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_ac75de87a27aee2f5da52b105a69006df}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!PAGNClumpyTorusModel@{PAGNClumpyTorusModel}}
+\index{PAGNClumpyTorusModel@{PAGNClumpyTorusModel}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{PAGNClumpyTorusModel()}{PAGNClumpyTorusModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&}]{torus,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{N\+\_\+H,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{aver\+Num\+Of\+Clouds\+Equator,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{vol\+Fill\+Factor }\end{DoxyParamCaption})}
+
+Constructs a smooth sphere agn structure model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em torus} & \\
+\hline
+{\em N\+\_\+H} & average column density along the equator \\
+\hline
+{\em aver\+Num\+Of\+Clouds\+Equator} & average number of clouds along the equator \\
+\hline
+{\em vol\+Fill\+Factor} & volume filling factor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_a02fc0ff69f5738cbe42e7e22e4cc0b62}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_a02fc0ff69f5738cbe42e7e22e4cc0b62}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!PAGNClumpyTorusModel@{PAGNClumpyTorusModel}}
+\index{PAGNClumpyTorusModel@{PAGNClumpyTorusModel}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{PAGNClumpyTorusModel()}{PAGNClumpyTorusModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} \&}]{torus,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{N\+\_\+H,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{aver\+Num\+Of\+Clouds\+Equator,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{vol\+Fill\+Factor,  }\item[{const \mbox{\hyperlink{namespaceagn_ad03a1934a3c99b676e8dea3c094b4b18}{t\+\_\+clouds}} \&}]{clouds }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_a2ed32c671a334d1daaff4fa55230f1e7}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_a2ed32c671a334d1daaff4fa55230f1e7}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!cloudRadius@{cloudRadius}}
+\index{cloudRadius@{cloudRadius}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{cloudRadius()}{cloudRadius()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::cloud\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a5283fde0d7de5da73e0bc7b606ee7173}{agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+ModelB}}.
+
+
+
+Definition at line 88 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_a3daf07f84b475408ac9fa4161ff01f70}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_a3daf07f84b475408ac9fa4161ff01f70}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!clouds@{clouds}}
+\index{clouds@{clouds}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{clouds()}{clouds()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} $>$ \& agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::clouds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get a reference to the clouds positions.
+
+\begin{DoxyReturn}{Returns}
+clouds positions 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_a789331c2184660144c5d1394aabe25f5}{agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+ModelB}}.
+
+
+
+Definition at line 68 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_adca6e713593196e988c4d1642cf2cad2}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_adca6e713593196e988c4d1642cf2cad2}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}}
+\index{equatorialEffectiveHalfSize@{equatorialEffectiveHalfSize}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{equatorialEffectiveHalfSize()}{equatorialEffectiveHalfSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::equatorial\+Effective\+Half\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the equatorial half effective size.
+
+\begin{DoxyReturn}{Returns}
+the equatorial half effective size 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a9ab6a2caa9356487a903e795d9782176}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 59 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_ae1a696b6f119f018928ff367a9a4aff3}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_ae1a696b6f119f018928ff367a9a4aff3}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!isInside@{isInside}}
+\index{isInside@{isInside}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Check if the given point is inside the agn structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & point\textquotesingle{}s position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point is inside, else false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_a997323fdf7e7065bfae66fba074392bb}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 63 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_a814a7c5f538eee318ad862a28b61ed7c}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_a814a7c5f538eee318ad862a28b61ed7c}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!n\_H@{n\_H}}
+\index{n\_H@{n\_H}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{n\_H()}{n\_H()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::n\+\_\+H (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the concentration of Hydrogen.
+
+\begin{DoxyReturn}{Returns}
+the concentration of Hidrogen 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b_ada82aa1c097cef6af22a8b0826581e8c}{agn\+::\+P\+A\+G\+N\+Structure\+ModelB}}.
+
+
+
+Definition at line 82 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp.
+
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_clumpy_torus_model_a2d05a0ec848baf944d0eba2939593911}\label{classagn_1_1_p_a_g_n_clumpy_torus_model_a2d05a0ec848baf944d0eba2939593911}} 
+\index{agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}!placeCloud@{placeCloud}}
+\index{placeCloud@{placeCloud}!agn::PAGNClumpyTorusModel@{agn::PAGNClumpyTorusModel}}
+\doxysubsubsection{\texorpdfstring{placeCloud()}{placeCloud()}}
+{\footnotesize\ttfamily void agn\+::\+P\+A\+G\+N\+Clumpy\+Torus\+Model\+::place\+Cloud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{cloud\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Place a cloud inside the agn randomly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud\+Position} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classagn_1_1_p_a_g_n_clumpy_structure_model_b_aeeffc2bcbd9f742482988b5fec49736c}{agn\+::\+P\+A\+G\+N\+Clumpy\+Structure\+ModelB}}.
+
+
+
+Definition at line 72 of file P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\+A\+G\+N\+Clumpy/\mbox{\hyperlink{_p_a_g_n_clumpy_torus_model_8hpp}{P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp}}\item 
+src/examples/\+A\+G\+N/\+A\+G\+N\+Clumpy/\mbox{\hyperlink{_p_a_g_n_clumpy_torus_model_8cpp}{P\+A\+G\+N\+Clumpy\+Torus\+Model.\+cpp}}\end{DoxyCompactItemize}

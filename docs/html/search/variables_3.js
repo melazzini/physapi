@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fekalpha1_579',['FeKalpha1',['../agn__utils_8hpp.html#a5cd2280b0021014967f6f8f643c4f57a',1,'agn']]],
-  ['fekalpha2_580',['FeKalpha2',['../agn__utils_8hpp.html#a467af54ef847bfd4cc384f6b4a48c8bd',1,'agn']]]
+  ['e_5flow_1031',['E_low',['../main_8cpp.html#a916108029210bca24cd432b99633c6ea',1,'main.cpp']]],
+  ['e_5fupp_1032',['E_upp',['../main_8cpp.html#a71d94e894daa894dc5c4b3f6445d9c77',1,'main.cpp']]]
 ];

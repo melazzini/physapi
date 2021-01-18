@@ -1,0 +1,9 @@
+digraph "physapi::PCollisionBase"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="physapi::PCollisionBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This is the base class for all types of classical collisions."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PPerfectlyElastic\lCollision",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_perfectly_elastic_collision.html",tooltip="Handles perfectly elastic collisions between two particles."];
+}

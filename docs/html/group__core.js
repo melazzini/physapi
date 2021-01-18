@@ -153,9 +153,23 @@ var group__core =
     [ "phys_smallFloat", "group__core.html#ga71fd5fa6d9f06b944613ef0f291757bd", null ],
     [ "phys_uint", "group__core.html#gad1f7c3134681170b5f6f6bb1bdfc5235", null ],
     [ "phys_ull", "group__core.html#ga63549e1e4e1e403291f5c5b03fd3b228", null ],
-    [ "eCoordSys", "group__core.html#ga59050da5736fc6cf7dde9779102c02b6", null ],
-    [ "eNumOfThreads", "group__core.html#gaf22949fd76e8a830eb45660c0769e10d", null ],
-    [ "eSense", "group__core.html#gaba57b90048e7f13a88a50f8c2c4e4704", null ],
+    [ "eCoordSys", "group__core.html#ga59050da5736fc6cf7dde9779102c02b6", [
+      [ "REC", "group__core.html#gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c", null ],
+      [ "POL", "group__core.html#gga59050da5736fc6cf7dde9779102c02b6a6f805bc5bbdb2ab10d849672c309a6cc", null ],
+      [ "SPH", "group__core.html#gga59050da5736fc6cf7dde9779102c02b6a1710c052ab1570668ba737824f33b6cb", null ]
+    ] ],
+    [ "eNumOfThreads", "group__core.html#gaf22949fd76e8a830eb45660c0769e10d", [
+      [ "ONE", "group__core.html#ggaf22949fd76e8a830eb45660c0769e10dabc21e6484530fc9d0313cb816b733396", null ],
+      [ "TWO", "group__core.html#ggaf22949fd76e8a830eb45660c0769e10da0f82d86afa0f5dc965c5c15aca58dcfb", null ],
+      [ "THREE", "group__core.html#ggaf22949fd76e8a830eb45660c0769e10da413af0de1f97a2155acf2b8b26ab36e2", null ],
+      [ "FOUR", "group__core.html#ggaf22949fd76e8a830eb45660c0769e10da341fee9692a2ed8f09906d40d23fb1f9", null ],
+      [ "MAX", "group__core.html#ggaf22949fd76e8a830eb45660c0769e10da26a4b44a837bf97b972628509912b4a5", null ]
+    ] ],
+    [ "eSense", "group__core.html#gaba57b90048e7f13a88a50f8c2c4e4704", [
+      [ "FORWARD", "group__core.html#ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31", null ],
+      [ "BACKWARD", "group__core.html#ggaba57b90048e7f13a88a50f8c2c4e4704a6377b4908ae38f9a57fe9120cf179eb1", null ],
+      [ "BOTH", "group__core.html#ggaba57b90048e7f13a88a50f8c2c4e4704a6328e5e3186c227a021ef2ff77e40197", null ]
+    ] ],
     [ "checkRangeExclusive", "group__core.html#ga3cd9a3283f784a6a22df2532fc99d1dc", null ],
     [ "checkRangeInclusive", "group__core.html#gafec5606c7bf79d88e5f429217f376d1d", null ],
     [ "checkRangeInclusiveLeft", "group__core.html#gacadd1d23c3c1b35cfa4863a2080973be", null ],
@@ -193,6 +207,7 @@ var group__core =
     [ "MINUS_INF", "group__core.html#ga45a86d55fd5787a662cbf52a6de7498a", null ],
     [ "PHYS_FLOAT_ANGLE_EPSILON", "group__core.html#gac05652ee3d3efd325e3441ae21819f2c", null ],
     [ "PHYS_FLOAT_DIG", "group__core.html#ga2c84bdf9073c0bc78732c70e73d214a2", null ],
+    [ "PHYS_FLOAT_EPSILON", "group__core.html#ga05de11c2d987e4c917f9ee4ad20876bf", null ],
     [ "PHYS_FLOAT_MAX", "group__core.html#ga23095db22c263df37bcfe2ba4ec9e239", null ],
     [ "PHYS_FLOAT_MIN", "group__core.html#gaf510ddc30f2959fd62e28eecb3488191", null ],
     [ "PHYS_LFLOAT_DIG", "group__core.html#gaa8debdecd0314a68d602e915dafa3110", null ],

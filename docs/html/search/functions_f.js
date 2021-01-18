@@ -1,6 +1,14 @@
 var searchData=
 [
-  ['theta_527',['theta',['../classphysapi_1_1_p_vector2_d.html#ae3f8992ec4806815ed072fb4dc16aa38',1,'physapi::PVector2D']]],
-  ['total_528',['total',['../classphysapi_1_1_p_abundance_table.html#a6014c8d72b69036a1cd106d67d85d9b7',1,'physapi::PAbundanceTable']]],
-  ['translate_529',['translate',['../classphysapi_1_1_p_geometry_base.html#a36d51266c9fa91f3a0c26f4620481136',1,'physapi::PGeometryBase::translate()'],['../classphysapi_1_1_p_simple_particle_base.html#a01948259db3eeb70b4201886755d8993',1,'physapi::PSimpleParticleBase::translate(const PPosition &amp;dr)'],['../classphysapi_1_1_p_simple_particle_base.html#ab29658452c30d15a3777b50ec22d9a6e',1,'physapi::PSimpleParticleBase::translate(phys_float ds)']]]
+  ['r_931',['r',['../classphysapi_1_1_p_vector3_d.html#ad33f1b41d8d8120e5147fd7315230b09',1,'physapi::PVector3D']]],
+  ['radius_932',['radius',['../classphysapi_1_1_p_sphere.html#a0348f7a848c80db8e0a4532b866cc135',1,'physapi::PSphere']]],
+  ['random_5f0_5f1_933',['random_0_1',['../classphysapi_1_1_p_random.html#aaf1a9a3a03a363adb33ee9cb3e5dafec',1,'physapi::PRandom']]],
+  ['random_5fminusplus_5f1_934',['random_minusPlus_1',['../classphysapi_1_1_p_random.html#ad0ec4a5caa6515a39a60f7f23bfc4840',1,'physapi::PRandom']]],
+  ['registerphoton_935',['registerPhoton',['../classagn_1_1_p_a_g_n_simulation_mng.html#a3eb153c6b9676621da4729bb5f6140f7',1,'agn::PAGNSimulationMng']]],
+  ['remainder_936',['remainder',['../classphysapi_1_1_p_spectrum.html#a57476aa68e068948d982698ed84de5dd',1,'physapi::PSpectrum']]],
+  ['reset_937',['reset',['../classagn_1_1_p_a_g_n_simulation_mng.html#a8e846f34577cc213e212d62f635b8bc3',1,'agn::PAGNSimulationMng']]],
+  ['rho_938',['rho',['../classphysapi_1_1_p_vector2_d.html#af6fa628381013afe9cf5b9e97c7a3a8d',1,'physapi::PVector2D']]],
+  ['rightbound_939',['rightBound',['../classphysapi_1_1_p_spectrum.html#a3bc2e811e723ac9a4b13394cd3eea5c3',1,'physapi::PSpectrum']]],
+  ['rightremainder_940',['rightRemainder',['../classphysapi_1_1_p_spectrum.html#aaa0e2308366decf9875689225536ec2f',1,'physapi::PSpectrum']]],
+  ['run_941',['run',['../classphysapi_1_1_p_fluorescence_hnd.html#abcf13691f2fffbdc987c9a4a178b33aa',1,'physapi::PFluorescenceHnd::run()'],['../classagn_1_1_p_a_g_n.html#aaf3db1ef7c4e6325d920f8b645f0d330',1,'agn::PAGN::run()'],['../classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce',1,'agn::PAGNSimulationTeamB::run()'],['../classphysapi_1_1_p_collider.html#a89c305ffe3a83eca5bc54f044cf2f427',1,'physapi::PCollider::run()'],['../classphysapi_1_1_p_compton_collider.html#a921141f11c5612a0f9386d573c749770',1,'physapi::PComptonCollider::run()'],['../classphysapi_1_1_p_compton_collider_3_01_p_m_c_compton_01_4.html#a6f8a872b0c153980431a1f3b4d257ed0',1,'physapi::PComptonCollider&lt; PMCCompton &gt;::run()']]]
 ];

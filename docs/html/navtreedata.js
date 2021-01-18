@@ -25,7 +25,26 @@
 var NAVTREE =
 [
   [ "physapi", "index.html", [
+    [ "Tutorial", "index.html", null ],
+    [ "Physapi X-Ray Spectral Model Of An Active Galactic Nuclei", "agn.html", null ],
+    [ "Hello World", "hello_world.html", [
+      [ "Hardware", "hello_world.html#helloWorldSection1", null ],
+      [ "Software", "hello_world.html#helloWorldSection2", [
+        [ "Software installation", "hello_world.html#helloWorldSection2Subsection1", null ],
+        [ "Setting up a physapi project in visual studio.", "hello_world.html#helloWorldSection2Subsection2", null ]
+      ] ]
+    ] ],
     [ "Modules", "modules.html", "modules" ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -38,16 +57,24 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-".html",
-"classphysapi_1_1_p_collider.html",
-"classphysapi_1_1_p_vector2_d.html#af13393ec2be2f87b21e095426c4b6809"
+"___p_m_c_compton_electron_modeler_8cpp.html",
+"astrophysics__utils_8hpp.html#ga3d437f2e32fe084a101460788e49f823",
+"classphysapi_1_1_p_random.html",
+"files.html",
+"main_8cpp.html#a916108029210bca24cd432b99633c6ea"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

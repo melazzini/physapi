@@ -1,0 +1,32 @@
+digraph "physapi::PVector2D::angleBetweenVectors"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PVector2D\l::angleBetweenVectors",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Calculates the angle  between two vectors."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PSphere::distance\lBetweenBoundaries",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_sphere.html#a9620a9bf73a2fbac24c701487921a5ae",tooltip="Get the distance from one boundary to another on the given line."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PSphere::effective\lLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_sphere.html#a3004e94d16b896bd17159ee9a0b639ed",tooltip="Get the length inside the geometry starting from a position."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="physapi::PSphere::distance\lToBoundaryFromInside",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_sphere.html#aa6666b385c620c468e6fae456c22f38c",tooltip="Get the distance to the geometry's boundaries from an inside point."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="agn::PAGNSmoothSphereModel\l::distanceToBoundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_sphere_model.html#a64494fc9cca719eb6c53c7fe551ec96d",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="agn::PAGNClumpySimulation\lTeam::distanceToBoundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_simulation_team.html#ac34a1368c306ff75648d347a2d3208fe",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="physapi::PSphere::distance\lToBoundaryFromOutside",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_sphere.html#a33ee0588a73fe7f1e55be847b94ec3b5",tooltip="Get the distance to the geometry's boundaries from an outside point."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="agn::PAGNSmoothSphereModel\l::distanceToEnteringPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_sphere_model.html#a80b21e04fa500ad9e635b2670cfa4d5f",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="physapi::PVector3D::e_r",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a7fe821abd771d6f47dd3b48277b1f4d2",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="physapi::PVector3D\l::e_phi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a37b00ddee4484f5eae447a0e8d4c2a39",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="agn::PAGNClumpyCloudFinder\lB::mainAlgorithm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_cloud_finder_b.html#a09d0d73a4bdc042b4484a6816d4660e4",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="agn::PAGNClumpyCloudFinder\lGPU::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_cloud_finder_g_p_u.html#ac0dc8aeb231b67a2a242cc9a603d1386",tooltip=" "];
+}

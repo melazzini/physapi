@@ -1,0 +1,257 @@
+\hypertarget{group__astrophysics}{}\doxysection{Astrophysics}
+\label{group__astrophysics}\index{Astrophysics@{Astrophysics}}
+
+
+This module offers tools for astrophysics.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{physapi\+::\+P\+Abundance\+Table}}
+\begin{DoxyCompactList}\small\item\em This class represents a table of abundances. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{physapi\+::\+P\+Fluorescence\+Table}}
+\begin{DoxyCompactList}\small\item\em This class represents a fluorescence table. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_verner}{physapi\+::\+P\+Verner}}
+\begin{DoxyCompactList}\small\item\em This class is a functor for calculating the photonionization cross section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__astrophysics_ga477065ebe056b55a364482f40c7764c9}{physapi\+::t\+\_\+fluorescence\+Key}} = std\+::array$<$ \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}, 5 $>$
+\begin{DoxyCompactList}\small\item\em This key determines a fluorescence line. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__astrophysics_gae84e4cf77a0d0a92018e2c35930bdb2a}{physapi\+::t\+\_\+fluorescence\+Value}} = std\+::array$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, 2 $>$
+\begin{DoxyCompactList}\small\item\em this is the value of a fluorescence line \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{physapi\+::t\+\_\+fluorescent\+Line}} = std\+::pair$<$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_key}{P\+Fluorescence\+Key}}, \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_value}{P\+Fluorescence\+Value}} $>$
+\begin{DoxyCompactList}\small\item\em Definition of a fluorescence line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{physapi\+::eZ}} \{ \newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ac1d9f50f86825a1a2302ec2449c17196}{physapi\+::e\+Z\+::H}} = 1, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa64cf5823262686e1a28b2245be34ce0}{physapi\+::e\+Z\+::\+He}} = 2, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8640d08847fe5e081f0a41c4579bf26a}{physapi\+::e\+Z\+::\+Li}} = 3, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a3c9547d2fcb523a7ae5681eedde43fb6}{physapi\+::e\+Z\+::\+Be}} = 4, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a9d5ed678fe57bcca610140957afab571}{physapi\+::e\+Z\+::B}} = 5, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a0d61f8370cad1d412f80b84d143e1257}{physapi\+::e\+Z\+::C}} = 6, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8d9c307cb7f3c4a32822a51922d1ceaa}{physapi\+::e\+Z\+::N}} = 7, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823af186217753c37b9b9f958d906208506e}{physapi\+::e\+Z\+::O}} = 8, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a800618943025315f869e4e1f09471012}{physapi\+::e\+Z\+::F}} = 9, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a4dec99baa99738721da9c9b0c1a92498}{physapi\+::e\+Z\+::\+Ne}} = 10, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a91fbc1ffc46dc5e768f6b154bb548e37}{physapi\+::e\+Z\+::\+Na}} = 11, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aaf6cdb852ac107524b150b227c2886e6}{physapi\+::e\+Z\+::\+Mg}} = 12, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a197cdcc53f062530d6256eddc6fc18e6}{physapi\+::e\+Z\+::\+Al}} = 13, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a29bf7a323f1088692c1ad29f08f4f573}{physapi\+::e\+Z\+::\+Si}} = 14, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a44c29edb103a2872f519ad0c9a0fdaaa}{physapi\+::e\+Z\+::P}} = 15, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5dbc98dcc983a70728bd082d1a47546e}{physapi\+::e\+Z\+::S}} = 16, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a30781641129e34de0449ccb1fba670da}{physapi\+::e\+Z\+::\+Cl}} = 17, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a864d72283695e6edd1fcdceb473de77f}{physapi\+::e\+Z\+::\+Ar}} = 18, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa5f3c6a11b03839d46af9fb43c97c188}{physapi\+::e\+Z\+::K}} = 19, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a346dd877a908ff6c7132acb0910a33d8}{physapi\+::e\+Z\+::\+Ca}} = 20, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823acb3f593eee6bf3a8ca2a807055521c5c}{physapi\+::e\+Z\+::\+Sc}} = 21, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5bcf1228cc875c5071ead303f941a4db}{physapi\+::e\+Z\+::\+Ti}} = 22, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5206560a306a2e085a437fd258eb57ce}{physapi\+::e\+Z\+::V}} = 23, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a46ce6eed09dd5a60280b497637d1697a}{physapi\+::e\+Z\+::\+Cr}} = 24, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6659d586c5ad74744a2f010f833eafb7}{physapi\+::e\+Z\+::\+Mn}} = 25, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ad684f8322b7404cd384bf1e425d9356e}{physapi\+::e\+Z\+::\+Fe}} = 26, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6bc2d2565ee5fbde75273949f2d2df0a}{physapi\+::e\+Z\+::\+Co}} = 27, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa26e174e330476756d2601ea5368aec3}{physapi\+::e\+Z\+::\+Ni}} = 28, 
+\newline
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa78dd5e8411c67a38ac02dde3250c029}{physapi\+::e\+Z\+::\+Cu}} = 29, 
+\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a61c25728f97910cd02b3443362a2f5ae}{physapi\+::e\+Z\+::\+Zn}} = 30
+ \}
+\begin{DoxyCompactList}\small\item\em Atomic numbers enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module offers tools for astrophysics. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__astrophysics_ga477065ebe056b55a364482f40c7764c9}\label{group__astrophysics_ga477065ebe056b55a364482f40c7764c9}} 
+\index{Astrophysics@{Astrophysics}!t\_fluorescenceKey@{t\_fluorescenceKey}}
+\index{t\_fluorescenceKey@{t\_fluorescenceKey}!Astrophysics@{Astrophysics}}
+\doxysubsubsection{\texorpdfstring{t\_fluorescenceKey}{t\_fluorescenceKey}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__astrophysics_ga477065ebe056b55a364482f40c7764c9}{physapi\+::t\+\_\+fluorescence\+Key}} = typedef std\+::array$<$\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}, 5$>$}
+
+
+
+This key determines a fluorescence line. 
+
+
+
+Definition at line 67 of file astrophysics\+\_\+utils.\+hpp.
+
+\mbox{\Hypertarget{group__astrophysics_gae84e4cf77a0d0a92018e2c35930bdb2a}\label{group__astrophysics_gae84e4cf77a0d0a92018e2c35930bdb2a}} 
+\index{Astrophysics@{Astrophysics}!t\_fluorescenceValue@{t\_fluorescenceValue}}
+\index{t\_fluorescenceValue@{t\_fluorescenceValue}!Astrophysics@{Astrophysics}}
+\doxysubsubsection{\texorpdfstring{t\_fluorescenceValue}{t\_fluorescenceValue}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__astrophysics_gae84e4cf77a0d0a92018e2c35930bdb2a}{physapi\+::t\+\_\+fluorescence\+Value}} = typedef std\+::array$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, 2$>$}
+
+
+
+this is the value of a fluorescence line 
+
+
+
+Definition at line 75 of file astrophysics\+\_\+utils.\+hpp.
+
+\mbox{\Hypertarget{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}\label{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}} 
+\index{Astrophysics@{Astrophysics}!t\_fluorescentLine@{t\_fluorescentLine}}
+\index{t\_fluorescentLine@{t\_fluorescentLine}!Astrophysics@{Astrophysics}}
+\doxysubsubsection{\texorpdfstring{t\_fluorescentLine}{t\_fluorescentLine}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{physapi\+::t\+\_\+fluorescent\+Line}} = typedef std\+::pair$<$\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_key}{P\+Fluorescence\+Key}}, \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_value}{P\+Fluorescence\+Value}}$>$}
+
+
+
+Definition of a fluorescence line. 
+
+
+
+Definition at line 135 of file astrophysics\+\_\+utils.\+hpp.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}\label{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}} 
+\index{Astrophysics@{Astrophysics}!eZ@{eZ}}
+\index{eZ@{eZ}!Astrophysics@{Astrophysics}}
+\doxysubsubsection{\texorpdfstring{eZ}{eZ}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{physapi\+::eZ}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Atomic numbers enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H@{H}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!H@{H}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ac1d9f50f86825a1a2302ec2449c17196}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ac1d9f50f86825a1a2302ec2449c17196}} 
+H&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{He@{He}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!He@{He}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa64cf5823262686e1a28b2245be34ce0}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa64cf5823262686e1a28b2245be34ce0}} 
+He&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Li@{Li}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Li@{Li}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8640d08847fe5e081f0a41c4579bf26a}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8640d08847fe5e081f0a41c4579bf26a}} 
+Li&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Be@{Be}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Be@{Be}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a3c9547d2fcb523a7ae5681eedde43fb6}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a3c9547d2fcb523a7ae5681eedde43fb6}} 
+Be&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B@{B}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!B@{B}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a9d5ed678fe57bcca610140957afab571}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a9d5ed678fe57bcca610140957afab571}} 
+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C@{C}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!C@{C}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a0d61f8370cad1d412f80b84d143e1257}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a0d61f8370cad1d412f80b84d143e1257}} 
+C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N@{N}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!N@{N}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8d9c307cb7f3c4a32822a51922d1ceaa}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a8d9c307cb7f3c4a32822a51922d1ceaa}} 
+N&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O@{O}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!O@{O}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823af186217753c37b9b9f958d906208506e}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823af186217753c37b9b9f958d906208506e}} 
+O&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F@{F}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!F@{F}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a800618943025315f869e4e1f09471012}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a800618943025315f869e4e1f09471012}} 
+F&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ne@{Ne}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Ne@{Ne}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a4dec99baa99738721da9c9b0c1a92498}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a4dec99baa99738721da9c9b0c1a92498}} 
+Ne&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Na@{Na}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Na@{Na}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a91fbc1ffc46dc5e768f6b154bb548e37}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a91fbc1ffc46dc5e768f6b154bb548e37}} 
+Na&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mg@{Mg}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Mg@{Mg}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aaf6cdb852ac107524b150b227c2886e6}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aaf6cdb852ac107524b150b227c2886e6}} 
+Mg&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Al@{Al}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Al@{Al}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a197cdcc53f062530d6256eddc6fc18e6}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a197cdcc53f062530d6256eddc6fc18e6}} 
+Al&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Si@{Si}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Si@{Si}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a29bf7a323f1088692c1ad29f08f4f573}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a29bf7a323f1088692c1ad29f08f4f573}} 
+Si&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P@{P}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!P@{P}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a44c29edb103a2872f519ad0c9a0fdaaa}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a44c29edb103a2872f519ad0c9a0fdaaa}} 
+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!S@{S}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5dbc98dcc983a70728bd082d1a47546e}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5dbc98dcc983a70728bd082d1a47546e}} 
+S&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cl@{Cl}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Cl@{Cl}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a30781641129e34de0449ccb1fba670da}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a30781641129e34de0449ccb1fba670da}} 
+Cl&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ar@{Ar}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Ar@{Ar}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a864d72283695e6edd1fcdceb473de77f}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a864d72283695e6edd1fcdceb473de77f}} 
+Ar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K@{K}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!K@{K}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa5f3c6a11b03839d46af9fb43c97c188}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa5f3c6a11b03839d46af9fb43c97c188}} 
+K&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ca@{Ca}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Ca@{Ca}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a346dd877a908ff6c7132acb0910a33d8}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a346dd877a908ff6c7132acb0910a33d8}} 
+Ca&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sc@{Sc}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Sc@{Sc}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823acb3f593eee6bf3a8ca2a807055521c5c}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823acb3f593eee6bf3a8ca2a807055521c5c}} 
+Sc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ti@{Ti}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Ti@{Ti}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5bcf1228cc875c5071ead303f941a4db}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5bcf1228cc875c5071ead303f941a4db}} 
+Ti&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V@{V}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!V@{V}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5206560a306a2e085a437fd258eb57ce}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a5206560a306a2e085a437fd258eb57ce}} 
+V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cr@{Cr}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Cr@{Cr}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a46ce6eed09dd5a60280b497637d1697a}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a46ce6eed09dd5a60280b497637d1697a}} 
+Cr&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mn@{Mn}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Mn@{Mn}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6659d586c5ad74744a2f010f833eafb7}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6659d586c5ad74744a2f010f833eafb7}} 
+Mn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fe@{Fe}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Fe@{Fe}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ad684f8322b7404cd384bf1e425d9356e}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ad684f8322b7404cd384bf1e425d9356e}} 
+Fe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Co@{Co}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Co@{Co}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6bc2d2565ee5fbde75273949f2d2df0a}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a6bc2d2565ee5fbde75273949f2d2df0a}} 
+Co&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ni@{Ni}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Ni@{Ni}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa26e174e330476756d2601ea5368aec3}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa26e174e330476756d2601ea5368aec3}} 
+Ni&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cu@{Cu}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Cu@{Cu}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa78dd5e8411c67a38ac02dde3250c029}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823aa78dd5e8411c67a38ac02dde3250c029}} 
+Cu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Zn@{Zn}!Astrophysics@{Astrophysics}}\index{Astrophysics@{Astrophysics}!Zn@{Zn}}}\mbox{\Hypertarget{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a61c25728f97910cd02b3443362a2f5ae}\label{group__astrophysics_gga3d437f2e32fe084a101460788e49f823a61c25728f97910cd02b3443362a2f5ae}} 
+Zn&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 21 of file astrophysics\+\_\+utils.\+hpp.
+

@@ -1,0 +1,41 @@
+digraph "physapi::_PMCComptonElectronModeler::operator()"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="physapi::_PMCComptonElectron\lModeler::operator()",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="physapi::PSimplePhoton\l::energy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#aa8578523517bdbd302353bda1e03a168",tooltip="Get the photon's energy."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="physapi::PSimplePhoton\l::omega",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_photon.html#ac03e217ba20745e12288c230065afb8a",tooltip="Photon's direction of movement."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="physapi::PSimpleParticle\lBase::momentum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_particle_base.html#a4d9c4a2ddda2c0b8e242470efc297410",tooltip="Get the momentum of the particle."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="physapi::PVector3D\l::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a17511cdd903682998726d8cc552ff697",tooltip="Get the norm of the vector."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="physapi::PVector3D\l::normSquared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a0424c2400c2ca9c8dc478317ce0378ca",tooltip="Get the squared of the vector's norm."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="physapi::PVector2D\l::normSquared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a492aecd7fdfd137de2efaf5a8eaa2fe4",tooltip="Get the squared of the vector's norm."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="physapi::PVector2D\l::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a93ca53c4e2c71d2b312f59cbc069de14",tooltip="Get the norm of the vector."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="physapi::PVector2D::rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#af6fa628381013afe9cf5b9e97c7a3a8d",tooltip="Get the  coordinate."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="physapi::sqr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#ga01ea6c103ae225b6d9c3dec92bd7141c",tooltip="Calculate the square of an obj(number, scalar, vector, etc)"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="physapi::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#gae92fbf95826f105bd60a485bf7b596e8",tooltip="Calculate the square root of a scalar."];
+  Node9 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="physapi::PVector2D::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#adef3e21a4bb82ad7b9351590075a8086",tooltip="Get the x coordinate."];
+  Node9 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="physapi::PVector2D::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a15bb9964eb7b9ea7936d3e075737558e",tooltip="Get the y coordinate."];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="physapi::PRandom::random_0_1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_random.html#aaf1a9a3a03a363adb33ee9cb3e5dafec",tooltip="Get a random number between 0 and 1."];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="physapi::PSimpleParticle\lBase::setMomentum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_particle_base.html#af21977f2fa25153133b9622d2f233ced",tooltip="Set the momentum of the particle."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

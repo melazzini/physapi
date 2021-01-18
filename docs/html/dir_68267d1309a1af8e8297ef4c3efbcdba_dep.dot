@@ -1,0 +1,21 @@
+digraph "src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"];
+    dir_68267d1309a1af8e8297ef4c3efbcdba [shape=plaintext label="src"];
+    dir_47503625be4a0df0d45ef37def8ea068 [shape=box label="astrophysics" color="black" fillcolor="white" style="filled" URL="dir_47503625be4a0df0d45ef37def8ea068.html"];
+    dir_aebb8dcc11953d78e620bbef0b9e2183 [shape=box label="core" color="black" fillcolor="white" style="filled" URL="dir_aebb8dcc11953d78e620bbef0b9e2183.html"];
+    dir_e931c1a3f0014e624d0645a271726ad2 [shape=box label="examples" color="red" fillcolor="white" style="filled" URL="dir_e931c1a3f0014e624d0645a271726ad2.html"];
+    dir_b043e16d2c62cd1d8049c4839258bf02 [shape=box label="interactions" color="red" fillcolor="white" style="filled" URL="dir_b043e16d2c62cd1d8049c4839258bf02.html"];
+    dir_bb65fb87a76e2ecee594b895218616fc [shape=box label="montecarlo" color="red" fillcolor="white" style="filled" URL="dir_bb65fb87a76e2ecee594b895218616fc.html"];
+    dir_db762ed8ec3aa0df992389441dbd75cb [shape=box label="particles" color="black" fillcolor="white" style="filled" URL="dir_db762ed8ec3aa0df992389441dbd75cb.html"];
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_b043e16d2c62cd1d8049c4839258bf02->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="2", labeldistance=1.5 headhref="dir_000023_000000.html"];
+  dir_bb65fb87a76e2ecee594b895218616fc->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="3", labeldistance=1.5 headhref="dir_000026_000000.html"];
+  dir_47503625be4a0df0d45ef37def8ea068->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="8", labeldistance=1.5 headhref="dir_000017_000000.html"];
+  dir_e931c1a3f0014e624d0645a271726ad2->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="23", labeldistance=1.5 headhref="dir_000019_000000.html"];
+  dir_aebb8dcc11953d78e620bbef0b9e2183->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="6", labeldistance=1.5 headhref="dir_000018_000000.html"];
+}

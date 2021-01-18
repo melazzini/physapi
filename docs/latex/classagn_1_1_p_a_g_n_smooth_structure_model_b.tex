@@ -1,0 +1,94 @@
+\hypertarget{classagn_1_1_p_a_g_n_smooth_structure_model_b}{}\doxysection{agn\+::P\+A\+G\+N\+Smooth\+Structure\+ModelB Class Reference}
+\label{classagn_1_1_p_a_g_n_smooth_structure_model_b}\index{agn::PAGNSmoothStructureModelB@{agn::PAGNSmoothStructureModelB}}
+
+
+This base class represents an abstract simple(not tend to be clumpy) agn structure model, it can be spherical, toridal, etc.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+G\+N\+Smooth\+Structure\+Model\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for agn\+::P\+A\+G\+N\+Smooth\+Structure\+ModelB\+:
+% FIG 0
+
+
+Collaboration diagram for agn\+::P\+A\+G\+N\+Smooth\+Structure\+ModelB\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_structure_model_b_af2f2478d5ee48f1b3fedc1ce2e8b973e}{distance\+To\+Boundary}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the distance to the next boundary inside the agn. \end{DoxyCompactList}\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_structure_model_b_aa1d6da0bd85c311f9f5358754c3de20a}{distance\+To\+Entering\+Point}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&position, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const =0
+\begin{DoxyCompactList}\small\item\em Get the distance to the next entering point to the agn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This base class represents an abstract simple(not tend to be clumpy) agn structure model, it can be spherical, toridal, etc. 
+
+Definition at line 22 of file P\+A\+G\+N\+Smooth\+Structure\+Model\+B.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_structure_model_b_af2f2478d5ee48f1b3fedc1ce2e8b973e}\label{classagn_1_1_p_a_g_n_smooth_structure_model_b_af2f2478d5ee48f1b3fedc1ce2e8b973e}} 
+\index{agn::PAGNSmoothStructureModelB@{agn::PAGNSmoothStructureModelB}!distanceToBoundary@{distanceToBoundary}}
+\index{distanceToBoundary@{distanceToBoundary}!agn::PAGNSmoothStructureModelB@{agn::PAGNSmoothStructureModelB}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundary()}{distanceToBoundary()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}$>$ agn\+::\+P\+A\+G\+N\+Smooth\+Structure\+Model\+B\+::distance\+To\+Boundary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the distance to the next boundary inside the agn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & reference point \\
+\hline
+{\em direction} & direction of the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optional distance to the next boundary 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_sphere_model_a64494fc9cca719eb6c53c7fe551ec96d}{agn\+::\+P\+A\+G\+N\+Smooth\+Sphere\+Model}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a51d41fbe24184640a2653af5b95c3b75}{agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_smooth_structure_model_b_aa1d6da0bd85c311f9f5358754c3de20a}\label{classagn_1_1_p_a_g_n_smooth_structure_model_b_aa1d6da0bd85c311f9f5358754c3de20a}} 
+\index{agn::PAGNSmoothStructureModelB@{agn::PAGNSmoothStructureModelB}!distanceToEnteringPoint@{distanceToEnteringPoint}}
+\index{distanceToEnteringPoint@{distanceToEnteringPoint}!agn::PAGNSmoothStructureModelB@{agn::PAGNSmoothStructureModelB}}
+\doxysubsubsection{\texorpdfstring{distanceToEnteringPoint()}{distanceToEnteringPoint()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}$>$ agn\+::\+P\+A\+G\+N\+Smooth\+Structure\+Model\+B\+::distance\+To\+Entering\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the distance to the next entering point to the agn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & reference point \\
+\hline
+{\em direction} & direction of the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optional distance to the entering point 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_sphere_model_a80b21e04fa500ad9e635b2670cfa4d5f}{agn\+::\+P\+A\+G\+N\+Smooth\+Sphere\+Model}}, and \mbox{\hyperlink{classagn_1_1_p_a_g_n_smooth_torus_model_a9ce6ebecbbd725067308412d1762aee8}{agn\+::\+P\+A\+G\+N\+Smooth\+Torus\+Model}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\+A\+G\+N\+Smooth/\mbox{\hyperlink{_p_a_g_n_smooth_structure_model_b_8hpp}{P\+A\+G\+N\+Smooth\+Structure\+Model\+B.\+hpp}}\end{DoxyCompactItemize}

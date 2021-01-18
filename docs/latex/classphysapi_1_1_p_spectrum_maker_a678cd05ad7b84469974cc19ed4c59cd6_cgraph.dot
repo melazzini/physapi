@@ -1,0 +1,18 @@
+digraph "physapi::PSpectrumMaker::operator()"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="physapi::PSpectrumMaker\l::operator()",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Make the spectrum."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSpectrum\l::addPhotons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#abf71fae6eb9f01645786b442053e2840",tooltip="Add a number of photons to the given interval."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PSpectrum\l::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#ad873684b9b3c746b574a14158dd9ea4e",tooltip="Clear the spectrum."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSpectrum\l::energy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a205afc21bebfcfb19d55cec26e28e36a",tooltip="Get the energy of the corresponding interval."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::PSpectrum\l::subintervalEnergyLowerBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a30b985140db42af89121754364922fe9",tooltip="Get the energy lower bound of the interval determined by the index."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="physapi::PSpectrum\l::subintervalEnergyUpperBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#ad4763641075f0e8f548cc87e6cab0a9e",tooltip="Get the energy upper bound of the interval determined by the index."];
+}

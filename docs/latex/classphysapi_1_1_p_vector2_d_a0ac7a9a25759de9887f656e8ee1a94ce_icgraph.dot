@@ -1,0 +1,29 @@
+digraph "physapi::PVector2D::PVector2D"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PVector2D\l::PVector2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Construct a new 2D-vector with x=y=0."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PVector2D\l::e_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#acc93d0621814fd75f0129828d87dacf0",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PVector3D\l::e_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a0741f13feb0438f3a7af0c16a60d28fc",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PVector2D\l::e_theta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#a65061ad2048259cf430d25ec23f3f8ba",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::PVector3D\l::e_theta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#ac925dc8dd82704807a08f4a15162c543",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="physapi::PVector3D\l::e_phi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a37b00ddee4484f5eae447a0e8d4c2a39",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PVector2D\l::operator*",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#ac9e8a6b840d68ba9ad265e227ce11898",tooltip="Multiplication of a 2D-vector by a number."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="physapi::PVector2D\l::operator+",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector2_d.html#afb0742ef8f9eacb596c6ccc6f08af4b7",tooltip="Addition of 2D-vectors."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="physapi::PVector3D\l::xyComponents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#ab8feefe0f1130441d69586fbdd707e20",tooltip="Get the XY components as a PVector2D."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="physapi::PVector3D\l::crossProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#ab44b6cd32c827e03b162f57532365b3c",tooltip="Calculates the cross product of two 3d vectors."];
+  Node10 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="physapi::PVector3D\l::operator*",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#acf5dd4969c9cb448f983f69a197dbcb3",tooltip="Vector multiplication of 3D-vectors."];
+}

@@ -1,0 +1,212 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+This example shows how to use the fluorescence simulator object.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N\+Simulation\+Team\+Factory\+Builder.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N\+Smooth\+Sphere\+Model.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N\+Clumpy\+Torus\+Model.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N\+Smooth\+Torus.\+model.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+A\+G\+N\+Simple\+Torus\+Direction\+Filter.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a916108029210bca24cd432b99633c6ea}{E\+\_\+low}} = 100.\+0
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a71d94e894daa894dc5c4b3f6445d9c77}{E\+\_\+upp}} = 300.\+0\+E3
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a492625c01cb41af46e9284b9fd87700c}{T\+\_\+e}} = 1.\+0\+\_\+e\+V\+To\+Kelvin
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a6ab395a2fd66a82aa34496d366f7bbb8}{S\+P\+H\+E\+R\+E\+\_\+R}} = 1.\+0\+E15\+\_\+cm
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_ae28e7d77b355696b808b02d9f275701b}{T\+O\+R\+U\+S\+\_\+\+R1}} = 1.\+0\+E14\+\_\+cm
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a79cf154ee3d6afbf0d3772e2270114dd}{T\+O\+R\+U\+S\+\_\+\+R2}} = 1.\+0\+E15\+\_\+cm
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a2f5aec2bda1abbb2d9b4e4c3c14fd006}{T\+O\+R\+U\+S\+\_\+\+H\+A\+L\+F\+O\+P\+E\+N\+I\+N\+G\+A\+N\+G\+LE}} = 60.\+0\+\_\+deg
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}{N\+\_\+H}} = 1.\+0\+E23 / 1.\+0\+\_\+cm2
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a4175591337448b7509777a1e0188fbae}{N\+\_\+aver}} = 3
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a43a01a98cfb0456d4147a9bbff67f029}{phi}} = 0.\+03
+\item 
+constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a01be05259e72759343b3bc42e3dcea0e}{N\+U\+M\+\_\+\+O\+F\+\_\+\+P\+H\+O\+T\+O\+NS}} = 50.\+0\+E6
+\item 
+const string \mbox{\hyperlink{main_8cpp_abb4b0a6d956813eb6e9334e335ec2249}{P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+ER}} = \char`\"{}./results/tests/23\+\_\+3\+\_\+03/\char`\"{}
+\item 
+const string \mbox{\hyperlink{main_8cpp_aaf95fa3939e6d7b449d260674263d109}{P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+E\+R\+\_\+\+D\+A\+TA}} = \mbox{\hyperlink{main_8cpp_abb4b0a6d956813eb6e9334e335ec2249}{P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+ER}} + \char`\"{}data\+\_\+50\+\_\+1/\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This example shows how to use the fluorescence simulator object. 
+
+\begin{DoxyAuthor}{Author}
+francisco melazzini 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a916108029210bca24cd432b99633c6ea}\label{main_8cpp_a916108029210bca24cd432b99633c6ea}} 
+\index{main.cpp@{main.cpp}!E\_low@{E\_low}}
+\index{E\_low@{E\_low}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{E\_low}{E\_low}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} E\+\_\+low = 100.\+0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 16 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a71d94e894daa894dc5c4b3f6445d9c77}\label{main_8cpp_a71d94e894daa894dc5c4b3f6445d9c77}} 
+\index{main.cpp@{main.cpp}!E\_upp@{E\_upp}}
+\index{E\_upp@{E\_upp}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{E\_upp}{E\_upp}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} E\+\_\+upp = 300.\+0\+E3\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 17 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a4175591337448b7509777a1e0188fbae}\label{main_8cpp_a4175591337448b7509777a1e0188fbae}} 
+\index{main.cpp@{main.cpp}!N\_aver@{N\_aver}}
+\index{N\_aver@{N\_aver}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{N\_aver}{N\_aver}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} N\+\_\+aver = 3\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 24 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}\label{main_8cpp_a4d70e7acce9aa65366fd7b2851b0ba30}} 
+\index{main.cpp@{main.cpp}!N\_H@{N\_H}}
+\index{N\_H@{N\_H}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{N\_H}{N\_H}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} N\+\_\+H = 1.\+0\+E23 / 1.\+0\+\_\+cm2\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 23 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a01be05259e72759343b3bc42e3dcea0e}\label{main_8cpp_a01be05259e72759343b3bc42e3dcea0e}} 
+\index{main.cpp@{main.cpp}!NUM\_OF\_PHOTONS@{NUM\_OF\_PHOTONS}}
+\index{NUM\_OF\_PHOTONS@{NUM\_OF\_PHOTONS}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_OF\_PHOTONS}{NUM\_OF\_PHOTONS}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} N\+U\+M\+\_\+\+O\+F\+\_\+\+P\+H\+O\+T\+O\+NS = 50.\+0\+E6\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 26 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_abb4b0a6d956813eb6e9334e335ec2249}\label{main_8cpp_abb4b0a6d956813eb6e9334e335ec2249}} 
+\index{main.cpp@{main.cpp}!PATH\_TO\_FOLDER@{PATH\_TO\_FOLDER}}
+\index{PATH\_TO\_FOLDER@{PATH\_TO\_FOLDER}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PATH\_TO\_FOLDER}{PATH\_TO\_FOLDER}}
+{\footnotesize\ttfamily const string P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+ER = \char`\"{}./results/tests/23\+\_\+3\+\_\+03/\char`\"{}}
+
+
+
+Definition at line 27 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aaf95fa3939e6d7b449d260674263d109}\label{main_8cpp_aaf95fa3939e6d7b449d260674263d109}} 
+\index{main.cpp@{main.cpp}!PATH\_TO\_FOLDER\_DATA@{PATH\_TO\_FOLDER\_DATA}}
+\index{PATH\_TO\_FOLDER\_DATA@{PATH\_TO\_FOLDER\_DATA}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PATH\_TO\_FOLDER\_DATA}{PATH\_TO\_FOLDER\_DATA}}
+{\footnotesize\ttfamily const string P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+E\+R\+\_\+\+D\+A\+TA = \mbox{\hyperlink{main_8cpp_abb4b0a6d956813eb6e9334e335ec2249}{P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+F\+O\+L\+D\+ER}} + \char`\"{}data\+\_\+50\+\_\+1/\char`\"{}}
+
+
+
+Definition at line 28 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a43a01a98cfb0456d4147a9bbff67f029}\label{main_8cpp_a43a01a98cfb0456d4147a9bbff67f029}} 
+\index{main.cpp@{main.cpp}!phi@{phi}}
+\index{phi@{phi}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{phi}{phi}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} phi = 0.\+03\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 25 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a6ab395a2fd66a82aa34496d366f7bbb8}\label{main_8cpp_a6ab395a2fd66a82aa34496d366f7bbb8}} 
+\index{main.cpp@{main.cpp}!SPHERE\_R@{SPHERE\_R}}
+\index{SPHERE\_R@{SPHERE\_R}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SPHERE\_R}{SPHERE\_R}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} S\+P\+H\+E\+R\+E\+\_\+R = 1.\+0\+E15\+\_\+cm\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 19 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a492625c01cb41af46e9284b9fd87700c}\label{main_8cpp_a492625c01cb41af46e9284b9fd87700c}} 
+\index{main.cpp@{main.cpp}!T\_e@{T\_e}}
+\index{T\_e@{T\_e}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{T\_e}{T\_e}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} T\+\_\+e = 1.\+0\+\_\+e\+V\+To\+Kelvin\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 18 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a2f5aec2bda1abbb2d9b4e4c3c14fd006}\label{main_8cpp_a2f5aec2bda1abbb2d9b4e4c3c14fd006}} 
+\index{main.cpp@{main.cpp}!TORUS\_HALFOPENINGANGLE@{TORUS\_HALFOPENINGANGLE}}
+\index{TORUS\_HALFOPENINGANGLE@{TORUS\_HALFOPENINGANGLE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TORUS\_HALFOPENINGANGLE}{TORUS\_HALFOPENINGANGLE}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} T\+O\+R\+U\+S\+\_\+\+H\+A\+L\+F\+O\+P\+E\+N\+I\+N\+G\+A\+N\+G\+LE = 60.\+0\+\_\+deg\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 22 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ae28e7d77b355696b808b02d9f275701b}\label{main_8cpp_ae28e7d77b355696b808b02d9f275701b}} 
+\index{main.cpp@{main.cpp}!TORUS\_R1@{TORUS\_R1}}
+\index{TORUS\_R1@{TORUS\_R1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TORUS\_R1}{TORUS\_R1}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} T\+O\+R\+U\+S\+\_\+\+R1 = 1.\+0\+E14\+\_\+cm\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 20 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a79cf154ee3d6afbf0d3772e2270114dd}\label{main_8cpp_a79cf154ee3d6afbf0d3772e2270114dd}} 
+\index{main.cpp@{main.cpp}!TORUS\_R2@{TORUS\_R2}}
+\index{TORUS\_R2@{TORUS\_R2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TORUS\_R2}{TORUS\_R2}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} T\+O\+R\+U\+S\+\_\+\+R2 = 1.\+0\+E15\+\_\+cm\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 21 of file main.\+cpp.
+

@@ -1,0 +1,277 @@
+\hypertarget{classphysapi_1_1_p_simple_photon}{}\doxysection{physapi\+::P\+Simple\+Photon Class Reference}
+\label{classphysapi_1_1_p_simple_photon}\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+
+
+This class represents a simple photon.  
+
+
+
+
+{\ttfamily \#include $<$P\+Simple\+Photon.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Simple\+Photon\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Simple\+Photon\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a593ea87e678eb518c70bcc8a10ac8da2}{P\+Simple\+Photon}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_aa8578523517bdbd302353bda1e03a168}{energy}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction, const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}=\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}())
+\begin{DoxyCompactList}\small\item\em Construct a new photon. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a4d0b7c986ae8345438665d7f5c730522}{$\sim$\+P\+Simple\+Photon}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the photon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_aa8578523517bdbd302353bda1e03a168}{energy}} () const override
+\begin{DoxyCompactList}\small\item\em Get the photon\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a7423a72f7351832842a2b5d758d6dddd}{velocity}} () const
+\begin{DoxyCompactList}\small\item\em Get the photon\textquotesingle{}s velocity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a0a53aa76e0deda26396552154ae33f38}{set\+Energy}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_aa8578523517bdbd302353bda1e03a168}{energy}})
+\begin{DoxyCompactList}\small\item\em Set the photon\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_ac03e217ba20745e12288c230065afb8a}{omega}} () const
+\begin{DoxyCompactList}\small\item\em Photon\textquotesingle{}s direction of movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a4fcab8fea7ca0076a803a854f880db2d}{set\+Omega}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction)
+\begin{DoxyCompactList}\small\item\em Set the photon\textquotesingle{}s direction of movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_a5a6e82485e0eb397cf58ced888fb99b8}{set\+Momentum}} (const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&momentum\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Set the momentum of the particle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_photon_ab391400ce8f861b727ce2735a6c30831}{give\+Impulse}} (const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&impulse)
+\begin{DoxyCompactList}\small\item\em Give an impulse to the photon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a simple photon. 
+
+A simple photon in our api is defined by its position, energy and direction of movement. 
+
+Definition at line 21 of file P\+Simple\+Photon.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a593ea87e678eb518c70bcc8a10ac8da2}\label{classphysapi_1_1_p_simple_photon_a593ea87e678eb518c70bcc8a10ac8da2}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!PSimplePhoton@{PSimplePhoton}}
+\index{PSimplePhoton@{PSimplePhoton}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{PSimplePhoton()}{PSimplePhoton()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Photon\+::\+P\+Simple\+Photon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new photon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & initial energy \\
+\hline
+{\em direction} & initial direction \\
+\hline
+{\em position} & initial position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+a photon with initial energy 0 cannot interact with other particles 
+\end{DoxyNote}
+
+
+Definition at line 37 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a4d0b7c986ae8345438665d7f5c730522}\label{classphysapi_1_1_p_simple_photon_a4d0b7c986ae8345438665d7f5c730522}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!````~PSimplePhoton@{$\sim$PSimplePhoton}}
+\index{````~PSimplePhoton@{$\sim$PSimplePhoton}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSimplePhoton()}{~PSimplePhoton()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Simple\+Photon\+::$\sim$\+P\+Simple\+Photon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the photon. 
+
+
+
+Definition at line 51 of file P\+Simple\+Photon.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_aa8578523517bdbd302353bda1e03a168}\label{classphysapi_1_1_p_simple_photon_aa8578523517bdbd302353bda1e03a168}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!energy@{energy}}
+\index{energy@{energy}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{energy()}{energy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Photon\+::energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the photon\textquotesingle{}s energy. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_af84864ba82b8abc0e6b3c38c1f046a08}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 62 of file P\+Simple\+Photon.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_ab391400ce8f861b727ce2735a6c30831}\label{classphysapi_1_1_p_simple_photon_ab391400ce8f861b727ce2735a6c30831}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!giveImpulse@{giveImpulse}}
+\index{giveImpulse@{giveImpulse}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{giveImpulse()}{giveImpulse()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Photon\+::give\+Impulse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{impulse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Give an impulse to the photon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em impulse} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a5f1d284094101d853275d8ab8c89bcb2}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 141 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_ac03e217ba20745e12288c230065afb8a}\label{classphysapi_1_1_p_simple_photon_ac03e217ba20745e12288c230065afb8a}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!omega@{omega}}
+\index{omega@{omega}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{omega()}{omega()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Simple\+Photon\+::omega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Photon\textquotesingle{}s direction of movement. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+it returns zero if the momentum is zero 
+\end{DoxyNote}
+
+
+Definition at line 97 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a0a53aa76e0deda26396552154ae33f38}\label{classphysapi_1_1_p_simple_photon_a0a53aa76e0deda26396552154ae33f38}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!setEnergy@{setEnergy}}
+\index{setEnergy@{setEnergy}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{setEnergy()}{setEnergy()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Photon\+::set\+Energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the photon\textquotesingle{}s energy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a68abd45ccd3ea1646c61cafaea54b61b}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 84 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a5a6e82485e0eb397cf58ced888fb99b8}\label{classphysapi_1_1_p_simple_photon_a5a6e82485e0eb397cf58ced888fb99b8}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!setMomentum@{setMomentum}}
+\index{setMomentum@{setMomentum}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{setMomentum()}{setMomentum()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Simple\+Photon\+::set\+Momentum (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{momentum\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the momentum of the particle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em momentum\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_af21977f2fa25153133b9622d2f233ced}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 126 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a4fcab8fea7ca0076a803a854f880db2d}\label{classphysapi_1_1_p_simple_photon_a4fcab8fea7ca0076a803a854f880db2d}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!setOmega@{setOmega}}
+\index{setOmega@{setOmega}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{setOmega()}{setOmega()}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Simple\+Photon\+::set\+Omega (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the photon\textquotesingle{}s direction of movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+this works only if the photon\textquotesingle{}s momentum is not zero 
+\end{DoxyNote}
+
+
+Definition at line 115 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_photon_a7423a72f7351832842a2b5d758d6dddd}\label{classphysapi_1_1_p_simple_photon_a7423a72f7351832842a2b5d758d6dddd}} 
+\index{physapi::PSimplePhoton@{physapi::PSimplePhoton}!velocity@{velocity}}
+\index{velocity@{velocity}!physapi::PSimplePhoton@{physapi::PSimplePhoton}}
+\doxysubsubsection{\texorpdfstring{velocity()}{velocity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Simple\+Photon\+::velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the photon\textquotesingle{}s velocity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+it returns zero if the momentum is zero otherwise it returns the speed of light with the corresponding direction of movement 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a27368dd84986bfc379fad65a7488e6e3}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 74 of file P\+Simple\+Photon.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/particles/\mbox{\hyperlink{_p_simple_photon_8hpp}{P\+Simple\+Photon.\+hpp}}\end{DoxyCompactItemize}

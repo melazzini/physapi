@@ -1,0 +1,181 @@
+\hypertarget{classphysapi_1_1_p_abundance_table}{}\doxysection{physapi\+::P\+Abundance\+Table Class Reference}
+\label{classphysapi_1_1_p_abundance_table}\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+
+
+This class represents a table of abundances.  
+
+
+
+
+{\ttfamily \#include $<$P\+Abundance\+Table.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_abundance_table_aff4f89b3de007f1f37d03e9041dba998}{P\+Abundance\+Table}} (const std\+::string \&file=D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+TH)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_abundance_table_a34f1293e48aa5881bf8df7b72df647cd}{$\sim$\+P\+Abundance\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_abundance_table_a206f8fae8c70f6ee0877c940d28fd3f4}{abundance}} (\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}} atomic\+Number) const
+\begin{DoxyCompactList}\small\item\em Get the abundance for the corresponding atomic number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_abundance_table_a6014c8d72b69036a1cd106d67d85d9b7}{total}} () const
+\begin{DoxyCompactList}\small\item\em get $ \sum_{i} (z_{i}*a_{i}) $ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$phys\+\_\+size columns, typename Target , typename T $>$ }\\void \mbox{\hyperlink{classphysapi_1_1_p_abundance_table_a60b86a4b1bfa89b89035c46bac5865e3}{load\+From\+File}} (const std\+::string \&file, Target \&target, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} max\+Nun\+Of\+Rows)
+\begin{DoxyCompactList}\small\item\em This is a tool for loading a file of n rows by m columns to a custom physapi container. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classphysapi_1_1_p_abundance_table_a1430f73572d1d2caea7dcb23adac2a16}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&table)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a table of abundances. 
+
+Abundance values are relative to the Hydrogen atom. 
+
+Definition at line 18 of file P\+Abundance\+Table.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_aff4f89b3de007f1f37d03e9041dba998}\label{classphysapi_1_1_p_abundance_table_aff4f89b3de007f1f37d03e9041dba998}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!PAbundanceTable@{PAbundanceTable}}
+\index{PAbundanceTable@{PAbundanceTable}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{PAbundanceTable()}{PAbundanceTable()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Abundance\+Table\+::\+P\+Abundance\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file = {\ttfamily DEFAULT\+\_\+FILE\+\_\+PATH} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & abundances table \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file P\+Abundance\+Table.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_a34f1293e48aa5881bf8df7b72df647cd}\label{classphysapi_1_1_p_abundance_table_a34f1293e48aa5881bf8df7b72df647cd}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!````~PAbundanceTable@{$\sim$PAbundanceTable}}
+\index{````~PAbundanceTable@{$\sim$PAbundanceTable}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{$\sim$PAbundanceTable()}{~PAbundanceTable()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Abundance\+Table\+::$\sim$\+P\+Abundance\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} object. 
+
+
+
+Definition at line 52 of file P\+Abundance\+Table.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_a206f8fae8c70f6ee0877c940d28fd3f4}\label{classphysapi_1_1_p_abundance_table_a206f8fae8c70f6ee0877c940d28fd3f4}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!abundance@{abundance}}
+\index{abundance@{abundance}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{abundance()}{abundance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Abundance\+Table\+::abundance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}}}]{atomic\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Get the abundance for the corresponding atomic number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atomic\+Number} & atomic number(\+Z) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float abundance 
+
+0 if no element 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file P\+Abundance\+Table.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_a6014c8d72b69036a1cd106d67d85d9b7}\label{classphysapi_1_1_p_abundance_table_a6014c8d72b69036a1cd106d67d85d9b7}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!total@{total}}
+\index{total@{total}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{total()}{total()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Abundance\+Table\+::total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get $ \sum_{i} (z_{i}*a_{i}) $ 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file P\+Abundance\+Table.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_a60b86a4b1bfa89b89035c46bac5865e3}\label{classphysapi_1_1_p_abundance_table_a60b86a4b1bfa89b89035c46bac5865e3}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{loadFromFile}{loadFromFile}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size columns, typename Target , typename T $>$ \\
+void load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{Target \&}]{target,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{max\+Nun\+Of\+Rows = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+This is a tool for loading a file of n rows by m columns to a custom physapi container. 
+
+The elements of the container have to be able to be built from rows of the file. The container need to have a method called \char`\"{} load\+Element(std\+::array) \char`\"{} which receives an array of size equal columns and type T.
+
+The number of raws depends on the number of raws of the file.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em columns} & number of columns \\
+\hline
+{\em Target} & target container\textquotesingle{}s type \\
+\hline
+{\em T} & one of the fundamental data types of in physapi(e.\+g. phys\+\_\+float) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em file} & file name \\
+\hline
+{\em target} & container where the data will be stored \\
+\hline
+{\em max\+Nun\+Of\+Raws} & maximum number of rows. If 0 then it depends on the file\textquotesingle{}s number of rows.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & any problem occurs while loading the file the this function abort the execution of the program. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 583 of file utils.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_abundance_table_a1430f73572d1d2caea7dcb23adac2a16}\label{classphysapi_1_1_p_abundance_table_a1430f73572d1d2caea7dcb23adac2a16}} 
+\index{physapi::PAbundanceTable@{physapi::PAbundanceTable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!physapi::PAbundanceTable@{physapi::PAbundanceTable}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 35 of file P\+Abundance\+Table.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/astrophysics/\mbox{\hyperlink{_p_abundance_table_8hpp}{P\+Abundance\+Table.\+hpp}}\item 
+src/astrophysics/\mbox{\hyperlink{_p_abundance_table_8cpp}{P\+Abundance\+Table.\+cpp}}\end{DoxyCompactItemize}

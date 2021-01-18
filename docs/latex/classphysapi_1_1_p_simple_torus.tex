@@ -1,0 +1,425 @@
+\hypertarget{classphysapi_1_1_p_simple_torus}{}\doxysection{physapi\+::P\+Simple\+Torus Class Reference}
+\label{classphysapi_1_1_p_simple_torus}\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+
+
+This class represents a simple torus.  
+
+
+
+
+{\ttfamily \#include $<$P\+Simple\+Torus.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Simple\+Torus\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Simple\+Torus\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a2677d8f4aa93865ff843d91fe1cbdbcd}{P\+Simple\+Torus}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} r1=0, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} r2=0, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a6ac6ce394351fdcce0b3b3e7d1ce2988}{theta0}}=0, const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&pos=\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}())
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_aef0f93da747a6bdf5f426e0b67809629}{$\sim$\+P\+Simple\+Torus}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a377f278cd3cd37352d503a4a93e5f8d6}{is\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Check if the given point is inside the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_abd070c3aeab7290b09c85e4f9d4662e7}{intersect}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction, \mbox{\hyperlink{group__core_gaba57b90048e7f13a88a50f8c2c4e4704}{e\+Sense}} sense=\mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31}{e\+Sense\+::\+F\+O\+R\+W\+A\+RD}}) const override
+\begin{DoxyCompactList}\small\item\em Check if the line determined by a point and a direction intersects or not the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ac99f96b476bd37e6ceebbc7ede24265e}{distance\+To\+Boundary\+From\+Outside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const override
+\begin{DoxyCompactList}\small\item\em Get the distance to the geometry\textquotesingle{}s boundaries from an outside point. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ad39bb1aa9c6b348b8f0aa130d125dfb9}{distance\+To\+Boundary\+From\+Inside}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const override
+\begin{DoxyCompactList}\small\item\em Get the distance to the geometry\textquotesingle{}s boundaries from an inside point. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a0b5d527f2c968c51f78bf6ed92dfca2e}{distance\+Between\+Boundaries}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const override
+\begin{DoxyCompactList}\small\item\em Get the distance from one boundary to another on the given line. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a04f22a422014c673f7585dc364483c55}{estimation\+Average\+Size}} () const
+\begin{DoxyCompactList}\small\item\em This class gives an estimation of the average size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a7ccc1b2360beafbc0498584e289a4438}{effective\+Length}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const
+\begin{DoxyCompactList}\small\item\em Get the length inside the geometry starting from a position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a048c0aaad78f211130396841d5578b6b}{maximum\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum possible length inside the geometry. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a9e13e2a65c827707d75e9990a8398b43}{free\+Length}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6bddf89a66ee7f884e33319b389c4147}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&direction) const
+\begin{DoxyCompactList}\small\item\em Get the length between boundaries, not inside the geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a8da7ba7f168e46232168e6c374997b47}{external\+Radius}} () const
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a33f07de36377d8535223ffeb80f13f12}{internal\+Radius}} () const
+\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_a6ac6ce394351fdcce0b3b3e7d1ce2988}{theta0}} () const
+\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_torus_ac1ff8ebd355b8a9320b501f7f1c4eeb0}{volume}} () const override
+\begin{DoxyCompactList}\small\item\em Get the volume of the geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a simple torus. 
+
+A simple torus in our api is defined by\+:
+
+
+\begin{DoxyItemize}
+\item inner and outer radius
+\item halfopening angle( $ \theta_{0} $) 
+\end{DoxyItemize}
+
+Definition at line 19 of file P\+Simple\+Torus.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a2677d8f4aa93865ff843d91fe1cbdbcd}\label{classphysapi_1_1_p_simple_torus_a2677d8f4aa93865ff843d91fe1cbdbcd}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!PSimpleTorus@{PSimpleTorus}}
+\index{PSimpleTorus@{PSimpleTorus}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{PSimpleTorus()}{PSimpleTorus()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Torus\+::\+P\+Simple\+Torus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{r1 = {\ttfamily 0},  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{r2 = {\ttfamily 0},  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{theta0 = {\ttfamily 0},  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{pos = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r1} & inner radius \\
+\hline
+{\em r2} & outer radius \\
+\hline
+{\em theta0} & halfopening angle(0, $ \pi/2 $) \\
+\hline
+{\em pos} & position of the center \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file P\+Simple\+Torus.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_aef0f93da747a6bdf5f426e0b67809629}\label{classphysapi_1_1_p_simple_torus_aef0f93da747a6bdf5f426e0b67809629}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!````~PSimpleTorus@{$\sim$PSimpleTorus}}
+\index{````~PSimpleTorus@{$\sim$PSimpleTorus}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSimpleTorus()}{~PSimpleTorus()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Simple\+Torus\+::$\sim$\+P\+Simple\+Torus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_simple_torus}{P\+Simple\+Torus}} object. 
+
+
+
+Definition at line 48 of file P\+Simple\+Torus.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a0b5d527f2c968c51f78bf6ed92dfca2e}\label{classphysapi_1_1_p_simple_torus_a0b5d527f2c968c51f78bf6ed92dfca2e}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!distanceBetweenBoundaries@{distanceBetweenBoundaries}}
+\index{distanceBetweenBoundaries@{distanceBetweenBoundaries}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{distanceBetweenBoundaries()}{distanceBetweenBoundaries()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::distance\+Between\+Boundaries (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the distance from one boundary to another on the given line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float if the geometry is not in the path, given by the position and direction then this method returns -\/1 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a6d9ca62f69dd8e03cf96e202fb156544}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 75 of file P\+Simple\+Torus.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_ad39bb1aa9c6b348b8f0aa130d125dfb9}\label{classphysapi_1_1_p_simple_torus_ad39bb1aa9c6b348b8f0aa130d125dfb9}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!distanceToBoundaryFromInside@{distanceToBoundaryFromInside}}
+\index{distanceToBoundaryFromInside@{distanceToBoundaryFromInside}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundaryFromInside()}{distanceToBoundaryFromInside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::distance\+To\+Boundary\+From\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the distance to the geometry\textquotesingle{}s boundaries from an inside point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the point \\
+\hline
+{\em direction} & direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a61418836b6054e30febdb41291442427}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 57 of file P\+Simple\+Torus.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_ac99f96b476bd37e6ceebbc7ede24265e}\label{classphysapi_1_1_p_simple_torus_ac99f96b476bd37e6ceebbc7ede24265e}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!distanceToBoundaryFromOutside@{distanceToBoundaryFromOutside}}
+\index{distanceToBoundaryFromOutside@{distanceToBoundaryFromOutside}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{distanceToBoundaryFromOutside()}{distanceToBoundaryFromOutside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::distance\+To\+Boundary\+From\+Outside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the distance to the geometry\textquotesingle{}s boundaries from an outside point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the point \\
+\hline
+{\em direction} & direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float if the geometry is not in the path, given by the position and direction then this method returns -\/1 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a80d390dba8dd66d37118cd3aa70dca0f}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 39 of file P\+Simple\+Torus.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a7ccc1b2360beafbc0498584e289a4438}\label{classphysapi_1_1_p_simple_torus_a7ccc1b2360beafbc0498584e289a4438}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!effectiveLength@{effectiveLength}}
+\index{effectiveLength@{effectiveLength}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{effectiveLength()}{effectiveLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::effective\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the length inside the geometry starting from a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a2e876fb5bfeba8497cc32e13cc85455d}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 121 of file P\+Simple\+Torus.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a04f22a422014c673f7585dc364483c55}\label{classphysapi_1_1_p_simple_torus_a04f22a422014c673f7585dc364483c55}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!estimationAverageSize@{estimationAverageSize}}
+\index{estimationAverageSize@{estimationAverageSize}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{estimationAverageSize()}{estimationAverageSize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::estimation\+Average\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This class gives an estimation of the average size. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float estimation size 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_aa7c0b416bb05d95586fd5bdd6e701210}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 109 of file P\+Simple\+Torus.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a8da7ba7f168e46232168e6c374997b47}\label{classphysapi_1_1_p_simple_torus_a8da7ba7f168e46232168e6c374997b47}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!externalRadius@{externalRadius}}
+\index{externalRadius@{externalRadius}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{externalRadius()}{externalRadius()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::external\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 155 of file P\+Simple\+Torus.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a9e13e2a65c827707d75e9990a8398b43}\label{classphysapi_1_1_p_simple_torus_a9e13e2a65c827707d75e9990a8398b43}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!freeLength@{freeLength}}
+\index{freeLength@{freeLength}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{freeLength()}{freeLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::free\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the length between boundaries, not inside the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_aa74ae1f35806b440d9f56fe3b0760210}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 149 of file P\+Simple\+Torus.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a33f07de36377d8535223ffeb80f13f12}\label{classphysapi_1_1_p_simple_torus_a33f07de36377d8535223ffeb80f13f12}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!internalRadius@{internalRadius}}
+\index{internalRadius@{internalRadius}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{internalRadius()}{internalRadius()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::internal\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 157 of file P\+Simple\+Torus.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_abd070c3aeab7290b09c85e4f9d4662e7}\label{classphysapi_1_1_p_simple_torus_abd070c3aeab7290b09c85e4f9d4662e7}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!intersect@{intersect}}
+\index{intersect@{intersect}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} physapi\+::\+P\+Simple\+Torus\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{direction,  }\item[{\mbox{\hyperlink{group__core_gaba57b90048e7f13a88a50f8c2c4e4704}{e\+Sense}}}]{sense = {\ttfamily \mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31}{e\+Sense\+::\+F\+O\+R\+W\+A\+RD}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the line determined by a point and a direction intersects or not the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & point\textquotesingle{}s position \\
+\hline
+{\em direction} & direction of the line \\
+\hline
+{\em sense} & sense of the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a9f3292d1a6933a649db0ab83522df299}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 27 of file P\+Simple\+Torus.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a377f278cd3cd37352d503a4a93e5f8d6}\label{classphysapi_1_1_p_simple_torus_a377f278cd3cd37352d503a4a93e5f8d6}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!isInside@{isInside}}
+\index{isInside@{isInside}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{phys\+\_\+bool}} physapi\+::\+P\+Simple\+Torus\+::is\+Inside (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the given point is inside the geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+bool true if the point is inside, else false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a0d798f51fab83f794ac85f9957758516}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 5 of file P\+Simple\+Torus.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a048c0aaad78f211130396841d5578b6b}\label{classphysapi_1_1_p_simple_torus_a048c0aaad78f211130396841d5578b6b}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!maximumLength@{maximumLength}}
+\index{maximumLength@{maximumLength}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{maximumLength()}{maximumLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::maximum\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the maximum possible length inside the geometry. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file P\+Simple\+Torus.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_a6ac6ce394351fdcce0b3b3e7d1ce2988}\label{classphysapi_1_1_p_simple_torus_a6ac6ce394351fdcce0b3b3e7d1ce2988}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!theta0@{theta0}}
+\index{theta0@{theta0}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{theta0()}{theta0()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::theta0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 159 of file P\+Simple\+Torus.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_torus_ac1ff8ebd355b8a9320b501f7f1c4eeb0}\label{classphysapi_1_1_p_simple_torus_ac1ff8ebd355b8a9320b501f7f1c4eeb0}} 
+\index{physapi::PSimpleTorus@{physapi::PSimpleTorus}!volume@{volume}}
+\index{volume@{volume}!physapi::PSimpleTorus@{physapi::PSimpleTorus}}
+\doxysubsubsection{\texorpdfstring{volume()}{volume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Torus\+::volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the volume of the geometry. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_geometry_base_a714de87fc9bfeedf8df1e4f95480d72b}{physapi\+::\+P\+Geometry\+Base}}.
+
+
+
+Definition at line 86 of file P\+Simple\+Torus.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_p_simple_torus_8hpp}{P\+Simple\+Torus.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_p_simple_torus_8cpp}{P\+Simple\+Torus.\+cpp}}\end{DoxyCompactItemize}

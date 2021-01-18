@@ -1,28 +1,28 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=latex 2020.12.16)  16 DEC 2020 09:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=latex 2021.1.8)  9 JAN 2021 15:35
 entering extended mode
 **./_formulas.tex
 (_formulas.tex
-LaTeX2e <2019-10-01> patch level 3
-
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-07> xparse <2020-03-03>
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.c
 ls"
-Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.cl
 o"
-File: size10.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+\c@part=\count177
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\c@figure=\count183
+\c@table=\count184
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 )
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.st
 y"
@@ -34,16 +34,16 @@ Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graph
 icx.sty"
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyva
 l.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graph
 ics.sty"
-Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.
 sty"
@@ -59,32 +59,51 @@ Package graphics Info: Driver file: dvips.def on input line 105.
 vips.def"
 File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
 )
-\epsfxsize=\dimen105
-\epsfysize=\dimen106
+\epsfxsize=\dimen141
+\epsfysize=\dimen142
 )
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.
 sty"
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 )
 ("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newunicodechar
 \newunicodechar.sty"
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 )
-No file _formulas.aux.
+
+Package newunicodechar Warning: Redefining Unicode character on input line 7.
+
+
+Package newunicodechar Warning: Redefining Unicode character on input line 8.
+
+
+("C:\Users\francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3ba
+ckend-dvips.def"
+File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count185
+\l__pdf_backend_content_box=\box48
+\l__pdf_backend_model_box=\box49
+\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_link_int=\count187
+\g__pdf_backend_link_sf_int=\count188
+) (_formulas.aux)
 \openout1 = `_formulas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
@@ -99,14 +118,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] 
 [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
 [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]
-(_formulas.aux) ) 
+[51] [52] [53] [54] (_formulas.aux) ) 
 Here is how much of TeX's memory you used:
- 696 strings out of 492451
- 9584 string characters out of 3118162
- 69504 words of memory out of 3000000
- 5113 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 890 strings out of 479663
+ 15287 string characters out of 2861654
+ 283514 words of memory out of 3000000
+ 18051 multiletter control sequences out of 15000+200000
+ 403430 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,4n,27p,230b,92s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,4n,85p,230b,93s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _formulas.dvi (50 pages, 5480 bytes).
+Output written on _formulas.dvi (54 pages, 5928 bytes).

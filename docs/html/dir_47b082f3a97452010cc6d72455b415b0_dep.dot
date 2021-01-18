@@ -1,0 +1,9 @@
+digraph "include/examples/AGN/AGNClumpy" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e4f11b19526d87cafb87dd86ec1e43d0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="AGN" fontname="Helvetica", fontsize="10", URL="dir_e4f11b19526d87cafb87dd86ec1e43d0.html"]
+  dir_47b082f3a97452010cc6d72455b415b0 [shape=box, label="AGNClumpy", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_47b082f3a97452010cc6d72455b415b0.html"];
+  }
+}

@@ -113,67 +113,374 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;omp.h&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
-<code>#include &quot;PAGNSimulationTeamFactoryBuilder.hpp&quot;</code><br />
-<code>#include &quot;PAGN.hpp&quot;</code><br />
-<code>#include &quot;PAGNSmoothSphereModel.hpp&quot;</code><br />
-<code>#include &quot;PAGNClumpyTorusModel.hpp&quot;</code><br />
-<code>#include &quot;PAGNSmoothTorus.model.hpp&quot;</code><br />
-<code>#include &quot;PAGNSimpleTorusDirectionFilter.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_simulation_team_factory_builder_8hpp_source.html">PAGNSimulationTeamFactoryBuilder.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_smooth_sphere_model_8hpp_source.html">PAGNSmoothSphereModel.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_clumpy_torus_model_8hpp_source.html">PAGNClumpyTorusModel.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_smooth_torus_8model_8hpp_source.html">PAGNSmoothTorus.model.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>&quot;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a916108029210bca24cd432b99633c6ea"><td class="memItemLeft" align="right" valign="top"><a id="a916108029210bca24cd432b99633c6ea"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>E_low</b> = 100.0</td></tr>
+<tr class="memitem:a916108029210bca24cd432b99633c6ea"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a916108029210bca24cd432b99633c6ea">E_low</a> = 100.0</td></tr>
 <tr class="separator:a916108029210bca24cd432b99633c6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71d94e894daa894dc5c4b3f6445d9c77"><td class="memItemLeft" align="right" valign="top"><a id="a71d94e894daa894dc5c4b3f6445d9c77"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>E_upp</b> = 300.0E3</td></tr>
+<tr class="memitem:a71d94e894daa894dc5c4b3f6445d9c77"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a71d94e894daa894dc5c4b3f6445d9c77">E_upp</a> = 300.0E3</td></tr>
 <tr class="separator:a71d94e894daa894dc5c4b3f6445d9c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492625c01cb41af46e9284b9fd87700c"><td class="memItemLeft" align="right" valign="top"><a id="a492625c01cb41af46e9284b9fd87700c"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>T_e</b> = 1.0_eVToKelvin</td></tr>
+<tr class="memitem:a492625c01cb41af46e9284b9fd87700c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a> = 1.0_eVToKelvin</td></tr>
 <tr class="separator:a492625c01cb41af46e9284b9fd87700c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ab395a2fd66a82aa34496d366f7bbb8"><td class="memItemLeft" align="right" valign="top"><a id="a6ab395a2fd66a82aa34496d366f7bbb8"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SPHERE_R</b> = 1.0E15_cm</td></tr>
+<tr class="memitem:a6ab395a2fd66a82aa34496d366f7bbb8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6ab395a2fd66a82aa34496d366f7bbb8">SPHERE_R</a> = 1.0E15_cm</td></tr>
 <tr class="separator:a6ab395a2fd66a82aa34496d366f7bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28e7d77b355696b808b02d9f275701b"><td class="memItemLeft" align="right" valign="top"><a id="ae28e7d77b355696b808b02d9f275701b"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TORUS_R1</b> = 1.0E14_cm</td></tr>
+<tr class="memitem:ae28e7d77b355696b808b02d9f275701b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae28e7d77b355696b808b02d9f275701b">TORUS_R1</a> = 1.0E14_cm</td></tr>
 <tr class="separator:ae28e7d77b355696b808b02d9f275701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cf154ee3d6afbf0d3772e2270114dd"><td class="memItemLeft" align="right" valign="top"><a id="a79cf154ee3d6afbf0d3772e2270114dd"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TORUS_R2</b> = 1.0E15_cm</td></tr>
+<tr class="memitem:a79cf154ee3d6afbf0d3772e2270114dd"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a79cf154ee3d6afbf0d3772e2270114dd">TORUS_R2</a> = 1.0E15_cm</td></tr>
 <tr class="separator:a79cf154ee3d6afbf0d3772e2270114dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5aec2bda1abbb2d9b4e4c3c14fd006"><td class="memItemLeft" align="right" valign="top"><a id="a2f5aec2bda1abbb2d9b4e4c3c14fd006"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TORUS_HALFOPENINGANGLE</b> = 60.0_deg</td></tr>
+<tr class="memitem:a2f5aec2bda1abbb2d9b4e4c3c14fd006"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a> = 60.0_deg</td></tr>
 <tr class="separator:a2f5aec2bda1abbb2d9b4e4c3c14fd006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memItemLeft" align="right" valign="top"><a id="a4d70e7acce9aa65366fd7b2851b0ba30"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>N_H</b> = 1.0E23 / 1.0_cm2</td></tr>
+<tr class="memitem:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a> = 1.0E23 / 1.0_cm2</td></tr>
 <tr class="separator:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4175591337448b7509777a1e0188fbae"><td class="memItemLeft" align="right" valign="top"><a id="a4175591337448b7509777a1e0188fbae"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>N_aver</b> = 3</td></tr>
+<tr class="memitem:a4175591337448b7509777a1e0188fbae"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4175591337448b7509777a1e0188fbae">N_aver</a> = 3</td></tr>
 <tr class="separator:a4175591337448b7509777a1e0188fbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a01a98cfb0456d4147a9bbff67f029"><td class="memItemLeft" align="right" valign="top"><a id="a43a01a98cfb0456d4147a9bbff67f029"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>phi</b> = 0.03</td></tr>
+<tr class="memitem:a43a01a98cfb0456d4147a9bbff67f029"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a43a01a98cfb0456d4147a9bbff67f029">phi</a> = 0.03</td></tr>
 <tr class="separator:a43a01a98cfb0456d4147a9bbff67f029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01be05259e72759343b3bc42e3dcea0e"><td class="memItemLeft" align="right" valign="top"><a id="a01be05259e72759343b3bc42e3dcea0e"></a>
-constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_OF_PHOTONS</b> = 50.0E6</td></tr>
+<tr class="memitem:a01be05259e72759343b3bc42e3dcea0e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a> = 50.0E6</td></tr>
 <tr class="separator:a01be05259e72759343b3bc42e3dcea0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4b0a6d956813eb6e9334e335ec2249"><td class="memItemLeft" align="right" valign="top"><a id="abb4b0a6d956813eb6e9334e335ec2249"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_TO_FOLDER</b> = &quot;./results/tests/23_3_03/&quot;</td></tr>
+<tr class="memitem:abb4b0a6d956813eb6e9334e335ec2249"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> = &quot;./results/tests/23_3_03/&quot;</td></tr>
 <tr class="separator:abb4b0a6d956813eb6e9334e335ec2249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf95fa3939e6d7b449d260674263d109"><td class="memItemLeft" align="right" valign="top"><a id="aaf95fa3939e6d7b449d260674263d109"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_TO_FOLDER_DATA</b> = PATH_TO_FOLDER + &quot;data_50_1/&quot;</td></tr>
+<tr class="memitem:aaf95fa3939e6d7b449d260674263d109"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a> = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data_50_1/&quot;</td></tr>
 <tr class="separator:aaf95fa3939e6d7b449d260674263d109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This example shows how to use the fluorescence simulator object. </p>
 <dl class="section author"><dt>Author</dt><dd>francisco melazzini </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>December 2020 </dd></dl>
-</div></div><!-- contents -->
+
+<p class="definition">Definition in file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00030">30</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a916108029210bca24cd432b99633c6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916108029210bca24cd432b99633c6ea">&#9670;&nbsp;</a></span>E_low</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> E_low = 100.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a71d94e894daa894dc5c4b3f6445d9c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d94e894daa894dc5c4b3f6445d9c77">&#9670;&nbsp;</a></span>E_upp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> E_upp = 300.0E3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00017">17</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4175591337448b7509777a1e0188fbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4175591337448b7509777a1e0188fbae">&#9670;&nbsp;</a></span>N_aver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> N_aver = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00024">24</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d70e7acce9aa65366fd7b2851b0ba30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d70e7acce9aa65366fd7b2851b0ba30">&#9670;&nbsp;</a></span>N_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> N_H = 1.0E23 / 1.0_cm2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00023">23</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a01be05259e72759343b3bc42e3dcea0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01be05259e72759343b3bc42e3dcea0e">&#9670;&nbsp;</a></span>NUM_OF_PHOTONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> NUM_OF_PHOTONS = 50.0E6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00026">26</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb4b0a6d956813eb6e9334e335ec2249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4b0a6d956813eb6e9334e335ec2249">&#9670;&nbsp;</a></span>PATH_TO_FOLDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string PATH_TO_FOLDER = &quot;./results/tests/23_3_03/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00027">27</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaf95fa3939e6d7b449d260674263d109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf95fa3939e6d7b449d260674263d109">&#9670;&nbsp;</a></span>PATH_TO_FOLDER_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string PATH_TO_FOLDER_DATA = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data_50_1/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00028">28</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a43a01a98cfb0456d4147a9bbff67f029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a01a98cfb0456d4147a9bbff67f029">&#9670;&nbsp;</a></span>phi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> phi = 0.03</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00025">25</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6ab395a2fd66a82aa34496d366f7bbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab395a2fd66a82aa34496d366f7bbb8">&#9670;&nbsp;</a></span>SPHERE_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> SPHERE_R = 1.0E15_cm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a492625c01cb41af46e9284b9fd87700c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492625c01cb41af46e9284b9fd87700c">&#9670;&nbsp;</a></span>T_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> T_e = 1.0_eVToKelvin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2f5aec2bda1abbb2d9b4e4c3c14fd006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5aec2bda1abbb2d9b4e4c3c14fd006">&#9670;&nbsp;</a></span>TORUS_HALFOPENINGANGLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> TORUS_HALFOPENINGANGLE = 60.0_deg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00022">22</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae28e7d77b355696b808b02d9f275701b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28e7d77b355696b808b02d9f275701b">&#9670;&nbsp;</a></span>TORUS_R1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> TORUS_R1 = 1.0E14_cm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00020">20</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a79cf154ee3d6afbf0d3772e2270114dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cf154ee3d6afbf0d3772e2270114dd">&#9670;&nbsp;</a></span>TORUS_R2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> TORUS_R2 = 1.0E15_cm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

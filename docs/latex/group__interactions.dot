@@ -1,0 +1,13 @@
+digraph "Interactions"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node3 [label="Compton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__compton.html",tooltip="This submodule handles compton interaction."];
+  Node1 [label="Interactions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This module handles particle interations."];
+  Node4 [label="Gravitation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gravitation.html",tooltip="This submodule handles gravitational interaction."];
+  Node2 [label="Collision",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__collision.html",tooltip="This submodule handles classical physics collisions."];
+  Node1->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node4 [shape=plaintext, dir="back", style="solid"];
+}

@@ -1,0 +1,18 @@
+digraph "src/examples/AGN" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e931c1a3f0014e624d0645a271726ad2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_e931c1a3f0014e624d0645a271726ad2.html"]
+  subgraph clusterdir_1166f2c9a8a331f7ebb2ca2ddcac3ecf {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1166f2c9a8a331f7ebb2ca2ddcac3ecf.html"];
+    dir_1166f2c9a8a331f7ebb2ca2ddcac3ecf [shape=plaintext label="AGN"];
+    dir_509019c50060448dd5bd8a365ed0af82 [shape=box label="AGNClumpy" color="black" fillcolor="white" style="filled" URL="dir_509019c50060448dd5bd8a365ed0af82.html"];
+    dir_5fce2141824aae5c963e442553f7b08b [shape=box label="AGNSmooth" color="black" fillcolor="white" style="filled" URL="dir_5fce2141824aae5c963e442553f7b08b.html"];
+  }
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_509019c50060448dd5bd8a365ed0af82->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="12", labeldistance=1.5 headhref="dir_000021_000000.html"];
+  dir_1166f2c9a8a331f7ebb2ca2ddcac3ecf->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="23", labeldistance=1.5 headhref="dir_000020_000000.html"];
+  dir_5fce2141824aae5c963e442553f7b08b->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="6", labeldistance=1.5 headhref="dir_000022_000000.html"];
+}

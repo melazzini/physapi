@@ -1,0 +1,28 @@
+digraph "physapi::PVector3D::phi"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PVector3D::phi",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the  spherical coordinate."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="agn::PAGNSimpleTorusDirection\lFilter::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a10dbc30f04236ea5457808241d1c6de4",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacephysapi.html#a53ec1be07c7eb9d9a7bec2a886a7e3bb",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="agn::PAGNClumpyTorusModel\l::placeCloud",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_torus_model.html#a2d05a0ec848baf944d0eba2939593911",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="agn::PAGNSimulationMng\l::registerPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_mng.html#a3eb153c6b9676621da4729bb5f6140f7",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="agn::PAGNSimulationTeamB::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="physapi::PVector3D\l::setPhi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#add9315ba6ef669c884340d340bf197a8",tooltip="Set a new  coordinate."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="physapi::PVector3D\l::setR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a07b5836d7759f1d82914ac02988c173b",tooltip="Set the r coordinate, i.e. the norm of the vector."];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="physapi::PVector3D\l::e_phi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_vector3_d.html#a37b00ddee4484f5eae447a0e8d4c2a39",tooltip="Get the  basis vector in cartesian coordinates."];
+  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="physapi::PSimpleElectron\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_electron.html#a7f563d2deab9ca8b36402bcee89a9825",tooltip="Set the electron's energy."];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="physapi::PSimpleParticle\l::setEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_particle.html#aa6d8185137ad45f73b653f2f356b88c5",tooltip="Set the particle's energy."];
+}

@@ -1,0 +1,72 @@
+\hypertarget{classagn_1_1_p_a_g_n}{}\doxysection{agn\+::P\+A\+GN Class Reference}
+\label{classagn_1_1_p_a_g_n}\index{agn::PAGN@{agn::PAGN}}
+
+
+{\ttfamily \#include $<$P\+A\+G\+N.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classagn_1_1_p_a_g_n_a4b3eeb138bd6785a8cdf2ca2ac782b00}{P\+A\+GN}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b}{P\+A\+G\+N\+Structure\+ModelB}} $>$ structure\+Model, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{main_8cpp_a492625c01cb41af46e9284b9fd87700c}{T\+\_\+e}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} num\+Of\+Photos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_factory}{P\+A\+G\+N\+Simulation\+Team\+Factory}} $>$ simulation\+Team\+Factory, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_formula}{P\+A\+G\+N\+Formula}} $>$ agnformula, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} $>$ init\+Spectrum\+Dir\+Filter=std\+::make\+\_\+shared$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} $>$())
+\item 
+void \mbox{\hyperlink{classagn_1_1_p_a_g_n_aaf3db1ef7c4e6325d920f8b645f0d330}{run}} (std\+::string\+\_\+view Path\+To\+Folder, \mbox{\hyperlink{group__core_gaf22949fd76e8a830eb45660c0769e10d}{e\+Num\+Of\+Threads}} num\+Of\+Threads=e\+Num\+Of\+Threads\+::\+M\+AX)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a smooth and homogeneous A\+GN. 
+
+Definition at line 18 of file P\+A\+G\+N.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_a4b3eeb138bd6785a8cdf2ca2ac782b00}\label{classagn_1_1_p_a_g_n_a4b3eeb138bd6785a8cdf2ca2ac782b00}} 
+\index{agn::PAGN@{agn::PAGN}!PAGN@{PAGN}}
+\index{PAGN@{PAGN}!agn::PAGN@{agn::PAGN}}
+\doxysubsubsection{\texorpdfstring{PAGN()}{PAGN()}}
+{\footnotesize\ttfamily agn\+::\+P\+A\+G\+N\+::\+P\+A\+GN (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_structure_model_b}{P\+A\+G\+N\+Structure\+ModelB}} $>$}]{structure\+Model,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{T\+\_\+e,  }\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{num\+Of\+Photos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_simulation_team_factory}{P\+A\+G\+N\+Simulation\+Team\+Factory}} $>$}]{simulation\+Team\+Factory,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_formula}{P\+A\+G\+N\+Formula}} $>$}]{agnformula,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}} $>$}]{init\+Spectrum\+Dir\+Filter = {\ttfamily std\+:\+:make\+\_\+shared$<$\mbox{\hyperlink{classagn_1_1_p_a_g_n_init_spectrum_direction_filter}{P\+A\+G\+N\+Init\+Spectrum\+Direction\+Filter}}$>$()} }\end{DoxyParamCaption})}
+
+Constructs a smooth agn x-\/ray spectral model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure\+Model} & agn structure model \\
+\hline
+{\em T\+\_\+e} & temperature of the electrons \\
+\hline
+{\em num\+Of\+Photos} & number of photons \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file P\+A\+G\+N.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classagn_1_1_p_a_g_n_aaf3db1ef7c4e6325d920f8b645f0d330}\label{classagn_1_1_p_a_g_n_aaf3db1ef7c4e6325d920f8b645f0d330}} 
+\index{agn::PAGN@{agn::PAGN}!run@{run}}
+\index{run@{run}!agn::PAGN@{agn::PAGN}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void agn\+::\+P\+A\+G\+N\+::run (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{Path\+To\+Folder,  }\item[{\mbox{\hyperlink{group__core_gaf22949fd76e8a830eb45660c0769e10d}{e\+Num\+Of\+Threads}}}]{num\+Of\+Threads = {\ttfamily eNumOfThreads\+:\+:MAX} }\end{DoxyParamCaption})}
+
+Run the simulation of the agn x-\/ray spectral model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path\+To\+Folder} & path to storage folder(the data resulting from the simulation will be stored here) \\
+\hline
+{\em num\+Of\+Threads} & number of cpu threads to be used in the simulation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file P\+A\+G\+N.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_8hpp}{P\+A\+G\+N.\+hpp}}\item 
+src/examples/\+A\+G\+N/\mbox{\hyperlink{_p_a_g_n_8cpp}{P\+A\+G\+N.\+cpp}}\end{DoxyCompactItemize}

@@ -104,21 +104,42 @@ $(document).ready(function(){initNavTree('classagn_1_1_p_a_g_n.html',''); initRe
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classagn_1_1_p_a_g_n-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">agn::PAGN Class Reference</div>  </div>
+<div class="title">agn::PAGN Class Reference<div class="ingroups"><a class="el" href="group__examples.html">Examples</a> &raquo; <a class="el" href="group__agn.html">Agn</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class represents an AGN x-ray spectral model(agn model).  
+ <a href="classagn_1_1_p_a_g_n.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b3eeb138bd6785a8cdf2ca2ac782b00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n.html#a4b3eeb138bd6785a8cdf2ca2ac782b00">PAGN</a> (const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_structure_model_b.html">PAGNStructureModelB</a> &gt; structureModel, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> T_e, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numOfPhotos, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_factory.html">PAGNSimulationTeamFactory</a> &gt; simulationTeamFactory, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_formula.html">PAGNFormula</a> &gt; agnformula, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &gt; initSpectrumDirFilter=std::make_shared&lt; <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &gt;())</td></tr>
+<tr class="memitem:a4b3eeb138bd6785a8cdf2ca2ac782b00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n.html#a4b3eeb138bd6785a8cdf2ca2ac782b00">PAGN</a> (const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_structure_model_b.html">PAGNStructureModelB</a> &gt; structureModel, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numOfPhotos, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_factory.html">PAGNSimulationTeamFactory</a> &gt; simulationTeamFactory, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_formula.html">PAGNFormula</a> &gt; agnformula, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &gt; initSpectrumDirFilter=std::make_shared&lt; <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &gt;())</td></tr>
+<tr class="memdesc:a4b3eeb138bd6785a8cdf2ca2ac782b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an agn x-ray spectral model.  <a href="classagn_1_1_p_a_g_n.html#a4b3eeb138bd6785a8cdf2ca2ac782b00">More...</a><br /></td></tr>
 <tr class="separator:a4b3eeb138bd6785a8cdf2ca2ac782b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf3db1ef7c4e6325d920f8b645f0d330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n.html#aaf3db1ef7c4e6325d920f8b645f0d330">run</a> (std::string_view PathToFolder, <a class="el" href="group__core.html#gaf22949fd76e8a830eb45660c0769e10d">eNumOfThreads</a> numOfThreads=eNumOfThreads::MAX)</td></tr>
+<tr class="memdesc:aaf3db1ef7c4e6325d920f8b645f0d330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation of the agn x-ray spectral model.  <a href="classagn_1_1_p_a_g_n.html#aaf3db1ef7c4e6325d920f8b645f0d330">More...</a><br /></td></tr>
 <tr class="separator:aaf3db1ef7c4e6325d920f8b645f0d330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class represents a smooth and homogeneous AGN. </p>
+<div class="textblock"><p>This class represents an AGN x-ray spectral model(agn model). </p>
+<p>This class represents a generic AGN model. It can be homogeneous or it can be clumpy. In addition, the geometric shape of the galaxy can also be specified separately. The geometry is absolutely independent of the internal structure. Furthermore, the physics and the Monte-Carlo algorithm for simulation are also independent and in overall the system is very flexible to be used for studying the physical processes involved in the formation of the resulting spectrum as well as for the dependency of the resulting spectrum on different parameters, such as the geometric shape, internal structure, number of clouds along the observer's line, etc.</p>
+<p>To be able to use the class:</p>
+<ol type="1">
+<li>Design your structure model(geometry+internal structure) based on <a class="el" href="classagn_1_1_p_a_g_n_structure_model_b.html">PAGNStructureModelB</a>. For example a simple clumpy torus.</li>
+<li>Create your simulation team based on <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</li>
+<li>Create the factory, which builds simulation team. To do this use the class <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_factory.html">PAGNSimulationTeamFactory</a>.</li>
+<li>Define your model's spectral formula based on <a class="el" href="classagn_1_1_p_a_g_n_formula.html">PAGNFormula</a>.</li>
+<li>If you want to have your photons created under some specific angular interval, then derive your filter from <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html" title="This functor filters the initial directions of the photons generated in the simulation.">PAGNInitSpectrumDirectionFilter</a>.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>Think of your simulation team as the group(for each thread) of internal objects, that handle different aspects of the simulation. For example photo-absorption, tracking the photons on their trajectory until they get registered, etc. For more information see <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</dd>
+<dd>
+Note that we have already implemented an example of a simulation team with the corresponding simulation algorithm which can be used very easily, and you are only required to implement one protected function. For more information please refer to <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</dd>
+<dd>
+The use of a factory to instantiate your simulation team class makes the model more flexible and separates the logic, and this is why we've chosen this approach. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_8hpp_source.html#l00048">48</a> of file <a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4b3eeb138bd6785a8cdf2ca2ac782b00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b3eeb138bd6785a8cdf2ca2ac782b00">&#9670;&nbsp;</a></span>PAGN()</h2>
@@ -169,15 +190,22 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a smooth agn x-ray spectral model.</p>
+
+<p>Constructs an agn x-ray spectral model. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">structureModel</td><td>agn structure model </td></tr>
+    <tr><td class="paramname">structureModel</td><td>geometry + internal structure </td></tr>
     <tr><td class="paramname">T_e</td><td>temperature of the electrons </td></tr>
-    <tr><td class="paramname">numOfPhotos</td><td>number of photons </td></tr>
+    <tr><td class="paramname">numOfPhotos</td><td>number of photons in the simulation </td></tr>
+    <tr><td class="paramname">simulationTeamFactory</td><td>creates the group of objects needed for the simulation </td></tr>
+    <tr><td class="paramname">agnformula</td><td>spectral formula of the agn </td></tr>
+    <tr><td class="paramname">initSpectrumDirFilter</td><td>determines the initial direction of the photons</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>By default all initial directions are allowed. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_8cpp_source.html#l00006">6</a> of file <a class="el" href="_p_a_g_n_8cpp_source.html">PAGN.cpp</a>.</p>
 
 </div>
 </div>
@@ -207,7 +235,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Run the simulation of the agn x-ray spectral model.</p>
+
+<p>Run the simulation of the agn x-ray spectral model. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">PathToFolder</td><td>path to storage folder(the data resulting from the simulation will be stored here) </td></tr>
@@ -216,18 +245,20 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_8cpp_source.html#l00018">18</a> of file <a class="el" href="_p_a_g_n_8cpp_source.html">PAGN.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/examples/AGN/<a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a></li>
-<li>src/examples/AGN/PAGN.cpp</li>
+<li>src/examples/AGN/<a class="el" href="_p_a_g_n_8cpp_source.html">PAGN.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>agn</b></li><li class="navelem"><a class="el" href="classagn_1_1_p_a_g_n.html">PAGN</a></li>
+    <li class="navelem"><a class="el" href="namespaceagn.html">agn</a></li><li class="navelem"><a class="el" href="classagn_1_1_p_a_g_n.html">PAGN</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

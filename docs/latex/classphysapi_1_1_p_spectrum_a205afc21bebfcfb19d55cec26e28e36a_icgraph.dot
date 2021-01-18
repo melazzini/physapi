@@ -1,0 +1,14 @@
+digraph "physapi::PSpectrum::energy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSpectrum\l::energy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the energy of the corresponding interval."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSpectrum\l\< intervals \>::index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#ace5940b23971be68974fca5d1cfd16af",tooltip="Get the index that corresponds to the given energy."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PSpectrumMaker\l::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum_maker.html#a678cd05ad7b84469974cc19ed4c59cd6",tooltip="Make the spectrum."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PFluxPerEnergyInterval\lMaker::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_flux_per_energy_interval_maker.html#ab5e0ed3a4166fc9f28b7231bb92ecbe2",tooltip="Get a flux per energyIntervals interval built from the given spectrum."];
+}

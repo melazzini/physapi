@@ -1,0 +1,126 @@
+\hypertarget{classphysapi_1_1_p_simple_mass_particle_base}{}\doxysection{physapi\+::P\+Simple\+Mass\+Particle\+Base Class Reference}
+\label{classphysapi_1_1_p_simple_mass_particle_base}\index{physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}}
+
+
+This is the base class for all classical particles that have an inertial mass.  
+
+
+
+
+{\ttfamily \#include $<$P\+Simple\+Mass\+Particle\+Base.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Simple\+Mass\+Particle\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Simple\+Mass\+Particle\+Base\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a6de0da781df10593569690c5cc1bd986}{P\+Simple\+Mass\+Particle\+Base}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}=\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}(), const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a4d9c4a2ddda2c0b8e242470efc297410}{momentum}}=\mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}())
+\begin{DoxyCompactList}\small\item\em Construct a new particle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a708dd8b26be30a55aa39fec7ac7577a0}{$\sim$\+P\+Simple\+Mass\+Particle\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the particle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}{mass}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the mass of the particle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_aaaed8f293d1b7cabdafb04c80e68f15c}{set\+Mass}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}{mass}})
+\begin{DoxyCompactList}\small\item\em Set the mass of the particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is the base class for all classical particles that have an inertial mass. 
+
+A classical particle in our api is defined by its position and momentum. 
+
+Definition at line 29 of file P\+Simple\+Mass\+Particle\+Base.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_mass_particle_base_a6de0da781df10593569690c5cc1bd986}\label{classphysapi_1_1_p_simple_mass_particle_base_a6de0da781df10593569690c5cc1bd986}} 
+\index{physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}!PSimpleMassParticleBase@{PSimpleMassParticleBase}}
+\index{PSimpleMassParticleBase@{PSimpleMassParticleBase}!physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}}
+\doxysubsubsection{\texorpdfstring{PSimpleMassParticleBase()}{PSimpleMassParticleBase()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Mass\+Particle\+Base\+::\+P\+Simple\+Mass\+Particle\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}()},  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}}]{momentum = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new particle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & initial position of the particle \\
+\hline
+{\em momentum} & initial momentum of the particle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file P\+Simple\+Mass\+Particle\+Base.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_mass_particle_base_a708dd8b26be30a55aa39fec7ac7577a0}\label{classphysapi_1_1_p_simple_mass_particle_base_a708dd8b26be30a55aa39fec7ac7577a0}} 
+\index{physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}!````~PSimpleMassParticleBase@{$\sim$PSimpleMassParticleBase}}
+\index{````~PSimpleMassParticleBase@{$\sim$PSimpleMassParticleBase}!physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSimpleMassParticleBase()}{~PSimpleMassParticleBase()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Simple\+Mass\+Particle\+Base\+::$\sim$\+P\+Simple\+Mass\+Particle\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the particle. 
+
+
+
+Definition at line 52 of file P\+Simple\+Mass\+Particle\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}\label{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}} 
+\index{physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}!mass@{mass}}
+\index{mass@{mass}!physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}}
+\doxysubsubsection{\texorpdfstring{mass()}{mass()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Mass\+Particle\+Base\+::mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the mass of the particle. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}{physapi\+::\+P\+Simple\+Particle}}, and \mbox{\hyperlink{classphysapi_1_1_p_simple_electron_aae96ca18699d5b60d9f59da22291a051}{physapi\+::\+P\+Simple\+Electron}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_mass_particle_base_aaaed8f293d1b7cabdafb04c80e68f15c}\label{classphysapi_1_1_p_simple_mass_particle_base_aaaed8f293d1b7cabdafb04c80e68f15c}} 
+\index{physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}!setMass@{setMass}}
+\index{setMass@{setMass}!physapi::PSimpleMassParticleBase@{physapi::PSimpleMassParticleBase}}
+\doxysubsubsection{\texorpdfstring{setMass()}{setMass()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Mass\+Particle\+Base\+::set\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the mass of the particle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a1ce26cfeaac891a807b4db071f8cb9c5}{physapi\+::\+P\+Simple\+Particle}}.
+
+
+
+Definition at line 70 of file P\+Simple\+Mass\+Particle\+Base.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/particles/\mbox{\hyperlink{_p_simple_mass_particle_base_8hpp}{P\+Simple\+Mass\+Particle\+Base.\+hpp}}\end{DoxyCompactItemize}

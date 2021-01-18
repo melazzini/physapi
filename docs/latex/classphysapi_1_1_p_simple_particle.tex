@@ -1,0 +1,336 @@
+\hypertarget{classphysapi_1_1_p_simple_particle}{}\doxysection{physapi\+::P\+Simple\+Particle Class Reference}
+\label{classphysapi_1_1_p_simple_particle}\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+
+
+This class represents a simple particle.  
+
+
+
+
+{\ttfamily \#include $<$P\+Simple\+Particle.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Simple\+Particle\+:
+% FIG 0
+
+
+Collaboration diagram for physapi\+::P\+Simple\+Particle\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a5b93d1d327c847db1d9dfbdf26bc20f3}{P\+Simple\+Particle}} (const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}=\mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}(), const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a4d9c4a2ddda2c0b8e242470efc297410}{momentum}}=\mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}())
+\begin{DoxyCompactList}\small\item\em Construct a new simple particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a10c87ad64db821e5cd6732b9a7d31737}{P\+Simple\+Particle}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}{mass}}, const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_ab2341ae14d6504d24c3d4ab5679c2f15}{position}}, const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a266a9a3c43865fa763c04cb00886aa9f}{velocity}}=\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}())
+\begin{DoxyCompactList}\small\item\em Construct a new simple particle with mass, position and velocity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a001fd5c84a9ccb85148c5d44554cc053}{$\sim$\+P\+Simple\+Particle}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}{mass}} () const override
+\begin{DoxyCompactList}\small\item\em Get the mass of the particle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_afe2daf12f1c45c7664b8a04b45062349}{energy}} () const override
+\begin{DoxyCompactList}\small\item\em Get the particle\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a266a9a3c43865fa763c04cb00886aa9f}{velocity}} () const override
+\begin{DoxyCompactList}\small\item\em Get the particle\textquotesingle{}s velocity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_aa6d8185137ad45f73b653f2f356b88c5}{set\+Energy}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_afe2daf12f1c45c7664b8a04b45062349}{energy}}) override
+\begin{DoxyCompactList}\small\item\em Set the particle\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a1ce26cfeaac891a807b4db071f8cb9c5}{set\+Mass}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}{mass}})
+\begin{DoxyCompactList}\small\item\em Set the particle\textquotesingle{}s mass. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a478b70066b13d13cc5590a032df2fa48}{set\+Energy}} (\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_afe2daf12f1c45c7664b8a04b45062349}{energy}}, \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&\&direction)
+\begin{DoxyCompactList}\small\item\em Set the particle energy with a given direction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a288cb77bf81400d2b0448218f35ed29a}{set\+Velocity}} (const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&\mbox{\hyperlink{classphysapi_1_1_p_simple_particle_a266a9a3c43865fa763c04cb00886aa9f}{velocity}})
+\begin{DoxyCompactList}\small\item\em Set the Velocity object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_ad94c9377a54a5650befcbd0a5ae07171}{give\+Impulse}} (const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&impulse)
+\begin{DoxyCompactList}\small\item\em Give an impulse to the particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a simple particle. 
+
+A simple particle in our api has mass, velocity and position.
+
+Both quantities can change.
+
+The mass and the velocity are related by the definition of classical momentum $ \vec{p} = m*\vec{v} $.
+
+The energy is given by $ \frac{p^{2}}{2*m} $ and in case the mass is zero the energy will be also zero, as well as the momentum, as well the velocity. When the momentum of the particle is zero it does not interact with any other particle, but it still can be moved to some position and it also can be given a mass.
+
+\begin{DoxyNote}{Note}
+If you have to work with particles which has a a fixed mass like an electron for example, then derive from \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base}{P\+Simple\+Mass\+Particle\+Base}} your own class. 
+\end{DoxyNote}
+
+
+Definition at line 34 of file P\+Simple\+Particle.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a5b93d1d327c847db1d9dfbdf26bc20f3}\label{classphysapi_1_1_p_simple_particle_a5b93d1d327c847db1d9dfbdf26bc20f3}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!PSimpleParticle@{PSimpleParticle}}
+\index{PSimpleParticle@{PSimpleParticle}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{PSimpleParticle()}{PSimpleParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Particle\+::\+P\+Simple\+Particle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}}()},  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{momentum = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new simple particle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & initial position \\
+\hline
+{\em momentum} & initial momentum \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file P\+Simple\+Particle.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a10c87ad64db821e5cd6732b9a7d31737}\label{classphysapi_1_1_p_simple_particle_a10c87ad64db821e5cd6732b9a7d31737}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!PSimpleParticle@{PSimpleParticle}}
+\index{PSimpleParticle@{PSimpleParticle}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{PSimpleParticle()}{PSimpleParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily physapi\+::\+P\+Simple\+Particle\+::\+P\+Simple\+Particle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{mass,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_position}{P\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{velocity = {\ttfamily \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new simple particle with mass, position and velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & initial mass \\
+\hline
+{\em position} & initial position \\
+\hline
+{\em velocity} & initial velocity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a001fd5c84a9ccb85148c5d44554cc053}\label{classphysapi_1_1_p_simple_particle_a001fd5c84a9ccb85148c5d44554cc053}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!````~PSimpleParticle@{$\sim$PSimpleParticle}}
+\index{````~PSimpleParticle@{$\sim$PSimpleParticle}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{$\sim$PSimpleParticle()}{~PSimpleParticle()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Simple\+Particle\+::$\sim$\+P\+Simple\+Particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the particle. 
+
+
+
+Definition at line 73 of file P\+Simple\+Particle.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_afe2daf12f1c45c7664b8a04b45062349}\label{classphysapi_1_1_p_simple_particle_afe2daf12f1c45c7664b8a04b45062349}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!energy@{energy}}
+\index{energy@{energy}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{energy()}{energy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Particle\+::energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the particle\textquotesingle{}s energy. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_af84864ba82b8abc0e6b3c38c1f046a08}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 91 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_ad94c9377a54a5650befcbd0a5ae07171}\label{classphysapi_1_1_p_simple_particle_ad94c9377a54a5650befcbd0a5ae07171}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!giveImpulse@{giveImpulse}}
+\index{giveImpulse@{giveImpulse}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{giveImpulse()}{giveImpulse()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Particle\+::give\+Impulse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \&}]{impulse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Give an impulse to the particle. 
+
+This will work only if the particle\textquotesingle{}s mass is not zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em impulse} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a5f1d284094101d853275d8ab8c89bcb2}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 184 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}\label{classphysapi_1_1_p_simple_particle_af24bdbcb52e7fb292e993adc2f0bcdfe}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!mass@{mass}}
+\index{mass@{mass}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{mass()}{mass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} physapi\+::\+P\+Simple\+Particle\+::mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the mass of the particle. 
+
+\begin{DoxyReturn}{Returns}
+phys\+\_\+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_a389ef305b8c4716e65e3d52e20462b56}{physapi\+::\+P\+Simple\+Mass\+Particle\+Base}}.
+
+
+
+Definition at line 84 of file P\+Simple\+Particle.\+hpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_aa6d8185137ad45f73b653f2f356b88c5}\label{classphysapi_1_1_p_simple_particle_aa6d8185137ad45f73b653f2f356b88c5}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!setEnergy@{setEnergy}}
+\index{setEnergy@{setEnergy}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{setEnergy()}{setEnergy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Particle\+::set\+Energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the particle\textquotesingle{}s energy. 
+
+This will work only if the particle\textquotesingle{}s mass is not zero.
+
+It will set the energy only in case the momentum of the particle is not zero, because you need a direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a68abd45ccd3ea1646c61cafaea54b61b}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 117 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a478b70066b13d13cc5590a032df2fa48}\label{classphysapi_1_1_p_simple_particle_a478b70066b13d13cc5590a032df2fa48}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!setEnergy@{setEnergy}}
+\index{setEnergy@{setEnergy}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{setEnergy()}{setEnergy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Particle\+::set\+Energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{energy,  }\item[{\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&\&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the particle energy with a given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & energy \\
+\hline
+{\em direction} & direction \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 152 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a1ce26cfeaac891a807b4db071f8cb9c5}\label{classphysapi_1_1_p_simple_particle_a1ce26cfeaac891a807b4db071f8cb9c5}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!setMass@{setMass}}
+\index{setMass@{setMass}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{setMass()}{setMass()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Particle\+::set\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}}]{mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the particle\textquotesingle{}s mass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classphysapi_1_1_p_simple_mass_particle_base_aaaed8f293d1b7cabdafb04c80e68f15c}{physapi\+::\+P\+Simple\+Mass\+Particle\+Base}}.
+
+
+
+Definition at line 138 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a288cb77bf81400d2b0448218f35ed29a}\label{classphysapi_1_1_p_simple_particle_a288cb77bf81400d2b0448218f35ed29a}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily virtual void physapi\+::\+P\+Simple\+Particle\+::set\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \&}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Velocity object. 
+
+This will work only if the particle\textquotesingle{}s mass is not zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocity} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classphysapi_1_1_p_simple_particle_a266a9a3c43865fa763c04cb00886aa9f}\label{classphysapi_1_1_p_simple_particle_a266a9a3c43865fa763c04cb00886aa9f}} 
+\index{physapi::PSimpleParticle@{physapi::PSimpleParticle}!velocity@{velocity}}
+\index{velocity@{velocity}!physapi::PSimpleParticle@{physapi::PSimpleParticle}}
+\doxysubsubsection{\texorpdfstring{velocity()}{velocity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} physapi\+::\+P\+Simple\+Particle\+::velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the particle\textquotesingle{}s velocity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classphysapi_1_1_p_simple_particle_base_a27368dd84986bfc379fad65a7488e6e3}{physapi\+::\+P\+Simple\+Particle\+Base}}.
+
+
+
+Definition at line 101 of file P\+Simple\+Particle.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/particles/\mbox{\hyperlink{_p_simple_particle_8hpp}{P\+Simple\+Particle.\+hpp}}\end{DoxyCompactItemize}

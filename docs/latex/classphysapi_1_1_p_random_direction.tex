@@ -1,0 +1,145 @@
+\hypertarget{classphysapi_1_1_p_random_direction}{}\doxysection{physapi\+::P\+Random\+Direction Class Reference}
+\label{classphysapi_1_1_p_random_direction}\index{physapi::PRandomDirection@{physapi::PRandomDirection}}
+
+
+This class generates random directions for vectors.  
+
+
+
+
+{\ttfamily \#include $<$P\+Random\+Direction.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_random_direction_a86d7a58c9dcea7ac2b1cc805419d7800}{P\+Random\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_random_direction_a261f9f3a24ce1ca0e21ac2f8e073e549}{$\sim$\+P\+Random\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysapi_1_1_p_random_direction_adedc6ed68e15bd13cab8bf482267f6ee}{operator()}} (\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} $\ast$vect)
+\begin{DoxyCompactList}\small\item\em Set a random direction to a 3d vector. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_random_direction_a329d5f967c5dc4783cd56f051d321be2}{operator()}} ()
+\begin{DoxyCompactList}\small\item\em Get a random oriented unitary 3d vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& \mbox{\hyperlink{classphysapi_1_1_p_random_direction_a0435e97240285c376e1f0c785061afc3}{operator()}} (const T \&predicate)
+\begin{DoxyCompactList}\small\item\em Get a random oriented unitary 3d vector, which satisfies a certain condition, given by a predicate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class generates random directions for vectors. 
+
+
+
+Definition at line 17 of file P\+Random\+Direction.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_random_direction_a86d7a58c9dcea7ac2b1cc805419d7800}\label{classphysapi_1_1_p_random_direction_a86d7a58c9dcea7ac2b1cc805419d7800}} 
+\index{physapi::PRandomDirection@{physapi::PRandomDirection}!PRandomDirection@{PRandomDirection}}
+\index{PRandomDirection@{PRandomDirection}!physapi::PRandomDirection@{physapi::PRandomDirection}}
+\doxysubsubsection{\texorpdfstring{PRandomDirection()}{PRandomDirection()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Random\+Direction\+::\+P\+Random\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} object. 
+
+
+
+Definition at line 24 of file P\+Random\+Direction.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_random_direction_a261f9f3a24ce1ca0e21ac2f8e073e549}\label{classphysapi_1_1_p_random_direction_a261f9f3a24ce1ca0e21ac2f8e073e549}} 
+\index{physapi::PRandomDirection@{physapi::PRandomDirection}!````~PRandomDirection@{$\sim$PRandomDirection}}
+\index{````~PRandomDirection@{$\sim$PRandomDirection}!physapi::PRandomDirection@{physapi::PRandomDirection}}
+\doxysubsubsection{\texorpdfstring{$\sim$PRandomDirection()}{~PRandomDirection()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Random\+Direction\+::$\sim$\+P\+Random\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_random_direction}{P\+Random\+Direction}} object. 
+
+
+
+Definition at line 36 of file P\+Random\+Direction.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_random_direction_a329d5f967c5dc4783cd56f051d321be2}\label{classphysapi_1_1_p_random_direction_a329d5f967c5dc4783cd56f051d321be2}} 
+\index{physapi::PRandomDirection@{physapi::PRandomDirection}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PRandomDirection@{physapi::PRandomDirection}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} \& physapi\+::\+P\+Random\+Direction\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a random oriented unitary 3d vector. 
+
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file P\+Random\+Direction.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classphysapi_1_1_p_random_direction_a0435e97240285c376e1f0c785061afc3}\label{classphysapi_1_1_p_random_direction_a0435e97240285c376e1f0c785061afc3}} 
+\index{physapi::PRandomDirection@{physapi::PRandomDirection}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PRandomDirection@{physapi::PRandomDirection}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& physapi\+::\+P\+Random\+Direction\+::operator() (\begin{DoxyParamCaption}\item[{const T \&}]{predicate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a random oriented unitary 3d vector, which satisfies a certain condition, given by a predicate. 
+
+The predicate must receive 3d vector as a constant reference parameter.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the predicate \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}}\& random oriente 3d vector according to the predicate 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file P\+Random\+Direction.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classphysapi_1_1_p_random_direction_adedc6ed68e15bd13cab8bf482267f6ee}\label{classphysapi_1_1_p_random_direction_adedc6ed68e15bd13cab8bf482267f6ee}} 
+\index{physapi::PRandomDirection@{physapi::PRandomDirection}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PRandomDirection@{physapi::PRandomDirection}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void physapi\+::\+P\+Random\+Direction\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classphysapi_1_1_p_vector3_d}{P\+Vector3D}} $\ast$}]{vect }\end{DoxyParamCaption})}
+
+
+
+Set a random direction to a 3d vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect} & 3d vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file P\+Random\+Direction.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_p_random_direction_8hpp}{P\+Random\+Direction.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_p_random_direction_8cpp}{P\+Random\+Direction.\+cpp}}\end{DoxyCompactItemize}

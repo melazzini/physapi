@@ -1,0 +1,222 @@
+\hypertarget{classphysapi_1_1_p_fluorescence_table}{}\doxysection{physapi\+::P\+Fluorescence\+Table Class Reference}
+\label{classphysapi_1_1_p_fluorescence_table}\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+
+
+This class represents a fluorescence table.  
+
+
+
+
+{\ttfamily \#include $<$P\+Fluorescence\+Table.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_aed0475a98c5e292c91f6551c3a41a845}{P\+Fluorescence\+Table}} (const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&abundances, const std\+::string file=D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+TH)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac157b171555305ad259b6069f155956d}{$\sim$\+P\+Fluorescence\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}} (const \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_key}{P\+Fluorescence\+Key}} \&line\+Key) const
+\begin{DoxyCompactList}\small\item\em Get the fluorescence line corresponding to the given key. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} $>$ \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}{lines}} (\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}} z, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} ionization\+State, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} shell, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} auger\+Electrons) const
+\begin{DoxyCompactList}\small\item\em Get a list(vector) of all lines corresponding to z, st, is and aug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$phys\+\_\+size columns, typename Target , typename T $>$ }\\void \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_a60b86a4b1bfa89b89035c46bac5865e3}{load\+From\+File}} (const std\+::string \&file, Target \&target, \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} max\+Nun\+Of\+Rows)
+\begin{DoxyCompactList}\small\item\em This is a tool for loading a file of n rows by m columns to a custom physapi container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a fluorescence table. 
+
+{\bfseries{Example}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{_p_fluorescence_table_8hpp}{PFluorescenceTable.hpp}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacephysapi}{physapi}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{fluorescence_example_8txt_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{PFluorescenceTable}} table;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{auto} \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}{lines}} = table.\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}{lines}}(\mbox{\hyperlink{group__astrophysics_gga3d437f2e32fe084a101460788e49f823ad684f8322b7404cd384bf1e425d9356e}{eZ::Fe}}, 1, 1, 0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}{lines}}.empty())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \textcolor{stringliteral}{"there is no line for:    "}}
+\DoxyCodeLine{            << \textcolor{stringliteral}{"z=1, st=1, is=1, aug=0"} << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&\&\mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}} : \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}{lines}})}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            cout << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.first[0] << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.first[1] << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.first[2] << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.first[3] << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.first[4] << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.second.lineEnergy() << \textcolor{stringliteral}{"  "}}
+\DoxyCodeLine{                << \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}{line}}.second.lineYield() << endl;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+output\+:
+
+26 1 1 0 1 6391.\+5 0.\+1013
+
+26 1 1 0 2 6404.\+7 0.\+2026
+
+26 1 1 0 3 7056.\+7 0.\+0127
+
+26 1 1 0 4 7058.\+3 0.\+0254 
+
+Definition at line 63 of file P\+Fluorescence\+Table.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_table_aed0475a98c5e292c91f6551c3a41a845}\label{classphysapi_1_1_p_fluorescence_table_aed0475a98c5e292c91f6551c3a41a845}} 
+\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}!PFluorescenceTable@{PFluorescenceTable}}
+\index{PFluorescenceTable@{PFluorescenceTable}!physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+\doxysubsubsection{\texorpdfstring{PFluorescenceTable()}{PFluorescenceTable()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Fluorescence\+Table\+::\+P\+Fluorescence\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_abundance_table}{P\+Abundance\+Table}} \&}]{abundances,  }\item[{const std\+::string}]{file = {\ttfamily DEFAULT\+\_\+FILE\+\_\+PATH} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & fluorescence table file path \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file P\+Fluorescence\+Table.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_table_ac157b171555305ad259b6069f155956d}\label{classphysapi_1_1_p_fluorescence_table_ac157b171555305ad259b6069f155956d}} 
+\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}!````~PFluorescenceTable@{$\sim$PFluorescenceTable}}
+\index{````~PFluorescenceTable@{$\sim$PFluorescenceTable}!physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+\doxysubsubsection{\texorpdfstring{$\sim$PFluorescenceTable()}{~PFluorescenceTable()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Fluorescence\+Table\+::$\sim$\+P\+Fluorescence\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_table}{P\+Fluorescence\+Table}} object. 
+
+
+
+Definition at line 106 of file P\+Fluorescence\+Table.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}\label{classphysapi_1_1_p_fluorescence_table_ac6008a94cac9d2d0f47962f80dfd8d37}} 
+\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}!line@{line}}
+\index{line@{line}!physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+\doxysubsubsection{\texorpdfstring{line()}{line()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} physapi\+::\+P\+Fluorescence\+Table\+::line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysapi_1_1_p_fluorescence_key}{P\+Fluorescence\+Key}} \&}]{line\+Key }\end{DoxyParamCaption}) const}
+
+
+
+Get the fluorescence line corresponding to the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+Key} & key of the fluorescence line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+t\+\_\+fluorescent\+Line fluorescence line(key + value) 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file P\+Fluorescence\+Table.\+cpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}\label{classphysapi_1_1_p_fluorescence_table_ac3ca324c7deb62092c2fc48916c09d84}} 
+\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}!lines@{lines}}
+\index{lines@{lines}!physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+\doxysubsubsection{\texorpdfstring{lines()}{lines()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{group__astrophysics_ga0a645c2378fec8ef02635c099690b2aa}{t\+\_\+fluorescent\+Line}} $>$ physapi\+::\+P\+Fluorescence\+Table\+::lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__astrophysics_ga3d437f2e32fe084a101460788e49f823}{eZ}}}]{z,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{ionization\+State,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{shell,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{auger\+Electrons }\end{DoxyParamCaption}) const}
+
+
+
+Get a list(vector) of all lines corresponding to z, st, is and aug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & atomic number \\
+\hline
+{\em ionization\+State} & st \\
+\hline
+{\em shell} & is \\
+\hline
+{\em auger\+Electrons} & aug \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$t\+\_\+fluorescent\+Line$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file P\+Fluorescence\+Table.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_fluorescence_table_a60b86a4b1bfa89b89035c46bac5865e3}\label{classphysapi_1_1_p_fluorescence_table_a60b86a4b1bfa89b89035c46bac5865e3}} 
+\index{physapi::PFluorescenceTable@{physapi::PFluorescenceTable}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!physapi::PFluorescenceTable@{physapi::PFluorescenceTable}}
+\doxysubsubsection{\texorpdfstring{loadFromFile}{loadFromFile}}
+{\footnotesize\ttfamily template$<$phys\+\_\+size columns, typename Target , typename T $>$ \\
+void load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{Target \&}]{target,  }\item[{\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}}}]{max\+Nun\+Of\+Rows = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+This is a tool for loading a file of n rows by m columns to a custom physapi container. 
+
+The elements of the container have to be able to be built from rows of the file. The container need to have a method called \char`\"{} load\+Element(std\+::array) \char`\"{} which receives an array of size equal columns and type T.
+
+The number of raws depends on the number of raws of the file.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em columns} & number of columns \\
+\hline
+{\em Target} & target container\textquotesingle{}s type \\
+\hline
+{\em T} & one of the fundamental data types of in physapi(e.\+g. phys\+\_\+float) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em file} & file name \\
+\hline
+{\em target} & container where the data will be stored \\
+\hline
+{\em max\+Nun\+Of\+Raws} & maximum number of rows. If 0 then it depends on the file\textquotesingle{}s number of rows.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & any problem occurs while loading the file the this function abort the execution of the program. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 583 of file utils.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/astrophysics/\mbox{\hyperlink{_p_fluorescence_table_8hpp}{P\+Fluorescence\+Table.\+hpp}}\item 
+src/astrophysics/\mbox{\hyperlink{_p_fluorescence_table_8cpp}{P\+Fluorescence\+Table.\+cpp}}\end{DoxyCompactItemize}

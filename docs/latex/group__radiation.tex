@@ -1,0 +1,52 @@
+\hypertarget{group__radiation}{}\doxysection{Radiation}
+\label{group__radiation}\index{Radiation@{Radiation}}
+
+
+This module has tools to deal with radiation.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval}{physapi\+::\+P\+Flux\+Per\+Energy\+Interval$<$ energy\+Intervals $>$}}
+\begin{DoxyCompactList}\small\item\em This class represents flux per energy interval. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_flux_per_energy_interval_maker}{physapi\+::\+P\+Flux\+Per\+Energy\+Interval\+Maker$<$ energy\+Intervals $>$}}
+\begin{DoxyCompactList}\small\item\em This class represents the flux per energy interval. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_spectral_formula_base}{physapi\+::\+P\+Spectral\+Formula\+Base}}
+\begin{DoxyCompactList}\small\item\em This is the base class for spectral formulas or functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_spectrum}{physapi\+::\+P\+Spectrum$<$ energy\+Intervals $>$}}
+\begin{DoxyCompactList}\small\item\em This class represents a raw spectrum(or photon distribution). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_spectrum_maker}{physapi\+::\+P\+Spectrum\+Maker$<$ energy\+Intervals, precision $>$}}
+\begin{DoxyCompactList}\small\item\em This is a functor class for making radiation spectra. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_spectrum_zenith}{physapi\+::\+P\+Spectrum\+Zenith$<$ intervals, cols $>$}}
+\begin{DoxyCompactList}\small\item\em This class represents a photon distribution under a specfic zenith angle and an angular interval obtained from a simulation file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t array\+Size$>$ }\\using \mbox{\hyperlink{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}{physapi\+::t\+\_\+spectrum}} = std\+::array$<$ std\+::pair$<$ \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}} $>$, array\+Size $>$
+\begin{DoxyCompactList}\small\item\em {\itshape Generic} spectrum data type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module has tools to deal with radiation. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}\label{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}} 
+\index{Radiation@{Radiation}!t\_spectrum@{t\_spectrum}}
+\index{t\_spectrum@{t\_spectrum}!Radiation@{Radiation}}
+\doxysubsubsection{\texorpdfstring{t\_spectrum}{t\_spectrum}}
+{\footnotesize\ttfamily template$<$size\+\_\+t array\+Size$>$ \\
+using \mbox{\hyperlink{group__radiation_ga66b6ef1dd5769d9b040bc4cd951431fd}{physapi\+::t\+\_\+spectrum}} = typedef std\+::array$<$std\+::pair$<$\mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}, \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{phys\+\_\+float}}$>$, array\+Size$>$}
+
+
+
+{\itshape Generic} spectrum data type. 
+
+A t\+\_\+spectrum is an std\+::array of std\+::map$<$phys\+\_\+float,phys\+\_\+float$>$ where the first key is the energy value of the interval and the value of the std\+::map is the generic spectrum value in that interval. The std\+::array index is the index of the corresponding energy interval.
+
+A generic spectrum may be a flux, a flux per energy interval, a photon distribution, etc. 
+
+Definition at line 32 of file radiation\+\_\+utils.\+hpp.
+

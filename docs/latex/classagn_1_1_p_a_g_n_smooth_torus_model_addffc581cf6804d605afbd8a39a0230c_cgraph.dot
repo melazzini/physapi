@@ -1,0 +1,14 @@
+digraph "agn::PAGNSmoothTorusModel::n_H"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="agn::PAGNSmoothTorusModel::n_H",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="agn::PAGNSmoothTorusModel\l::equatorialEffectiveHalfSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_torus_model.html#a2eac8ac8cd6cab04bace64f9959cef53",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::PSimpleTorus\l::externalRadius",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_torus.html#a8da7ba7f168e46232168e6c374997b47",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSimpleTorus\l::internalRadius",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_simple_torus.html#a33f07de36377d8535223ffeb80f13f12",tooltip=" "];
+}

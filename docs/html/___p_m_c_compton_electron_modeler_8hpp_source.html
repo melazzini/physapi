@@ -104,13 +104,13 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="title">_PMCComptonElectronModeler.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;PRandomDirection.hpp&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;PSimplePhoton.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;PSimpleElectron.hpp&quot;</span></div>
+<a href="___p_m_c_compton_electron_modeler_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_random_direction_8hpp.html">PRandomDirection.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_simple_photon_8hpp.html">PSimplePhoton.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_simple_electron_8hpp.html">PSimpleElectron.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>physapi</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacephysapi.html">physapi</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//this class models the momentum of a simple electron(PSimpleElectron)</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">//using motecarlo methods in order to simulate compton scattering,</span></div>
@@ -124,13 +124,13 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//the only required &quot;configuration&quot; parameter in order to model</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//the momentum of the electrons is its temperature</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html">_PMCComptonElectronModeler</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> T_e)</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#a9f74e05142c9b97296205442e7d1c3f6">   21</a></span>&#160;        <a class="code" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#a9f74e05142c9b97296205442e7d1c3f6">_PMCComptonElectronModeler</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">//in this ctor we create \Omega and v_0 unit vectors</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            : m_T_e{T_e}, m_Omega{1, 0, 0}, m_v0{1, 0, 0}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            : m_T_e{<a class="code" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>}, m_Omega{1, 0, 0}, m_v0{1, 0, 0}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        ~<a class="code" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html">_PMCComptonElectronModeler</a>() {}</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#ac3013dac9374748b5bb9e025993a6eb8">   27</a></span>&#160;        <a class="code" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#ac3013dac9374748b5bb9e025993a6eb8">~_PMCComptonElectronModeler</a>() {}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//it receives a photon and electron references and returns the value</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//of the parameter x and \gamma and beta, which are needed for simulating the</span></div>
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//where the first element is the value of x and the second \gamma</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//and the third beta</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::tuple&lt;phys_float, phys_float, phys_float&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        operator()(<span class="keyword">const</span> <a class="code" href="classphysapi_1_1_p_simple_photon.html">PSimplePhoton</a> &amp;photon, <a class="code" href="classphysapi_1_1_p_simple_electron.html">PSimpleElectron</a> &amp;electron);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#a7f7d4c98244d5af2dc32c2a296b271ba">operator()</a>(<span class="keyword">const</span> <a class="code" href="classphysapi_1_1_p_simple_photon.html">PSimplePhoton</a> &amp;photon, <a class="code" href="classphysapi_1_1_p_simple_electron.html">PSimpleElectron</a> &amp;electron);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//temperature of the electrons*</span></div>
@@ -179,14 +179,14 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> m_x; <span class="comment">//p: 131, 136</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//unit vector photon direction</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classphysapi_1_1_p_vector3_d.html">PVector3D</a> m_Omega;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        PVector3D m_Omega;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//unit vector electron direction</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classphysapi_1_1_p_vector3_d.html">PVector3D</a> m_v0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        PVector3D m_v0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//this member sets a random dir to</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//the momentum of the electron</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classphysapi_1_1_p_random_direction.html">PRandomDirection</a> m_RandomDirectionHnd;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        PRandomDirection m_RandomDirectionHnd;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//here we have some variables that help us</span></div>
@@ -220,7 +220,7 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">//this object manages the internal production of random</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//numbers necessary to run the montecarlo simulation</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="classphysapi_1_1_p_random.html">PRandom</a> m_randomMngr;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        PRandom m_randomMngr;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//helper function to get the value of</span></div>
@@ -269,20 +269,25 @@ $(document).ready(function(){initNavTree('___p_m_c_compton_electron_modeler_8hpp
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;} <span class="comment">// namespace physapi</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__core_html_ga6fd9eb8d30db6f33aea7a7aeb4baad80"><div class="ttname"><a href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">physapi::phys_float</a></div><div class="ttdeci">double phys_float</div><div class="ttdoc">Standard floating point type.</div><div class="ttdef"><b>Definition:</b> utils.hpp:75</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_simple_photon_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_photon.html">physapi::PSimplePhoton</a></div><div class="ttdoc">This class represents a simple photon.</div><div class="ttdef"><b>Definition:</b> PSimplePhoton.hpp:22</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_simple_electron_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_electron.html">physapi::PSimpleElectron</a></div><div class="ttdoc">This class represents a simple electron.</div><div class="ttdef"><b>Definition:</b> PSimpleElectron.hpp:22</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_vector3_d_html"><div class="ttname"><a href="classphysapi_1_1_p_vector3_d.html">physapi::PVector3D</a></div><div class="ttdoc">This class represents a vector in the XYZ space.</div><div class="ttdef"><b>Definition:</b> PVector3D.hpp:33</div></div>
-<div class="ttc" id="agroup__core_html_gaa1f9fffc2ee32daa5ca44dd39dcfd12e"><div class="ttname"><a href="group__core.html#gaa1f9fffc2ee32daa5ca44dd39dcfd12e">physapi::k_B</a></div><div class="ttdeci">constexpr phys_float k_B</div><div class="ttdoc">Boltzmann constant.</div><div class="ttdef"><b>Definition:</b> utils.hpp:501</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_random_direction_html"><div class="ttname"><a href="classphysapi_1_1_p_random_direction.html">physapi::PRandomDirection</a></div><div class="ttdoc">This class generates random directions for vectors.</div><div class="ttdef"><b>Definition:</b> PRandomDirection.hpp:18</div></div>
-<div class="ttc" id="agroup__core_html_ga735021e47b23cdceb04d748c24585dd3"><div class="ttname"><a href="group__core.html#ga735021e47b23cdceb04d748c24585dd3">physapi::mc2_e</a></div><div class="ttdeci">constexpr phys_float mc2_e</div><div class="ttdoc">Rest energy of an electron.</div><div class="ttdef"><b>Definition:</b> utils.hpp:495</div></div>
-<div class="ttc" id="agroup__core_html_ga01ea6c103ae225b6d9c3dec92bd7141c"><div class="ttname"><a href="group__core.html#ga01ea6c103ae225b6d9c3dec92bd7141c">physapi::sqr</a></div><div class="ttdeci">constexpr auto sqr(const T &amp;value) -&gt; decltype(value *value)</div><div class="ttdoc">Calculate the square of an obj(number, scalar, vector, etc)</div><div class="ttdef"><b>Definition:</b> utils.hpp:272</div></div>
-<div class="ttc" id="aclassphysapi_1_1___p_m_c_compton_electron_modeler_html"><div class="ttname"><a href="classphysapi_1_1___p_m_c_compton_electron_modeler.html">physapi::_PMCComptonElectronModeler</a></div><div class="ttdef"><b>Definition:</b> _PMCComptonElectronModeler.hpp:17</div></div>
-<div class="ttc" id="aclassphysapi_1_1_p_random_html"><div class="ttname"><a href="classphysapi_1_1_p_random.html">physapi::PRandom</a></div><div class="ttdoc">Generate random numbers offering a simple interface.</div><div class="ttdef"><b>Definition:</b> utils.hpp:656</div></div>
+<div class="ttc" id="agroup__core_html_ga6fd9eb8d30db6f33aea7a7aeb4baad80"><div class="ttname"><a href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">physapi::phys_float</a></div><div class="ttdeci">double phys_float</div><div class="ttdoc">Standard floating point type.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00075">utils.hpp:75</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_simple_photon_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_photon.html">physapi::PSimplePhoton</a></div><div class="ttdoc">This class represents a simple photon.</div><div class="ttdef"><b>Definition:</b> <a href="_p_simple_photon_8hpp_source.html#l00021">PSimplePhoton.hpp:22</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_simple_electron_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_electron.html">physapi::PSimpleElectron</a></div><div class="ttdoc">This class represents a simple electron.</div><div class="ttdef"><b>Definition:</b> <a href="_p_simple_electron_8hpp_source.html#l00021">PSimpleElectron.hpp:22</a></div></div>
+<div class="ttc" id="agroup__core_html_gaa1f9fffc2ee32daa5ca44dd39dcfd12e"><div class="ttname"><a href="group__core.html#gaa1f9fffc2ee32daa5ca44dd39dcfd12e">physapi::k_B</a></div><div class="ttdeci">constexpr phys_float k_B</div><div class="ttdoc">Boltzmann constant.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00501">utils.hpp:501</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1___p_m_c_compton_electron_modeler_html_a9f74e05142c9b97296205442e7d1c3f6"><div class="ttname"><a href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#a9f74e05142c9b97296205442e7d1c3f6">physapi::_PMCComptonElectronModeler::_PMCComptonElectronModeler</a></div><div class="ttdeci">_PMCComptonElectronModeler(const phys_float T_e)</div><div class="ttdef"><b>Definition:</b> <a href="___p_m_c_compton_electron_modeler_8hpp_source.html#l00021">_PMCComptonElectronModeler.hpp:21</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1___p_m_c_compton_electron_modeler_html_a7f7d4c98244d5af2dc32c2a296b271ba"><div class="ttname"><a href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#a7f7d4c98244d5af2dc32c2a296b271ba">physapi::_PMCComptonElectronModeler::operator()</a></div><div class="ttdeci">std::tuple&lt; phys_float, phys_float, phys_float &gt; operator()(const PSimplePhoton &amp;photon, PSimpleElectron &amp;electron)</div><div class="ttdef"><b>Definition:</b> <a href="___p_m_c_compton_electron_modeler_8cpp_source.html#l00006">_PMCComptonElectronModeler.cpp:6</a></div></div>
+<div class="ttc" id="agroup__core_html_ga735021e47b23cdceb04d748c24585dd3"><div class="ttname"><a href="group__core.html#ga735021e47b23cdceb04d748c24585dd3">physapi::mc2_e</a></div><div class="ttdeci">constexpr phys_float mc2_e</div><div class="ttdoc">Rest energy of an electron.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00495">utils.hpp:495</a></div></div>
+<div class="ttc" id="a_p_simple_electron_8hpp_html"><div class="ttname"><a href="_p_simple_electron_8hpp.html">PSimpleElectron.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a492625c01cb41af46e9284b9fd87700c"><div class="ttname"><a href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a></div><div class="ttdeci">constexpr phys_float T_e</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="a_p_random_direction_8hpp_html"><div class="ttname"><a href="_p_random_direction_8hpp.html">PRandomDirection.hpp</a></div></div>
+<div class="ttc" id="agroup__core_html_ga01ea6c103ae225b6d9c3dec92bd7141c"><div class="ttname"><a href="group__core.html#ga01ea6c103ae225b6d9c3dec92bd7141c">physapi::sqr</a></div><div class="ttdeci">constexpr auto sqr(const T &amp;value) -&gt; decltype(value *value)</div><div class="ttdoc">Calculate the square of an obj(number, scalar, vector, etc)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00272">utils.hpp:272</a></div></div>
+<div class="ttc" id="a_p_simple_photon_8hpp_html"><div class="ttname"><a href="_p_simple_photon_8hpp.html">PSimplePhoton.hpp</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1___p_m_c_compton_electron_modeler_html"><div class="ttname"><a href="classphysapi_1_1___p_m_c_compton_electron_modeler.html">physapi::_PMCComptonElectronModeler</a></div><div class="ttdef"><b>Definition:</b> <a href="___p_m_c_compton_electron_modeler_8hpp_source.html#l00016">_PMCComptonElectronModeler.hpp:17</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1___p_m_c_compton_electron_modeler_html_ac3013dac9374748b5bb9e025993a6eb8"><div class="ttname"><a href="classphysapi_1_1___p_m_c_compton_electron_modeler.html#ac3013dac9374748b5bb9e025993a6eb8">physapi::_PMCComptonElectronModeler::~_PMCComptonElectronModeler</a></div><div class="ttdeci">~_PMCComptonElectronModeler()</div><div class="ttdef"><b>Definition:</b> <a href="___p_m_c_compton_electron_modeler_8hpp_source.html#l00027">_PMCComptonElectronModeler.hpp:27</a></div></div>
+<div class="ttc" id="anamespacephysapi_html"><div class="ttname"><a href="namespacephysapi.html">physapi</a></div><div class="ttdef"><b>Definition:</b> <a href="astrophysics__utils_8hpp_source.html#l00013">astrophysics_utils.hpp:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f9d60213ad3e9a3f75b58cadac8553a7.html">montecarlo</a></li><li class="navelem"><a class="el" href="dir_0d10e04eb9c71527b81872286633c8eb.html">mccompton</a></li><li class="navelem"><b>_PMCComptonElectronModeler.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f9d60213ad3e9a3f75b58cadac8553a7.html">montecarlo</a></li><li class="navelem"><a class="el" href="dir_0d10e04eb9c71527b81872286633c8eb.html">mccompton</a></li><li class="navelem"><a class="el" href="___p_m_c_compton_electron_modeler_8hpp.html">_PMCComptonElectronModeler.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

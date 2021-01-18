@@ -1,11 +1,18 @@
 var searchData=
 [
-  ['e_5fphi_401',['e_phi',['../classphysapi_1_1_p_vector3_d.html#a37b00ddee4484f5eae447a0e8d4c2a39',1,'physapi::PVector3D']]],
-  ['e_5fr_402',['e_r',['../classphysapi_1_1_p_vector3_d.html#a7fe821abd771d6f47dd3b48277b1f4d2',1,'physapi::PVector3D']]],
-  ['e_5frho_403',['e_rho',['../classphysapi_1_1_p_vector2_d.html#acc93d0621814fd75f0129828d87dacf0',1,'physapi::PVector2D::e_rho()'],['../classphysapi_1_1_p_vector3_d.html#a0741f13feb0438f3a7af0c16a60d28fc',1,'physapi::PVector3D::e_rho()']]],
-  ['e_5ftheta_404',['e_theta',['../classphysapi_1_1_p_vector2_d.html#a65061ad2048259cf430d25ec23f3f8ba',1,'physapi::PVector2D::e_theta()'],['../classphysapi_1_1_p_vector3_d.html#ac925dc8dd82704807a08f4a15162c543',1,'physapi::PVector3D::e_theta()']]],
-  ['effectivelength_405',['effectiveLength',['../classphysapi_1_1_p_geometry_base.html#a2e876fb5bfeba8497cc32e13cc85455d',1,'physapi::PGeometryBase::effectiveLength()'],['../classphysapi_1_1_p_simple_torus.html#a7ccc1b2360beafbc0498584e289a4438',1,'physapi::PSimpleTorus::effectiveLength()'],['../classphysapi_1_1_p_sphere.html#a3004e94d16b896bd17159ee9a0b639ed',1,'physapi::PSphere::effectiveLength()']]],
-  ['energy_406',['energy',['../classphysapi_1_1_p_simple_electron.html#a6cf4d5324d94e802fce30cc39bbc4e88',1,'physapi::PSimpleElectron::energy()'],['../classphysapi_1_1_p_simple_particle.html#afe2daf12f1c45c7664b8a04b45062349',1,'physapi::PSimpleParticle::energy()'],['../classphysapi_1_1_p_simple_particle_base.html#af84864ba82b8abc0e6b3c38c1f046a08',1,'physapi::PSimpleParticleBase::energy()'],['../classphysapi_1_1_p_simple_photon.html#aa8578523517bdbd302353bda1e03a168',1,'physapi::PSimplePhoton::energy()'],['../classphysapi_1_1_p_spectrum.html#a205afc21bebfcfb19d55cec26e28e36a',1,'physapi::PSpectrum::energy()']]],
-  ['equatorialeffectivehalfsize_407',['equatorialEffectiveHalfSize',['../classagn_1_1_p_a_g_n_clumpy_torus_model.html#adca6e713593196e988c4d1642cf2cad2',1,'agn::PAGNClumpyTorusModel::equatorialEffectiveHalfSize()'],['../classagn_1_1_p_a_g_n_smooth_sphere_model.html#ad6aa7176c63c64b879ff2ee90e28f10b',1,'agn::PAGNSmoothSphereModel::equatorialEffectiveHalfSize()'],['../classagn_1_1_p_a_g_n_smooth_torus_model.html#a2eac8ac8cd6cab04bace64f9959cef53',1,'agn::PAGNSmoothTorusModel::equatorialEffectiveHalfSize()'],['../classagn_1_1_p_a_g_n_structure_model_b.html#a9ab6a2caa9356487a903e795d9782176',1,'agn::PAGNStructureModelB::equatorialEffectiveHalfSize()']]],
-  ['estimationaveragesize_408',['estimationAverageSize',['../classphysapi_1_1_p_geometry_base.html#aa7c0b416bb05d95586fd5bdd6e701210',1,'physapi::PGeometryBase::estimationAverageSize()'],['../classphysapi_1_1_p_simple_torus.html#a04f22a422014c673f7585dc364483c55',1,'physapi::PSimpleTorus::estimationAverageSize()'],['../classphysapi_1_1_p_sphere.html#ae384fe1f4e438bef2a3a3eb7cdf5bfcf',1,'physapi::PSphere::estimationAverageSize()']]]
+  ['callmainalgorithgpu_775',['callMainAlgorithGPU',['../namespaceagn.html#a0d2cf34ee6af8d87980797e461d26ab5',1,'agn']]],
+  ['checkenergy_776',['checkEnergy',['../classphysapi_1_1_p_simple_particle_base.html#ac10ba6e613574a6318f70d1f72f0bfea',1,'physapi::PSimpleParticleBase']]],
+  ['checkrangeexclusive_777',['checkRangeExclusive',['../group__core.html#ga3cd9a3283f784a6a22df2532fc99d1dc',1,'physapi']]],
+  ['checkrangeinclusive_778',['checkRangeInclusive',['../group__core.html#gafec5606c7bf79d88e5f429217f376d1d',1,'physapi']]],
+  ['checkrangeinclusiveleft_779',['checkRangeInclusiveLeft',['../group__core.html#gacadd1d23c3c1b35cfa4863a2080973be',1,'physapi']]],
+  ['checkrangeinclusiveright_780',['checkRangeInclusiveRight',['../group__core.html#ga7d22b29a503bc80fe477846ffdb300b1',1,'physapi']]],
+  ['clear_781',['clear',['../classphysapi_1_1_p_spectrum.html#ad873684b9b3c746b574a14158dd9ea4e',1,'physapi::PSpectrum']]],
+  ['cloudradius_782',['cloudRadius',['../classagn_1_1_p_a_g_n_clumpy_structure_model_b.html#a5283fde0d7de5da73e0bc7b606ee7173',1,'agn::PAGNClumpyStructureModelB::cloudRadius()'],['../classagn_1_1_p_a_g_n_clumpy_torus_model.html#a2ed32c671a334d1daaff4fa55230f1e7',1,'agn::PAGNClumpyTorusModel::cloudRadius()']]],
+  ['clouds_783',['clouds',['../classagn_1_1_p_a_g_n_clumpy_structure_model_b.html#a789331c2184660144c5d1394aabe25f5',1,'agn::PAGNClumpyStructureModelB::clouds()'],['../classagn_1_1_p_a_g_n_clumpy_torus_model.html#a3daf07f84b475408ac9fa4161ff01f70',1,'agn::PAGNClumpyTorusModel::clouds()']]],
+  ['coordsys_784',['coordSys',['../classphysapi_1_1_p_vector2_d.html#a921d7965babf2352574778ca97cea71d',1,'physapi::PVector2D']]],
+  ['cos_785',['cos',['../classphysapi_1_1_p_vector2_d.html#aa0167d443f83fb9822a04401654f22c1',1,'physapi::PVector2D']]],
+  ['count_786',['count',['../classphysapi_1_1_p_spectrum.html#ad2354653e1077dc6e6f2ec37379e3084',1,'physapi::PSpectrum']]],
+  ['createclouds_787',['createClouds',['../classagn_1_1_p_a_g_n_clumpy_clouds_creator.html#a98fc5fc0f7b8f090c0ebb72b6c197ba0',1,'agn::PAGNClumpyCloudsCreator']]],
+  ['crossproduct_788',['crossProduct',['../classphysapi_1_1_p_vector2_d.html#a11df58f0191454f79c974a55131b6632',1,'physapi::PVector2D::crossProduct()'],['../classphysapi_1_1_p_vector3_d.html#ab44b6cd32c827e03b162f57532365b3c',1,'physapi::PVector3D::crossProduct()']]],
+  ['cub_789',['cub',['../group__core.html#gad811674e1b0bbc9874f87965cfa33561',1,'physapi']]]
 ];

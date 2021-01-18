@@ -1,0 +1,16 @@
+digraph "agn::PAGNSpectrumZenith::loadElement"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="agn::PAGNSpectrumZenith\l::loadElement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="count a photon into the spectrum"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="physapi::PSpectrum\l\< intervals \>::addPhoton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum.html#a95b91efd286d14246d3eb23484519ae8",tooltip="Add a photon with energy hv to the spectrum."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="physapi::checkRangeInclusive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html#gafec5606c7bf79d88e5f429217f376d1d",tooltip="left <= value <= right"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="physapi::PSpectrumZenith\l::maxPhi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum_zenith.html#a551e9ae5f42f86d55a01806750c51c6d",tooltip="Get the absolute value of the the maximum phi angle."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="physapi::PSpectrumZenith\l::minPhi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classphysapi_1_1_p_spectrum_zenith.html#aa7e76d44fb7126a53c1bdb37b81e552e",tooltip="Get the absolute value of the minimum phi angle."];
+}

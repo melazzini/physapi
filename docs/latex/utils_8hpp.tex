@@ -1,0 +1,163 @@
+\hypertarget{utils_8hpp}{}\doxysection{include/core/utils.hpp File Reference}
+\label{utils_8hpp}\index{include/core/utils.hpp@{include/core/utils.hpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+Include dependency graph for utils.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_random}{physapi\+::\+P\+Random}}
+\begin{DoxyCompactList}\small\item\em Generate random numbers offering a simple interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_process_table}{physapi\+::\+P\+Process\+Table$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$}}
+\begin{DoxyCompactList}\small\item\em This class process a generic table. It can load elements to it with defined constrains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacephysapi}{physapi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__core_ga71fd5fa6d9f06b944613ef0f291757bd}{physapi\+::phys\+\_\+small\+Float}} = float
+\begin{DoxyCompactList}\small\item\em Floating point type with minimum precision. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_gac897c09386f574318a2841fa765a7690}{physapi\+::phys\+\_\+lfloat}} = long double
+\begin{DoxyCompactList}\small\item\em Floating point type with maximum presicion. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_ga6fd9eb8d30db6f33aea7a7aeb4baad80}{physapi\+::phys\+\_\+float}} = double
+\begin{DoxyCompactList}\small\item\em Standard floating point type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_gad60d944d12d60559af8f33fc36fc3f69}{physapi\+::phys\+\_\+int}} = int
+\begin{DoxyCompactList}\small\item\em Standard integer type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_gad1f7c3134681170b5f6f6bb1bdfc5235}{physapi\+::phys\+\_\+uint}} = int
+\begin{DoxyCompactList}\small\item\em Unsigned integer type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_ga961a6ad83c74d135766d36b1e47b94bc}{physapi\+::phys\+\_\+lint}} = long int
+\begin{DoxyCompactList}\small\item\em Long integer type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{physapi\+::phys\+\_\+size}} = size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Standard index type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_ga63549e1e4e1e403291f5c5b03fd3b228}{physapi\+::phys\+\_\+ull}} = unsigned long long
+\begin{DoxyCompactList}\small\item\em Index type with maximum size. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__core_gac8041f925c2f096aa892ef295b27a97a}{physapi\+::phys\+\_\+bool}} = bool
+\begin{DoxyCompactList}\small\item\em Standard boolean type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__core_ga59050da5736fc6cf7dde9779102c02b6}{physapi\+::e\+Coord\+Sys}} \{ \mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6ad6d269952320c4fb5e50f278c94a098c}{physapi\+::e\+Coord\+Sys\+::\+R\+EC}}, 
+\mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6a6f805bc5bbdb2ab10d849672c309a6cc}{physapi\+::e\+Coord\+Sys\+::\+P\+OL}}, 
+\mbox{\hyperlink{group__core_gga59050da5736fc6cf7dde9779102c02b6a1710c052ab1570668ba737824f33b6cb}{physapi\+::e\+Coord\+Sys\+::\+S\+PH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Standard coordinate systems. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__core_gaba57b90048e7f13a88a50f8c2c4e4704}{physapi\+::e\+Sense}} \{ \mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704abfec72bb37910c61f36b6c29a1f7ec31}{physapi\+::e\+Sense\+::\+F\+O\+R\+W\+A\+RD}}, 
+\mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704a6377b4908ae38f9a57fe9120cf179eb1}{physapi\+::e\+Sense\+::\+B\+A\+C\+K\+W\+A\+RD}}, 
+\mbox{\hyperlink{group__core_ggaba57b90048e7f13a88a50f8c2c4e4704a6328e5e3186c227a021ef2ff77e40197}{physapi\+::e\+Sense\+::\+B\+O\+TH}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum helps to determine intersection of lines and shapes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__core_gaf22949fd76e8a830eb45660c0769e10d}{physapi\+::e\+Num\+Of\+Threads}} \{ \newline
+\mbox{\hyperlink{group__core_ggaf22949fd76e8a830eb45660c0769e10dabc21e6484530fc9d0313cb816b733396}{physapi\+::e\+Num\+Of\+Threads\+::\+O\+NE}} = 1U, 
+\mbox{\hyperlink{group__core_ggaf22949fd76e8a830eb45660c0769e10da0f82d86afa0f5dc965c5c15aca58dcfb}{physapi\+::e\+Num\+Of\+Threads\+::\+T\+WO}}, 
+\mbox{\hyperlink{group__core_ggaf22949fd76e8a830eb45660c0769e10da413af0de1f97a2155acf2b8b26ab36e2}{physapi\+::e\+Num\+Of\+Threads\+::\+T\+H\+R\+EE}}, 
+\mbox{\hyperlink{group__core_ggaf22949fd76e8a830eb45660c0769e10da341fee9692a2ed8f09906d40d23fb1f9}{physapi\+::e\+Num\+Of\+Threads\+::\+F\+O\+UR}}, 
+\newline
+\mbox{\hyperlink{group__core_ggaf22949fd76e8a830eb45660c0769e10da26a4b44a837bf97b972628509912b4a5}{physapi\+::e\+Num\+Of\+Threads\+::\+M\+AX}}
+ \}
+\begin{DoxyCompactList}\small\item\em This class represents the number of threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr phys\+\_\+bool \mbox{\hyperlink{group__core_gafec5606c7bf79d88e5f429217f376d1d}{physapi\+::check\+Range\+Inclusive}} (const T \&left, const T \&value, const T \&right)
+\begin{DoxyCompactList}\small\item\em left $<$= value $<$= right \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr phys\+\_\+bool \mbox{\hyperlink{group__core_ga3cd9a3283f784a6a22df2532fc99d1dc}{physapi\+::check\+Range\+Exclusive}} (const T \&left, const T \&value, const T \&right)
+\begin{DoxyCompactList}\small\item\em left $<$ value $<$ right \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr phys\+\_\+bool \mbox{\hyperlink{group__core_gacadd1d23c3c1b35cfa4863a2080973be}{physapi\+::check\+Range\+Inclusive\+Left}} (const T \&left, const T \&value, const T \&right)
+\begin{DoxyCompactList}\small\item\em left $<$= value $<$ right. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr phys\+\_\+bool \mbox{\hyperlink{group__core_ga7d22b29a503bc80fe477846ffdb300b1}{physapi\+::check\+Range\+Inclusive\+Right}} (const T \&left, const T \&value, const T \&right)
+\begin{DoxyCompactList}\small\item\em left $<$ value $<$= right. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr auto \mbox{\hyperlink{group__core_ga01ea6c103ae225b6d9c3dec92bd7141c}{physapi\+::sqr}} (const T \&value) -\/$>$ decltype(value $\ast$value)
+\begin{DoxyCompactList}\small\item\em Calculate the square of an obj(number, scalar, vector, etc) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr auto \mbox{\hyperlink{group__core_gad811674e1b0bbc9874f87965cfa33561}{physapi\+::cub}} (const T \&value) -\/$>$ decltype(value $\ast$sqr(value))
+\begin{DoxyCompactList}\small\item\em Calculate the cube of an obj(scalar, vector, etc) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr auto \mbox{\hyperlink{group__core_gae92fbf95826f105bd60a485bf7b596e8}{physapi\+::sqrt}} (T value) -\/$>$ decltype(std\+::pow(value, 0.\+5))
+\begin{DoxyCompactList}\small\item\em Calculate the square root of a scalar. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga35f515d151f3c043b7ba577d065f06a9}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+m}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Meter definition. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga9a74510b62ed66c42938e1a9598c276d}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+s}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Second definition. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gad8f962bb4b2cb77d122f8ab6dc506526}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+kg}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Kilogram definition. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gad875b817aaa5a4e656b6ae05803aae8e}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+cm}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Convert cm to m. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga5c0e7dc381d49ec24c2ad681a0824e42}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+cm2}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Convert cm2 to m2. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga92c93f34d6ab508590c1f5dbec5aa00b}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+eV}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Convert eV to J. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gac20d682ad162cd26d718f87d55ffb2de}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+e\+V\+To\+Kelvin}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Convert eV to its equivalent value in Kelvin. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga018eb32bb69d325e4d672bb5d9abefb9}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+k}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Literal operator for \char`\"{}\+Kilo = 1\textquotesingle{}000\char`\"{}. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga0743ce389a2c9fd892ad70f3c37bf256}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+M}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Literal operator for \char`\"{}\+Mega = 1\textquotesingle{}000\textquotesingle{}000\char`\"{}. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+int \mbox{\hyperlink{group__core_ga3a15da18156d1acd80c5ae4232b3f785}{physapi\+::factorial\+Compile}} (phys\+\_\+int n)
+\begin{DoxyCompactList}\small\item\em Calculate the factorial of a number if it is possible at compile time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename T\+\_\+  = phys\+\_\+float$>$ }\\constexpr T\+\_\+ \mbox{\hyperlink{group__core_ga2a1f5f15515ae3582695475797d26d31}{physapi\+::integrate}} (T function, T\+\_\+ lower\+Bound, T\+\_\+ upper\+Bound, phys\+\_\+size number\+Of\+Intervals)
+\begin{DoxyCompactList}\small\item\em Calculate the integral of a a function {\itshape f} on $ [a,b] $. \end{DoxyCompactList}\item 
+{\footnotesize template$<$phys\+\_\+size columns, typename Target , typename T  = phys\+\_\+float$>$ }\\void \mbox{\hyperlink{group__core_gaed104f515ebdb0f2fd8b1d8cf29923b1}{physapi\+::load\+From\+File}} (const std\+::string \&file, Target \&target, phys\+\_\+size max\+Nun\+Of\+Rows=0)
+\begin{DoxyCompactList}\small\item\em This is a tool for loading a file of n rows by m columns to a custom physapi container. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga2f4b5fd5ad281191edfb3f8c3b5a2b63}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+deg}} (phys\+\_\+lfloat x)
+\begin{DoxyCompactList}\small\item\em Degrees to radian. \end{DoxyCompactList}\item 
+phys\+\_\+float \mbox{\hyperlink{group__core_gae0f80af1083e32e7ae24f831eaa83a5c}{physapi\+::solid\+Angle}} (phys\+\_\+float theta)
+\begin{DoxyCompactList}\small\item\em Get the solid angle of a cone with a given half opening angle theta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr phys\+\_\+size \mbox{\hyperlink{group__core_ga2c84bdf9073c0bc78732c70e73d214a2}{physapi\+::\+P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+IG}} = D\+B\+L\+\_\+\+D\+IG
+\begin{DoxyCompactList}\small\item\em Digits of phys\+\_\+float. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+size \mbox{\hyperlink{group__core_gaa8debdecd0314a68d602e915dafa3110}{physapi\+::\+P\+H\+Y\+S\+\_\+\+L\+F\+L\+O\+A\+T\+\_\+\+D\+IG}} = L\+D\+B\+L\+\_\+\+D\+IG
+\begin{DoxyCompactList}\small\item\em Digits of phys\+\_\+lfloat. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga05de11c2d987e4c917f9ee4ad20876bf}{physapi\+::\+P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+E\+P\+S\+I\+L\+ON}} = D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON
+\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gac05652ee3d3efd325e3441ae21819f2c}{physapi\+::\+P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+E\+P\+S\+I\+L\+ON}} = 2.\+10734242554471e-\/08
+\begin{DoxyCompactList}\small\item\em Presision with angles. If a given angle is less or equal to this value then it is 0. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga23095db22c263df37bcfe2ba4ec9e239}{physapi\+::\+P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+M\+AX}} = D\+B\+L\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em phys\+\_\+float maximum value \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gaf510ddc30f2959fd62e28eecb3488191}{physapi\+::\+P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+M\+IN}} = D\+B\+L\+\_\+\+M\+IN
+\begin{DoxyCompactList}\small\item\em phys\+\_\+float minimum value \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gace82a60cdafccc985a5032911854e99a}{physapi\+::\+P\+L\+U\+S\+\_\+\+I\+NF}} = P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em Definition of +infinity. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga45a86d55fd5787a662cbf52a6de7498a}{physapi\+::\+M\+I\+N\+U\+S\+\_\+\+I\+NF}} = P\+H\+Y\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+M\+IN
+\begin{DoxyCompactList}\small\item\em Definition of -\/infinity. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+uint \mbox{\hyperlink{group__core_ga6f49e88ed83f848e1d026bf803242d45}{physapi\+::\+D\+E\+G\+R\+E\+E\+S\+\_\+360}} = 360
+\begin{DoxyCompactList}\small\item\em Degrees of an angle of 2π \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga576ece9f648463c901eeeca97ce89737}{physapi\+::\+Pi}} = 3.\+14159265358979323846264
+\begin{DoxyCompactList}\small\item\em Number π \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga4dd3ed9de6dcf4926215c186d9692cb5}{physapi\+::G}} = 6.\+67E-\/11
+\begin{DoxyCompactList}\small\item\em Gravitational-\/constant of Newton\textquotesingle{}s law. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga1fb4066e6d674f228e58fc9d7f3739e6}{physapi\+::\+M\+\_\+earth}} = 5.\+972E24
+\begin{DoxyCompactList}\small\item\em Mass of the Earth. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gae515c5663b0e60d05fd55efb69629812}{physapi\+::\+M\+\_\+moon}} = 7.\+349E22
+\begin{DoxyCompactList}\small\item\em Mass of the Moon. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga3f77531de54cc322ff6c35cb9ab1b998}{physapi\+::\+M\+\_\+sun}} = 1.\+989E30
+\begin{DoxyCompactList}\small\item\em Mass of the S\+Un. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gab06480bd1a2ee40ace9c6d35d1a13507}{physapi\+::m\+\_\+e}} = 0.\+911E-\/30
+\begin{DoxyCompactList}\small\item\em Mass of the electron. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga5359d971320901c7a547312e543ee268}{physapi\+::d\+\_\+sun\+\_\+earth}} = 149\textquotesingle{}597\textquotesingle{}870\textquotesingle{}700.\+0
+\begin{DoxyCompactList}\small\item\em Distance between the Sun and the Earth. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga45297fd7d9412876bd73844b1f924cf4}{physapi\+::d\+\_\+earth\+\_\+moon}} = 384\textquotesingle{}440\textquotesingle{}000.\+0
+\begin{DoxyCompactList}\small\item\em Distance between the Earth and the Moon. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gaf0e049646834eab26eeef3f10bb757a8}{physapi\+::h\+\_\+\+Plank}} = 6.\+626E-\/34
+\begin{DoxyCompactList}\small\item\em Planck constant. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga735021e47b23cdceb04d748c24585dd3}{physapi\+::mc2\+\_\+e}} = 0.\+511E6\+\_\+eV
+\begin{DoxyCompactList}\small\item\em Rest energy of an electron. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gaa1f9fffc2ee32daa5ca44dd39dcfd12e}{physapi\+::k\+\_\+B}} = 1.\+381E-\/23
+\begin{DoxyCompactList}\small\item\em Boltzmann constant. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_ga609cf4d1346545f214b0563bf0741339}{physapi\+::c\+\_\+light}} = 299\textquotesingle{}792\textquotesingle{}458.\+0
+\begin{DoxyCompactList}\small\item\em Speed of light in vacuum. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gafda977b591163a4bac0375ca4caf6cad}{physapi\+::mc\+\_\+e}} = mc2\+\_\+e / c\+\_\+light
+\begin{DoxyCompactList}\small\item\em Electron mass times the speed of light. \end{DoxyCompactList}\item 
+constexpr phys\+\_\+float \mbox{\hyperlink{group__core_gade4bfbd7a65bda807d2e76faee6027f2}{physapi\+::sigma\+\_\+T}} = 6.\+652E-\/25\+\_\+cm2
+\begin{DoxyCompactList}\small\item\em Thompson\textquotesingle{}s scattering section. \end{DoxyCompactList}\end{DoxyCompactItemize}

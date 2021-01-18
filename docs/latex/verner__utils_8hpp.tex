@@ -1,0 +1,102 @@
+\hypertarget{verner__utils_8hpp}{}\doxysection{include/astrophysics/verner\+\_\+utils.hpp File Reference}
+\label{verner__utils_8hpp}\index{include/astrophysics/verner\_utils.hpp@{include/astrophysics/verner\_utils.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}P\+Abundance\+Table.\+hpp\char`\"{}}\newline
+Include dependency graph for verner\+\_\+utils.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_verner_table1}{physapi\+::\+P\+Verner\+Table1}}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_verner_table1_hnd}{physapi\+::\+P\+Verner\+Table1\+Hnd}}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_load_verner_table1}{physapi\+::\+P\+Load\+Verner\+Table1}}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_selector_verner_table1}{physapi\+::\+P\+Selector\+Verner\+Table1}}
+\item 
+class \mbox{\hyperlink{classphysapi_1_1_p_verner_table2}{physapi\+::\+P\+Verner\+Table2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacephysapi}{physapi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacephysapi_ab4af819249f98cfe4cacd2fdfb2e8bff}{physapi\+::\+\_\+t\+\_\+nz\+\_\+ne\+\_\+is}} = std\+::array$<$ phys\+\_\+size, 3 $>$
+\item 
+using \mbox{\hyperlink{namespacephysapi_add579859f36995642c296c5fa711ad20}{physapi\+::t\+\_\+vernertable1\+Key}} = \+\_\+t\+\_\+nz\+\_\+ne\+\_\+is
+\item 
+using \mbox{\hyperlink{namespacephysapi_acef0526668081db52d2e114c239d5ba4}{physapi\+::t\+\_\+vernertable1\+Value}} = std\+::array$<$ phys\+\_\+float, 6 $>$
+\item 
+using \mbox{\hyperlink{namespacephysapi_a412ebca3adc6772767cadda3e5e9f94a}{physapi\+::t\+\_\+nz\+\_\+ne}} = std\+::array$<$ phys\+\_\+size, 2 $>$
+\item 
+using \mbox{\hyperlink{namespacephysapi_a7057154a30aff2d3b1fac9627e355fc7}{physapi\+::t\+\_\+vernertable2\+Key}} = t\+\_\+nz\+\_\+ne
+\item 
+using \mbox{\hyperlink{namespacephysapi_ac105594721b3e9470041b50a419d5084}{physapi\+::t\+\_\+vernertable2\+Value}} = std\+::array$<$ phys\+\_\+float, 9 $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacephysapi_aab954369a330e2a83fc75cd69f21a9ba}{physapi\+::e\+Verner\+Table1\+Key}} \{ \mbox{\hyperlink{namespacephysapi_aab954369a330e2a83fc75cd69f21a9baa21c2e59531c8710156d34a3c30ac81d5}{physapi\+::e\+Verner\+Table1\+Key\+::Z}} = 0, 
+\mbox{\hyperlink{namespacephysapi_aab954369a330e2a83fc75cd69f21a9baa4dec99baa99738721da9c9b0c1a92498}{physapi\+::e\+Verner\+Table1\+Key\+::\+Ne}} = 1, 
+\mbox{\hyperlink{namespacephysapi_aab954369a330e2a83fc75cd69f21a9baa27d4cf7da57f6748f79254f7be42cca3}{physapi\+::e\+Verner\+Table1\+Key\+::\+Is}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0}{physapi\+::e\+Verner\+Table1\+Val}} \{ \newline
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0af4ac28a9f24c04df948262cbbe0fd3de}{physapi\+::e\+Verner\+Table1\+Val\+::\+E\+Th}} = 0, 
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0a0e51a87ec173dd9534a056a403c85881}{physapi\+::e\+Verner\+Table1\+Val\+::\+E0}}, 
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0a0990b0a37e63c122ab0c2d1ddf0c0d12}{physapi\+::e\+Verner\+Table1\+Val\+::\+S\+I\+G\+M\+A0}}, 
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0a582d9f9e98cfe857f43929842d90bff6}{physapi\+::e\+Verner\+Table1\+Val\+::\+Ya}}, 
+\newline
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0a44c29edb103a2872f519ad0c9a0fdaaa}{physapi\+::e\+Verner\+Table1\+Val\+::P}}, 
+\mbox{\hyperlink{namespacephysapi_a238846e141363ec48f3dbc0de042a3b0afcd96577720309903855b08b6bbc5cd7}{physapi\+::e\+Verner\+Table1\+Val\+::\+Yw}} = 5
+ \}
+\item 
+enum \mbox{\hyperlink{namespacephysapi_a0016c3c2da03e6baf4f52c50b5074971}{physapi\+::e\+Verner\+Table2\+Key}} \{ \mbox{\hyperlink{namespacephysapi_a0016c3c2da03e6baf4f52c50b5074971a21c2e59531c8710156d34a3c30ac81d5}{physapi\+::e\+Verner\+Table2\+Key\+::Z}} = 0, 
+\mbox{\hyperlink{namespacephysapi_a0016c3c2da03e6baf4f52c50b5074971a4dec99baa99738721da9c9b0c1a92498}{physapi\+::e\+Verner\+Table2\+Key\+::\+Ne}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6f}{physapi\+::e\+Verner\+Table2\+Val}} \{ \newline
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa9c5284d7ac44af9f0b1ac7688e268814}{physapi\+::e\+Verner\+Table2\+Val\+::\+Eth}} = 0, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6faf685b860708c66cc601d13f0f638dbb8}{physapi\+::e\+Verner\+Table2\+Val\+::\+Emax}} = 1, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa0e51a87ec173dd9534a056a403c85881}{physapi\+::e\+Verner\+Table2\+Val\+::\+E0}} = 2, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa0990b0a37e63c122ab0c2d1ddf0c0d12}{physapi\+::e\+Verner\+Table2\+Val\+::\+S\+I\+G\+M\+A0}} = 3, 
+\newline
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa582d9f9e98cfe857f43929842d90bff6}{physapi\+::e\+Verner\+Table2\+Val\+::\+Ya}} = 4, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa44c29edb103a2872f519ad0c9a0fdaaa}{physapi\+::e\+Verner\+Table2\+Val\+::P}} = 5, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fafcd96577720309903855b08b6bbc5cd7}{physapi\+::e\+Verner\+Table2\+Val\+::\+Yw}} = 6, 
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6facf0237a3612e8e4e742f0b6f862b48a2}{physapi\+::e\+Verner\+Table2\+Val\+::\+Y0}} = 7, 
+\newline
+\mbox{\hyperlink{namespacephysapi_a749bc2d087c8c4db57a5980b65987b6fa5aefcaaf9790cc8ece124e274779ae94}{physapi\+::e\+Verner\+Table2\+Val\+::\+Y1}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{namespacephysapi_ad44b80dda01e731851525b61e114e76c}{physapi\+::e\+Absorbing\+Element}} \{ \mbox{\hyperlink{namespacephysapi_ad44b80dda01e731851525b61e114e76ca21c2e59531c8710156d34a3c30ac81d5}{physapi\+::e\+Absorbing\+Element\+::Z}} = static\+\_\+cast$<$phys\+\_\+size$>$(e\+Verner\+Table1\+Key\+::Z), 
+\mbox{\hyperlink{namespacephysapi_ad44b80dda01e731851525b61e114e76ca4dec99baa99738721da9c9b0c1a92498}{physapi\+::e\+Absorbing\+Element\+::\+Ne}} = static\+\_\+cast$<$phys\+\_\+size$>$(e\+Verner\+Table1\+Key\+::Ne), 
+\mbox{\hyperlink{namespacephysapi_ad44b80dda01e731851525b61e114e76ca27d4cf7da57f6748f79254f7be42cca3}{physapi\+::e\+Absorbing\+Element\+::\+Is}} = static\+\_\+cast$<$phys\+\_\+size$>$(e\+Verner\+Table1\+Key\+::Is), 
+\mbox{\hyperlink{namespacephysapi_ad44b80dda01e731851525b61e114e76ca0b1c668dfc6023057dda34a2684e557a}{physapi\+::e\+Absorbing\+Element\+::\+S\+I\+G\+MA}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr phys\+\_\+lfloat \mbox{\hyperlink{namespacephysapi_a3b720455bb028e80d2f2912e0d0e0c92}{physapi\+::operator\char`\"{}\char`\"{}\+\_\+\+Mb}} (phys\+\_\+lfloat value)
+\begin{DoxyCompactList}\small\item\em This operator is needed to normalize the value of the sigma cross section given by Prof. Verner\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr phys\+\_\+size \mbox{\hyperlink{namespacephysapi_ace4e52aa8c48003d12f58ffacee04a82}{physapi\+::\+V\+E\+R\+N\+E\+R\+T\+A\+B\+L\+E1\+\_\+\+C\+O\+LS}} = 10
+\item 
+const std\+::string \mbox{\hyperlink{namespacephysapi_aff3c4160cd399ba9c32103584736f76b}{physapi\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+T\+H\+\_\+\+V\+E\+R\+N\+E\+R\+T\+A\+B\+L\+E1}} = \char`\"{}./include/astrophysics/tables/vernertable1.\+txt\char`\"{}
+\item 
+constexpr phys\+\_\+size \mbox{\hyperlink{namespacephysapi_a27faa37a34f68fa5c82ad64836a3543e}{physapi\+::\+V\+E\+R\+N\+E\+R\+T\+A\+B\+L\+E2\+\_\+\+C\+O\+LS}} = 11
+\item 
+const std\+::string \mbox{\hyperlink{namespacephysapi_a424a104b470fdeaaf99060d276402b0a}{physapi\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+T\+H\+\_\+\+V\+E\+R\+N\+E\+R\+T\+A\+B\+L\+E2}} = \char`\"{}./include/astrophysics/tables/vernertable2.\+txt\char`\"{}
+\item 
+constexpr phys\+\_\+size \mbox{\hyperlink{namespacephysapi_a346f2cb2904d4177ee6ab85c79ddadf1}{physapi\+::\+A\+B\+S\+O\+R\+B\+I\+N\+G\+E\+L\+E\+M\+E\+N\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES}} = 4
+\end{DoxyCompactItemize}

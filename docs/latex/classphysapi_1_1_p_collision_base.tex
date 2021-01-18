@@ -1,0 +1,109 @@
+\hypertarget{classphysapi_1_1_p_collision_base}{}\doxysection{physapi\+::P\+Collision\+Base Class Reference}
+\label{classphysapi_1_1_p_collision_base}\index{physapi::PCollisionBase@{physapi::PCollisionBase}}
+
+
+This is the base class for all types of classical collisions.  
+
+
+
+
+{\ttfamily \#include $<$P\+Collision\+Base.\+hpp$>$}
+
+
+
+Inheritance diagram for physapi\+::P\+Collision\+Base\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classphysapi_1_1_p_collision_base_af20e7add89edee3d296c007122322b6d}{$\sim$\+P\+Collision\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classphysapi_1_1_p_collision_base}{P\+Collision\+Base}} object. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \& \mbox{\hyperlink{classphysapi_1_1_p_collision_base_a54c048a4b800a3da1038bda5049bb7a0}{momentumA}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the momentum of the particle A. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} \& \mbox{\hyperlink{classphysapi_1_1_p_collision_base_ac88f9867b57a2fe798626fc7e9d0fe91}{momentumB}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the momentum of the particle B. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_collision_base_ae9509f326b9e8e558252d214588f0f3f}{P\+Collision\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_collision_base}{P\+Collision\+Base}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the base class for all types of classical collisions. 
+
+Definition at line 15 of file P\+Collision\+Base.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_collision_base_ae9509f326b9e8e558252d214588f0f3f}\label{classphysapi_1_1_p_collision_base_ae9509f326b9e8e558252d214588f0f3f}} 
+\index{physapi::PCollisionBase@{physapi::PCollisionBase}!PCollisionBase@{PCollisionBase}}
+\index{PCollisionBase@{PCollisionBase}!physapi::PCollisionBase@{physapi::PCollisionBase}}
+\doxysubsubsection{\texorpdfstring{PCollisionBase()}{PCollisionBase()}}
+{\footnotesize\ttfamily physapi\+::\+P\+Collision\+Base\+::\+P\+Collision\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_collision_base}{P\+Collision\+Base}} object. 
+
+
+
+Definition at line 22 of file P\+Collision\+Base.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_collision_base_af20e7add89edee3d296c007122322b6d}\label{classphysapi_1_1_p_collision_base_af20e7add89edee3d296c007122322b6d}} 
+\index{physapi::PCollisionBase@{physapi::PCollisionBase}!````~PCollisionBase@{$\sim$PCollisionBase}}
+\index{````~PCollisionBase@{$\sim$PCollisionBase}!physapi::PCollisionBase@{physapi::PCollisionBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$PCollisionBase()}{~PCollisionBase()}}
+{\footnotesize\ttfamily virtual physapi\+::\+P\+Collision\+Base\+::$\sim$\+P\+Collision\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classphysapi_1_1_p_collision_base}{P\+Collision\+Base}} object. 
+
+
+
+Definition at line 29 of file P\+Collision\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_collision_base_a54c048a4b800a3da1038bda5049bb7a0}\label{classphysapi_1_1_p_collision_base_a54c048a4b800a3da1038bda5049bb7a0}} 
+\index{physapi::PCollisionBase@{physapi::PCollisionBase}!momentumA@{momentumA}}
+\index{momentumA@{momentumA}!physapi::PCollisionBase@{physapi::PCollisionBase}}
+\doxysubsubsection{\texorpdfstring{momentumA()}{momentumA()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}\& physapi\+::\+P\+Collision\+Base\+::momentumA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the momentum of the particle A. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_perfectly_elastic_collision_ad1049f810ffa2bbc7056c7dbf9df9f2d}{physapi\+::\+P\+Perfectly\+Elastic\+Collision}}.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_collision_base_ac88f9867b57a2fe798626fc7e9d0fe91}\label{classphysapi_1_1_p_collision_base_ac88f9867b57a2fe798626fc7e9d0fe91}} 
+\index{physapi::PCollisionBase@{physapi::PCollisionBase}!momentumB@{momentumB}}
+\index{momentumB@{momentumB}!physapi::PCollisionBase@{physapi::PCollisionBase}}
+\doxysubsubsection{\texorpdfstring{momentumB()}{momentumB()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}}\& physapi\+::\+P\+Collision\+Base\+::momentumB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the momentum of the particle B. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classphysapi_1_1_p_momentum}{P\+Momentum}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classphysapi_1_1_p_perfectly_elastic_collision_a3a3256bfe57daf07d2b97bd0a8330afb}{physapi\+::\+P\+Perfectly\+Elastic\+Collision}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/interactions/collision/\mbox{\hyperlink{_p_collision_base_8hpp}{P\+Collision\+Base.\+hpp}}\end{DoxyCompactItemize}

@@ -1,24 +1,10 @@
 var searchData=
 [
-  ['c_5flight_13',['c_light',['../group__core.html#ga609cf4d1346545f214b0563bf0741339',1,'physapi']]],
-  ['cakalpha1_14',['CaKalpha1',['../agn__utils_8hpp.html#a7e32a8b0ce23c210a9b092914d4cc614',1,'agn']]],
-  ['cakalpha2_15',['CaKalpha2',['../agn__utils_8hpp.html#ae65c22a976e795acaa45c28e73df72b6',1,'agn']]],
-  ['checkrangeexclusive_16',['checkRangeExclusive',['../group__core.html#ga3cd9a3283f784a6a22df2532fc99d1dc',1,'physapi']]],
-  ['checkrangeinclusive_17',['checkRangeInclusive',['../group__core.html#gafec5606c7bf79d88e5f429217f376d1d',1,'physapi']]],
-  ['checkrangeinclusiveleft_18',['checkRangeInclusiveLeft',['../group__core.html#gacadd1d23c3c1b35cfa4863a2080973be',1,'physapi']]],
-  ['checkrangeinclusiveright_19',['checkRangeInclusiveRight',['../group__core.html#ga7d22b29a503bc80fe477846ffdb300b1',1,'physapi']]],
-  ['ckalpha1_20',['CKalpha1',['../agn__utils_8hpp.html#a0049eeaf27dbc2856e874b1d28ff39af',1,'agn']]],
-  ['ckalpha2_21',['CKalpha2',['../agn__utils_8hpp.html#a5612f9ab743cc35a198c34c227c14240',1,'agn']]],
-  ['clear_22',['clear',['../classphysapi_1_1_p_spectrum.html#ad873684b9b3c746b574a14158dd9ea4e',1,'physapi::PSpectrum']]],
-  ['clouds_23',['clouds',['../classagn_1_1_p_a_g_n_clumpy_structure_model_b.html#a789331c2184660144c5d1394aabe25f5',1,'agn::PAGNClumpyStructureModelB::clouds()'],['../classagn_1_1_p_a_g_n_clumpy_torus_model.html#a3daf07f84b475408ac9fa4161ff01f70',1,'agn::PAGNClumpyTorusModel::clouds()']]],
-  ['collision_24',['Collision',['../group__collision.html',1,'']]],
-  ['compton_25',['Compton',['../group__compton.html',1,'']]],
-  ['coordsys_26',['coordSys',['../classphysapi_1_1_p_vector2_d.html#a921d7965babf2352574778ca97cea71d',1,'physapi::PVector2D']]],
-  ['core_27',['Core',['../group__core.html',1,'']]],
-  ['cos_28',['cos',['../classphysapi_1_1_p_vector2_d.html#aa0167d443f83fb9822a04401654f22c1',1,'physapi::PVector2D']]],
-  ['count_29',['count',['../classphysapi_1_1_p_spectrum.html#ad2354653e1077dc6e6f2ec37379e3084',1,'physapi::PSpectrum']]],
-  ['crkalpha1_30',['CrKalpha1',['../agn__utils_8hpp.html#aceaa7bc038926c4d894b2dc9bc3b93b6',1,'agn']]],
-  ['crkalpha2_31',['CrKalpha2',['../agn__utils_8hpp.html#a333872cd70171cec865885106797b967',1,'agn']]],
-  ['crossproduct_32',['crossProduct',['../classphysapi_1_1_p_vector2_d.html#a11df58f0191454f79c974a55131b6632',1,'physapi::PVector2D::crossProduct()'],['../classphysapi_1_1_p_vector3_d.html#ab44b6cd32c827e03b162f57532365b3c',1,'physapi::PVector3D::crossProduct()']]],
-  ['cub_33',['cub',['../group__core.html#gad811674e1b0bbc9874f87965cfa33561',1,'physapi']]]
+  ['b_30',['B',['../group__astrophysics.html#gga3d437f2e32fe084a101460788e49f823a9d5ed678fe57bcca610140957afab571',1,'physapi']]],
+  ['backward_31',['BACKWARD',['../group__core.html#ggaba57b90048e7f13a88a50f8c2c4e4704a6377b4908ae38f9a57fe9120cf179eb1',1,'physapi']]],
+  ['be_32',['Be',['../group__astrophysics.html#gga3d437f2e32fe084a101460788e49f823a3c9547d2fcb523a7ae5681eedde43fb6',1,'physapi']]],
+  ['both_33',['BOTH',['../group__core.html#ggaba57b90048e7f13a88a50f8c2c4e4704a6328e5e3186c227a021ef2ff77e40197',1,'physapi']]],
+  ['buildagnclumpysimulationteamfactory_34',['buildAGNClumpySimulationTeamFactory',['../classagn_1_1_p_a_g_n_simulation_team_factory_builder.html#ab5ea5be416ebc92b05dd1a382c74de62',1,'agn::PAGNSimulationTeamFactoryBuilder']]],
+  ['buildagnsmoothsimulationteamfactory_35',['buildAGNSmoothSimulationTeamFactory',['../classagn_1_1_p_a_g_n_simulation_team_factory_builder.html#ae7b5644bbe8e1d10544c0290eaa56e99',1,'agn::PAGNSimulationTeamFactoryBuilder']]],
+  ['buildsimulationteam_36',['buildSimulationTeam',['../classagn_1_1_p_a_g_n_clumpy_simulation_team_factory.html#a93c8fd35d03b2cc531535832c3354dd1',1,'agn::PAGNClumpySimulationTeamFactory::buildSimulationTeam()'],['../classagn_1_1_p_a_g_n_smooth_simulation_team_factory.html#a1154ca7b5f0784ae2ce26e09403d9608',1,'agn::PAGNSmoothSimulationTeamFactory::buildSimulationTeam()'],['../classagn_1_1_p_a_g_n_simulation_team_factory.html#ae9a17023c2dbe9da5e4d429ee55ae16e',1,'agn::PAGNSimulationTeamFactory::buildSimulationTeam()']]]
 ];

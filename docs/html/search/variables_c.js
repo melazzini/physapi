@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['sigma_5ft_611',['sigma_T',['../group__core.html#gade4bfbd7a65bda807d2e76faee6027f2',1,'physapi']]],
-  ['sikalpha1_612',['SiKalpha1',['../agn__utils_8hpp.html#afd9092e33993afc97154d1fa3adb1d2f',1,'agn']]],
-  ['sikalpha2_613',['SiKalpha2',['../agn__utils_8hpp.html#ae7526db0829ce718c07d3bf38cac7584',1,'agn']]],
-  ['skalpha1_614',['SKalpha1',['../agn__utils_8hpp.html#a2ba6192ed72a17b88c2e2235fb8b2a3f',1,'agn']]],
-  ['skalpha2_615',['SKalpha2',['../agn__utils_8hpp.html#a16f9cb409e85fc9ef4b189446c68f34f',1,'agn']]]
+  ['okalpha1_1077',['OKalpha1',['../group__agn.html#ga4f21c70f9e2fdd95465717e3966a5ead',1,'agn']]],
+  ['okalpha2_1078',['OKalpha2',['../group__agn.html#ga8e8aef4c4029babfea4693b52450f2f6',1,'agn']]]
 ];

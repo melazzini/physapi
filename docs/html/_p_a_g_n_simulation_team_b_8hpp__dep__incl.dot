@@ -1,0 +1,39 @@
+digraph "include/examples/AGN/PAGNSimulationTeamB.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/examples/AGN\l/PAGNSimulationTeamB.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="include/examples/AGN\l/AGNClumpy/PAGNClumpySimulation\lTeam.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_clumpy_simulation_team_8hpp.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/examples/AGN/AGNClumpy\l/PAGNClumpySimulationTeam.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_clumpy_simulation_team_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/examples/AGN/AGNClumpy\l/PAGNClumpySimulationTeamFactory.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_clumpy_simulation_team_factory_8cpp.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="include/examples/AGN\l/AGNSmooth/PAGNSmoothSimulation\lTeam.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_smooth_simulation_team_8hpp.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/examples/AGN/AGNSmooth\l/PAGNSmoothSimulationTeam.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_smooth_simulation_team_8cpp.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/examples/AGN/AGNSmooth\l/PAGNSmoothSimulationTeamFactory.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_smooth_simulation_team_factory_8cpp.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="include/examples/AGN\l/PAGNSimulationTeamFactory.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_simulation_team_factory_8hpp.html",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="include/examples/AGN\l/AGNClumpy/PAGNClumpySimulation\lTeamFactory.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_clumpy_simulation_team_factory_8hpp.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="include/examples/AGN\l/PAGNSimulationTeamFactoryBuilder.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_simulation_team_factory_builder_8hpp.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="This example shows how to use the fluorescence simulator object."];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="include/examples/AGN\l/AGNSmooth/PAGNSmoothSimulation\lTeamFactory.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_smooth_simulation_team_factory_8hpp.html",tooltip=" "];
+  Node12 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="include/examples/AGN\l/PAGN.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_8hpp.html",tooltip=" "];
+  Node13 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="src/examples/AGN/PAGN.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_8cpp.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="src/examples/AGN/PAGNSimulation\lTeamB.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_p_a_g_n_simulation_team_b_8cpp.html",tooltip=" "];
+}

@@ -1,0 +1,136 @@
+\hypertarget{classphysapi_1_1_p_process_table}{}\doxysection{physapi\+::P\+Process\+Table$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$ Class Template Reference}
+\label{classphysapi_1_1_p_process_table}\index{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}}
+
+
+This class process a generic table. It can load elements to it with defined constrains.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysapi_1_1_p_process_table_a58f712918cc434133fca978d189dd640}{P\+Process\+Table}} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+\+Config $>$ }\\\mbox{\hyperlink{classphysapi_1_1_p_process_table_a5fcac675d912bf30a66491a8c3657aca}{P\+Process\+Table}} (const std\+::string \&file, const T\+\_\+\+Config \&f)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+\+Table , typename T\+\_\+predicate , typename... Args$>$ }\\void \mbox{\hyperlink{classphysapi_1_1_p_process_table_a1734beb1b9081a974e65e5bf870db3dc}{operator()}} (T\+\_\+\+Table \&table, T\+\_\+predicate predicate, const Args \&... args)
+\begin{DoxyCompactList}\small\item\em Load the table with the data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T\+\_\+key, typename T\+\_\+value, const phys\+\_\+size S\+I\+Z\+E\+\_\+phys, typename T\+\_\+\+Load\+Array$>$\newline
+class physapi\+::\+P\+Process\+Table$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$}
+
+This class process a generic table. It can load elements to it with defined constrains. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+\_\+key} & type of the table elements keys \\
+\hline
+{\em T\+\_\+value} & type of the table elements values \\
+\hline
+{\em size} & number of table columns \\
+\hline
+{\em T\+\_\+\+Load\+Array} & type of the table loader functor \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 713 of file utils.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_process_table_a58f712918cc434133fca978d189dd640}\label{classphysapi_1_1_p_process_table_a58f712918cc434133fca978d189dd640}} 
+\index{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}!PProcessTable@{PProcessTable}}
+\index{PProcessTable@{PProcessTable}!physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}}
+\doxysubsubsection{\texorpdfstring{PProcessTable()}{PProcessTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T\+\_\+key , typename T\+\_\+value , const phys\+\_\+size S\+I\+Z\+E\+\_\+phys, typename T\+\_\+\+Load\+Array $>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_process_table}{physapi\+::\+P\+Process\+Table}}$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & file name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 733 of file utils.\+hpp.
+
+\mbox{\Hypertarget{classphysapi_1_1_p_process_table_a5fcac675d912bf30a66491a8c3657aca}\label{classphysapi_1_1_p_process_table_a5fcac675d912bf30a66491a8c3657aca}} 
+\index{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}!PProcessTable@{PProcessTable}}
+\index{PProcessTable@{PProcessTable}!physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}}
+\doxysubsubsection{\texorpdfstring{PProcessTable()}{PProcessTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T\+\_\+key , typename T\+\_\+value , const phys\+\_\+size S\+I\+Z\+E\+\_\+phys, typename T\+\_\+\+Load\+Array $>$ \\
+template$<$typename T\+\_\+\+Config $>$ \\
+\mbox{\hyperlink{classphysapi_1_1_p_process_table}{physapi\+::\+P\+Process\+Table}}$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$\+::\mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const T\+\_\+\+Config \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classphysapi_1_1_p_process_table}{P\+Process\+Table}} object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+\_\+\+Config} & special filter type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em file} & file name \\
+\hline
+{\em f} & filter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 743 of file utils.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphysapi_1_1_p_process_table_a1734beb1b9081a974e65e5bf870db3dc}\label{classphysapi_1_1_p_process_table_a1734beb1b9081a974e65e5bf870db3dc}} 
+\index{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$@{physapi::PProcessTable$<$ T\_key, T\_value, SIZE\_phys, T\_LoadArray $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T\+\_\+key , typename T\+\_\+value , const phys\+\_\+size S\+I\+Z\+E\+\_\+phys, typename T\+\_\+\+Load\+Array $>$ \\
+template$<$typename T\+\_\+\+Table , typename T\+\_\+predicate , typename... Args$>$ \\
+void \mbox{\hyperlink{classphysapi_1_1_p_process_table}{physapi\+::\+P\+Process\+Table}}$<$ T\+\_\+key, T\+\_\+value, S\+I\+Z\+E\+\_\+phys, T\+\_\+\+Load\+Array $>$\+::operator() (\begin{DoxyParamCaption}\item[{T\+\_\+\+Table \&}]{table,  }\item[{T\+\_\+predicate}]{predicate,  }\item[{const Args \&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load the table with the data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+\_\+\+Table} & Table type \\
+\hline
+{\em T\+\_\+predicate} & type of the predicate \\
+\hline
+{\em Args} & variadic argument types \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em table} & table which will be loaded with the data \\
+\hline
+{\em predicate} & predicate filter \\
+\hline
+{\em args} & arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 761 of file utils.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{utils_8hpp}{utils.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,16 @@
+digraph "physapi::PSimpleTorus::externalRadius"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="physapi::PSimpleTorus\l::externalRadius",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="agn::PAGNSmoothTorusModel\l::equatorialEffectiveHalfSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_torus_model.html#a2eac8ac8cd6cab04bace64f9959cef53",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="agn::PAGNSmoothTorusModel::n_H",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_smooth_torus_model.html#addffc581cf6804d605afbd8a39a0230c",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="agn::PAGNClumpyTorusModel\l::equatorialEffectiveHalfSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_torus_model.html#adca6e713593196e988c4d1642cf2cad2",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="agn::PAGNClumpyTorusModel\l::placeCloud",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classagn_1_1_p_a_g_n_clumpy_torus_model.html#a2d05a0ec848baf944d0eba2939593911",tooltip=" "];
+}

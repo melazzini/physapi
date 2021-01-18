@@ -1,0 +1,97 @@
+\hypertarget{group__montecarlo}{}\doxysection{Monte Carlo}
+\label{group__montecarlo}\index{Monte Carlo@{Monte Carlo}}
+
+
+This module offers Monte Carlo simulation tools.  
+
+
+Collaboration diagram for Monte Carlo\+:
+% FIG 0
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mccompton}{M\+C Compton}}
+\begin{DoxyCompactList}\small\item\em This submodule contains all the tools needed for simulation of compton scattering with Monte Carlo methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{group__montecarlo_ga9017f8a6abd1e7a520ac976ed881e87a}{physapi\+::get\+Random\+Index\+Montecarlo}} (const T \&sequence)
+\begin{DoxyCompactList}\small\item\em Get a Random Index of a sequence of probabilities using a Montecarlo approach. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} \mbox{\hyperlink{group__montecarlo_ga45022b0f8446a75e2a25e355f0b08e0c}{physapi\+::get\+Random\+Index\+Montecarlo}} (const T \&sequence, \mbox{\hyperlink{classphysapi_1_1_p_random}{P\+Random}} \&rnd\+Mng)
+\begin{DoxyCompactList}\small\item\em Get a Random Index of a sequence of probabilities using a Montecarlo approach. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module offers Monte Carlo simulation tools. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__montecarlo_ga9017f8a6abd1e7a520ac976ed881e87a}\label{group__montecarlo_ga9017f8a6abd1e7a520ac976ed881e87a}} 
+\index{Monte Carlo@{Monte Carlo}!getRandomIndexMontecarlo@{getRandomIndexMontecarlo}}
+\index{getRandomIndexMontecarlo@{getRandomIndexMontecarlo}!Monte Carlo@{Monte Carlo}}
+\doxysubsubsection{\texorpdfstring{getRandomIndexMontecarlo()}{getRandomIndexMontecarlo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} physapi\+::get\+Random\+Index\+Montecarlo (\begin{DoxyParamCaption}\item[{const T \&}]{sequence }\end{DoxyParamCaption})}
+
+
+
+Get a Random Index of a sequence of probabilities using a Montecarlo approach. 
+
+This is based on Pozdnyakov page 305
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ type of the sequence \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & -\/ sequence of probabilities, the sum of all elements of the sequence must be 1, ie the sequence must be normalize before using this function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+size -\/ random index of the sequence. It returns -\/1 if it was not possible to obtain any index. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file montecarlo\+\_\+utils.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__montecarlo_ga45022b0f8446a75e2a25e355f0b08e0c}\label{group__montecarlo_ga45022b0f8446a75e2a25e355f0b08e0c}} 
+\index{Monte Carlo@{Monte Carlo}!getRandomIndexMontecarlo@{getRandomIndexMontecarlo}}
+\index{getRandomIndexMontecarlo@{getRandomIndexMontecarlo}!Monte Carlo@{Monte Carlo}}
+\doxysubsubsection{\texorpdfstring{getRandomIndexMontecarlo()}{getRandomIndexMontecarlo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{group__core_ga3958628b70224fbb8e9412786048e633}{phys\+\_\+size}} physapi\+::get\+Random\+Index\+Montecarlo (\begin{DoxyParamCaption}\item[{const T \&}]{sequence,  }\item[{\mbox{\hyperlink{classphysapi_1_1_p_random}{P\+Random}} \&}]{rnd\+Mng }\end{DoxyParamCaption})}
+
+
+
+Get a Random Index of a sequence of probabilities using a Montecarlo approach. 
+
+This is based on Pozdnyakov page 305
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ type of the sequence \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & -\/ sequence of probabilities, the sum of all elements of the sequence must be 1, ie the sequence must be normalize before using this function. \\
+\hline
+{\em rnd\+Mng} & -\/ random number generator reference of type \mbox{\hyperlink{classphysapi_1_1_p_random}{P\+Random}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+phys\+\_\+size -\/ random index of the sequence. It returns -\/1 if it was not possible to obtain any index. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file montecarlo\+\_\+utils.\+hpp.
+
+Here is the call graph for this function\+:
+% FIG 3
