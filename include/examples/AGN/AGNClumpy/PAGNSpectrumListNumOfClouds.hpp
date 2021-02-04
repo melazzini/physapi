@@ -5,7 +5,7 @@
 namespace agn
 {
     template <phys_size N_intervals>
-    class PAGNSpectrumListNumOfClouds
+    class PAGNSpectrumComponentsListNumOfClouds
     {
     private:
         phys_float m_zenith;
@@ -17,19 +17,19 @@ namespace agn
         phys_float m_angularInterval;
         t_clouds m_clouds;
         std::vector<t_clouds> m_cloudsVector;
-        std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> m_spectrumList;
+        std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> m_fullSpectrumList;
 
     public:
-        PAGNSpectrumListNumOfClouds(phys_float zenithAngle,
-                                    phys_float E_low,
-                                    phys_float E_upp,
-                                    const std::string cloudsFile,
-                                    phys_float cloudsRadius,
-                                    eSpectrumScale scale = eSpectrumScale::LIN,
-                                    phys_float angularInterval = 10.0_deg) : m_zenith{zenithAngle}, m_E_low{E_low}, m_E_upp{E_upp},
-                                                                             m_cloudsFile{cloudsFile}, m_cloudsRadius{cloudsRadius},
-                                                                             m_scale{scale}, m_angularInterval{angularInterval},
-                                                                             m_clouds{}
+        PAGNSpectrumComponentsListNumOfClouds(phys_float zenithAngle,
+                                              phys_float E_low,
+                                              phys_float E_upp,
+                                              const std::string cloudsFile,
+                                              phys_float cloudsRadius,
+                                              eSpectrumScale scale = eSpectrumScale::LIN,
+                                              phys_float angularInterval = 10.0_deg) : m_zenith{zenithAngle}, m_E_low{E_low}, m_E_upp{E_upp},
+                                                                                       m_cloudsFile{cloudsFile}, m_cloudsRadius{cloudsRadius},
+                                                                                       m_scale{scale}, m_angularInterval{angularInterval},
+                                                                                       m_clouds{}
         {
             loadClouds();
         }
@@ -41,8 +41,11 @@ namespace agn
                                          cloudCoordinates[2]}); //z
         }
 
-        std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>>
-        spectrumLists(const std::vector<std::string> &photonsFiles)
+        void
+        spectrumLists(const std::vector<std::string> &photonsFiles,
+                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &fullSpectrumList,
+                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &reflectedSpectrumList,
+                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &transmittedSpectrumList)
         {
             phys_float minPhi = Pi / 2 - (m_zenith + m_angularInterval);
             phys_float maxPhi = Pi / 2 - m_zenith;
@@ -77,15 +80,47 @@ namespace agn
                     if (checkRangeInclusive(minPhi, std::abs(phi), maxPhi)) // && (type < 1.5))
                     {
                         auto numOfClouds = (phys_size(type) == 0) ? 0 : countClouds(theta, phi);
-                        if (m_spectrumList.find(numOfClouds) != m_spectrumList.end())
+
+                        // full spectrum
+                        if (fullSpectrumList.find(numOfClouds) != fullSpectrumList.end())
                         {
-                            m_spectrumList[numOfClouds]->addPhoton(energy);
+                            fullSpectrumList[numOfClouds]->addPhoton(energy);
                         }
                         else
                         {
-                            m_spectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
+                            fullSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
                                 m_E_low, m_E_upp, m_scale);
-                            m_spectrumList[numOfClouds]->addPhoton(energy);
+                            fullSpectrumList[numOfClouds]->addPhoton(energy);
+                        }
+
+                        // reflected spectrum
+                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTED)
+                        {
+                            if (reflectedSpectrumList.find(numOfClouds) != reflectedSpectrumList.end())
+                            {
+                                reflectedSpectrumList[numOfClouds]->addPhoton(energy);
+                            }
+                            else
+                            {
+                                reflectedSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
+                                    m_E_low, m_E_upp, m_scale);
+                                reflectedSpectrumList[numOfClouds]->addPhoton(energy);
+                            }
+                        }
+
+                        // transmitted spectrum
+                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::INTRINSIC || eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY)
+                        {
+                            if (transmittedSpectrumList.find(numOfClouds) != transmittedSpectrumList.end())
+                            {
+                                transmittedSpectrumList[numOfClouds]->addPhoton(energy);
+                            }
+                            else
+                            {
+                                transmittedSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
+                                    m_E_low, m_E_upp, m_scale);
+                                transmittedSpectrumList[numOfClouds]->addPhoton(energy);
+                            }
                         }
                     }
                     numOfPhotonsProcessed++;
@@ -93,8 +128,6 @@ namespace agn
                 fin.clear();
                 fin.close();
             }
-
-            return std::move(m_spectrumList);
         }
 
     private:
@@ -148,7 +181,7 @@ namespace agn
 
             for (phys_size i = 0; i < m_cloudsVector.size() - 1; i++)
             {
-                threads.push_back(std::thread(&PAGNSpectrumListNumOfClouds::countAlgorithm, this, std::ref(dir),
+                threads.push_back(std::thread(&PAGNSpectrumComponentsListNumOfClouds::countAlgorithm, this, std::ref(dir),
                                               i,
                                               std::ref(numOfCloudsVector[i])));
             }
