@@ -7,7 +7,10 @@ namespace agn
 	/**
 	 * @brief This class represents a smooth torus agn structure model.
 	 *
-	 * @ingroup agnsmooth
+	 * This class represents an AGN with a smooth isotropic toroidal structure with a given
+	 * column density \f$ N_H \f$.
+	 * 
+	 * @ingroup agn
 	 */
 	class PAGNSmoothTorusModel :public PAGNSmoothStructureModelB
 	{
@@ -19,7 +22,7 @@ namespace agn
 
 	public:
 		/**
-		 * Constructs a smooth torus agn structure model.
+		 * @brief Constructs a smooth torus agn structure model.
 		 *
 		 * \param torus geomtry
 		 * \param N_H average column density
@@ -27,7 +30,7 @@ namespace agn
 		PAGNSmoothTorusModel(const PSimpleTorus& torus, phys_float N_H);
 
 		/**
-		 * Get the distance to the next boundary inside the agn.
+		 * @brief Get the distance to the next boundary inside the agn.
 		 *
 		 * \param position reference point
 		 * \param direction direction of the trajectory
@@ -36,7 +39,7 @@ namespace agn
 		virtual std::optional<phys_float> distanceToBoundary(const PPosition& position, const PVector3D& direction) const override;
 
 		/**
-		 * Get the distance to the next entering point to the agn.
+		 * @brief Get the distance to the next entering point to the agn.
 		 *
 		 * \param position reference point
 		 * \param direction direction of the trajectory
@@ -45,14 +48,14 @@ namespace agn
 		virtual std::optional<phys_float> distanceToEnteringPoint(const PPosition& position, const PVector3D& direction) const override;
 
 		/**
-		 * Get the equatorial half effective size.
+		 * @brief Get the equatorial half effective size.
 		 *
 		 * \return the equatorial half effective size
 		 */
 		virtual phys_float equatorialEffectiveHalfSize() const override;
 
 		/**
-		 * Check if the given point is inside the agn structure.
+		 * @brief Check if the given point is inside the agn structure.
 		 *
 		 * \param position point's position
 		 * \return true if the point is inside, else false
@@ -60,9 +63,9 @@ namespace agn
 		virtual phys_bool isInside(const PPosition& position) const override;
 
 		/**
-		 * Get the concentration of Hydrogen.
+		 * @brief Get the concentration of Hydrogen.
 		 *
-		 * \return the concentration of Hidrogen
+		 * \return the concentration of Hydrogen
 		 */
 		virtual phys_float n_H() const override;
 

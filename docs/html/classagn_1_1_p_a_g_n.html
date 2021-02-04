@@ -128,18 +128,57 @@ Public Member Functions</h2></td></tr>
 <p>To be able to use the class:</p>
 <ol type="1">
 <li>Design your structure model(geometry+internal structure) based on <a class="el" href="classagn_1_1_p_a_g_n_structure_model_b.html">PAGNStructureModelB</a>. For example a simple clumpy torus.</li>
-<li>Create your simulation team based on <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</li>
+</ol>
+<p>Create your simulation team based on <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html" title="This class represents a team of objects that handle the AGN X-Ray simulation.">PAGNSimulationTeamB</a>.</p><ol type="1">
 <li>Create the factory, which builds simulation team. To do this use the class <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_factory.html">PAGNSimulationTeamFactory</a>.</li>
-<li>Define your model's spectral formula based on <a class="el" href="classagn_1_1_p_a_g_n_formula.html">PAGNFormula</a>.</li>
+<li>Define your model's spectral formula based on <a class="el" href="classagn_1_1_p_a_g_n_formula.html" title="This class represents an AGN spectral formula.">PAGNFormula</a>.</li>
 <li>If you want to have your photons created under some specific angular interval, then derive your filter from <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html" title="This functor filters the initial directions of the photons generated in the simulation.">PAGNInitSpectrumDirectionFilter</a>.</li>
 </ol>
-<dl class="section note"><dt>Note</dt><dd>Think of your simulation team as the group(for each thread) of internal objects, that handle different aspects of the simulation. For example photo-absorption, tracking the photons on their trajectory until they get registered, etc. For more information see <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</dd>
+<dl class="section note"><dt>Note</dt><dd>Think of your simulation team as the group(for each thread) of internal objects, that handle different aspects of the simulation. For example photo-absorption, tracking the photons on their trajectory until they get registered, etc. For more information see <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html" title="This class represents a team of objects that handle the AGN X-Ray simulation.">PAGNSimulationTeamB</a>.</dd>
 <dd>
-Note that we have already implemented an example of a simulation team with the corresponding simulation algorithm which can be used very easily, and you are only required to implement one protected function. For more information please refer to <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html">PAGNSimulationTeamB</a>.</dd>
+Note that we have already implemented an example of a simulation team with the corresponding simulation algorithm which can be used very easily, and you are only required to implement one protected function. For more information please refer to <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html" title="This class represents a team of objects that handle the AGN X-Ray simulation.">PAGNSimulationTeamB</a>.</dd>
 <dd>
-The use of a factory to instantiate your simulation team class makes the model more flexible and separates the logic, and this is why we've chosen this approach. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_8hpp_source.html#l00048">48</a> of file <a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>.</p>
+The use of a factory to instantiate your simulation team class makes the model more flexible and separates the logic, and this is why we've chosen this approach.</dd></dl>
+<p>The following piece of code shows how we you can model an agn with a smooth simple toroidal structure.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include&lt;string_view&gt;</span></div>
+<div class="line"><span class="preprocessor">#include&quot;<a class="code" href="_p_a_g_n_simulation_team_factory_builder_8hpp.html">PAGNSimulationTeamFactoryBuilder.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include&quot;<a class="code" href="_p_a_g_n_8hpp.html">PAGN.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include&quot;<a class="code" href="_p_a_g_n_smooth_torus_8model_8hpp.html">PAGNSmoothTorus.model.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include&quot;<a class="code" href="_p_a_g_n_simple_torus_direction_filter_8hpp.html">PAGNSimpleTorusDirectionFilter.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacephysapi.html">physapi</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceagn.html">agn</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"> </div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a916108029210bca24cd432b99633c6ea">E_low</a> = 100.0;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a71d94e894daa894dc5c4b3f6445d9c77">E_upp</a> = 300.0E3;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a> = 1.0_eVToKelvin;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#ae28e7d77b355696b808b02d9f275701b">TORUS_R1</a> = 1.0E14_cm;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a79cf154ee3d6afbf0d3772e2270114dd">TORUS_R2</a> = 1.0E15_cm;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a> = 60.0_deg;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a> = 1.0E24 / 1.0_cm2;</div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a4175591337448b7509777a1e0188fbae">N_aver</a> = 3;             <span class="comment">//average number of clouds along the line of sight</span></div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a43a01a98cfb0456d4147a9bbff67f029">phi</a> = 0.03;             <span class="comment">//volume filling factor</span></div>
+<div class="line">constexpr <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="code" href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a> = 50.0E6;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> = <span class="stringliteral">&quot;./results/tests/24/&quot;</span>;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a> = <a class="code" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + <span class="stringliteral">&quot;data/&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="fluorescence_example_8txt.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"> <span class="keyword">auto</span> torusModel{ make_shared&lt;PAGNSmoothTorusModel&gt;(<a class="code" href="classphysapi_1_1_p_simple_torus.html">PSimpleTorus</a>(<a class="code" href="main_8cpp.html#ae28e7d77b355696b808b02d9f275701b">TORUS_R1</a>,<a class="code" href="main_8cpp.html#a79cf154ee3d6afbf0d3772e2270114dd">TORUS_R2</a>,<a class="code" href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a>),<a class="code" href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a>) };</div>
+<div class="line"> <span class="keyword">auto</span> formula{ make_shared&lt;PAGNFormula&gt;(<a class="code" href="main_8cpp.html#a916108029210bca24cd432b99633c6ea">E_low</a>,<a class="code" href="main_8cpp.html#a71d94e894daa894dc5c4b3f6445d9c77">E_upp</a>) };</div>
+<div class="line"> <span class="keyword">auto</span> torusDirFilter{ make_shared&lt;PAGNSimpleTorusDirectionFilter&gt;(<a class="code" href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a>) };</div>
+<div class="line"> </div>
+<div class="line"> <span class="keyword">auto</span> <a class="code" href="namespaceagn.html">agn</a>{ <a class="code" href="classagn_1_1_p_a_g_n.html">PAGN</a>{torusModel,<a class="code" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>,<a class="code" href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a>,<a class="code" href="classagn_1_1_p_a_g_n_simulation_team_factory_builder.html#ae7b5644bbe8e1d10544c0290eaa56e99">PAGNSimulationTeamFactoryBuilder::buildAGNSmoothSimulationTeamFactory</a>(),formula,torusDirFilter} };</div>
+<div class="line"> </div>
+<div class="line"> <a class="code" href="namespaceagn.html">agn</a>.run(<a class="code" href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a>); <span class="comment">// use maximum number of threads</span></div>
+<div class="line"> </div>
+<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_8hpp_source.html#l00090">90</a> of file <a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4b3eeb138bd6785a8cdf2ca2ac782b00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b3eeb138bd6785a8cdf2ca2ac782b00">&#9670;&nbsp;</a></span>PAGN()</h2>
@@ -255,6 +294,29 @@ The use of a factory to instantiate your simulation team class makes the model m
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__core_html_ga6fd9eb8d30db6f33aea7a7aeb4baad80"><div class="ttname"><a href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">physapi::phys_float</a></div><div class="ttdeci">double phys_float</div><div class="ttdoc">Standard floating point type.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00075">utils.hpp:75</a></div></div>
+<div class="ttc" id="a_p_a_g_n_simulation_team_factory_builder_8hpp_html"><div class="ttname"><a href="_p_a_g_n_simulation_team_factory_builder_8hpp.html">PAGNSimulationTeamFactoryBuilder.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_abb4b0a6d956813eb6e9334e335ec2249"><div class="ttname"><a href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a></div><div class="ttdeci">const string PATH_TO_FOLDER</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
+<div class="ttc" id="aclassagn_1_1_p_a_g_n_simulation_team_factory_builder_html_ae7b5644bbe8e1d10544c0290eaa56e99"><div class="ttname"><a href="classagn_1_1_p_a_g_n_simulation_team_factory_builder.html#ae7b5644bbe8e1d10544c0290eaa56e99">agn::PAGNSimulationTeamFactoryBuilder::buildAGNSmoothSimulationTeamFactory</a></div><div class="ttdeci">static std::shared_ptr&lt; PAGNSimulationTeamFactory &gt; buildAGNSmoothSimulationTeamFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_p_a_g_n_simulation_team_factory_builder_8hpp_source.html#l00016">PAGNSimulationTeamFactoryBuilder.hpp:16</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a01be05259e72759343b3bc42e3dcea0e"><div class="ttname"><a href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a></div><div class="ttdeci">constexpr phys_float NUM_OF_PHOTONS</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00022">main.cpp:22</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a79cf154ee3d6afbf0d3772e2270114dd"><div class="ttname"><a href="main_8cpp.html#a79cf154ee3d6afbf0d3772e2270114dd">TORUS_R2</a></div><div class="ttdeci">constexpr phys_float TORUS_R2</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00017">main.cpp:17</a></div></div>
+<div class="ttc" id="anamespaceagn_html"><div class="ttname"><a href="namespaceagn.html">agn</a></div><div class="ttdef"><b>Definition:</b> <a href="agn__utils_8hpp_source.html#l00045">agn_utils.hpp:46</a></div></div>
+<div class="ttc" id="a_p_a_g_n_smooth_torus_8model_8hpp_html"><div class="ttname"><a href="_p_a_g_n_smooth_torus_8model_8hpp.html">PAGNSmoothTorus.model.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae28e7d77b355696b808b02d9f275701b"><div class="ttname"><a href="main_8cpp.html#ae28e7d77b355696b808b02d9f275701b">TORUS_R1</a></div><div class="ttdeci">constexpr phys_float TORUS_R1</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a4d70e7acce9aa65366fd7b2851b0ba30"><div class="ttname"><a href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a></div><div class="ttdeci">constexpr phys_float N_H</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aaf95fa3939e6d7b449d260674263d109"><div class="ttname"><a href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a></div><div class="ttdeci">const string PATH_TO_FOLDER_DATA</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00024">main.cpp:24</a></div></div>
+<div class="ttc" id="aclassphysapi_1_1_p_simple_torus_html"><div class="ttname"><a href="classphysapi_1_1_p_simple_torus.html">physapi::PSimpleTorus</a></div><div class="ttdoc">This class represents a simple torus.</div><div class="ttdef"><b>Definition:</b> <a href="_p_simple_torus_8hpp_source.html#l00019">PSimpleTorus.hpp:20</a></div></div>
+<div class="ttc" id="a_p_a_g_n_simple_torus_direction_filter_8hpp_html"><div class="ttname"><a href="_p_a_g_n_simple_torus_direction_filter_8hpp.html">PAGNSimpleTorusDirectionFilter.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a2f5aec2bda1abbb2d9b4e4c3c14fd006"><div class="ttname"><a href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a></div><div class="ttdeci">constexpr phys_float TORUS_HALFOPENINGANGLE</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a492625c01cb41af46e9284b9fd87700c"><div class="ttname"><a href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a></div><div class="ttdeci">constexpr phys_float T_e</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a71d94e894daa894dc5c4b3f6445d9c77"><div class="ttname"><a href="main_8cpp.html#a71d94e894daa894dc5c4b3f6445d9c77">E_upp</a></div><div class="ttdeci">constexpr phys_float E_upp</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00014">main.cpp:14</a></div></div>
+<div class="ttc" id="a_p_a_g_n_8hpp_html"><div class="ttname"><a href="_p_a_g_n_8hpp.html">PAGN.hpp</a></div></div>
+<div class="ttc" id="afluorescence_example_8txt_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="fluorescence_example_8txt.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="fluorescence_example_8txt_source.html#l00016">fluorescenceExample.txt:16</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a916108029210bca24cd432b99633c6ea"><div class="ttname"><a href="main_8cpp.html#a916108029210bca24cd432b99633c6ea">E_low</a></div><div class="ttdeci">constexpr phys_float E_low</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a43a01a98cfb0456d4147a9bbff67f029"><div class="ttname"><a href="main_8cpp.html#a43a01a98cfb0456d4147a9bbff67f029">phi</a></div><div class="ttdeci">constexpr phys_float phi</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00021">main.cpp:21</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a4175591337448b7509777a1e0188fbae"><div class="ttname"><a href="main_8cpp.html#a4175591337448b7509777a1e0188fbae">N_aver</a></div><div class="ttdeci">constexpr phys_float N_aver</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
+<div class="ttc" id="aclassagn_1_1_p_a_g_n_html"><div class="ttname"><a href="classagn_1_1_p_a_g_n.html">agn::PAGN</a></div><div class="ttdoc">This class represents an AGN x-ray spectral model(agn model).</div><div class="ttdef"><b>Definition:</b> <a href="_p_a_g_n_8hpp_source.html#l00090">PAGN.hpp:91</a></div></div>
+<div class="ttc" id="anamespacephysapi_html"><div class="ttname"><a href="namespacephysapi.html">physapi</a></div><div class="ttdef"><b>Definition:</b> <a href="astrophysics__utils_8hpp_source.html#l00013">astrophysics_utils.hpp:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

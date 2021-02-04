@@ -28,13 +28,13 @@ namespace agn
 		if (m_id == 0)
 		{
 
-			std::cout << "Simulation team created(main thread)!" << std::endl;
+			//std::cout << "Simulation team created(main thread)!" << std::endl;
 			std::cout << "number of photons per thread (main thread):  " << m_initSpectrum.count() << std::endl;
 		}
-		else
+		/*else
 		{
 			std::cout << "New thread created, with id:	" << m_id << std::endl;
-		}
+		}*/
 	}
 
 	void PAGNSimulationTeamB::run(std::string_view pathToStorageFolder)

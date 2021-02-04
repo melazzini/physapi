@@ -111,15 +111,12 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 <p>This example shows how to use the fluorescence simulator object.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;omp.h&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &quot;<a class="el" href="_p_a_g_n_simulation_team_factory_builder_8hpp_source.html">PAGNSimulationTeamFactoryBuilder.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_p_a_g_n_8hpp_source.html">PAGN.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_p_a_g_n_smooth_sphere_model_8hpp_source.html">PAGNSmoothSphereModel.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_p_a_g_n_clumpy_torus_model_8hpp_source.html">PAGNClumpyTorusModel.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_p_a_g_n_smooth_torus_8model_8hpp_source.html">PAGNSmoothTorus.model.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>&quot;</code><br />
-<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &quot;<a class="el" href="_p_flux_per_energy_interval_maker_8hpp_source.html">PFluxPerEnergyIntervalMaker.hpp</a>&quot;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -136,26 +133,26 @@ Variables</h2></td></tr>
 <tr class="separator:a71d94e894daa894dc5c4b3f6445d9c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492625c01cb41af46e9284b9fd87700c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a> = 1.0_eVToKelvin</td></tr>
 <tr class="separator:a492625c01cb41af46e9284b9fd87700c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ab395a2fd66a82aa34496d366f7bbb8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6ab395a2fd66a82aa34496d366f7bbb8">SPHERE_R</a> = 1.0E15_cm</td></tr>
-<tr class="separator:a6ab395a2fd66a82aa34496d366f7bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28e7d77b355696b808b02d9f275701b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae28e7d77b355696b808b02d9f275701b">TORUS_R1</a> = 1.0E14_cm</td></tr>
 <tr class="separator:ae28e7d77b355696b808b02d9f275701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79cf154ee3d6afbf0d3772e2270114dd"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a79cf154ee3d6afbf0d3772e2270114dd">TORUS_R2</a> = 1.0E15_cm</td></tr>
 <tr class="separator:a79cf154ee3d6afbf0d3772e2270114dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5aec2bda1abbb2d9b4e4c3c14fd006"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2f5aec2bda1abbb2d9b4e4c3c14fd006">TORUS_HALFOPENINGANGLE</a> = 60.0_deg</td></tr>
 <tr class="separator:a2f5aec2bda1abbb2d9b4e4c3c14fd006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a> = 1.0E23 / 1.0_cm2</td></tr>
+<tr class="memitem:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4d70e7acce9aa65366fd7b2851b0ba30">N_H</a> = 1.0E24 / 1.0_cm2</td></tr>
 <tr class="separator:a4d70e7acce9aa65366fd7b2851b0ba30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4175591337448b7509777a1e0188fbae"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4175591337448b7509777a1e0188fbae">N_aver</a> = 3</td></tr>
 <tr class="separator:a4175591337448b7509777a1e0188fbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43a01a98cfb0456d4147a9bbff67f029"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a43a01a98cfb0456d4147a9bbff67f029">phi</a> = 0.03</td></tr>
 <tr class="separator:a43a01a98cfb0456d4147a9bbff67f029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01be05259e72759343b3bc42e3dcea0e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a> = 50.0E6</td></tr>
+<tr class="memitem:a01be05259e72759343b3bc42e3dcea0e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a01be05259e72759343b3bc42e3dcea0e">NUM_OF_PHOTONS</a> = 200.0E6</td></tr>
 <tr class="separator:a01be05259e72759343b3bc42e3dcea0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4b0a6d956813eb6e9334e335ec2249"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> = &quot;./results/tests/23_3_03/&quot;</td></tr>
+<tr class="memitem:abb4b0a6d956813eb6e9334e335ec2249"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> = &quot;./results/tests/24/&quot;</td></tr>
 <tr class="separator:abb4b0a6d956813eb6e9334e335ec2249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf95fa3939e6d7b449d260674263d109"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a> = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data_50_1/&quot;</td></tr>
+<tr class="memitem:aaf95fa3939e6d7b449d260674263d109"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aaf95fa3939e6d7b449d260674263d109">PATH_TO_FOLDER_DATA</a> = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data/&quot;</td></tr>
 <tr class="separator:aaf95fa3939e6d7b449d260674263d109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4614fe242cd245f7f9361a94d4dc25c9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4614fe242cd245f7f9361a94d4dc25c9">NUM_OF_INTERVALS</a> = 2000</td></tr>
+<tr class="separator:a4614fe242cd245f7f9361a94d4dc25c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This example shows how to use the fluorescence simulator object. </p>
@@ -179,7 +176,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00030">30</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00027">27</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -204,7 +201,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00013">13</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,7 +225,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00017">17</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00014">14</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +249,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00024">24</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00020">20</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +263,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> N_H = 1.0E23 / 1.0_cm2</td>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> N_H = 1.0E24 / 1.0_cm2</td>
         </tr>
       </table>
   </td>
@@ -276,7 +273,31 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00023">23</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4614fe242cd245f7f9361a94d4dc25c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4614fe242cd245f7f9361a94d4dc25c9">&#9670;&nbsp;</a></span>NUM_OF_INTERVALS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> NUM_OF_INTERVALS = 2000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00025">25</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +311,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> NUM_OF_PHOTONS = 50.0E6</td>
+          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> NUM_OF_PHOTONS = 200.0E6</td>
         </tr>
       </table>
   </td>
@@ -300,7 +321,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00026">26</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00022">22</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,12 +332,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string PATH_TO_FOLDER = &quot;./results/tests/23_3_03/&quot;</td>
+          <td class="memname">const string PATH_TO_FOLDER = &quot;./results/tests/24/&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00027">27</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00023">23</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -327,12 +348,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string PATH_TO_FOLDER_DATA = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data_50_1/&quot;</td>
+          <td class="memname">const string PATH_TO_FOLDER_DATA = <a class="el" href="main_8cpp.html#abb4b0a6d956813eb6e9334e335ec2249">PATH_TO_FOLDER</a> + &quot;data/&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00028">28</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00024">24</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,31 +377,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00025">25</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a6ab395a2fd66a82aa34496d366f7bbb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ab395a2fd66a82aa34496d366f7bbb8">&#9670;&nbsp;</a></span>SPHERE_R</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> SPHERE_R = 1.0E15_cm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +401,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00015">15</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -428,7 +425,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00022">22</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -452,7 +449,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00020">20</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -476,7 +473,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00017">17</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

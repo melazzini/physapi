@@ -5,7 +5,11 @@
 
 namespace agn
 {
-
+	/**
+	 * @brief This class defines different static functions to create simulation builders.
+	 * 
+	 * @ingroup agn
+	 */
 	class PAGNSimulationTeamFactoryBuilder
 	{
 	public:

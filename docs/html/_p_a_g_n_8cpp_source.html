@@ -137,69 +137,71 @@ $(document).ready(function(){initNavTree('_p_a_g_n_8cpp_source.html',''); initRe
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::vector&lt;std::thread&gt; threads;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a> = MAINTHREAD_ID + 1; <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a> &lt; trueNumOfThreads; <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a>++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            threads.push_back(std::thread(&amp;PAGN::createSimulationThread, <span class="keyword">this</span>, <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a>, photonsPerThread, pathToStorageFolder));</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        createSimulationThread(MAINTHREAD_ID, photonsPerThread, pathToStorageFolder);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Number Of Threads In The Simulation:  &quot;</span> &lt;&lt; trueNumOfThreads &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a> = MAINTHREAD_ID + 1; <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a> &lt; trueNumOfThreads; <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a>++)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            threads.push_back(std::thread(&amp;PAGN::createSimulationThread, <span class="keyword">this</span>, <a class="code" href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">i</a>, photonsPerThread, pathToStorageFolder));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; thread_i : threads)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (thread_i.joinable())</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                thread_i.join();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> PAGN::initTables()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        m_abundances = std::make_shared&lt;PAbundanceTable&gt;();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        initVernerTable1();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        initVernerTable2();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        m_fluorescences = std::make_shared&lt;PFluorescenceTable&gt;(*m_abundances);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> PAGN::initVernerTable1()</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// this configurator object handles the verner table1 proper configuration.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// the order of elements in that table is not well suited for our algorithms</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// that is why we need to tacle that issue and set an order with the quantum numbers.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// this object handle that issue</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        PVernerTable1Hnd config;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// ProcessTable can load data with special configuration requirements, in this case</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// the requirement is that the elements in verner table 1 will be properly ordered</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// when they get loaded into the table object. Thus, handler1 will handle that issue</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        PProcessTable&lt;t_vernertable1Key, t_vernertable1Value, VERNERTABLE1_COLS, PLoadVernerTable1&gt; handler1{ <span class="stringliteral">&quot;./include/astrophysics/tables/vernertable1.txt&quot;</span>, config };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// This selector will filter out the elements that aren&#39;t neutral</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        PSelectorVernerTable1 f;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        m_vernerTable1 = std::make_shared&lt;PVernerTable1&gt;(*m_abundances);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        createSimulationThread(MAINTHREAD_ID, photonsPerThread, pathToStorageFolder);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; thread_i : threads)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (thread_i.joinable())</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                thread_i.join();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> PAGN::initTables()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_abundances = std::make_shared&lt;PAbundanceTable&gt;();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        initVernerTable1();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        initVernerTable2();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        m_fluorescences = std::make_shared&lt;PFluorescenceTable&gt;(*m_abundances);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> PAGN::initVernerTable1()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// this configurator object handles the verner table1 proper configuration.</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// the order of elements in that table is not well suited for our algorithms</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// that is why we need to tacle that issue and set an order with the quantum numbers.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// this object handle that issue</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        PVernerTable1Hnd config;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// ProcessTable can load data with special configuration requirements, in this case</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// the requirement is that the elements in verner table 1 will be properly ordered</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// when they get loaded into the table object. Thus, handler1 will handle that issue</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        PProcessTable&lt;t_vernertable1Key, t_vernertable1Value, VERNERTABLE1_COLS, PLoadVernerTable1&gt; handler1{ <span class="stringliteral">&quot;./include/astrophysics/tables/vernertable1.txt&quot;</span>, config };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// This selector will filter out the elements that aren&#39;t neutral</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        PSelectorVernerTable1 f;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// now we can load up(in a special way) the verner table 1 object </span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        handler1(*m_vernerTable1, f, *m_abundances);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> PAGN::initVernerTable2()</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        m_vernerTable2 = std::make_shared&lt;PVernerTable2&gt;(*m_abundances);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// verner table 2 does not has any special requirements, other than the existence</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// of the elements, that is determined by the abundace table, this is why we use</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">// the loadFromFile() function directly to load the elements of verner table 2.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        loadFromFile&lt;VERNERTABLE2_COLS&gt;(<a class="code" href="namespacephysapi.html#a424a104b470fdeaaf99060d276402b0a">DEFAULT_FILE_PATH_VERNERTABLE2</a>, *m_vernerTable2);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> PAGN::createSimulationThread(<a class="code" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> <span class="keywordtype">id</span>, <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numOfPhotons, std::string_view pathToStorageFolder)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">auto</span> simulationTeam{ m_simulationTeamFactory-&gt;buildSimulationTeam(m_structureModel,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                                        m_vernerTable1,m_vernerTable2,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                                        m_fluorescences, m_abundances,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                                        <span class="keywordtype">id</span>, numOfPhotons, m_n_e, m_T_e,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                                                        m_formula, m_initSpectrumDirFilter) };</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        simulationTeam-&gt;run(pathToStorageFolder);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}<span class="comment">// namespace agn</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        m_vernerTable1 = std::make_shared&lt;PVernerTable1&gt;(*m_abundances);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// now we can load up(in a special way) the verner table 1 object </span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        handler1(*m_vernerTable1, f, *m_abundances);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> PAGN::initVernerTable2()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        m_vernerTable2 = std::make_shared&lt;PVernerTable2&gt;(*m_abundances);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">// verner table 2 does not has any special requirements, other than the existence</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// of the elements, that is determined by the abundace table, this is why we use</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// the loadFromFile() function directly to load the elements of verner table 2.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        loadFromFile&lt;VERNERTABLE2_COLS&gt;(<a class="code" href="namespacephysapi.html#a424a104b470fdeaaf99060d276402b0a">DEFAULT_FILE_PATH_VERNERTABLE2</a>, *m_vernerTable2);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> PAGN::createSimulationThread(<a class="code" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> <span class="keywordtype">id</span>, <a class="code" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> numOfPhotons, std::string_view pathToStorageFolder)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">auto</span> simulationTeam{ m_simulationTeamFactory-&gt;buildSimulationTeam(m_structureModel,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                                        m_vernerTable1,m_vernerTable2,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                                                        m_fluorescences, m_abundances,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                                        <span class="keywordtype">id</span>, numOfPhotons, m_n_e, m_T_e,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                                        m_formula, m_initSpectrumDirFilter) };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        simulationTeam-&gt;run(pathToStorageFolder);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}<span class="comment">// namespace agn</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__core_html_ga6fd9eb8d30db6f33aea7a7aeb4baad80"><div class="ttname"><a href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">physapi::phys_float</a></div><div class="ttdeci">double phys_float</div><div class="ttdoc">Standard floating point type.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00075">utils.hpp:75</a></div></div>
@@ -208,7 +210,7 @@ $(document).ready(function(){initNavTree('_p_a_g_n_8cpp_source.html',''); initRe
 <div class="ttc" id="agroup__core_html_ga3958628b70224fbb8e9412786048e633"><div class="ttname"><a href="group__core.html#ga3958628b70224fbb8e9412786048e633">physapi::phys_size</a></div><div class="ttdeci">size_t phys_size</div><div class="ttdoc">Standard index type.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8hpp_source.html#l00103">utils.hpp:103</a></div></div>
 <div class="ttc" id="anamespacephysapi_html_a424a104b470fdeaaf99060d276402b0a"><div class="ttname"><a href="namespacephysapi.html#a424a104b470fdeaaf99060d276402b0a">physapi::DEFAULT_FILE_PATH_VERNERTABLE2</a></div><div class="ttdeci">const std::string DEFAULT_FILE_PATH_VERNERTABLE2</div><div class="ttdef"><b>Definition:</b> <a href="verner__utils_8hpp_source.html#l00150">verner_utils.hpp:150</a></div></div>
 <div class="ttc" id="anamespacephysapi_html_a97d80935485eacb3cd8b9bcc70baeb9e"><div class="ttname"><a href="namespacephysapi.html#a97d80935485eacb3cd8b9bcc70baeb9e">physapi::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="_p_verner_8cpp_source.html#l00088">PVerner.cpp:88</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a492625c01cb41af46e9284b9fd87700c"><div class="ttname"><a href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a></div><div class="ttdeci">constexpr phys_float T_e</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a492625c01cb41af46e9284b9fd87700c"><div class="ttname"><a href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a></div><div class="ttdeci">constexpr phys_float T_e</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
 <div class="ttc" id="a_p_a_g_n_8hpp_html"><div class="ttname"><a href="_p_a_g_n_8hpp.html">PAGN.hpp</a></div></div>
 <div class="ttc" id="aclassagn_1_1_p_a_g_n_html_a4b3eeb138bd6785a8cdf2ca2ac782b00"><div class="ttname"><a href="classagn_1_1_p_a_g_n.html#a4b3eeb138bd6785a8cdf2ca2ac782b00">agn::PAGN::PAGN</a></div><div class="ttdeci">PAGN(const std::shared_ptr&lt; PAGNStructureModelB &gt; structureModel, phys_float T_e, phys_float numOfPhotos, const std::shared_ptr&lt; PAGNSimulationTeamFactory &gt; simulationTeamFactory, const std::shared_ptr&lt; PAGNFormula &gt; agnformula, const std::shared_ptr&lt; PAGNInitSpectrumDirectionFilter &gt; initSpectrumDirFilter=std::make_shared&lt; PAGNInitSpectrumDirectionFilter &gt;())</div><div class="ttdoc">Constructs an agn x-ray spectral model.</div><div class="ttdef"><b>Definition:</b> <a href="_p_a_g_n_8cpp_source.html#l00006">PAGN.cpp:6</a></div></div>
 <div class="ttc" id="aclassagn_1_1_p_a_g_n_html_aaf3db1ef7c4e6325d920f8b645f0d330"><div class="ttname"><a href="classagn_1_1_p_a_g_n.html#aaf3db1ef7c4e6325d920f8b645f0d330">agn::PAGN::run</a></div><div class="ttdeci">void run(std::string_view PathToFolder, eNumOfThreads numOfThreads=eNumOfThreads::MAX)</div><div class="ttdoc">Run the simulation of the agn x-ray spectral model.</div><div class="ttdef"><b>Definition:</b> <a href="_p_a_g_n_8cpp_source.html#l00018">PAGN.cpp:18</a></div></div>

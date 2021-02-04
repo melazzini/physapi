@@ -31,6 +31,8 @@ namespace agn
 
 		std::vector<std::thread> threads;
 
+		std::cout << "Number Of Threads In The Simulation:	" << trueNumOfThreads << std::endl;
+
 		for (phys_size i = MAINTHREAD_ID + 1; i < trueNumOfThreads; i++)
 		{
 			threads.push_back(std::thread(&PAGN::createSimulationThread, this, i, photonsPerThread, pathToStorageFolder));

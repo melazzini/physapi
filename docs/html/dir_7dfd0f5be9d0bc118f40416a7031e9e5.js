@@ -12,7 +12,5 @@ var dir_7dfd0f5be9d0bc118f40416a7031e9e5 =
     [ "PAGNSmoothStructureModelB.hpp", "_p_a_g_n_smooth_structure_model_b_8hpp.html", [
       [ "PAGNSmoothStructureModelB", "classagn_1_1_p_a_g_n_smooth_structure_model_b.html", "classagn_1_1_p_a_g_n_smooth_structure_model_b" ]
     ] ],
-    [ "PAGNSmoothTorus.model.hpp", "_p_a_g_n_smooth_torus_8model_8hpp.html", [
-      [ "PAGNSmoothTorusModel", "classagn_1_1_p_a_g_n_smooth_torus_model.html", "classagn_1_1_p_a_g_n_smooth_torus_model" ]
-    ] ]
+    [ "PAGNSmoothTorus.model.hpp", "_p_a_g_n_smooth_torus_8model_8hpp.html", null ]
 ];

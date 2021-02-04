@@ -72,9 +72,9 @@ var NAVTREEINDEX =
 [
 "___p_m_c_compton_electron_modeler_8cpp.html",
 "astrophysics__utils_8hpp.html#ga3d437f2e32fe084a101460788e49f823",
-"classphysapi_1_1_p_random.html",
-"files.html",
-"main_8cpp.html#a916108029210bca24cd432b99633c6ea"
+"classphysapi_1_1_p_simple_electron.html#a5b9a05c1f956883d1b607cc4e24c93c5",
+"functions_func_g.html",
+"montecarlo__utils_8hpp.html#ga9017f8a6abd1e7a520ac976ed881e87a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

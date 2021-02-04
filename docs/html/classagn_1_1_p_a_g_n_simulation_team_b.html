@@ -103,12 +103,14 @@ $(document).ready(function(){initNavTree('classagn_1_1_p_a_g_n_simulation_team_b
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classagn_1_1_p_a_g_n_simulation_team_b-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">agn::PAGNSimulationTeamB Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">agn::PAGNSimulationTeamB Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__examples.html">Examples</a> &raquo; <a class="el" href="group__agn.html">Agn</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class represents a team of objects that handle the AGN X-Ray simulation.  
+ <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -125,59 +127,30 @@ Inheritance diagram for agn::PAGNSimulationTeamB:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b7fe16bc2b539ebcef935512b7563a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a4b7fe16bc2b539ebcef935512b7563a5">PAGNSimulationTeamB</a> (const std::shared_ptr&lt; <a class="el" href="classphysapi_1_1_p_verner_table1.html">PVernerTable1</a> &gt; vernerTable1, const std::shared_ptr&lt; <a class="el" href="classphysapi_1_1_p_verner_table2.html">PVernerTable2</a> &gt; vernerTable2, const std::shared_ptr&lt; <a class="el" href="classphysapi_1_1_p_fluorescence_table.html">PFluorescenceTable</a> &gt; fluorescenceTable, const std::shared_ptr&lt; <a class="el" href="classphysapi_1_1_p_abundance_table.html">PAbundanceTable</a> &gt; abundances, <a class="el" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a> <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a714c050a466c27983aa8ced38acb2416">id</a>, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a1abcba89591d9825da2c43403d1a5bca">numOfPhotons</a>, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> n_e, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="main_8cpp.html#a492625c01cb41af46e9284b9fd87700c">T_e</a>, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_formula.html">PAGNFormula</a> &gt; agnformula, const std::shared_ptr&lt; <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &gt; initSpectrumDirFilter)</td></tr>
+<tr class="memdesc:a4b7fe16bc2b539ebcef935512b7563a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a simulation team object.  <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#a4b7fe16bc2b539ebcef935512b7563a5">More...</a><br /></td></tr>
 <tr class="separator:a4b7fe16bc2b539ebcef935512b7563a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac731744118677ec55c1f0bd457b3e2ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce">run</a> (std::string_view pathToStorageFolder)</td></tr>
+<tr class="memdesc:ac731744118677ec55c1f0bd457b3e2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation.  <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce">More...</a><br /></td></tr>
 <tr class="separator:ac731744118677ec55c1f0bd457b3e2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a714c050a466c27983aa8ced38acb2416"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga3958628b70224fbb8e9412786048e633">phys_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a714c050a466c27983aa8ced38acb2416">id</a> () const</td></tr>
+<tr class="memdesc:a714c050a466c27983aa8ced38acb2416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the team's id.  <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#a714c050a466c27983aa8ced38acb2416">More...</a><br /></td></tr>
 <tr class="separator:a714c050a466c27983aa8ced38acb2416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1abcba89591d9825da2c43403d1a5bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a1abcba89591d9825da2c43403d1a5bca">numOfPhotons</a> () const</td></tr>
+<tr class="memdesc:a1abcba89591d9825da2c43403d1a5bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of photons in the current team.  <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#a1abcba89591d9825da2c43403d1a5bca">More...</a><br /></td></tr>
 <tr class="separator:a1abcba89591d9825da2c43403d1a5bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a851865f10f78fb14e275d9c2b9446a57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a851865f10f78fb14e275d9c2b9446a57">lambdaMean</a> (<a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> sigmaTotal)</td></tr>
-<tr class="separator:a851865f10f78fb14e275d9c2b9446a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add58db86b5c7abaf7292aa53c9077801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#add58db86b5c7abaf7292aa53c9077801">escapeProbability</a> (<a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2">distanceToBoundary</a>, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a851865f10f78fb14e275d9c2b9446a57">lambdaMean</a>)</td></tr>
-<tr class="separator:add58db86b5c7abaf7292aa53c9077801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aeb5f55fd505a2892205774271124c2"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2">distanceToBoundary</a> (<a class="el" href="classphysapi_1_1_p_simple_photon.html">PSimplePhoton</a> &amp;photon)=0</td></tr>
+<tr class="memdesc:a8aeb5f55fd505a2892205774271124c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the photon inside the agn internal structure and get the distance to closest external boundary.  <a href="classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2">More...</a><br /></td></tr>
 <tr class="separator:a8aeb5f55fd505a2892205774271124c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e6e373f0c9da6e3b223a0a2757f43d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="group__astrophysics.html#ga0a645c2378fec8ef02635c099690b2aa">t_fluorescentLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#aa0e6e373f0c9da6e3b223a0a2757f43d">fluorescentLine</a> (const std::vector&lt; std::array&lt; <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>, ABSORBINGELEMENT_PROPERTIES &gt;&gt; &amp;absorbingElements, <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> sigmaVerner)</td></tr>
-<tr class="separator:aa0e6e373f0c9da6e3b223a0a2757f43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a8a07a9c941e9926b3acc84b6a234f06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_verner.html">PVerner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a8a07a9c941e9926b3acc84b6a234f06d">m_verner</a></td></tr>
-<tr class="separator:a8a07a9c941e9926b3acc84b6a234f06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b8f41a48cb12a11557ecf153457275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_fluorescence_hnd.html">PFluorescenceHnd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a55b8f41a48cb12a11557ecf153457275">m_fluorescenceHnd</a></td></tr>
-<tr class="separator:a55b8f41a48cb12a11557ecf153457275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54d6b15418425f025784839f18b52b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classagn_1_1_p_a_g_n_simulation_mng.html">PAGNSimulationMng</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#ac54d6b15418425f025784839f18b52b2">m_simMng</a></td></tr>
-<tr class="separator:ac54d6b15418425f025784839f18b52b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70d2df74132cf479d443767ec4803b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_spectrum.html">PSpectrum</a>&lt; N_intervals &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a70d2df74132cf479d443767ec4803b1b">m_initSpectrum</a></td></tr>
-<tr class="separator:a70d2df74132cf479d443767ec4803b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa257371d4228106f1c61ed8ca3886b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_random.html">PRandom</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#aa257371d4228106f1c61ed8ca3886b83">m_randomValuesMng</a></td></tr>
-<tr class="separator:aa257371d4228106f1c61ed8ca3886b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe22fc7c70a6e074a9a06d5479d12cd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_random_direction.html">PRandomDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#abe22fc7c70a6e074a9a06d5479d12cd2">m_randDirMng</a></td></tr>
-<tr class="separator:abe22fc7c70a6e074a9a06d5479d12cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212b9ad9d32fb307af2b4ba7720c9c80"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a212b9ad9d32fb307af2b4ba7720c9c80">m_dirFilter</a></td></tr>
-<tr class="separator:a212b9ad9d32fb307af2b4ba7720c9c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6197e53bb6ba1f59f1bb1dc00863c0ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classphysapi_1_1_p_compton_collider.html">PComptonCollider</a>&lt; <a class="el" href="classphysapi_1_1_p_m_c_compton.html">physapi::PMCCompton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a6197e53bb6ba1f59f1bb1dc00863c0ee">m_comptonHnd</a></td></tr>
-<tr class="separator:a6197e53bb6ba1f59f1bb1dc00863c0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d5713d6d6c428032392aaedd56a8259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a6d5713d6d6c428032392aaedd56a8259">m_sigmaVerner</a></td></tr>
-<tr class="separator:a6d5713d6d6c428032392aaedd56a8259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72dcf50dfe9b84fbb786c2c2957eda2a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::array&lt; <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>, ABSORBINGELEMENT_PROPERTIES &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a72dcf50dfe9b84fbb786c2c2957eda2a">m_listOfAbsorbingElements</a></td></tr>
-<tr class="separator:a72dcf50dfe9b84fbb786c2c2957eda2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fcc3e1d9fc213601420d48ee5a3b72f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a2fcc3e1d9fc213601420d48ee5a3b72f">m_sigmaKleinNishina</a></td></tr>
-<tr class="separator:a2fcc3e1d9fc213601420d48ee5a3b72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13c4846990dcb13dc2784861cc45f128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a13c4846990dcb13dc2784861cc45f128">m_sigmaTotal</a></td></tr>
-<tr class="separator:a13c4846990dcb13dc2784861cc45f128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2429bb9fdf7dd0800e8d4b708c4b154e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a2429bb9fdf7dd0800e8d4b708c4b154e">m_lambdaMean</a></td></tr>
-<tr class="separator:a2429bb9fdf7dd0800e8d4b708c4b154e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4695ca860deb20412922b2987af68913"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a4695ca860deb20412922b2987af68913">m_escapeProbability</a></td></tr>
-<tr class="separator:a4695ca860deb20412922b2987af68913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00011">11</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
+<div class="textblock"><p>This class represents a team of objects that handle the AGN X-Ray simulation. </p>
+<p>This class is like an office where you have different workers, where each handles a specific task, and all work together in order to simulate the x-ray spectrum of the given agn. For example: one object handles the calculation of the photo-ionization cross section, other the fluorescence, there is one object, which tracks each photon on its trajectory until it gets registered after leaving the agn, etc.</p>
+<p>This class provides a simple tracking predefined algorithm to simulate x-ray spectrum for a given agn, with an arbitrary internal structure as well as an arbitrary geometric shape. To be able to use this class, you only need to derive from it a child class, and override the protected method distanceToBoundary(&amp;photon), which receives a photon and returns the distance to the next escaping boundary on the photon's path, see <a class="el" href="classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2" title="move the photon inside the agn internal structure and get the distance to closest external boundary.">distanceToBoundary()</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00029">29</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4b7fe16bc2b539ebcef935512b7563a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b7fe16bc2b539ebcef935512b7563a5">&#9670;&nbsp;</a></span>PAGNSimulationTeamB()</h2>
@@ -253,6 +226,23 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a simulation team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vernerTable1</td><td></td></tr>
+    <tr><td class="paramname">vernerTable2</td><td></td></tr>
+    <tr><td class="paramname">fluorescenceTable</td><td></td></tr>
+    <tr><td class="paramname">abundances</td><td></td></tr>
+    <tr><td class="paramname">id</td><td></td></tr>
+    <tr><td class="paramname">numOfPhotons</td><td></td></tr>
+    <tr><td class="paramname">n_e</td><td></td></tr>
+    <tr><td class="paramname">T_e</td><td></td></tr>
+    <tr><td class="paramname">agnformula</td><td></td></tr>
+    <tr><td class="paramname">initSpectrumDirFilter</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html#l00006">6</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html">PAGNSimulationTeamB.cpp</a>.</p>
 
 </div>
@@ -282,83 +272,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>move the photon inside the agn internal structure and get the distance to closest external boundary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">photon</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p>Implemented in <a class="el" href="classagn_1_1_p_a_g_n_clumpy_simulation_team.html#ac34a1368c306ff75648d347a2d3208fe">agn::PAGNClumpySimulationTeam</a>, and <a class="el" href="classagn_1_1_p_a_g_n_smooth_simulation_team.html#ab4f57f961d0476504071f734c0633ba4">agn::PAGNSmoothSimulationTeam</a>.</p>
-
-</div>
-</div>
-<a id="add58db86b5c7abaf7292aa53c9077801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add58db86b5c7abaf7292aa53c9077801">&#9670;&nbsp;</a></span>escapeProbability()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::escapeProbability </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td>
-          <td class="paramname"><em>distanceToBoundary</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td>
-          <td class="paramname"><em>lambdaMean</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00100">100</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa0e6e373f0c9da6e3b223a0a2757f43d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0e6e373f0c9da6e3b223a0a2757f43d">&#9670;&nbsp;</a></span>fluorescentLine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="group__astrophysics.html#ga0a645c2378fec8ef02635c099690b2aa">t_fluorescentLine</a> &gt; agn::PAGNSimulationTeamB::fluorescentLine </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; <a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>, ABSORBINGELEMENT_PROPERTIES &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>absorbingElements</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td>
-          <td class="paramname"><em>sigmaVerner</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html#l00167">167</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html">PAGNSimulationTeamB.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,38 +307,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the team's id.</p>
+
+<p>Get the team's id. </p>
 <dl class="section return"><dt>Returns</dt><dd>team's id </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00055">55</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a851865f10f78fb14e275d9c2b9446a57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a851865f10f78fb14e275d9c2b9446a57">&#9670;&nbsp;</a></span>lambdaMean()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::lambdaMean </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>&#160;</td>
-          <td class="paramname"><em>sigmaTotal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00094">94</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00093">93</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,10 +337,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the number of photons in the current team.</p>
+
+<p>Get the number of photons in the current team. </p>
 <dl class="section return"><dt>Returns</dt><dd>the number of photons in the current team </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00062">62</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00100">100</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,344 +369,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Run the simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathToStorageFolder</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html#l00040">40</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8cpp_source.html">PAGNSimulationTeamB.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6197e53bb6ba1f59f1bb1dc00863c0ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6197e53bb6ba1f59f1bb1dc00863c0ee">&#9670;&nbsp;</a></span>m_comptonHnd</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_compton_collider.html">PComptonCollider</a>&lt;<a class="el" href="classphysapi_1_1_p_m_c_compton.html">physapi::PMCCompton</a>&gt; agn::PAGNSimulationTeamB::m_comptonHnd</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00083">83</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a212b9ad9d32fb307af2b4ba7720c9c80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a212b9ad9d32fb307af2b4ba7720c9c80">&#9670;&nbsp;</a></span>m_dirFilter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html">PAGNInitSpectrumDirectionFilter</a>&amp; agn::PAGNSimulationTeamB::m_dirFilter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00082">82</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4695ca860deb20412922b2987af68913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4695ca860deb20412922b2987af68913">&#9670;&nbsp;</a></span>m_escapeProbability</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::m_escapeProbability</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00090">90</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a55b8f41a48cb12a11557ecf153457275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55b8f41a48cb12a11557ecf153457275">&#9670;&nbsp;</a></span>m_fluorescenceHnd</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_fluorescence_hnd.html">PFluorescenceHnd</a> agn::PAGNSimulationTeamB::m_fluorescenceHnd</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00077">77</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a70d2df74132cf479d443767ec4803b1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70d2df74132cf479d443767ec4803b1b">&#9670;&nbsp;</a></span>m_initSpectrum</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_spectrum.html">PSpectrum</a>&lt;N_intervals&gt; agn::PAGNSimulationTeamB::m_initSpectrum</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00079">79</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2429bb9fdf7dd0800e8d4b708c4b154e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2429bb9fdf7dd0800e8d4b708c4b154e">&#9670;&nbsp;</a></span>m_lambdaMean</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::m_lambdaMean</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00089">89</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a72dcf50dfe9b84fbb786c2c2957eda2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72dcf50dfe9b84fbb786c2c2957eda2a">&#9670;&nbsp;</a></span>m_listOfAbsorbingElements</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::array&lt;<a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a>, ABSORBINGELEMENT_PROPERTIES&gt; &gt; agn::PAGNSimulationTeamB::m_listOfAbsorbingElements</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00086">86</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abe22fc7c70a6e074a9a06d5479d12cd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe22fc7c70a6e074a9a06d5479d12cd2">&#9670;&nbsp;</a></span>m_randDirMng</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_random_direction.html">PRandomDirection</a> agn::PAGNSimulationTeamB::m_randDirMng</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00081">81</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa257371d4228106f1c61ed8ca3886b83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa257371d4228106f1c61ed8ca3886b83">&#9670;&nbsp;</a></span>m_randomValuesMng</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_random.html">PRandom</a> agn::PAGNSimulationTeamB::m_randomValuesMng</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00080">80</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2fcc3e1d9fc213601420d48ee5a3b72f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fcc3e1d9fc213601420d48ee5a3b72f">&#9670;&nbsp;</a></span>m_sigmaKleinNishina</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::m_sigmaKleinNishina</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00087">87</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a13c4846990dcb13dc2784861cc45f128"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13c4846990dcb13dc2784861cc45f128">&#9670;&nbsp;</a></span>m_sigmaTotal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::m_sigmaTotal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00088">88</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6d5713d6d6c428032392aaedd56a8259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d5713d6d6c428032392aaedd56a8259">&#9670;&nbsp;</a></span>m_sigmaVerner</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> agn::PAGNSimulationTeamB::m_sigmaVerner</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00085">85</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac54d6b15418425f025784839f18b52b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac54d6b15418425f025784839f18b52b2">&#9670;&nbsp;</a></span>m_simMng</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classagn_1_1_p_a_g_n_simulation_mng.html">PAGNSimulationMng</a> agn::PAGNSimulationTeamB::m_simMng</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00078">78</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8a07a9c941e9926b3acc84b6a234f06d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a07a9c941e9926b3acc84b6a234f06d">&#9670;&nbsp;</a></span>m_verner</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classphysapi_1_1_p_verner.html">PVerner</a> agn::PAGNSimulationTeamB::m_verner</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html#l00076">76</a> of file <a class="el" href="_p_a_g_n_simulation_team_b_8hpp_source.html">PAGNSimulationTeamB.hpp</a>.</p>
 
 </div>
 </div>

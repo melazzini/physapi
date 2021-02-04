@@ -5,13 +5,40 @@ var group__agn =
       [ "PAGNSpectrumZenith", "classagn_1_1_p_a_g_n_spectrum_zenith.html#a79432215eef2cb29f15835a8ab665a62", null ],
       [ "loadElement", "classagn_1_1_p_a_g_n_spectrum_zenith.html#a80f4964b24dfd7e91f069ba3385dac98", null ]
     ] ],
+    [ "PAGNSmoothTorusModel", "classagn_1_1_p_a_g_n_smooth_torus_model.html", [
+      [ "PAGNSmoothTorusModel", "classagn_1_1_p_a_g_n_smooth_torus_model.html#a337408f844484353d04c2dd0d51715f6", null ],
+      [ "distanceToBoundary", "classagn_1_1_p_a_g_n_smooth_torus_model.html#a51d41fbe24184640a2653af5b95c3b75", null ],
+      [ "distanceToEnteringPoint", "classagn_1_1_p_a_g_n_smooth_torus_model.html#a9ce6ebecbbd725067308412d1762aee8", null ],
+      [ "equatorialEffectiveHalfSize", "classagn_1_1_p_a_g_n_smooth_torus_model.html#a2eac8ac8cd6cab04bace64f9959cef53", null ],
+      [ "isInside", "classagn_1_1_p_a_g_n_smooth_torus_model.html#a5df3c55e4af94f2393547b4729d3ab1c", null ],
+      [ "n_H", "classagn_1_1_p_a_g_n_smooth_torus_model.html#addffc581cf6804d605afbd8a39a0230c", null ]
+    ] ],
     [ "PAGN", "classagn_1_1_p_a_g_n.html", [
       [ "PAGN", "classagn_1_1_p_a_g_n.html#a4b3eeb138bd6785a8cdf2ca2ac782b00", null ],
       [ "run", "classagn_1_1_p_a_g_n.html#aaf3db1ef7c4e6325d920f8b645f0d330", null ]
     ] ],
+    [ "PAGNFormula", "classagn_1_1_p_a_g_n_formula.html", [
+      [ "PAGNFormula", "classagn_1_1_p_a_g_n_formula.html#a69c1c95336ab1c62689013235274d895", null ],
+      [ "E_cut", "classagn_1_1_p_a_g_n_formula.html#acd0a48b4150c6f45cb925713c1a8c496", null ],
+      [ "E_low", "classagn_1_1_p_a_g_n_formula.html#a66ea13d17e395af5bc222118049170f0", null ],
+      [ "gamma", "classagn_1_1_p_a_g_n_formula.html#ad7bc42cafce94a15a84f264ea4b4a269", null ],
+      [ "operator()", "classagn_1_1_p_a_g_n_formula.html#a6b91f9980b80432ab5140efc3e0319e7", null ]
+    ] ],
     [ "PAGNInitSpectrumDirectionFilter", "classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html", [
       [ "operator()", "classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html#a40afa431660dc60e19a0b5643285b5b2", null ]
     ] ],
+    [ "PAGNSimpleTorusDirectionFilter", "classagn_1_1_p_a_g_n_simple_torus_direction_filter.html", [
+      [ "PAGNSimpleTorusDirectionFilter", "classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a8daaa864bfbe59ea4e3b5e47645839b2", null ],
+      [ "operator()", "classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a10dbc30f04236ea5457808241d1c6de4", null ]
+    ] ],
+    [ "PAGNSimulationTeamB", "classagn_1_1_p_a_g_n_simulation_team_b.html", [
+      [ "PAGNSimulationTeamB", "classagn_1_1_p_a_g_n_simulation_team_b.html#a4b7fe16bc2b539ebcef935512b7563a5", null ],
+      [ "distanceToBoundary", "classagn_1_1_p_a_g_n_simulation_team_b.html#a8aeb5f55fd505a2892205774271124c2", null ],
+      [ "id", "classagn_1_1_p_a_g_n_simulation_team_b.html#a714c050a466c27983aa8ced38acb2416", null ],
+      [ "numOfPhotons", "classagn_1_1_p_a_g_n_simulation_team_b.html#a1abcba89591d9825da2c43403d1a5bca", null ],
+      [ "run", "classagn_1_1_p_a_g_n_simulation_team_b.html#ac731744118677ec55c1f0bd457b3e2ce", null ]
+    ] ],
+    [ "PAGNSimulationTeamFactoryBuilder", "classagn_1_1_p_a_g_n_simulation_team_factory_builder.html", null ],
     [ "eAGNData", "group__agn.html#gaa9e1548e7f0f593ab9daf8fa5b3dcd07", [
       [ "ENERGY", "group__agn.html#ggaa9e1548e7f0f593ab9daf8fa5b3dcd07a93e0e13277e4354c72e2b033514037a5", null ],
       [ "THETA", "group__agn.html#ggaa9e1548e7f0f593ab9daf8fa5b3dcd07a9b450ec4004f161c8681fbd7a7bb890a", null ],

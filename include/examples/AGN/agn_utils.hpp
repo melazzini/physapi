@@ -41,6 +41,7 @@
 #include "montecarlo_utils.hpp"
 #include "PSpectrumZenith.hpp"
 #include "verner_utils.hpp"
+#include"PFluxPerEnergyIntervalMaker.hpp"
 
 namespace agn
 {
@@ -368,6 +369,10 @@ namespace agn
 	class PAGNSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
 	{
 	public:
+		/**
+		 * @brief Build an empty spectrum.
+		 * 
+		 */
 		PAGNSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
 
 		/**
@@ -384,7 +389,7 @@ namespace agn
 			phys_float E_upp,
 			eSpectrumScale scale = eSpectrumScale::LIN,
 			phys_float angularInterval = 10.0_deg)
-			: PSpectrumZenith(zenithAngle, E_low, E_upp, scale, angularInterval)
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
 		{
 		}
 
@@ -398,9 +403,126 @@ namespace agn
 		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
 		{
 			phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
-			if (checkRangeInclusive(PSpectrumZenith::minPhi(), std::abs(phi), PSpectrumZenith::maxPhi()))
+			if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))
 			{
-				PSpectrumZenith::addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+				PSpectrumZenith<N_intervals, AGN_DATA_COLS>::addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+			}
+		}
+	};
+
+	/**
+	 * @brief This class represents an agn spectrum under a specific zenith angle
+	 * and angular interval.
+	 *
+	 * To load the spectrum you can use physapi::loadFromFile()
+	 *
+	 * @ingroup agn
+	 *
+	 */
+	template<phys_size N_intervals>
+	class PAGNTransmittedSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
+	{
+	public:
+		/**
+		 * @brief Build an empty spectrum.
+		 *
+		 */
+		PAGNTransmittedSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+
+		/**
+		 * @brief Construct a new agn spectrum under a specfied zenith angle
+		 *
+		 * @param zenithAngle zenith angle (\f$ \theta \f$)
+		 * @param E_low energy lower bound
+		 * @param E_upp energy upper bound
+		 * @param scale scale(logarithmic or linear)
+		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
+		 */
+		PAGNTransmittedSpectrumZenith(phys_float zenithAngle,
+			phys_float E_low,
+			phys_float E_upp,
+			eSpectrumScale scale = eSpectrumScale::LIN,
+			phys_float angularInterval = 10.0_deg)
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
+		{
+		}
+
+		/**
+		 * @brief count a photon into the spectrum
+		 *
+		 * This method is meant to be used in conjunction with physapi::loadFromFile()
+		 *
+		 * @param row
+		 */
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		{
+			auto type = static_cast<eTypeOfAGNPhoton>(row[static_cast<phys_size>(eAGNData::TYPE)]);
+			if (type==eTypeOfAGNPhoton::INTRINSIC || type == eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY)
+			{
+				phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
+				if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))
+				{
+					PSpectrumZenith<N_intervals, AGN_DATA_COLS>::addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+				}
+			}
+		}
+	};
+
+
+	/**
+	 * @brief This class represents an agn spectrum under a specific zenith angle
+	 * and angular interval.
+	 *
+	 * To load the spectrum you can use physapi::loadFromFile()
+	 *
+	 * @ingroup agn
+	 *
+	 */
+	template<phys_size N_intervals>
+	class PAGNReflectedSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
+	{
+	public:
+		/**
+		 * @brief Build an empty spectrum.
+		 *
+		 */
+		PAGNReflectedSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+
+		/**
+		 * @brief Construct a new agn spectrum under a specfied zenith angle
+		 *
+		 * @param zenithAngle zenith angle (\f$ \theta \f$)
+		 * @param E_low energy lower bound
+		 * @param E_upp energy upper bound
+		 * @param scale scale(logarithmic or linear)
+		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
+		 */
+		PAGNReflectedSpectrumZenith(phys_float zenithAngle,
+			phys_float E_low,
+			phys_float E_upp,
+			eSpectrumScale scale = eSpectrumScale::LIN,
+			phys_float angularInterval = 10.0_deg)
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
+		{
+		}
+
+		/**
+		 * @brief count a photon into the spectrum
+		 *
+		 * This method is meant to be used in conjunction with physapi::loadFromFile()
+		 *
+		 * @param row
+		 */
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		{
+			auto type = static_cast<eTypeOfAGNPhoton>(row[static_cast<phys_size>(eAGNData::TYPE)]);
+			if (type == eTypeOfAGNPhoton::REFLECTED)
+			{
+				phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
+				if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))
+				{
+					PSpectrumZenith<N_intervals, AGN_DATA_COLS>::addPhoton(row[static_cast<phys_size>(eAGNData::ENERGY)]);
+				}
 			}
 		}
 	};
@@ -428,5 +550,56 @@ namespace agn
 		phys_float T_e,
 		phys_float R_clouds,
 		std::ostream& os);
+
+
+	template <phys_size rows>
+	void loadAGNResultingSpectrum(PSpectrum<rows>& spectrum, const std::vector<std::string>& files, phys_float zenith, phys_float dzenith)
+	{
+		std::ifstream fin;
+
+		auto phi_max{ Pi / 2 - zenith };
+		auto phi_min{ Pi / 2 - (zenith+dzenith)};
+
+		for (auto&& file_i : files)
+		{
+			fin.open(file_i);
+			if (!fin.good())
+			{
+				std::cerr << "error while opening the file:  " << file_i << std::endl;
+				abort();
+			}
+
+			phys_float hv, theta, phi, type, line;
+			while (fin >> hv)
+			{
+				fin >> theta;
+				fin >> phi;
+				fin >> type;
+				fin >> line;
+
+				if (type == 2)
+				{
+					if (std::abs(phi) <= phi_max && std::abs(phi) >= phi_min)
+					{
+						spectrum.addPhoton(hv);
+					}
+				}
+			}
+			fin.clear();
+			fin.close();
+		}
+	}
+
+	template<typename T_spectrum, phys_size NUM_INTERVALS = 2000>
+	void processAgnSpectrum(phys_float zenith, phys_float dZenith, phys_float E_low, phys_float E_upp,
+		eSpectrumScale scale,
+		const std::vector<std::string>& files,
+		PFluxPerEnergyIntervalMaker<NUM_INTERVALS>& fluxMaker, std::ostream& os)
+	{
+		auto spectrumTheta{ T_spectrum(zenith, E_low,E_upp,scale,dZenith) };
+		loadAGNResultingSpectrum(spectrumTheta, files, zenith, dZenith);
+		PFluxPerEnergyInterval<NUM_INTERVALS> flux_dE(fluxMaker(spectrumTheta, agnSolidAngle(zenith, dZenith)));
+		os << flux_dE << std::endl;
+	}
 
 } // namespace agn

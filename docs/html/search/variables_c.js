@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['okalpha1_1077',['OKalpha1',['../group__agn.html#ga4f21c70f9e2fdd95465717e3966a5ead',1,'agn']]],
-  ['okalpha2_1078',['OKalpha2',['../group__agn.html#ga8e8aef4c4029babfea4693b52450f2f6',1,'agn']]]
+  ['okalpha1_1046',['OKalpha1',['../group__agn.html#ga4f21c70f9e2fdd95465717e3966a5ead',1,'agn']]],
+  ['okalpha2_1047',['OKalpha2',['../group__agn.html#ga8e8aef4c4029babfea4693b52450f2f6',1,'agn']]]
 ];

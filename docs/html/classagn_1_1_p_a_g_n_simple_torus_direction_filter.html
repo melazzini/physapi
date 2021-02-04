@@ -104,9 +104,12 @@ $(document).ready(function(){initNavTree('classagn_1_1_p_a_g_n_simple_torus_dire
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classagn_1_1_p_a_g_n_simple_torus_direction_filter-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">agn::PAGNSimpleTorusDirectionFilter Class Reference</div>  </div>
+<div class="title">agn::PAGNSimpleTorusDirectionFilter Class Reference<div class="ingroups"><a class="el" href="group__examples.html">Examples</a> &raquo; <a class="el" href="group__agn.html">Agn</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class selects the initial directions for the source photons for the simple torus agn model.  
+ <a href="classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -122,13 +125,16 @@ Inheritance diagram for agn::PAGNSimpleTorusDirectionFilter:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8daaa864bfbe59ea4e3b5e47645839b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a8daaa864bfbe59ea4e3b5e47645839b2">PAGNSimpleTorusDirectionFilter</a> (<a class="el" href="group__core.html#ga6fd9eb8d30db6f33aea7a7aeb4baad80">phys_float</a> halfOpeningAngle)</td></tr>
+<tr class="memdesc:a8daaa864bfbe59ea4e3b5e47645839b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the direction filter object.  <a href="classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a8daaa864bfbe59ea4e3b5e47645839b2">More...</a><br /></td></tr>
 <tr class="separator:a8daaa864bfbe59ea4e3b5e47645839b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10dbc30f04236ea5457808241d1c6de4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core.html#gac8041f925c2f096aa892ef295b27a97a">phys_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a10dbc30f04236ea5457808241d1c6de4">operator()</a> (const <a class="el" href="classphysapi_1_1_p_vector3_d.html">PVector3D</a> &amp;direction) const override</td></tr>
+<tr class="memdesc:a10dbc30f04236ea5457808241d1c6de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the given direction is valid.  <a href="classagn_1_1_p_a_g_n_simple_torus_direction_filter.html#a10dbc30f04236ea5457808241d1c6de4">More...</a><br /></td></tr>
 <tr class="separator:a10dbc30f04236ea5457808241d1c6de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00007">7</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
+<div class="textblock"><p>This class selects the initial directions for the source photons for the simple torus agn model. </p>
+
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00012">12</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8daaa864bfbe59ea4e3b5e47645839b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8daaa864bfbe59ea4e3b5e47645839b2">&#9670;&nbsp;</a></span>PAGNSimpleTorusDirectionFilter()</h2>
@@ -154,7 +160,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00013">13</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
+<p>Creates the direction filter object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">halfOpeningAngle</td><td>torus half-opening angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00023">23</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -182,7 +196,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check whether or not the given direction is valid.</p>
+
+<p>Check whether or not the given direction is valid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>photon's direction </td></tr>
@@ -193,7 +208,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classagn_1_1_p_a_g_n_init_spectrum_direction_filter.html#a40afa431660dc60e19a0b5643285b5b2">agn::PAGNInitSpectrumDirectionFilter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00025">25</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html#l00035">35</a> of file <a class="el" href="_p_a_g_n_simple_torus_direction_filter_8hpp_source.html">PAGNSimpleTorusDirectionFilter.hpp</a>.</p>
 
 </div>
 </div>

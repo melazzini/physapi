@@ -43,6 +43,48 @@ namespace agn
 	 * @note The use of a factory to instantiate your simulation team class makes the model more flexible and separates the logic, and
 	 *		 this is why we've chosen this approach.
 	 * 
+	 * The following piece of code shows how we you can model an agn with a smooth simple toroidal structure.
+	 * 
+	 @code{.cpp}
+		#include <iostream>
+		#include<string_view>
+		#include"PAGNSimulationTeamFactoryBuilder.hpp"
+		#include"PAGN.hpp"
+		#include"PAGNSmoothTorus.model.hpp"
+		#include"PAGNSimpleTorusDirectionFilter.hpp"
+
+		using namespace physapi;
+		using namespace agn;
+		using namespace std;
+
+		constexpr phys_float E_low = 100.0;
+		constexpr phys_float E_upp = 300.0E3;
+		constexpr phys_float T_e = 1.0_eVToKelvin;
+		constexpr phys_float TORUS_R1 = 1.0E14_cm;
+		constexpr phys_float TORUS_R2 = 1.0E15_cm;
+		constexpr phys_float TORUS_HALFOPENINGANGLE = 60.0_deg;
+		constexpr phys_float N_H = 1.0E24 / 1.0_cm2;
+		constexpr phys_float N_aver = 3;             //average number of clouds along the line of sight
+		constexpr phys_float phi = 0.03;             //volume filling factor
+		constexpr phys_float NUM_OF_PHOTONS = 50.0E6;
+		const string PATH_TO_FOLDER = "./results/tests/24/";
+		const string PATH_TO_FOLDER_DATA = PATH_TO_FOLDER + "data/";
+
+		int main()
+		{
+
+			auto torusModel{ make_shared<PAGNSmoothTorusModel>(PSimpleTorus(TORUS_R1,TORUS_R2,TORUS_HALFOPENINGANGLE),N_H) };
+			auto formula{ make_shared<PAGNFormula>(E_low,E_upp) };
+			auto torusDirFilter{ make_shared<PAGNSimpleTorusDirectionFilter>(TORUS_HALFOPENINGANGLE) };
+
+			auto agn{ PAGN{torusModel,T_e,NUM_OF_PHOTONS,PAGNSimulationTeamFactoryBuilder::buildAGNSmoothSimulationTeamFactory(),formula,torusDirFilter} };
+
+			agn.run(PATH_TO_FOLDER_DATA); // use maximum number of threads
+
+			return 0;
+		}
+		@endcode
+	 * 
 	 * @ingroup agn
 	 */
 	class PAGN
