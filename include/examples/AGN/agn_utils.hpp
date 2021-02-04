@@ -559,54 +559,59 @@ namespace agn
 								 phys_float R_clouds,
 								 std::ostream &os);
 
-	template <phys_size rows>
-	void loadAGNResultingSpectrum(PSpectrum<rows> &spectrum, const std::vector<std::string> &files, phys_float zenith, phys_float dzenith)
+	/**
+	 * @brief Get the T-spectrum type under dT-zenith angle interval
+	 * 
+	 * @tparam T_spectrum T_spectrum spectrum type
+	 * @param data_files input data files
+	 * @param theta zenith angle
+	 * @param dTheta zenith angular interval
+	 * @param E_low energy lower bound
+	 * @param E_upp energy upper bound
+	 * @return auto corresponding spectrum
+	 */
+	template <typename T_spectrum>
+	auto get_T_dT_AGNSpectrum(const std::vector<std::string> &data_files, phys_float theta,
+							  phys_float dTheta,
+							  phys_float E_low, phys_float E_upp)
 	{
-		std::ifstream fin;
-
-		auto phi_max{Pi / 2 - zenith};
-		auto phi_min{Pi / 2 - (zenith + dzenith)};
-
-		for (auto &&file_i : files)
+		auto T_dT_Spectrum = T_spectrum(theta,
+										E_low, E_upp,
+										eSpectrumScale::LOG,
+										dTheta);
+		for (auto &&file : data_files)
 		{
-			fin.open(file_i);
-			if (!fin.good())
-			{
-				std::cerr << "error while opening the file:  " << file_i << std::endl;
-				abort();
-			}
-
-			phys_float hv, theta, phi, type, line;
-			while (fin >> hv)
-			{
-				fin >> theta;
-				fin >> phi;
-				fin >> type;
-				fin >> line;
-
-				if (type == 2)
-				{
-					if (std::abs(phi) <= phi_max && std::abs(phi) >= phi_min)
-					{
-						spectrum.addPhoton(hv);
-					}
-				}
-			}
-			fin.clear();
-			fin.close();
+			loadFromFile<AGN_DATA_COLS>(file, T_dT_Spectrum);
 		}
+
+		return T_dT_Spectrum;
 	}
 
-	template <typename T_spectrum, phys_size NUM_INTERVALS = 2000>
-	void processAgnSpectrum(phys_float zenith, phys_float dZenith, phys_float E_low, phys_float E_upp,
-							eSpectrumScale scale,
-							const std::vector<std::string> &files,
-							PFluxPerEnergyIntervalMaker<NUM_INTERVALS> &fluxMaker, std::ostream &os)
+	/**
+	 * @brief Process and print the spectrum of type T_spectrum under dT-zenith
+	 * 
+	 * @tparam T_spectrum spectrum type
+	 * @param data_files input data files
+	 * @param outputFileName output file name
+	 * @param theta zenith angle
+	 * @param dTheta zenith angular interval
+	 * @param E_low energy lower bound
+	 * @param E_upp energy upper bound
+	 */
+	template <typename T_spectrum>
+	void process_T_dT_AGNSpectrum(const std::vector<std::string> &data_files,
+								  const std::string &outputFileName,
+								  phys_float theta,
+								  phys_float dTheta,
+								  phys_float E_low, phys_float E_upp)
 	{
-		auto spectrumTheta{T_spectrum(zenith, E_low, E_upp, scale, dZenith)};
-		loadAGNResultingSpectrum(spectrumTheta, files, zenith, dZenith);
-		PFluxPerEnergyInterval<NUM_INTERVALS> flux_dE(fluxMaker(spectrumTheta, agnSolidAngle(zenith, dZenith)));
-		os << flux_dE << std::endl;
+		std::ofstream fout;
+
+		fout.open(outputFileName);
+
+		auto &&T_dT_Spectrum = std::move(get_T_dT_AGNSpectrum<T_spectrum>(data_files, theta, dTheta, E_low, E_upp));
+
+		fout << T_dT_Spectrum << std::endl;
 	}
 
 } // namespace agn
