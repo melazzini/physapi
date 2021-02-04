@@ -1,4 +1,4 @@
-/*****************************************************************//**
+/*****************************************************************/ /**
  * \file   agn_utils.hpp
  * \brief  This file contains all the utilities needed by the agn
  *		   x-ray spectrum models, provided in this application module.
@@ -7,14 +7,14 @@
  * \date   December 2020
  *********************************************************************/
 
- /**
+/**
   * @defgroup examples
   *
   * @brief This module offers different ready-to-use examples.
   *
   */
 
-  /**
+/**
    * @defgroup agn
    *
    * @brief This module implements a model of an Active Galactic Nuclei X-Ray Spectral Model.
@@ -25,7 +25,7 @@
 
 #pragma once
 
-#define PHYSAPI_USE_GPU
+// #define PHYSAPI_USE_GPU
 
 #include "PSpectrumMaker.hpp"
 #include "PGeometryBase.hpp"
@@ -41,7 +41,7 @@
 #include "montecarlo_utils.hpp"
 #include "PSpectrumZenith.hpp"
 #include "verner_utils.hpp"
-#include"PFluxPerEnergyIntervalMaker.hpp"
+#include "PFluxPerEnergyIntervalMaker.hpp"
 
 namespace agn
 {
@@ -64,9 +64,9 @@ namespace agn
 	 */
 	enum class eTypeOfAGNPhoton
 	{
-		INTRINSIC = 0,   // PHOTON COMES DIRECTLY FROM THE AGN SOURCE, WITHOUT ANY INTERACTION AND WITHOUT ENTERING THE INTERNAL STRUCTURE OF THE AGN
+		INTRINSIC = 0,				 // PHOTON COMES DIRECTLY FROM THE AGN SOURCE, WITHOUT ANY INTERACTION AND WITHOUT ENTERING THE INTERNAL STRUCTURE OF THE AGN
 		ENTEREDINTERNALGEOMETRY = 1, // THE PHOTON ENTERED THE INTERNAL STRUCTURE OF THE AGN, BUT IT DID NOT INTERACTED WITH MATTER INSIDE THE AGN
-		REFLECTED = 2, // REPROCESSED PHOTON(ANY KIND OF INTERACTION)
+		REFLECTED = 2,				 // REPROCESSED PHOTON(ANY KIND OF INTERACTION)
 	};
 
 	/**
@@ -78,10 +78,10 @@ namespace agn
 	enum class eAGNData
 	{
 		ENERGY = 0, // FIRST COLUMN IS THE PHOTON ENERGY
-		THETA = 1,  // SECOND COLUMN IS THE POTHON'S DIRECTION THETA ANGLE(SPHERICAL COORDINATES)
-		PHY = 2,    // SECOND COLUMN IS THE POTHON'S DIRECTION PHI ANGLE (SPHERICAL COORDINATES)
-		TYPE = 3,   // TYPE OF PHOTON(DIRECT FROM THE AGN CENTER, SCATTERED, ETC. SEE @TYPEOFAGNPHOTONS)
-		LINE = 4    // TYPE OF FLUORESCENCE LINE(I.E. NONE, FeKalpha, CaKalpha, ETC), SEE @eImportantFluorescentLines
+		THETA = 1,	// SECOND COLUMN IS THE POTHON'S DIRECTION THETA ANGLE(SPHERICAL COORDINATES)
+		PHY = 2,	// SECOND COLUMN IS THE POTHON'S DIRECTION PHI ANGLE (SPHERICAL COORDINATES)
+		TYPE = 3,	// TYPE OF PHOTON(DIRECT FROM THE AGN CENTER, SCATTERED, ETC. SEE @TYPEOFAGNPHOTONS)
+		LINE = 4	// TYPE OF FLUORESCENCE LINE(I.E. NONE, FeKalpha, CaKalpha, ETC), SEE @eImportantFluorescentLines
 	};
 
 	/**
@@ -117,7 +117,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CKalpha1{ eZ::C, 1, 1, 0, 1 };
+	const PFluorescenceKey CKalpha1{eZ::C, 1, 1, 0, 1};
 
 	/**
 	 * @brief C K-alpha fluorescent line 2
@@ -125,7 +125,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CKalpha2{ eZ::C, 1, 1, 0, 2 };
+	const PFluorescenceKey CKalpha2{eZ::C, 1, 1, 0, 2};
 
 	/**
 	 * @brief N K-alpha fluorescent line 1
@@ -133,7 +133,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NKalpha1{ eZ::N, 1, 1, 0, 1 };
+	const PFluorescenceKey NKalpha1{eZ::N, 1, 1, 0, 1};
 
 	/**
 	 * @brief N K-alpha fluorescent line 2
@@ -141,7 +141,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NKalpha2{ eZ::N, 1, 1, 0, 2 };
+	const PFluorescenceKey NKalpha2{eZ::N, 1, 1, 0, 2};
 
 	/**
 	 * @brief O K-alpha fluorescent line 1
@@ -149,7 +149,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey OKalpha1{ eZ::O, 1, 1, 0, 1 };
+	const PFluorescenceKey OKalpha1{eZ::O, 1, 1, 0, 1};
 
 	/**
 	 * @brief O K-alpha fluorescent line 2
@@ -157,7 +157,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey OKalpha2{ eZ::O, 1, 1, 0, 2 };
+	const PFluorescenceKey OKalpha2{eZ::O, 1, 1, 0, 2};
 
 	/**
 	 * @brief Ne K-alpha fluorescent line 1
@@ -165,7 +165,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NeKalpha1{ eZ::Ne, 1, 1, 0, 1 };
+	const PFluorescenceKey NeKalpha1{eZ::Ne, 1, 1, 0, 1};
 
 	/**
 	 * @brief Ne K-alpha fluorescent line 2
@@ -173,7 +173,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NeKalpha2{ eZ::Ne, 1, 1, 0, 2 };
+	const PFluorescenceKey NeKalpha2{eZ::Ne, 1, 1, 0, 2};
 
 	/**
 	 * @brief Na K-alpha fluorescent line 1
@@ -181,7 +181,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NaKalpha1{ eZ::Na, 1, 1, 0, 1 };
+	const PFluorescenceKey NaKalpha1{eZ::Na, 1, 1, 0, 1};
 
 	/**
 	 * @brief Na K-alpha fluorescent line 2
@@ -189,7 +189,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NaKalpha2{ eZ::Na, 1, 1, 0, 2 };
+	const PFluorescenceKey NaKalpha2{eZ::Na, 1, 1, 0, 2};
 
 	/**
 	 * @brief Mg K-alpha fluorescent line 1
@@ -197,7 +197,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey MgKalpha1{ eZ::Mg, 1, 1, 0, 1 };
+	const PFluorescenceKey MgKalpha1{eZ::Mg, 1, 1, 0, 1};
 
 	/**
 	 * @brief Mg K-alpha fluorescent line 2
@@ -205,7 +205,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey MgKalpha2{ eZ::Mg, 1, 1, 0, 2 };
+	const PFluorescenceKey MgKalpha2{eZ::Mg, 1, 1, 0, 2};
 
 	/**
 	 * @brief Al K-alpha fluorescent line 1
@@ -213,7 +213,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey AlKalpha1{ eZ::Al, 1, 1, 0, 1 };
+	const PFluorescenceKey AlKalpha1{eZ::Al, 1, 1, 0, 1};
 
 	/**
 	 * @brief Al K-alpha fluorescent line 2
@@ -221,7 +221,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey AlKalpha2{ eZ::Al, 1, 1, 0, 2 };
+	const PFluorescenceKey AlKalpha2{eZ::Al, 1, 1, 0, 2};
 
 	/**
 	 * @brief Si K-alpha fluorescent line 1
@@ -229,7 +229,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey SiKalpha1{ eZ::Si, 1, 1, 0, 1 };
+	const PFluorescenceKey SiKalpha1{eZ::Si, 1, 1, 0, 1};
 
 	/**
 	 * @brief Si K-alpha fluorescent line 2
@@ -237,7 +237,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey SiKalpha2{ eZ::Si, 1, 1, 0, 2 };
+	const PFluorescenceKey SiKalpha2{eZ::Si, 1, 1, 0, 2};
 
 	/**
 	 * @brief S K-alpha fluorescent line 1
@@ -245,7 +245,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey SKalpha1{ eZ::S, 1, 1, 0, 1 };
+	const PFluorescenceKey SKalpha1{eZ::S, 1, 1, 0, 1};
 
 	/**
 	 * @brief S K-alpha fluorescent line 2
@@ -253,7 +253,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey SKalpha2{ eZ::S, 1, 1, 0, 2 };
+	const PFluorescenceKey SKalpha2{eZ::S, 1, 1, 0, 2};
 
 	/**
 	 * @brief Ar K-alpha fluorescent line 1
@@ -261,7 +261,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey ArKalpha1{ eZ::Ar, 1, 1, 0, 1 };
+	const PFluorescenceKey ArKalpha1{eZ::Ar, 1, 1, 0, 1};
 
 	/**
 	 * @brief Ar K-alpha fluorescent line 2
@@ -269,7 +269,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey ArKalpha2{ eZ::Ar, 1, 1, 0, 2 };
+	const PFluorescenceKey ArKalpha2{eZ::Ar, 1, 1, 0, 2};
 
 	/**
 	 * @brief Ca K-alpha fluorescent line 1
@@ -277,7 +277,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CaKalpha1{ eZ::Ca, 1, 1, 0, 1 };
+	const PFluorescenceKey CaKalpha1{eZ::Ca, 1, 1, 0, 1};
 
 	/**
 	 * @brief Ca K-alpha fluorescent line 2
@@ -285,7 +285,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CaKalpha2{ eZ::Ca, 1, 1, 0, 2 };
+	const PFluorescenceKey CaKalpha2{eZ::Ca, 1, 1, 0, 2};
 
 	/**
 	 * @brief Cr K-alpha fluorescent line 1
@@ -293,7 +293,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CrKalpha1{ eZ::Cr, 1, 1, 0, 1 };
+	const PFluorescenceKey CrKalpha1{eZ::Cr, 1, 1, 0, 1};
 
 	/**
 	 * @brief Cr K-alpha fluorescent line 2
@@ -301,7 +301,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey CrKalpha2{ eZ::Cr, 1, 1, 0, 2 };
+	const PFluorescenceKey CrKalpha2{eZ::Cr, 1, 1, 0, 2};
 
 	/**
 	 * @brief Fe K-alpha fluorescent line 1
@@ -309,7 +309,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey FeKalpha1{ eZ::Fe, 1, 1, 0, 1 };
+	const PFluorescenceKey FeKalpha1{eZ::Fe, 1, 1, 0, 1};
 
 	/**
 	 * @brief Fe K-alpha fluorescent line 2
@@ -317,7 +317,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey FeKalpha2{ eZ::Fe, 1, 1, 0, 2 };
+	const PFluorescenceKey FeKalpha2{eZ::Fe, 1, 1, 0, 2};
 
 	/**
 	 * @brief Ni K-alpha fluorescent line 1
@@ -325,7 +325,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NiKalpha1{ eZ::Ni, 1, 1, 0, 1 };
+	const PFluorescenceKey NiKalpha1{eZ::Ni, 1, 1, 0, 1};
 
 	/**
 	 * @brief Ni K-alpha fluorescent line 2
@@ -333,7 +333,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	const PFluorescenceKey NiKalpha2{ eZ::Ni, 1, 1, 0, 2 };
+	const PFluorescenceKey NiKalpha2{eZ::Ni, 1, 1, 0, 2};
 
 	/**
 	 * @brief Get the total solid angle of an agn angular portion.
@@ -365,7 +365,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	template<phys_size N_intervals>
+	template <phys_size N_intervals>
 	class PAGNSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
 	{
 	public:
@@ -373,7 +373,10 @@ namespace agn
 		 * @brief Build an empty spectrum.
 		 * 
 		 */
-		PAGNSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+		PAGNSpectrumZenith()
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(0, 0, 0, eSpectrumScale::LIN, 0)
+		{
+		}
 
 		/**
 		 * @brief Construct a new agn spectrum under a specfied zenith angle
@@ -385,10 +388,10 @@ namespace agn
 		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
 		 */
 		PAGNSpectrumZenith(phys_float zenithAngle,
-			phys_float E_low,
-			phys_float E_upp,
-			eSpectrumScale scale = eSpectrumScale::LIN,
-			phys_float angularInterval = 10.0_deg)
+						   phys_float E_low,
+						   phys_float E_upp,
+						   eSpectrumScale scale = eSpectrumScale::LIN,
+						   phys_float angularInterval = 10.0_deg)
 			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
 		{
 		}
@@ -400,7 +403,7 @@ namespace agn
 		 *
 		 * @param row
 		 */
-		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS> &row) override
 		{
 			phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
 			if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))
@@ -419,7 +422,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	template<phys_size N_intervals>
+	template <phys_size N_intervals>
 	class PAGNTransmittedSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
 	{
 	public:
@@ -427,7 +430,10 @@ namespace agn
 		 * @brief Build an empty spectrum.
 		 *
 		 */
-		PAGNTransmittedSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+		PAGNTransmittedSpectrumZenith()
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(0, 0, 0, eSpectrumScale::LIN, 0)
+		{
+		}
 
 		/**
 		 * @brief Construct a new agn spectrum under a specfied zenith angle
@@ -439,10 +445,10 @@ namespace agn
 		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
 		 */
 		PAGNTransmittedSpectrumZenith(phys_float zenithAngle,
-			phys_float E_low,
-			phys_float E_upp,
-			eSpectrumScale scale = eSpectrumScale::LIN,
-			phys_float angularInterval = 10.0_deg)
+									  phys_float E_low,
+									  phys_float E_upp,
+									  eSpectrumScale scale = eSpectrumScale::LIN,
+									  phys_float angularInterval = 10.0_deg)
 			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
 		{
 		}
@@ -454,10 +460,10 @@ namespace agn
 		 *
 		 * @param row
 		 */
-		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS> &row) override
 		{
 			auto type = static_cast<eTypeOfAGNPhoton>(row[static_cast<phys_size>(eAGNData::TYPE)]);
-			if (type==eTypeOfAGNPhoton::INTRINSIC || type == eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY)
+			if (type == eTypeOfAGNPhoton::INTRINSIC || type == eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY)
 			{
 				phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
 				if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))
@@ -468,7 +474,6 @@ namespace agn
 		}
 	};
 
-
 	/**
 	 * @brief This class represents an agn spectrum under a specific zenith angle
 	 * and angular interval.
@@ -478,7 +483,7 @@ namespace agn
 	 * @ingroup agn
 	 *
 	 */
-	template<phys_size N_intervals>
+	template <phys_size N_intervals>
 	class PAGNReflectedSpectrumZenith : public PSpectrumZenith<N_intervals, AGN_DATA_COLS>
 	{
 	public:
@@ -486,7 +491,10 @@ namespace agn
 		 * @brief Build an empty spectrum.
 		 *
 		 */
-		PAGNReflectedSpectrumZenith() :PSpectrumZenith(0, 0, 0, eSpectrumScale::LIN, 0) {}
+		PAGNReflectedSpectrumZenith()
+			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(0, 0, 0, eSpectrumScale::LIN, 0)
+		{
+		}
 
 		/**
 		 * @brief Construct a new agn spectrum under a specfied zenith angle
@@ -498,10 +506,10 @@ namespace agn
 		 * @param angularInterval angular interval size (\f$ \Delta \theta \f$)
 		 */
 		PAGNReflectedSpectrumZenith(phys_float zenithAngle,
-			phys_float E_low,
-			phys_float E_upp,
-			eSpectrumScale scale = eSpectrumScale::LIN,
-			phys_float angularInterval = 10.0_deg)
+									phys_float E_low,
+									phys_float E_upp,
+									eSpectrumScale scale = eSpectrumScale::LIN,
+									phys_float angularInterval = 10.0_deg)
 			: PSpectrumZenith<N_intervals, AGN_DATA_COLS>(zenithAngle, E_low, E_upp, scale, angularInterval)
 		{
 		}
@@ -513,7 +521,7 @@ namespace agn
 		 *
 		 * @param row
 		 */
-		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS>& row) override
+		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS> &row) override
 		{
 			auto type = static_cast<eTypeOfAGNPhoton>(row[static_cast<phys_size>(eAGNData::TYPE)]);
 			if (type == eTypeOfAGNPhoton::REFLECTED)
@@ -530,9 +538,9 @@ namespace agn
 	using t_clouds = std::vector<PPosition>;
 	using t_histogram = std::map<phys_size, phys_float>;
 
-	void loadClouds(t_clouds& clouds, const std::string& cloudsFile);
+	void loadClouds(t_clouds &clouds, const std::string &cloudsFile);
 
-	void loadHistogram(t_histogram& histogram, const std::string& histogramFile);
+	void loadHistogram(t_histogram &histogram, const std::string &histogramFile);
 
 	struct sPosition
 	{
@@ -540,27 +548,26 @@ namespace agn
 	};
 
 	void printAGNClumpyTorusInfo(phys_float R1,
-		phys_float R2,
-		phys_float theta0,
-		phys_float N_H,
-		phys_float N_aver,
-		phys_float phi,
-		phys_size numOfPhotons,
-		phys_size numOfClouds,
-		phys_float T_e,
-		phys_float R_clouds,
-		std::ostream& os);
-
+								 phys_float R2,
+								 phys_float theta0,
+								 phys_float N_H,
+								 phys_float N_aver,
+								 phys_float phi,
+								 phys_size numOfPhotons,
+								 phys_size numOfClouds,
+								 phys_float T_e,
+								 phys_float R_clouds,
+								 std::ostream &os);
 
 	template <phys_size rows>
-	void loadAGNResultingSpectrum(PSpectrum<rows>& spectrum, const std::vector<std::string>& files, phys_float zenith, phys_float dzenith)
+	void loadAGNResultingSpectrum(PSpectrum<rows> &spectrum, const std::vector<std::string> &files, phys_float zenith, phys_float dzenith)
 	{
 		std::ifstream fin;
 
-		auto phi_max{ Pi / 2 - zenith };
-		auto phi_min{ Pi / 2 - (zenith+dzenith)};
+		auto phi_max{Pi / 2 - zenith};
+		auto phi_min{Pi / 2 - (zenith + dzenith)};
 
-		for (auto&& file_i : files)
+		for (auto &&file_i : files)
 		{
 			fin.open(file_i);
 			if (!fin.good())
@@ -590,13 +597,13 @@ namespace agn
 		}
 	}
 
-	template<typename T_spectrum, phys_size NUM_INTERVALS = 2000>
+	template <typename T_spectrum, phys_size NUM_INTERVALS = 2000>
 	void processAgnSpectrum(phys_float zenith, phys_float dZenith, phys_float E_low, phys_float E_upp,
-		eSpectrumScale scale,
-		const std::vector<std::string>& files,
-		PFluxPerEnergyIntervalMaker<NUM_INTERVALS>& fluxMaker, std::ostream& os)
+							eSpectrumScale scale,
+							const std::vector<std::string> &files,
+							PFluxPerEnergyIntervalMaker<NUM_INTERVALS> &fluxMaker, std::ostream &os)
 	{
-		auto spectrumTheta{ T_spectrum(zenith, E_low,E_upp,scale,dZenith) };
+		auto spectrumTheta{T_spectrum(zenith, E_low, E_upp, scale, dZenith)};
 		loadAGNResultingSpectrum(spectrumTheta, files, zenith, dZenith);
 		PFluxPerEnergyInterval<NUM_INTERVALS> flux_dE(fluxMaker(spectrumTheta, agnSolidAngle(zenith, dZenith)));
 		os << flux_dE << std::endl;

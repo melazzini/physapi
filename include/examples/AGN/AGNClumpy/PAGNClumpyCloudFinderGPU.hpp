@@ -4,15 +4,13 @@
 #include <algorithm>
 #include <thread>
 #include<optional>
+
 #ifdef PHYSAPI_USE_GPU
-
 #define CUDA_API_PER_THREAD_DEFAULT_STREAM
-
 #include<cuda.h>
 #include "device_launch_parameters.h"
 #include <device_functions.h>
 #include<cuda_runtime.h>
-
 #endif // PHYSAPI_USE_GPU
 
 
