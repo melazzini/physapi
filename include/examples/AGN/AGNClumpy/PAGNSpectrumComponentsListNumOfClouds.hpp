@@ -43,9 +43,10 @@ namespace agn
 
         void
         spectrumLists(const std::vector<std::string> &photonsFiles,
-                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &fullSpectrumList,
-                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &reflectedSpectrumList,
-                      std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals>>> &transmittedSpectrumList)
+                      agnSpectrumList_t<N_intervals> &fullSpectrumList,
+                      agnSpectrumList_t<N_intervals> &reflectedSpectrumList,
+                      agnSpectrumList_t<N_intervals> &transmittedSpectrumList,
+                      agnFlLinesSpectrumList_t<N_intervals> &flLinesSpectrumList)
         {
             phys_float minPhi = Pi / 2 - (m_zenith + m_angularInterval);
             phys_float maxPhi = Pi / 2 - m_zenith;
@@ -77,50 +78,37 @@ namespace agn
                                   << numOfPhotonsProcessed << std::endl;
                     }
 
-                    if (checkRangeInclusive(minPhi, std::abs(phi), maxPhi)) // && (type < 1.5))
+                    if (checkRangeInclusive(minPhi, std::abs(phi), maxPhi))
                     {
                         auto numOfClouds = (phys_size(type) == 0) ? 0 : countClouds(theta, phi);
 
                         // full spectrum
-                        if (fullSpectrumList.find(numOfClouds) != fullSpectrumList.end())
-                        {
-                            fullSpectrumList[numOfClouds]->addPhoton(energy);
-                        }
-                        else
-                        {
-                            fullSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
-                                m_E_low, m_E_upp, m_scale);
-                            fullSpectrumList[numOfClouds]->addPhoton(energy);
-                        }
+                        addPhoton(fullSpectrumList, numOfClouds, energy);
 
                         // reflected spectrum
                         if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTED)
                         {
-                            if (reflectedSpectrumList.find(numOfClouds) != reflectedSpectrumList.end())
+                            addPhoton(reflectedSpectrumList, numOfClouds, energy);
+
+                            auto line_v = static_cast<eImportantFluorescentLines>(line);
+                            if (line_v == eImportantFluorescentLines::NONE)
                             {
-                                reflectedSpectrumList[numOfClouds]->addPhoton(energy);
+                                continue;
+                            }
+                            else if (flLinesSpectrumList.find(line_v) != flLinesSpectrumList.end())
+                            {
+                                addPhoton(flLinesSpectrumList[line_v], numOfClouds, energy);
                             }
                             else
                             {
-                                reflectedSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
-                                    m_E_low, m_E_upp, m_scale);
-                                reflectedSpectrumList[numOfClouds]->addPhoton(energy);
+                                flLinesSpectrumList[line_v] = agnSpectrumList_t<N_intervals>();
+                                addPhoton(flLinesSpectrumList[line_v], numOfClouds, energy);
                             }
                         }
-
                         // transmitted spectrum
-                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::INTRINSIC || eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::ENTEREDINTERNALGEOMETRY)
+                        else
                         {
-                            if (transmittedSpectrumList.find(numOfClouds) != transmittedSpectrumList.end())
-                            {
-                                transmittedSpectrumList[numOfClouds]->addPhoton(energy);
-                            }
-                            else
-                            {
-                                transmittedSpectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
-                                    m_E_low, m_E_upp, m_scale);
-                                transmittedSpectrumList[numOfClouds]->addPhoton(energy);
-                            }
+                            addPhoton(transmittedSpectrumList, numOfClouds, energy);
                         }
                     }
                     numOfPhotonsProcessed++;
@@ -234,6 +222,21 @@ namespace agn
             }
 
             numOfClouds = numberOfCloudsFound;
+        }
+
+        void addPhoton(agnSpectrumList_t<N_intervals> &spectrumList, phys_size numOfClouds, phys_float hv)
+        {
+            if (spectrumList.find(numOfClouds) != spectrumList.end())
+            {
+                spectrumList[numOfClouds]->addPhoton(hv);
+            }
+            else
+            {
+                spectrumList[numOfClouds] = std::make_unique<PSpectrum<N_intervals>>(
+                    m_E_low, m_E_upp, m_scale);
+
+                spectrumList[numOfClouds]->addPhoton(hv);
+            }
         }
     };
 } // namespace agn
