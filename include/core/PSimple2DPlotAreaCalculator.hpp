@@ -25,26 +25,7 @@ namespace physapi
             }
         };
 
-    private:
-        phys_float m_lowerBound;
-        phys_float m_upperBound;
-
     public:
-        /**
-         * @brief Construct a new PSimple2DPlotAreaCalculator object
-         * 
-         * @param a lower bound
-         * @param b upper bound
-         */
-        PSimple2DPlotAreaCalculator(phys_float a, phys_float b)
-            : m_lowerBound{a}, m_upperBound{b} {}
-
-        /**
-         * @brief Destroy the PSimple2DPlotAreaCalculator object
-         * 
-         */
-        virtual ~PSimple2DPlotAreaCalculator() {}
-
         /**
          * @brief Get the scattered plot's area
          * 
