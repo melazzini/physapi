@@ -15,7 +15,11 @@ namespace physapi
         for (phys_size i = 0; i < plot.size() - 1; i++)
         {
             phys_float rect_base{plot[i + 1].first - plot[i].first};
-            phys_float rect_height{plot[i + 1].second};
+            phys_float rect_height{
+                (plot[i + 1].second <= plot[i].second)
+                    ? plot[i + 1].second
+                    : plot[i].second};
+
             if (rect_base < 0 || rect_height < 0)
             {
                 std::cerr << "the rectangle sides cannot be zero!" << std::endl;
