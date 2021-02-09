@@ -327,12 +327,6 @@ namespace agn
 	 */
 	const PFluorescenceKey NiKalpha1{eZ::Ni, 1, 1, 0, 1};
 
-	template <phys_size N_intervals_>
-	using agnSpectrumList_t = std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals_>>>;
-
-	template <phys_size N_intervals_>
-	using agnFlLinesSpectrumList_t = std::map<eImportantFluorescentLines, agnSpectrumList_t<N_intervals_>>;
-
 	/**
 	 * @brief Ni K-alpha fluorescent line 2
 	 *
@@ -340,6 +334,12 @@ namespace agn
 	 *
 	 */
 	const PFluorescenceKey NiKalpha2{eZ::Ni, 1, 1, 0, 2};
+
+	template <phys_size N_intervals_>
+	using agnSpectrumList_t = std::map<phys_size, std::unique_ptr<PSpectrum<N_intervals_>>>;
+
+	template <phys_size N_intervals_>
+	using agnFlLinesSpectrumList_t = std::map<eImportantFluorescentLines, agnSpectrumList_t<N_intervals_>>;
 
 	/**
 	 * @brief Get the total solid angle of an agn angular portion.
