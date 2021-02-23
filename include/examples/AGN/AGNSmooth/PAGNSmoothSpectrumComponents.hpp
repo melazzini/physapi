@@ -29,6 +29,7 @@ namespace agn
         void spectrumComponents(
             const std::vector<std::string> &photonsFiles,
             PSpectrum<N_intervals> &full,
+            PSpectrum<N_intervals> &compton,
             PSpectrum<N_intervals> &reflected,
             PSpectrum<N_intervals> &transmitted,
             std::map<eImportantFluorescentLines, std::unique_ptr<PSpectrum<N_intervals>>> &flLines)
@@ -63,15 +64,25 @@ namespace agn
                                   << numOfPhotonsProcessed << std::endl;
                     }
 
+                    numOfPhotonsProcessed++;
+
                     if (checkRangeInclusive(minPhi, std::abs(phi), maxPhi))
                     {
                         // full spectrum
                         full.addPhoton(energy);
 
                         // reflected spectrum
-                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTED)
+                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTEDONLY ||
+                            eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::FLUORESCENT)
                         {
                             reflected.addPhoton(energy);
+
+                            if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTEDONLY)
+                            {
+                                compton.addPhoton(energy);
+                                continue;
+                            }
+
                             auto line_v = static_cast<eImportantFluorescentLines>(line);
                             if (line_v == eImportantFluorescentLines::NONE)
                             {
@@ -92,8 +103,6 @@ namespace agn
                             transmitted.addPhoton(energy);
                         }
                     }
-
-                    numOfPhotonsProcessed++;
                 }
                 fin.clear();
                 fin.close();

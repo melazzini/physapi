@@ -66,7 +66,8 @@ namespace agn
 	{
 		INTRINSIC = 0,				 // PHOTON COMES DIRECTLY FROM THE AGN SOURCE, WITHOUT ANY INTERACTION AND WITHOUT ENTERING THE INTERNAL STRUCTURE OF THE AGN
 		ENTEREDINTERNALGEOMETRY = 1, // THE PHOTON ENTERED THE INTERNAL STRUCTURE OF THE AGN, BUT IT DID NOT INTERACTED WITH MATTER INSIDE THE AGN
-		REFLECTED = 2,				 // REPROCESSED PHOTON(ANY KIND OF INTERACTION)
+		REFLECTEDONLY = 2,			 // REPROCESSED PHOTON(ANY KIND OF INTERACTION BUT FLUORESCENCE)
+		FLUORESCENT = 3,			 // SPECIFICALLY FLUORESCENCE
 	};
 
 	/**
@@ -530,7 +531,7 @@ namespace agn
 		virtual void loadElement(const std::array<phys_float, AGN_DATA_COLS> &row) override
 		{
 			auto type = static_cast<eTypeOfAGNPhoton>(row[static_cast<phys_size>(eAGNData::TYPE)]);
-			if (type == eTypeOfAGNPhoton::REFLECTED)
+			if (type == eTypeOfAGNPhoton::REFLECTEDONLY)
 			{
 				phys_float phi = row[static_cast<phys_size>(eAGNData::PHY)];
 				if (checkRangeInclusive(PSpectrumZenith<N_intervals, AGN_DATA_COLS>::minPhi(), std::abs(phi), PSpectrumZenith<N_intervals, AGN_DATA_COLS>::maxPhi()))

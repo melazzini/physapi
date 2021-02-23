@@ -86,7 +86,7 @@ namespace agn
                         addPhoton(fullSpectrumList, numOfClouds, energy);
 
                         // reflected spectrum
-                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTED)
+                        if (eTypeOfAGNPhoton(round(type)) == eTypeOfAGNPhoton::REFLECTEDONLY)
                         {
                             addPhoton(reflectedSpectrumList, numOfClouds, energy);
 

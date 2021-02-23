@@ -39,7 +39,7 @@ namespace agn
 		{
 			if (trueOrFalse)
 			{
-				m_currentPhotonType = eTypeOfAGNPhoton::REFLECTED;
+				m_currentPhotonType = eTypeOfAGNPhoton::REFLECTEDONLY;
 			}
 		}
 
