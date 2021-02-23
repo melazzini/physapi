@@ -33,5 +33,14 @@ namespace physapi
          * @return phys_float area
          */
         phys_float operator()(std::span<const std::pair<phys_float, phys_float>> plot);
+
+        /**
+         * @brief Get the scattered plot's area
+         * 
+         * @param plot scattered plot(coordinates)
+         * @return phys_float area
+         */
+        phys_float operator()(std::span<const std::pair<phys_float, phys_float>> plot,
+                              phys_float a, phys_float b);
     };
 } // namespace physapi
